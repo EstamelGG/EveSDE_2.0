@@ -21,6 +21,11 @@ class SQLiteFieldDiff:
         self.db1_path = Path(db1_path)
         self.db2_path = Path(db2_path)
         
+        # 硬编码开关：是否记录图片差异
+        self.IGNORE_IMAGE_DIFFERENCES = True
+        # 硬编码开关：是否忽略主键差异
+        self.IGNORE_PRIMARY_KEY_DIFFERENCES = True
+        
         # 检查文件是否存在
         if not self.db1_path.exists():
             raise FileNotFoundError(f"数据库文件不存在: {db1_path}")
@@ -30,6 +35,12 @@ class SQLiteFieldDiff:
     def get_connection(self, db_path: Path) -> sqlite3.Connection:
         """获取数据库连接"""
         return sqlite3.connect(str(db_path))
+    
+    def is_image_value(self, value: Any) -> bool:
+        """检查值是否为图片文件（.png结尾）"""
+        if not isinstance(value, str):
+            return False
+        return value.lower().endswith('.png')
     
     def get_tables(self, conn: sqlite3.Connection) -> List[str]:
         """获取数据库中的所有表名"""
@@ -77,6 +88,30 @@ class SQLiteFieldDiff:
             return []
         
         diff_lines = []
+        has_non_ignored_differences = False
+        
+        # 逐列比较，先检查是否有非忽略的差异
+        for i, (col1, col2) in enumerate(zip(row1, row2)):
+            if col1 != col2:
+                col_name = columns[i]
+                
+                # 如果启用了忽略主键差异，且当前字段是主键，则跳过
+                if (self.IGNORE_PRIMARY_KEY_DIFFERENCES and 
+                    col_name in primary_keys):
+                    continue
+                
+                # 如果启用了忽略图片差异，且两个值都是图片文件，则跳过
+                if (self.IGNORE_IMAGE_DIFFERENCES and 
+                    self.is_image_value(col1) and 
+                    self.is_image_value(col2)):
+                    continue
+                
+                has_non_ignored_differences = True
+                break
+        
+        # 如果没有非忽略的差异，返回空列表
+        if not has_non_ignored_differences:
+            return []
         
         # 获取主键列的索引
         pk_indices = [i for i, col in enumerate(columns) if col in primary_keys]
@@ -89,10 +124,22 @@ class SQLiteFieldDiff:
             pk_info.append(f"{pk_col}={pk_value}")
         diff_lines.append(f"@@ 主键: {', '.join(pk_info)} @@")
         
-        # 逐列比较
+        # 逐列比较，显示差异
         for i, (col1, col2) in enumerate(zip(row1, row2)):
             if col1 != col2:
                 col_name = columns[i]
+                
+                # 如果启用了忽略主键差异，且当前字段是主键，则跳过
+                if (self.IGNORE_PRIMARY_KEY_DIFFERENCES and 
+                    col_name in primary_keys):
+                    continue
+                
+                # 如果启用了忽略图片差异，且两个值都是图片文件，则跳过
+                if (self.IGNORE_IMAGE_DIFFERENCES and 
+                    self.is_image_value(col1) and 
+                    self.is_image_value(col2)):
+                    continue
+                
                 diff_lines.append(f"  {col_name}:")
                 diff_lines.append(f"    - {col1}")
                 diff_lines.append(f"    + {col2}")
@@ -198,6 +245,8 @@ class SQLiteFieldDiff:
             report_lines.append("=" * 80)
             report_lines.append(f"数据库1: {self.db1_path}")
             report_lines.append(f"数据库2: {self.db2_path}")
+            report_lines.append(f"图片差异忽略: {'是' if self.IGNORE_IMAGE_DIFFERENCES else '否'}")
+            report_lines.append(f"主键差异忽略: {'是' if self.IGNORE_PRIMARY_KEY_DIFFERENCES else '否'}")
             report_lines.append("")
             
             total_differences = 0
@@ -300,8 +349,8 @@ class SQLiteFieldDiff:
 def main():
     """主函数"""
     # 硬编码的数据库路径
-    db1_path = "/Users/gg/Documents/GitHub/EveSDE/output/db/item_db_zh.sqlite"
-    db2_path = "/Users/gg/Documents/GitHub/EveSDE_2.0/output/db/item_db_zh.sqlite"
+    db1_path = "/Users/gg/Documents/tmp/1.7.5.sqlite"
+    db2_path = "/Users/gg/Documents/tmp/1.8.sqlite"
     
     print("[+] SQLite字段级差异对比工具 (类似git diff)")
     print("=" * 60)

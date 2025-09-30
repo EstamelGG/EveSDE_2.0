@@ -3,6 +3,10 @@
 """
 代理人处理器模块
 处理EVE代理人数据并存储到数据库
+
+注意：从SDE Build 3031812开始，agents和researchAgents已合并到npcCharacters中
+新数据结构中，只有包含agent字段的行才是真正的代理人
+agent字段包含agentTypeID、divisionID、isLocator、level等信息
 """
 
 import json
@@ -31,14 +35,19 @@ class AgentsProcessor:
         """加载代理人数据"""
         print("[+] 加载代理人数据...")
         
-        # 加载agents数据
-        agents_file = self.sde_input_path / "agents.jsonl"
-        if agents_file.exists():
-            agents_list = jsonl_loader.load_jsonl(str(agents_file))
-            self.agents_data = {item['_key']: item for item in agents_list}
-            print(f"[+] 加载了 {len(self.agents_data)} 个代理人")
+        # 加载npcCharacters数据（新版本合并了agents和researchAgents）
+        # 新数据结构中，只有包含agent字段的行才是真正的代理人
+        npc_characters_file = self.sde_input_path / "npcCharacters.jsonl"
+        if npc_characters_file.exists():
+            npc_characters_list = jsonl_loader.load_jsonl(str(npc_characters_file))
+            self.agents_data = {item['_key']: item for item in npc_characters_list}
+            print(f"[+] 加载了 {len(self.agents_data)} 个NPC角色")
+            
+            # 统计真正的代理人数量
+            agent_count = sum(1 for item in self.agents_data.values() if 'agent' in item)
+            print(f"[+] 其中包含 {agent_count} 个真正的代理人（有agent字段）")
         else:
-            print(f"[x] 代理人文件不存在: {agents_file}")
+            print(f"[x] NPC角色文件不存在: {npc_characters_file}")
         
         # 加载agentsInSpace数据
         agents_in_space_file = self.sde_input_path / "agentsInSpace.jsonl"
@@ -49,14 +58,8 @@ class AgentsProcessor:
         else:
             print(f"[x] 太空代理人文件不存在: {agents_in_space_file}")
         
-        # 加载researchAgents数据
-        research_agents_file = self.sde_input_path / "researchAgents.jsonl"
-        if research_agents_file.exists():
-            research_agents_list = jsonl_loader.load_jsonl(str(research_agents_file))
-            self.research_agents_data = {item['_key']: item for item in research_agents_list}
-            print(f"[+] 加载了 {len(self.research_agents_data)} 个研究代理人")
-        else:
-            print(f"[x] 研究代理人文件不存在: {research_agents_file}")
+        # 清空research_agents_data，因为已经合并到npcCharacters中
+        self.research_agents_data = {}
     
     def create_agents_table(self, cursor: sqlite3.Cursor):
         """创建agents表"""
@@ -96,20 +99,32 @@ class AgentsProcessor:
         
         # 处理每个代理
         for agent_id, agent_data in self.agents_data.items():
-            # 获取代理数据
-            agent_type = agent_data.get('agentTypeID')
+            # 只处理包含agent字段的行（真正的代理人）
+            if 'agent' not in agent_data:
+                continue
+            
+            # 从agent字段获取代理人信息
+            agent_info = agent_data['agent']
+            agent_type = agent_info.get('agentTypeID')
+            division_id = agent_info.get('divisionID')
+            is_locator = 1 if agent_info.get('isLocator', False) else 0
+            level = agent_info.get('level')
+            
+            # 从主对象获取其他信息
             corporation_id = agent_data.get('corporationID')
-            division_id = agent_data.get('divisionID')
-            is_locator = 1 if agent_data.get('isLocator', False) else 0
-            level = agent_data.get('level')
             location_id = agent_data.get('locationID')
+            
+            # 获取多语言名称
+            agent_name = None
+            if 'name' in agent_data and isinstance(agent_data['name'], dict):
+                agent_name = agent_data['name'].get(lang, agent_data['name'].get('en', None))
             
             # 如果代理在太空中，获取其太阳系ID，否则为NULL
             solar_system_id = agents_solar_systems.get(agent_id)
             
             agents_batch.append((
                 agent_id, agent_type, corporation_id, division_id,
-                is_locator, level, location_id, solar_system_id, None  # agent_name初始为NULL
+                is_locator, level, location_id, solar_system_id, agent_name
             ))
             
             # 批量插入
@@ -134,7 +149,7 @@ class AgentsProcessor:
         # 统计信息
         cursor.execute('SELECT COUNT(*) FROM agents')
         agents_count = cursor.fetchone()[0]
-        print(f"[+] 代理人数据处理完成: {agents_count} 个")
+        print(f"[+] 代理人数据处理完成: {agents_count} 个代理人")
     
     def process_agents_data(self, cursor: sqlite3.Cursor, lang: str = 'en'):
         """

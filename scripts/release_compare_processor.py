@@ -167,6 +167,18 @@ class ReleaseCompareProcessor:
                                 self.log(f"    {item.name}")
                             elif item.is_dir():
                                 self.log(f"    [目录] {item.name}")
+                                # 列出子目录内容
+                                try:
+                                    sub_items = list(item.iterdir())
+                                    for sub_item in sub_items[:5]:  # 只显示前5个
+                                        if sub_item.is_file():
+                                            self.log(f"      {sub_item.name}")
+                                        elif sub_item.is_dir():
+                                            self.log(f"      [子目录] {sub_item.name}")
+                                    if len(sub_items) > 5:
+                                        self.log(f"      ... 还有 {len(sub_items) - 5} 个文件/目录")
+                                except Exception as e:
+                                    self.log(f"      [无法列出子目录内容: {e}]")
                     else:
                         self.log("    [空目录]")
                         
@@ -285,7 +297,8 @@ class ReleaseCompareProcessor:
                 
                 # 当前版本数据库
                 current_db = self.output_sde_path / "db" / f"item_db_{lang}.sqlite"
-                old_db = self.temp_dir / "sde_old" / f"item_db_{lang}.sqlite"
+                # 旧版本数据库：GitHub Actions压缩时是平铺结构，文件直接在sde_old根目录
+                old_db = self.temp_dir / "sde_old" / "db" / f"item_db_{lang}.sqlite"
                 
                 if not current_db.exists():
                     self.log(f"[!] 当前版本数据库不存在: {current_db}")
@@ -325,14 +338,15 @@ class ReleaseCompareProcessor:
             self.log(f"[x] 比较数据库失败: {e}")
             return False
     
-    def compare_maps(self) -> bool:
-        """比较地图文件差异"""
+    def compare_json(self) -> bool:
+        """比较地图文件和本地化文件差异"""
         try:
             self.log("[+] 开始比较地图文件...")
             
             # 当前版本地图目录
             current_maps_path = self.output_sde_path / "maps"
-            old_maps_path = self.temp_dir / "sde_old"
+            # 旧版本地图目录：GitHub Actions压缩时是平铺结构，文件在sde_old/maps目录
+            old_maps_path = self.temp_dir / "sde_old" / "maps"
             
             if not current_maps_path.exists():
                 self.log("[!] 当前版本地图目录不存在")
@@ -340,6 +354,9 @@ class ReleaseCompareProcessor:
             
             # 地图文件列表
             map_files = ['regions_data.json', 'systems_data.json', 'neighbors_data.json']
+            
+            # 本地化文件列表
+            localization_files = ['accountingentrytypes_localized.json']
             
             for map_file in map_files:
                 self.log(f"[+] 比较 {map_file}...")
@@ -384,10 +401,59 @@ class ReleaseCompareProcessor:
                 except Exception as e:
                     self.log(f"[!] 比较 {map_file} 失败: {e}")
             
+            # 比较本地化文件
+            self.log("[+] 开始比较本地化文件...")
+            current_localization_path = self.output_sde_path / "localization"
+            old_localization_path = self.temp_dir / "sde_old" / "localization"
+            
+            for localization_file in localization_files:
+                self.log(f"[+] 比较 {localization_file}...")
+                
+                current_file = current_localization_path / localization_file
+                old_file = old_localization_path / localization_file
+                
+                if not current_file.exists():
+                    self.log(f"[!] 当前版本文件不存在: {current_file}")
+                    continue
+                
+                if not old_file.exists():
+                    self.log(f"[!] 旧版本文件不存在: {old_file}")
+                    continue
+                
+                # 读取文件内容
+                try:
+                    with open(current_file, 'r', encoding='utf-8') as f:
+                        current_content = f.readlines()
+                    
+                    with open(old_file, 'r', encoding='utf-8') as f:
+                        old_content = f.readlines()
+                    
+                    # 使用difflib比较
+                    diff = difflib.unified_diff(
+                        old_content,
+                        current_content,
+                        fromfile=str(old_file),
+                        tofile=str(current_file),
+                        lineterm=''
+                    )
+                    
+                    diff_lines = list(diff)
+                    if diff_lines:
+                        self.log(f"[+] {localization_file} 差异:")
+                        for line in diff_lines[:50]:  # 只显示前50行差异
+                            self.log(f"    {line}")
+                        if len(diff_lines) > 50:
+                            self.log(f"    ... (还有 {len(diff_lines) - 50} 行差异)")
+                    else:
+                        self.log(f"[+] {localization_file} 无差异")
+                        
+                except Exception as e:
+                    self.log(f"[!] 比较 {localization_file} 失败: {e}")
+            
             return True
             
         except Exception as e:
-            self.log(f"[x] 比较地图文件失败: {e}")
+            self.log(f"[x] 比较地图和本地化文件失败: {e}")
             return False
     
     def process_release_compare(self) -> bool:
@@ -418,8 +484,8 @@ class ReleaseCompareProcessor:
             # 4. 比较数据库文件
             self.compare_databases()
             
-            # 5. 比较地图文件
-            self.compare_maps()
+            # 5. 比较地图和本地化文件
+            self.compare_json()
             
             self.log("=" * 60)
             self.log(f"[+] Release比较完成 - Build {self.build_number}")
