@@ -347,8 +347,8 @@ class SQLiteComparator:
 def main():
     """主函数"""
     # 硬编码的数据库路径
-    db1_path = "/Users/gg/Documents/GitHub/EveSDE_2.0/output/db/item_db_zh.sqlite"
-    db2_path = "/Users/gg/Documents/GitHub/EveSDE/output/db/item_db_zh.sqlite"
+    db1_path = "/Users/gg/Documents/tmp/1.7.5.sqlite"
+    db2_path = "/Users/gg/Documents/tmp/1.8.1.sqlite"
     
     print("[+] SQLite数据库对比工具 (基于sqldiff思想)")
     print("=" * 50)

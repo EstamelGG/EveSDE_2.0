@@ -167,6 +167,18 @@ class ReleaseCompareProcessor:
                                 self.log(f"    {item.name}")
                             elif item.is_dir():
                                 self.log(f"    [目录] {item.name}")
+                                # 列出子目录内容
+                                try:
+                                    sub_items = list(item.iterdir())
+                                    for sub_item in sub_items[:5]:  # 只显示前5个
+                                        if sub_item.is_file():
+                                            self.log(f"      {sub_item.name}")
+                                        elif sub_item.is_dir():
+                                            self.log(f"      [子目录] {sub_item.name}")
+                                    if len(sub_items) > 5:
+                                        self.log(f"      ... 还有 {len(sub_items) - 5} 个文件/目录")
+                                except Exception as e:
+                                    self.log(f"      [无法列出子目录内容: {e}]")
                     else:
                         self.log("    [空目录]")
                         
@@ -285,7 +297,8 @@ class ReleaseCompareProcessor:
                 
                 # 当前版本数据库
                 current_db = self.output_sde_path / "db" / f"item_db_{lang}.sqlite"
-                old_db = self.temp_dir / "sde_old" / f"item_db_{lang}.sqlite"
+                # 旧版本数据库：GitHub Actions压缩时是平铺结构，文件直接在sde_old根目录
+                old_db = self.temp_dir / "sde_old" / "db" / f"item_db_{lang}.sqlite"
                 
                 if not current_db.exists():
                     self.log(f"[!] 当前版本数据库不存在: {current_db}")
@@ -332,7 +345,8 @@ class ReleaseCompareProcessor:
             
             # 当前版本地图目录
             current_maps_path = self.output_sde_path / "maps"
-            old_maps_path = self.temp_dir / "sde_old"
+            # 旧版本地图目录：GitHub Actions压缩时是平铺结构，文件在sde_old/maps目录
+            old_maps_path = self.temp_dir / "sde_old" / "maps"
             
             if not current_maps_path.exists():
                 self.log("[!] 当前版本地图目录不存在")

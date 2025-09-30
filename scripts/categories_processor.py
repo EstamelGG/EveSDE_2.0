@@ -121,7 +121,7 @@ class CategoriesProcessor:
             
             elif icon_source.startswith("type_"):
                 # 从output/icons目录复制
-                source_path = self.project_root / "output" / "icons" / icon_source
+                source_path = self.project_root / "output_icons" / icon_source
                 if source_path.exists():
                     import shutil
                     shutil.copy2(source_path, target_path)

@@ -177,8 +177,10 @@ class DogmaAttributesProcessor:
         
         processed_count = 0
         for key, attr_data in attributes_data.items():
-            attribute_id = attr_data.get('attributeID')
-            category_id = attr_data.get('categoryID', 0)
+            # 新版本：attributeID字段已移除，使用_key作为attribute_id
+            attribute_id = key  # 使用_key作为attribute_id
+            # 新版本：categoryID重命名为attributeCategoryID
+            category_id = attr_data.get('attributeCategoryID', attr_data.get('categoryID', 0))
             name = attr_data.get('name', None)
             
             # 多语言字段处理

@@ -77,13 +77,15 @@ class DogmaEffectsProcessor:
         
         for effect_id, effect_data in self.dogma_effects_data.items():
             # 获取基本字段
-            effect_name = effect_data.get('effectName', None)
+            # 新版本：effectName重命名为name
+            effect_name = effect_data.get('name', effect_data.get('effectName', None))
             
             # 效果分类特殊处理
             if effect_name == "online":  # 打补丁修复
                 effect_category = 4
             else:
-                effect_category = effect_data.get('effectCategory', None)
+                # 新版本：effectCategory重命名为effectCategoryID
+                effect_category = effect_data.get('effectCategoryID', effect_data.get('effectCategory', None))
             
             published = effect_data.get('published', False)
             is_assistance = effect_data.get('isAssistance', False)
