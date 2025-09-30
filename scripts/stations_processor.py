@@ -108,9 +108,12 @@ class StationsProcessor:
                 operation_name = operation_names.get(lang, operation_names.get('en', ''))
             
             # 组合名称
-            if system_name and celestial_roman and corp_name:
-                # 第一部分：星系名 + 天体罗马数字
-                part1 = f"{system_name} {celestial_roman}"
+            if system_name and corp_name:
+                # 第一部分：星系名 + 天体罗马数字（如果存在且不为0）
+                if celestial_index and celestial_index > 0:
+                    part1 = f"{system_name} {celestial_roman}"
+                else:
+                    part1 = system_name
                 
                 # 第二部分：卫星部分（如果有轨道索引）
                 if orbit_index > 0:
