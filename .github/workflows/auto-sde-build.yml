@@ -9,8 +9,8 @@ on:
         default: false
         type: boolean
   schedule:
-    # 北京时间每天下午7点10分执行 (UTC时间11:10)
-    - cron: '10 11 * * *'
+    # 每小时检查一次
+    - cron: '0 * * * *'
 
 concurrency:
   group: ${{ github.workflow }}
