@@ -2,6 +2,12 @@ name: Auto SDE Build and Release
 
 on:
   workflow_dispatch:
+    inputs:
+      build_patch:
+        description: '构建补丁包（即使已存在相同buildNumber的release也重新构建）'
+        required: false
+        default: false
+        type: boolean
   schedule:
     # 北京时间每天下午7点10分执行 (UTC时间11:10)
     - cron: '10 11 * * *'
@@ -20,6 +26,8 @@ jobs:
       release-date: ${{ steps.get-build-info.outputs.release-date }}
       build-key: ${{ steps.get-build-info.outputs.build-key }}
       new-build: ${{ steps.get-build-info.outputs.new-build }}
+      patch-version: ${{ steps.get-build-info.outputs.patch-version }}
+      final-build-number: ${{ steps.get-build-info.outputs.final-build-number }}
     
     steps:
     - name: 获取SDE版本信息并检查重复
@@ -38,19 +46,72 @@ jobs:
         echo "Release date: ${RELEASE_DATE}"
         echo "Build key: ${BUILD_KEY}"
         
-        # 检查Release是否已存在
+        # 检查是否为补丁包构建
+        BUILD_PATCH="${{ github.event.inputs.build_patch }}"
+        echo "Build patch mode: ${BUILD_PATCH}"
+        
+        # 首先检查原始buildNumber的release是否已存在
         TAG_NAME="sde-build-${BUILD_NUMBER}"
         echo "[+] 检查Release是否已存在: ${TAG_NAME}"
         
         RELEASE_EXISTS=$(curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -s \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r '.id')
         
-        if [ "$RELEASE_EXISTS" != "null" ] && [ -n "$RELEASE_EXISTS" ]; then
-          echo "Release ${TAG_NAME} 已存在，跳过构建"
-          NEW_BUILD="false"
+        if [ "$BUILD_PATCH" = "true" ]; then
+          echo "[+] 补丁包模式：强制重新构建"
+          
+          if [ "$RELEASE_EXISTS" != "null" ] && [ -n "$RELEASE_EXISTS" ]; then
+            echo "[+] 原始版本已存在，查找下一个可用的补丁版本号"
+            
+            # 查找已存在的补丁版本
+            PATCH_VERSION=1
+            FINAL_BUILD_NUMBER="${BUILD_NUMBER}.01"
+            
+            # 检查补丁版本直到找到可用的版本号（最多99次）
+            while [ $PATCH_VERSION -le 99 ]; do
+              PATCH_STR=$(printf "%02d" $PATCH_VERSION)
+              TAG_NAME="sde-build-${BUILD_NUMBER}.${PATCH_STR}"
+              
+              echo "[+] 检查补丁版本: ${TAG_NAME}"
+              RELEASE_EXISTS=$(curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -s \
+                "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r '.id')
+              
+              if [ "$RELEASE_EXISTS" = "null" ] || [ -z "$RELEASE_EXISTS" ]; then
+                echo "[+] 找到可用的补丁版本: ${TAG_NAME}"
+                FINAL_BUILD_NUMBER="${BUILD_NUMBER}.${PATCH_STR}"
+                NEW_BUILD="true"
+                break
+              else
+                echo "补丁版本 ${TAG_NAME} 已存在，尝试下一个"
+                PATCH_VERSION=$((PATCH_VERSION + 1))
+              fi
+            done
+            
+            if [ $PATCH_VERSION -gt 99 ]; then
+              echo "[x] 错误：已达到补丁版本上限（99），无法创建新的补丁包"
+              exit 1
+            fi
+          else
+            echo "[+] 原始版本不存在，直接使用原始buildNumber"
+            FINAL_BUILD_NUMBER="${BUILD_NUMBER}"
+            PATCH_VERSION=0
+            NEW_BUILD="true"
+          fi
+          
+          echo "patch-version=${PATCH_VERSION}" >> $GITHUB_OUTPUT
+          echo "final-build-number=${FINAL_BUILD_NUMBER}" >> $GITHUB_OUTPUT
         else
-          echo "新版本 ${TAG_NAME} 需要构建"
-          NEW_BUILD="true"
+          # 正常模式：检查Release是否已存在
+          if [ "$RELEASE_EXISTS" != "null" ] && [ -n "$RELEASE_EXISTS" ]; then
+            echo "Release ${TAG_NAME} 已存在，跳过构建"
+            NEW_BUILD="false"
+          else
+            echo "新版本 ${TAG_NAME} 需要构建"
+            NEW_BUILD="true"
+          fi
+          
+          echo "patch-version=0" >> $GITHUB_OUTPUT
+          echo "final-build-number=${BUILD_NUMBER}" >> $GITHUB_OUTPUT
         fi
         
         echo "build-number=${BUILD_NUMBER}" >> $GITHUB_OUTPUT
@@ -87,11 +148,11 @@ jobs:
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
       with:
-        name: sde-output-${{ needs.get-build-info.outputs.build-number }}
+        name: sde-output-${{ needs.get-build-info.outputs.final-build-number }}
         path: |
           output_sde/
           output_icons/
-          release_compare_${{ needs.get-build-info.outputs.build-number }}.log
+          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.log
         retention-days: 30
 
   create-release:
@@ -108,12 +169,12 @@ jobs:
     - name: 下载构建产物
       uses: actions/download-artifact@v4
       with:
-        name: sde-output-${{ needs.get-build-info.outputs.build-number }}
+        name: sde-output-${{ needs.get-build-info.outputs.final-build-number }}
         path: ./
     
     - name: 创建压缩包
       run: |
-        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         
         # 创建图标压缩包（从output_icons/icons.zip复制）
         if [ -f "output_icons/icons.zip" ]; then
@@ -174,13 +235,13 @@ jobs:
         echo "[+] SDE数据压缩包SHA256: $SDE_SHA256"
         
         # 验证release比较日志文件（可选）
-        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
-        if [ -f "release_compare_${BUILD_NUMBER}.log" ]; then
-          LOG_SIZE=$(stat -c%s "release_compare_${BUILD_NUMBER}.log")
-          LOG_HASH=$(sha256sum "release_compare_${BUILD_NUMBER}.log" | cut -d' ' -f1)
-          echo "[+] release_compare_${BUILD_NUMBER}.log - 大小: ${LOG_SIZE} bytes, SHA256: ${LOG_HASH}"
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        if [ -f "release_compare_${FINAL_BUILD_NUMBER}.log" ]; then
+          LOG_SIZE=$(stat -c%s "release_compare_${FINAL_BUILD_NUMBER}.log")
+          LOG_HASH=$(sha256sum "release_compare_${FINAL_BUILD_NUMBER}.log" | cut -d' ' -f1)
+          echo "[+] release_compare_${FINAL_BUILD_NUMBER}.log - 大小: ${LOG_SIZE} bytes, SHA256: ${LOG_HASH}"
         else
-          echo "[!] release_compare_${BUILD_NUMBER}.log 不存在（首次构建或比较失败）"
+          echo "[!] release_compare_${FINAL_BUILD_NUMBER}.log 不存在（首次构建或比较失败）"
         fi
         
         # 验证压缩包完整性
@@ -224,9 +285,9 @@ jobs:
         files: |
           icons.zip
           sde.zip
-          release_compare_${{ needs.get-build-info.outputs.build-number }}.log
-        tag_name: sde-build-${{ needs.get-build-info.outputs.build-number }}
-        name: EVE SDE Build ${{ needs.get-build-info.outputs.build-number }}
+          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.log
+        tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
+        name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}
         draft: false
         prerelease: false
         fail_on_unmatched_files: false
@@ -243,14 +304,18 @@ jobs:
     steps:
     - name: 构建状态通知
       run: |
-        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         
         if [ "${{ needs.build-sde.result }}" == "success" ] && [ "${{ needs.create-release.result }}" == "success" ]; then
           echo "[+] SDE构建成功完成"
-          echo "Build Number: $BUILD_NUMBER"
-          echo "Release: https://github.com/${GITHUB_REPOSITORY}/releases/tag/sde-build-$BUILD_NUMBER"
+          echo "Final Build Number: $FINAL_BUILD_NUMBER"
+          if [ "$PATCH_VERSION" != "0" ]; then
+            echo "Patch Version: $PATCH_VERSION"
+          fi
+          echo "Release: https://github.com/${GITHUB_REPOSITORY}/releases/tag/sde-build-$FINAL_BUILD_NUMBER"
         else
           echo "[x] SDE构建失败"
-          echo "Build Number: $BUILD_NUMBER"
+          echo "Final Build Number: $FINAL_BUILD_NUMBER"
           echo "请检查GitHub Actions日志"
         fi
