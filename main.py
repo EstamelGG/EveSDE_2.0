@@ -365,8 +365,19 @@ def main():
     current_build_number = latest_sde_info['build_number']
     current_release_date = latest_sde_info['release_date']
     
-    print(f"[+] 当前最新SDE版本: {current_build_number}")
-    print(f"[+] 发布时间: {current_release_date}")
+    # 检查是否有环境变量指定的最终build number（用于补丁包）
+    final_build_number = os.environ.get('FINAL_BUILD_NUMBER')
+    patch_version = os.environ.get('PATCH_VERSION', '0')
+    
+    if final_build_number:
+        print(f"[+] 当前最新SDE版本: {current_build_number}")
+        print(f"[+] 最终构建版本: {final_build_number}")
+        print(f"[+] 补丁版本: {patch_version}")
+        # 使用最终的build number进行后续处理
+        current_build_number = final_build_number
+    else:
+        print(f"[+] 当前最新SDE版本: {current_build_number}")
+        print(f"[+] 发布时间: {current_release_date}")
     
     # 检查是否需要强制重建
     if not args.force_rebuild:

@@ -143,6 +143,14 @@ jobs:
     - name: 执行SDE构建
       run: |
         echo "[+] 执行SDE构建"
+        echo "[+] Build Number: ${{ needs.get-build-info.outputs.build-number }}"
+        echo "[+] Final Build Number: ${{ needs.get-build-info.outputs.final-build-number }}"
+        echo "[+] Patch Version: ${{ needs.get-build-info.outputs.patch-version }}"
+        
+        # 设置环境变量，让main.py知道最终的build number
+        export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        export PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        
         python main.py
         
     - name: 上传构建产物
@@ -191,7 +199,7 @@ jobs:
         cd ..
         
         echo "[+] SDE数据压缩包创建完成: sde.zip"
-        ls -la icons.zip sde.zip release_compare_${BUILD_NUMBER}.log 2>/dev/null || ls -la icons.zip sde.zip
+        ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.log 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
       run: |
