@@ -29,6 +29,7 @@ class VersionInfoProcessor:
             CREATE TABLE IF NOT EXISTS version_info (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 build_number INTEGER NOT NULL,
+                patch_number INTEGER DEFAULT 0,
                 release_date TEXT,
                 build_key TEXT,
                 description TEXT DEFAULT 'EVE SDE Database Version Information'
@@ -37,21 +38,39 @@ class VersionInfoProcessor:
         
         print("[+] 创建version_info表")
     
-    def insert_version_info(self, cursor: sqlite3.Cursor, build_number: int, release_date: str = None, build_key: str = None):
+    def insert_version_info(self, cursor: sqlite3.Cursor, build_number, release_date: str = None, build_key: str = None):
         """
         插入版本信息到数据库
+        支持格式：
+        - 纯数字：2615149 -> build_number=2615149, patch_number=0
+        - 带补丁：2615149.01 -> build_number=2615149, patch_number=1
         """
         # 先清空现有版本信息（只保留最新的）
         cursor.execute('DELETE FROM version_info')
         
-        cursor.execute('''
-            INSERT INTO version_info (build_number, release_date, build_key)
-            VALUES (?, ?, ?)
-        ''', (build_number, release_date, build_key))
+        # 解析build_number和patch_number
+        build_number_str = str(build_number)
+        if '.' in build_number_str:
+            # 格式：2615149.01
+            base_number, patch_str = build_number_str.split('.', 1)
+            base_number = int(base_number)
+            patch_number = int(patch_str)
+        else:
+            # 格式：2615149
+            base_number = int(build_number_str)
+            patch_number = 0
         
-        print(f"[+] 插入版本信息: build_number={build_number}, release_date={release_date}")
+        cursor.execute('''
+            INSERT INTO version_info (build_number, patch_number, release_date, build_key)
+            VALUES (?, ?, ?, ?)
+        ''', (base_number, patch_number, release_date, build_key))
+        
+        if patch_number > 0:
+            print(f"[+] 插入版本信息: build_number={base_number}, patch_number={patch_number}, release_date={release_date}")
+        else:
+            print(f"[+] 插入版本信息: build_number={base_number}, release_date={release_date}")
     
-    def process_version_info_for_language(self, language: str, build_number: int, release_date: str = None, build_key: str = None) -> bool:
+    def process_version_info_for_language(self, language: str, build_number, release_date: str = None, build_key: str = None) -> bool:
         """
         为指定语言处理版本信息
         """
@@ -87,7 +106,7 @@ class VersionInfoProcessor:
             if 'conn' in locals():
                 conn.close()
     
-    def process_all_languages(self, build_number: int, release_date: str = None, build_key: str = None) -> bool:
+    def process_all_languages(self, build_number, release_date: str = None, build_key: str = None) -> bool:
         """
         为所有语言处理版本信息
         """
