@@ -17,7 +17,7 @@ from datetime import datetime
 # 导入SDE处理模块
 import scripts.sde_downloader as sde_downloader
 import scripts.jsonl_loader as jsonl_loader
-import scripts.icons_downloader as icons_downloader
+import scripts.icon_builder_wrapper as icon_builder_wrapper
 import scripts.icon_fetcher as icon_fetcher
 import scripts.dynamic_items_updater as dynamic_items_updater
 import scripts.universe_processor as universe_processor
@@ -139,8 +139,7 @@ def check_network_connectivity():
         "https://binaries.eveonline.com/eveclient_TQ.json",
         "https://evemaps.dotlan.net/svg/New_Eden.svg",
         "https://jambeeno.com/jo.txt",
-        "https://esi.evetech.net/status",
-        "https://newedenencyclopedia.net/dev_resource/icons_dedup.zip"
+        "https://esi.evetech.net/status"
     ]
     
     failed_urls = []
@@ -153,12 +152,6 @@ def check_network_connectivity():
     for url in test_urls:
         try:
             print(f"[+] 检查URL: {url}")
-            
-            # 对newedenencyclopedia.net使用无代理连接
-            if "newedenencyclopedia.net" in url:
-                session.proxies = {'http': None, 'https': None}
-            else:
-                session.proxies = {}  # 使用默认代理设置
             
             # 使用HEAD请求检查URL可访问性
             response = session.head(url, allow_redirects=True)
@@ -439,8 +432,8 @@ def main():
     
     print("[+] SDE数据准备完成，继续后续处理...")
     
-    # 执行图标包下载
-    safe_execute_processor(icons_downloader.main, "图标包下载", config)
+    # 执行图标构造（使用eve_icon_builder）
+    safe_execute_processor(icon_builder_wrapper.main, "图标构造", config)
     
     # 执行图标获取
     safe_execute_processor(icon_fetcher.main, "图标获取", config)

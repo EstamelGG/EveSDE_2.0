@@ -11,8 +11,7 @@
   },
   "urls": {
     "sde_update": "https://developers.eveonline.com/static-data/tranquility/latest.jsonl",
-    "sde_download_template": "https://developers.eveonline.com/static-data/tranquility/eve-online-static-data-{build_number}-jsonl.zip",
-    "icons_zip": "https://newedenencyclopedia.net/dev_resource/icons_dedup.zip"
+    "sde_download_template": "https://developers.eveonline.com/static-data/tranquility/eve-online-static-data-{build_number}-jsonl.zip"
   },
   "languages": ["en", "zh"],
   "github_repo": "estamelgg/EveSDE_2.0"
