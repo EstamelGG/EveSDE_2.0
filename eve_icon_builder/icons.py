@@ -207,7 +207,7 @@ def build_icon_export(output_mode: str, skip_output_if_fresh: bool, data: IconBu
             continue
         
         # 如果设置了跳过SKIN，则跳过SKIN类型（category_id == 91）
-        if skip_skins and category_id in [91, 2118]:
+        if skip_skins and category_id in [91, 30, 2118]:
             continue
         
         processable_types.append((type_id, type_info, category_id))
