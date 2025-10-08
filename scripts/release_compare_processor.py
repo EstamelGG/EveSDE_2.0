@@ -31,8 +31,8 @@ class ReleaseCompareProcessor:
         self.tools_path = self.project_root / "tools"
         self.languages = config.get("languages", ["en", "zh"])
         
-        # 创建比较日志文件（输出到项目根目录）
-        self.compare_log_path = self.project_root / f"release_compare_{build_number}.log"
+        # 创建比较Markdown文件（输出到项目根目录）
+        self.compare_md_path = self.project_root / f"release_compare_{build_number}.md"
         
         # 临时目录用于下载和解压旧版本
         self.temp_dir = None
@@ -47,24 +47,17 @@ class ReleaseCompareProcessor:
         if self.temp_dir and self.temp_dir.exists():
             shutil.rmtree(self.temp_dir)
     
-    def log(self, message: str):
-        """记录日志到文件和控制台"""
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_message = f"[{timestamp}] {message}"
-        print(log_message)
-        
-        with open(self.compare_log_path, 'a', encoding='utf-8') as f:
-            f.write(log_message + '\n')
+    def write_md(self, content: str):
+        """直接写入Markdown内容"""
+        with open(self.compare_md_path, 'a', encoding='utf-8') as f:
+            f.write(content)
     
     def get_latest_release_info(self) -> Optional[Dict[str, Any]]:
         """获取最新Release信息"""
         try:
-            self.log("[+] 获取最新Release信息...")
-            
             # 获取仓库信息
             github_repo = self.config.get('github_repo', '')
             if not github_repo:
-                self.log("[!] 未配置GitHub仓库信息，跳过Release比较")
                 return None
             
             # 构建API URL
@@ -76,32 +69,22 @@ class ReleaseCompareProcessor:
                 'User-Agent': 'EVE-SDE-Processor'
             }
             
-            self.log("[+] 使用公开仓库访问，无需认证")
-            
             response = requests.get(repo_url, headers=headers, timeout=30)
             response.raise_for_status()
             
             release_info = response.json()
-            self.log(f"[+] 最新Release: {release_info.get('tag_name', 'Unknown')}")
-            self.log(f"[+] 发布时间: {release_info.get('published_at', 'Unknown')}")
-            
             return release_info
             
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 404:
-                self.log("[!] 未找到任何Release，跳过比较")
-            else:
-                self.log(f"[!] HTTP错误: {e}")
+                pass  # 未找到任何Release
             return None
         except Exception as e:
-            self.log(f"[!] 获取最新Release信息失败: {e}")
             return None
     
     def download_release_assets(self, release_info: Dict[str, Any]) -> bool:
         """下载Release资源文件"""
         try:
-            self.log("[+] 开始下载Release资源文件...")
-            
             assets = release_info.get('assets', [])
             downloaded_files = {}
             
@@ -110,8 +93,6 @@ class ReleaseCompareProcessor:
                 download_url = asset.get('browser_download_url', '')
                 
                 if asset_name in ['icons.zip', 'sde.zip']:
-                    self.log(f"[+] 下载 {asset_name}...")
-                    
                     # 准备请求头
                     headers = {
                         'Accept': 'application/octet-stream',
@@ -126,7 +107,6 @@ class ReleaseCompareProcessor:
                         f.write(response.content)
                     
                     downloaded_files[asset_name] = file_path
-                    self.log(f"[+] {asset_name} 下载完成: {file_path.stat().st_size} bytes")
             
             # 解压sde.zip
             if 'sde.zip' in downloaded_files:
@@ -134,83 +114,34 @@ class ReleaseCompareProcessor:
                 sde_extract_path = self.temp_dir / "sde_old"
                 sde_extract_path.mkdir()
                 
-                self.log(f"[+] 开始解压SDE数据: {sde_zip_path}")
-                self.log(f"[+] 解压到目录: {sde_extract_path}")
-                
-                # 检查ZIP文件是否存在和大小
-                if sde_zip_path.exists():
-                    zip_size = sde_zip_path.stat().st_size
-                    self.log(f"[+] ZIP文件大小: {zip_size} bytes")
-                else:
-                    self.log("[!] ZIP文件不存在")
-                    return False
-                
                 try:
                     # 使用zipfile处理ZIP格式的文件
                     with zipfile.ZipFile(sde_zip_path, 'r') as zip_ref:
-                        file_list = zip_ref.namelist()
-                        self.log(f"[+] ZIP文件包含 {len(file_list)} 个文件")
-                        self.log("[+] ZIP文件内容（前10个）:")
-                        for i, filename in enumerate(file_list[:10]):
-                            self.log(f"    {filename}")
-                        
                         zip_ref.extractall(sde_extract_path)
-                    
-                    self.log(f"[+] SDE数据解压完成: {sde_extract_path}")
-                    
-                    # 调试：列出解压后的文件
-                    self.log("[+] 解压后的文件列表:")
-                    extracted_files = list(sde_extract_path.iterdir())
-                    if extracted_files:
-                        for item in extracted_files:
-                            if item.is_file():
-                                self.log(f"    {item.name}")
-                            elif item.is_dir():
-                                self.log(f"    [目录] {item.name}")
-                                # 列出子目录内容
-                                try:
-                                    sub_items = list(item.iterdir())
-                                    for sub_item in sub_items[:5]:  # 只显示前5个
-                                        if sub_item.is_file():
-                                            self.log(f"      {sub_item.name}")
-                                        elif sub_item.is_dir():
-                                            self.log(f"      [子目录] {sub_item.name}")
-                                    if len(sub_items) > 5:
-                                        self.log(f"      ... 还有 {len(sub_items) - 5} 个文件/目录")
-                                except Exception as e:
-                                    self.log(f"      [无法列出子目录内容: {e}]")
-                    else:
-                        self.log("    [空目录]")
                         
                 except Exception as e:
-                    self.log(f"[!] 解压失败: {e}")
                     return False
-            
-            # 保留icons.zip文件用于直接比较（不解压）
-            if 'icons.zip' in downloaded_files:
-                self.log("[+] 保留旧版本图标ZIP文件用于直接比较")
             
             return True
             
         except Exception as e:
-            self.log(f"[x] 下载Release资源失败: {e}")
             return False
     
     def compare_icons(self) -> bool:
         """比较图标文件差异（直接比较ZIP文件内容）"""
         try:
-            self.log("[+] 开始比较图标文件...")
+            self.write_md("## 图标文件比较\n\n")
             
             # 当前版本图标ZIP文件
             current_icons_zip = self.output_icons_path / "icons.zip"
             old_icons_zip = self.temp_dir / "icons.zip"
             
             if not current_icons_zip.exists():
-                self.log("[!] 当前版本图标ZIP文件不存在")
+                self.write_md("当前版本图标ZIP文件不存在\n\n")
                 return False
             
             if not old_icons_zip.exists():
-                self.log("[!] 旧版本图标ZIP文件不存在")
+                self.write_md("旧版本图标ZIP文件不存在\n\n")
                 return False
             
             # 读取ZIP文件内容列表
@@ -230,24 +161,27 @@ class ReleaseCompareProcessor:
             removed_files = old_files - current_files
             common_files = current_files & old_files
             
-            self.log(f"[+] 图标文件统计:")
-            self.log(f"    当前版本: {len(current_files)} 个文件")
-            self.log(f"    旧版本: {len(old_files)} 个文件")
-            self.log(f"    新增: {len(added_files)} 个文件")
-            self.log(f"    删除: {len(removed_files)} 个文件")
-            self.log(f"    共同: {len(common_files)} 个文件")
+            # 记录到Markdown
+            self.write_md(f"**文件统计**:\n")
+            self.write_md(f"- 当前版本: {len(current_files)} 个文件\n")
+            self.write_md(f"- 旧版本: {len(old_files)} 个文件\n")
+            self.write_md(f"- 新增: {len(added_files)} 个文件\n")
+            self.write_md(f"- 删除: {len(removed_files)} 个文件\n")
+            self.write_md(f"- 共同: {len(common_files)} 个文件\n\n")
             
             # 详细列出新增文件
             if added_files:
-                self.log(f"[+] 新增的图标文件:")
+                self.write_md(f"**新增文件** ({len(added_files)} 个):\n")
                 for file_name in sorted(added_files):
-                    self.log(f"    + {file_name}")
+                    self.write_md(f"- `{file_name}`\n")
+                self.write_md("\n")
             
             # 详细列出删除文件
             if removed_files:
-                self.log(f"[+] 删除的图标文件:")
+                self.write_md(f"**删除文件** ({len(removed_files)} 个):\n")
                 for file_name in sorted(removed_files):
-                    self.log(f"    - {file_name}")
+                    self.write_md(f"- `{file_name}`\n")
+                self.write_md("\n")
             
             # 检查文件大小变化（只检查前10个文件，避免输出过多）
             changed_files = []
@@ -268,32 +202,31 @@ class ReleaseCompareProcessor:
                     continue
             
             if changed_files:
-                self.log(f"[+] 内容变化的图标文件:")
+                self.write_md(f"**内容变化文件** ({len(changed_files)} 个):\n")
                 for file_name in changed_files:
-                    self.log(f"    ~ {file_name}")
+                    self.write_md(f"- `{file_name}`\n")
+                self.write_md("\n")
             
-            self.log("[+] 图标文件比较完成")
             return True
             
         except Exception as e:
-            self.log(f"[x] 比较图标文件失败: {e}")
             return False
     
     def compare_databases(self) -> bool:
         """比较数据库差异"""
         try:
-            self.log("[+] 开始比较数据库文件...")
+            self.write_md("## 数据库比较\n\n")
             
             sqldiff_path = self.tools_path / "sqldiff"
             if not sqldiff_path.exists():
-                self.log(f"[!] sqldiff工具不存在: {sqldiff_path}")
+                self.write_md("sqldiff工具不存在\n\n")
                 return False
             
             # 确保sqldiff有执行权限
             sqldiff_path.chmod(0o755)
             
             for lang in self.languages:
-                self.log(f"[+] 比较 {lang} 语言数据库...")
+                self.write_md(f"### {lang.upper()} 数据库\n\n")
                 
                 # 当前版本数据库
                 current_db = self.output_sde_path / "db" / f"item_db_{lang}.sqlite"
@@ -301,11 +234,11 @@ class ReleaseCompareProcessor:
                 old_db = self.temp_dir / "sde_old" / "db" / f"item_db_{lang}.sqlite"
                 
                 if not current_db.exists():
-                    self.log(f"[!] 当前版本数据库不存在: {current_db}")
+                    self.write_md(f"当前版本数据库不存在\n\n")
                     continue
                 
                 if not old_db.exists():
-                    self.log(f"[!] 旧版本数据库不存在: {old_db}")
+                    self.write_md(f"旧版本数据库不存在\n\n")
                     continue
                 
                 # 执行sqldiff比较
@@ -319,29 +252,30 @@ class ReleaseCompareProcessor:
                     
                     if result.returncode == 0:
                         if result.stdout.strip():
-                            self.log(f"[+] {lang} 数据库差异:")
+                            self.write_md("**数据库差异**:\n")
+                            self.write_md("```sql\n")
                             for line in result.stdout.strip().split('\n'):
-                                self.log(f"    {line}")
+                                self.write_md(f"{line}\n")
+                            self.write_md("```\n\n")
                         else:
-                            self.log(f"[+] {lang} 数据库无差异")
+                            self.write_md("数据库无差异\n\n")
                     else:
-                        self.log(f"[!] sqldiff执行失败: {result.stderr}")
+                        self.write_md(f"sqldiff执行失败: {result.stderr}\n\n")
                         
                 except subprocess.TimeoutExpired:
-                    self.log(f"[!] sqldiff执行超时")
+                    self.write_md(f"sqldiff执行超时\n\n")
                 except Exception as e:
-                    self.log(f"[!] sqldiff执行异常: {e}")
+                    self.write_md(f"sqldiff执行异常: {e}\n\n")
             
             return True
             
         except Exception as e:
-            self.log(f"[x] 比较数据库失败: {e}")
             return False
     
     def compare_json(self) -> bool:
         """比较地图文件和本地化文件差异"""
         try:
-            self.log("[+] 开始比较地图文件...")
+            self.write_md("## 地图和本地化文件比较\n\n")
             
             # 当前版本地图目录
             current_maps_path = self.output_sde_path / "maps"
@@ -349,7 +283,7 @@ class ReleaseCompareProcessor:
             old_maps_path = self.temp_dir / "sde_old" / "maps"
             
             if not current_maps_path.exists():
-                self.log("[!] 当前版本地图目录不存在")
+                self.write_md("当前版本地图目录不存在\n\n")
                 return False
             
             # 地图文件列表
@@ -359,17 +293,17 @@ class ReleaseCompareProcessor:
             localization_files = ['accountingentrytypes_localized.json']
             
             for map_file in map_files:
-                self.log(f"[+] 比较 {map_file}...")
+                self.write_md(f"### {map_file}\n\n")
                 
                 current_file = current_maps_path / map_file
                 old_file = old_maps_path / map_file
                 
                 if not current_file.exists():
-                    self.log(f"[!] 当前版本文件不存在: {current_file}")
+                    self.write_md("当前版本文件不存在\n\n")
                     continue
                 
                 if not old_file.exists():
-                    self.log(f"[!] 旧版本文件不存在: {old_file}")
+                    self.write_md("旧版本文件不存在\n\n")
                     continue
                 
                 # 读取文件内容
@@ -390,34 +324,36 @@ class ReleaseCompareProcessor:
                     ))
                     
                     if diff:
-                        self.log(f"[+] {map_file} 差异:")
+                        self.write_md("**文件差异**:\n")
+                        self.write_md("```diff\n")
                         for line in diff[:50]:  # 只显示前50行差异
-                            self.log(f"    {line}")
+                            self.write_md(f"{line}\n")
                         if len(diff) > 50:
-                            self.log(f"    ... (还有 {len(diff) - 50} 行差异)")
+                            self.write_md(f"... (还有 {len(diff) - 50} 行差异)\n")
+                        self.write_md("```\n\n")
                     else:
-                        self.log(f"[+] {map_file} 无差异")
+                        self.write_md("文件无差异\n\n")
                         
                 except Exception as e:
-                    self.log(f"[!] 比较 {map_file} 失败: {e}")
+                    self.write_md(f"比较失败: {e}\n\n")
             
             # 比较本地化文件
-            self.log("[+] 开始比较本地化文件...")
+            self.write_md("## 本地化文件比较\n\n")
             current_localization_path = self.output_sde_path / "localization"
             old_localization_path = self.temp_dir / "sde_old" / "localization"
             
             for localization_file in localization_files:
-                self.log(f"[+] 比较 {localization_file}...")
+                self.write_md(f"### {localization_file}\n\n")
                 
                 current_file = current_localization_path / localization_file
                 old_file = old_localization_path / localization_file
                 
                 if not current_file.exists():
-                    self.log(f"[!] 当前版本文件不存在: {current_file}")
+                    self.write_md("当前版本文件不存在\n\n")
                     continue
                 
                 if not old_file.exists():
-                    self.log(f"[!] 旧版本文件不存在: {old_file}")
+                    self.write_md("旧版本文件不存在\n\n")
                     continue
                 
                 # 读取文件内容
@@ -439,43 +375,49 @@ class ReleaseCompareProcessor:
                     
                     diff_lines = list(diff)
                     if diff_lines:
-                        self.log(f"[+] {localization_file} 差异:")
+                        self.write_md("**文件差异**:\n")
+                        self.write_md("```diff\n")
                         for line in diff_lines[:50]:  # 只显示前50行差异
-                            self.log(f"    {line}")
+                            self.write_md(f"{line}\n")
                         if len(diff_lines) > 50:
-                            self.log(f"    ... (还有 {len(diff_lines) - 50} 行差异)")
+                            self.write_md(f"... (还有 {len(diff_lines) - 50} 行差异)\n")
+                        self.write_md("```\n\n")
                     else:
-                        self.log(f"[+] {localization_file} 无差异")
+                        self.write_md("文件无差异\n\n")
                         
                 except Exception as e:
-                    self.log(f"[!] 比较 {localization_file} 失败: {e}")
+                    self.write_md(f"比较失败: {e}\n\n")
             
             return True
             
         except Exception as e:
-            self.log(f"[x] 比较地图和本地化文件失败: {e}")
             return False
     
     def process_release_compare(self) -> bool:
         """执行完整的Release比较流程"""
         try:
-            self.log("=" * 60)
-            self.log(f"[+] 开始Release比较 - Build {self.build_number}")
-            self.log("=" * 60)
+            # 初始化Markdown文件
+            with open(self.compare_md_path, 'w', encoding='utf-8') as f:
+                f.write(f"# EVE SDE Build {self.build_number} - 版本比较报告\n\n")
+                f.write(f"**构建时间**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
             
             # 1. 获取最新Release信息
             release_info = self.get_latest_release_info()
             if not release_info:
-                self.log("[!] 无法获取最新Release信息，跳过比较")
-                self.log("[!] 可能原因：")
-                self.log("    1. 这是第一个Release")
-                self.log("    2. 网络连接问题")
-                self.log("    3. GitHub API限制")
+                # 添加首次构建说明到Markdown
+                self.write_md("## 首次构建\n\n")
+                self.write_md("这是首次构建，无历史版本可比较。\n\n")
+                self.write_md("## 下载文件\n\n")
+                self.write_md("- **icons.zip**: 图标压缩包\n")
+                self.write_md("- **sde.zip**: SDE数据压缩包\n")
+                self.write_md("- **release_compare_*.log**: 详细比较日志\n")
+                
                 return False
             
             # 2. 下载Release资源
             if not self.download_release_assets(release_info):
-                self.log("[!] 下载Release资源失败，跳过比较")
+                self.write_md("## 下载失败\n\n")
+                self.write_md("下载Release资源失败，跳过比较\n\n")
                 return False
             
             # 3. 比较图标文件
@@ -487,14 +429,15 @@ class ReleaseCompareProcessor:
             # 5. 比较地图和本地化文件
             self.compare_json()
             
-            self.log("=" * 60)
-            self.log(f"[+] Release比较完成 - Build {self.build_number}")
-            self.log("=" * 60)
+            # 添加下载文件说明到Markdown
+            self.write_md("\n## 下载文件\n\n")
+            self.write_md("- **icons.zip**: 图标压缩包\n")
+            self.write_md("- **sde.zip**: SDE数据压缩包\n")
+            self.write_md("- **release_compare_*.log**: 详细比较日志\n")
             
             return True
             
         except Exception as e:
-            self.log(f"[x] Release比较失败: {e}")
             return False
 
 

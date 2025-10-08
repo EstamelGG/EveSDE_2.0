@@ -164,7 +164,7 @@ jobs:
         path: |
           output_sde/
           output_icons/
-          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.log
+          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
         retention-days: 30
 
   create-release:
@@ -297,13 +297,13 @@ jobs:
         files: |
           icons.zip
           sde.zip
-          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.log
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
         name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}
+        body_path: release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
         draft: false
         prerelease: false
         fail_on_unmatched_files: false
-        generate_release_notes: true
+        generate_release_notes: false
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
 
