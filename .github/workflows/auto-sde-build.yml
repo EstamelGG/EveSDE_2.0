@@ -291,15 +291,45 @@ jobs:
         echo "[+] 压缩包验证完成"
     
     
+    - name: 创建Release说明
+      run: |
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        
+        # 创建简短的Release说明
+        RELEASE_NOTES_FILE="release_notes_${FINAL_BUILD_NUMBER}.md"
+        
+        echo "# EVE SDE Build ${FINAL_BUILD_NUMBER}" > "$RELEASE_NOTES_FILE"
+        echo "" >> "$RELEASE_NOTES_FILE"
+        echo "## 构建信息" >> "$RELEASE_NOTES_FILE"
+        echo "- **Build Number**: ${FINAL_BUILD_NUMBER}" >> "$RELEASE_NOTES_FILE"
+        echo "- **Release Date**: ${{ needs.get-build-info.outputs.release-date }}" >> "$RELEASE_NOTES_FILE"
+        echo "- **Build Key**: ${{ needs.get-build-info.outputs.build-key }}" >> "$RELEASE_NOTES_FILE"
+        if [ "$PATCH_VERSION" != "0" ]; then
+          echo "- **Patch Version**: ${PATCH_VERSION}" >> "$RELEASE_NOTES_FILE"
+        fi
+        echo "" >> "$RELEASE_NOTES_FILE"
+        echo "## 详细比较报告" >> "$RELEASE_NOTES_FILE"
+        echo "" >> "$RELEASE_NOTES_FILE"
+        echo "请下载并查看 [release_compare_${FINAL_BUILD_NUMBER}.md](release_compare_${FINAL_BUILD_NUMBER}.md) 文件获取详细的版本比较信息。" >> "$RELEASE_NOTES_FILE"
+        echo "" >> "$RELEASE_NOTES_FILE"
+        echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
+        echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
+        echo "- **sde.zip**: SDE数据压缩包" >> "$RELEASE_NOTES_FILE"
+        echo "- **release_compare_${FINAL_BUILD_NUMBER}.md**: 详细比较报告" >> "$RELEASE_NOTES_FILE"
+        
+        echo "[+] Release说明已生成: $RELEASE_NOTES_FILE"
+    
     - name: 创建Release
       uses: softprops/action-gh-release@v2
       with:
         files: |
           icons.zip
           sde.zip
+          release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
         name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}
-        body_path: release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
+        body_path: release_notes_${{ needs.get-build-info.outputs.final-build-number }}.md
         draft: false
         prerelease: false
         fail_on_unmatched_files: false

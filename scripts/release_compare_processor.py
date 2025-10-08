@@ -410,7 +410,7 @@ class ReleaseCompareProcessor:
                 self.write_md("## 下载文件\n\n")
                 self.write_md("- **icons.zip**: 图标压缩包\n")
                 self.write_md("- **sde.zip**: SDE数据压缩包\n")
-                self.write_md("- **release_compare_*.log**: 详细比较日志\n")
+                self.write_md("- **release_compare_{}.md**: 详细比较报告\n".format(self.build_number))
                 
                 return False
             
@@ -433,7 +433,7 @@ class ReleaseCompareProcessor:
             self.write_md("\n## 下载文件\n\n")
             self.write_md("- **icons.zip**: 图标压缩包\n")
             self.write_md("- **sde.zip**: SDE数据压缩包\n")
-            self.write_md("- **release_compare_*.log**: 详细比较日志\n")
+            self.write_md("- **release_compare_{}.md**: 详细比较报告\n".format(self.build_number))
             
             return True
             
