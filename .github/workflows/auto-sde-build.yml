@@ -206,6 +206,7 @@ jobs:
         ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
+      id: verify-packages
       run: |
         echo "[+] 验证压缩包..."
         
@@ -246,6 +247,10 @@ jobs:
         echo "[+] 图标压缩包SHA256: $ICONS_SHA256"
         echo "[+] SDE数据压缩包SHA256: $SDE_SHA256"
         
+        # 将SHA256值输出到环境变量，供后续步骤使用
+        echo "icons-sha256=${ICONS_SHA256}" >> $GITHUB_OUTPUT
+        echo "sde-sha256=${SDE_SHA256}" >> $GITHUB_OUTPUT
+        
         # 验证压缩包完整性
         if unzip -t "icons.zip" > /dev/null 2>&1; then
           echo "[+] 图标压缩包完整性验证通过"
@@ -285,6 +290,10 @@ jobs:
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
+        RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
+        ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
+        SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
         
         # 创建简短的Release说明
         RELEASE_NOTES_FILE="release_notes_${FINAL_BUILD_NUMBER}.md"
@@ -292,12 +301,13 @@ jobs:
         echo "# EVE SDE Build ${FINAL_BUILD_NUMBER}" > "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
         echo "## 构建信息" >> "$RELEASE_NOTES_FILE"
-        echo "- **Build Number**: ${FINAL_BUILD_NUMBER}" >> "$RELEASE_NOTES_FILE"
-        echo "- **Release Date**: ${{ needs.get-build-info.outputs.release-date }}" >> "$RELEASE_NOTES_FILE"
-        echo "- **Build Key**: ${{ needs.get-build-info.outputs.build-key }}" >> "$RELEASE_NOTES_FILE"
+        echo "- **Build Number**: ${BUILD_NUMBER}" >> "$RELEASE_NOTES_FILE"
         if [ "$PATCH_VERSION" != "0" ]; then
           echo "- **Patch Version**: ${PATCH_VERSION}" >> "$RELEASE_NOTES_FILE"
         fi
+        echo "- **icon_sha256**: ${ICONS_SHA256}" >> "$RELEASE_NOTES_FILE"
+        echo "- **sde_sha256**: ${SDE_SHA256}" >> "$RELEASE_NOTES_FILE"
+        echo "- **Release Date**: ${RELEASE_DATE}" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
         echo "## 详细比较报告" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"

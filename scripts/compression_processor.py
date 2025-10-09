@@ -4,7 +4,6 @@
 压缩处理器模块
 用于创建无压缩的图标ZIP文件和压缩数据库文件
 
-对应old版本: old/main.py中的create_uncompressed_icons_zip、compress_database、compress_all_databases函数
 功能: 
 1. 将custom_icons目录中的图片打包到output/icons/icons.zip（无压缩）
 2. 移除output/icons中的图片文件
@@ -184,61 +183,8 @@ class CompressionProcessor:
         except Exception as e:
             print(f"[x] 清理图片文件时发生错误: {e}")
             return False
-    
-    def compress_database(self, db_path: Path) -> float:
-        """压缩单个数据库文件，使用一致性元数据确保ZIP文件的一致性"""
-        try:
-            # 获取压缩前的大小
-            before_size = db_path.stat().st_size / (1024 * 1024)  # 转换为MB
-            print(f"[+] 压缩数据库: {db_path.name}")
-            print(f"[+] 压缩前大小: {before_size:.2f}MB")
 
-            # 创建zip文件路径
-            zip_path = db_path.with_suffix('.sqlite.zip')
 
-            # 使用一致性ZIP创建方法
-            success = self._create_consistent_zip(
-                zip_path=zip_path,
-                files_to_add=[db_path],
-                compression=zipfile.ZIP_DEFLATED,
-                sort_files=False
-            )
-            
-            if not success:
-                print(f"[x] 压缩数据库 {db_path.name} 失败")
-                return 0
-            
-            # 删除原始数据库文件
-            db_path.unlink()
-
-            # 获取压缩后的大小
-            after_size = zip_path.stat().st_size / (1024 * 1024)  # 转换为MB
-            print(f"[+] 压缩后大小: {after_size:.2f}MB")
-            print(f"[+] 节省空间: {(before_size - after_size):.2f}MB")
-            print(f"[+] 使用一致性元数据，确保ZIP文件结构一致")
-
-            return before_size - after_size
-            
-        except Exception as e:
-            print(f"[x] 压缩数据库 {db_path.name} 时发生错误: {e}")
-            return 0
-    
-    def compress_all_databases(self):
-        """压缩所有语言的数据库"""
-        print("[+] 开始压缩所有数据库...")
-        total_saved = 0
-
-        for lang in self.languages:
-            db_path = self.db_output_path / f'item_db_{lang}.sqlite'
-            if db_path.exists():
-                saved = self.compress_database(db_path)
-                total_saved += saved
-            else:
-                print(f"[!] 数据库文件不存在: {db_path}")
-
-        print(f"[+] 数据库压缩完成，总共节省空间: {total_saved:.2f}MB")
-        return total_saved
-    
     def cleanup_png_files(self) -> bool:
         """删除output_icons目录中的PNG文件，只保留icons.zip"""
         try:
