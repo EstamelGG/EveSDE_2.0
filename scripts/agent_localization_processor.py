@@ -94,7 +94,7 @@ class AgentLocalizationProcessor:
     def update_agents_localization(self):
         """
         更新agents表的本地化信息
-        使用ESI API获取agent名称，然后进行本地化处理
+        只处理那些在JSONL中没有名称的agent，使用ESI API作为补充
         """
         print("[+] 开始更新agents表的本地化信息...")
         
@@ -107,17 +107,33 @@ class AgentLocalizationProcessor:
         # 确保输出目录存在
         self.db_output_path.mkdir(parents=True, exist_ok=True)
         
-        # 首先收集所有agent_id
+        # 首先收集所有agent_id和检查哪些没有名称
         all_agent_ids = set()
+        agents_without_names = set()
+        
         for lang in self.languages:
             db_filename = self.db_output_path / f'item_db_{lang}.sqlite'
             if db_filename.exists():
                 try:
                     conn = sqlite3.connect(str(db_filename))
                     cursor = conn.cursor()
+                    
+                    # 检查agents表是否存在
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='agents'")
+                    if not cursor.fetchone():
+                        print(f"[-] 数据库 {db_filename} 中不存在agents表，跳过")
+                        conn.close()
+                        continue
+                    
+                    # 获取所有agent_id
                     cursor.execute("SELECT agent_id FROM agents")
                     agent_ids = [row[0] for row in cursor.fetchall()]
                     all_agent_ids.update(agent_ids)
+                    
+                    # 检查哪些agent没有名称（agent_name为NULL或空字符串）
+                    cursor.execute("SELECT agent_id FROM agents WHERE agent_name IS NULL OR agent_name = ''")
+                    agents_without_names.update([row[0] for row in cursor.fetchall()])
+                    
                     conn.close()
                 except Exception as e:
                     print(f"[x] 读取数据库 {db_filename} 时出错: {e}")
@@ -127,13 +143,15 @@ class AgentLocalizationProcessor:
             return False
         
         print(f"[+] 找到 {len(all_agent_ids)} 个唯一的agent ID")
+        print(f"[+] 其中 {len(agents_without_names)} 个agent没有名称，需要从ESI获取")
         
-        # 通过ESI API获取所有agent的英文名称
-        agent_names = self.get_agent_names_from_esi(list(all_agent_ids))
-        
-        if not agent_names:
-            print("[x] 无法从ESI获取agent名称")
-            return False
+        # 只对没有名称的agent通过ESI API获取名称
+        agent_names = {}
+        if agents_without_names:
+            agent_names = self.get_agent_names_from_esi(list(agents_without_names))
+            print(f"[+] 从ESI获取到 {len(agent_names)} 个agent名称")
+        else:
+            print("[+] 所有agent都有名称，无需从ESI获取")
         
         success_count = 0
         
@@ -165,23 +183,23 @@ class AgentLocalizationProcessor:
                     print(f"[+] 在数据库 {db_filename} 中添加agent_name列")
                     cursor.execute("ALTER TABLE agents ADD COLUMN agent_name TEXT")
                 
-                # 获取所有agents记录
-                cursor.execute("SELECT agent_id FROM agents")
-                agents = cursor.fetchall()
+                # 只获取没有名称的agents记录
+                cursor.execute("SELECT agent_id FROM agents WHERE agent_name IS NULL OR agent_name = ''")
+                agents_without_names = cursor.fetchall()
                 
-                if not agents:
-                    print(f"[!] 数据库 {db_filename} 中没有找到agents记录")
+                if not agents_without_names:
+                    print(f"[+] 数据库 {db_filename} 中所有agent都有名称，无需更新")
                     conn.close()
                     continue
                 
-                print(f"[+] 找到 {len(agents)} 个代理人记录")
+                print(f"[+] 找到 {len(agents_without_names)} 个没有名称的代理人记录")
                 
-                # 更新每条记录的agent_name
+                # 更新每条没有名称的记录
                 updated_count = 0
                 not_found_count = 0
                 esi_not_found_count = 0
                 
-                for (agent_id,) in agents:
+                for (agent_id,) in agents_without_names:
                     # 从ESI获取的名称中查找英文名称
                     if agent_id in agent_names:
                         english_name = agent_names[agent_id]
@@ -219,7 +237,7 @@ class AgentLocalizationProcessor:
                 
                 # 提交更改
                 conn.commit()
-                print(f"[+] 成功更新了 {updated_count} 条记录，{not_found_count} 条记录使用原始英文名称，{esi_not_found_count} 条记录使用默认名称")
+                print(f"[+] 成功更新了 {updated_count} 条记录（使用本地化映射），{not_found_count} 条记录使用原始英文名称，{esi_not_found_count} 条记录使用默认名称")
                 success_count += 1
                 
             except Exception as e:
@@ -229,6 +247,9 @@ class AgentLocalizationProcessor:
                     conn.close()
         
         print(f"[+] 本地化更新完成，成功处理了 {success_count} 个数据库")
+        print(f"[+] 数据来源统计:")
+        print(f"    - 从JSONL获取名称: {len(all_agent_ids) - len(agents_without_names)} 个agent")
+        print(f"    - 从ESI获取名称: {len(agents_without_names)} 个agent")
         return success_count > 0
 
 
