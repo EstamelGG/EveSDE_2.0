@@ -155,7 +155,7 @@ jobs:
         export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         export PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         
-        python main.py
+        python -u main.py
         
     - name: 上传构建产物
       uses: actions/upload-artifact@v4

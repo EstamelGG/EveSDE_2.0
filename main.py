@@ -14,10 +14,13 @@ import requests
 import urllib3
 from pathlib import Path
 from datetime import datetime
+
+# 设置无缓冲输出，确保在GitHub Actions中日志能实时显示
+os.environ['PYTHONUNBUFFERED'] = '1'
 # 导入SDE处理模块
 import scripts.sde_downloader as sde_downloader
 import scripts.jsonl_loader as jsonl_loader
-import scripts.icon_builder_wrapper as icon_builder_wrapper
+import scripts.icon_builder_processor as icon_builder_processor
 import scripts.icon_fetcher as icon_fetcher
 import scripts.dynamic_items_updater as dynamic_items_updater
 import scripts.universe_processor as universe_processor
@@ -433,7 +436,7 @@ def main():
     print("[+] SDE数据准备完成，继续后续处理...")
     
     # 执行图标构造（使用eve_icon_builder）
-    safe_execute_processor(icon_builder_wrapper.main, "图标构造", config)
+    safe_execute_processor(icon_builder_processor.main, "图标构造", config)
     
     # 执行图标获取
     safe_execute_processor(icon_fetcher.main, "图标获取", config)
