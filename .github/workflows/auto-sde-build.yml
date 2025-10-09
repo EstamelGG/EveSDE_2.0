@@ -203,7 +203,7 @@ jobs:
         cd ..
         
         echo "[+] SDE数据压缩包创建完成: sde.zip"
-        ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.log 2>/dev/null || ls -la icons.zip sde.zip
+        ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
       run: |
@@ -245,16 +245,6 @@ jobs:
         SDE_SHA256=$(sha256sum "sde.zip" | cut -d' ' -f1)
         echo "[+] 图标压缩包SHA256: $ICONS_SHA256"
         echo "[+] SDE数据压缩包SHA256: $SDE_SHA256"
-        
-        # 验证release比较日志文件（可选）
-        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
-        if [ -f "release_compare_${FINAL_BUILD_NUMBER}.log" ]; then
-          LOG_SIZE=$(stat -c%s "release_compare_${FINAL_BUILD_NUMBER}.log")
-          LOG_HASH=$(sha256sum "release_compare_${FINAL_BUILD_NUMBER}.log" | cut -d' ' -f1)
-          echo "[+] release_compare_${FINAL_BUILD_NUMBER}.log - 大小: ${LOG_SIZE} bytes, SHA256: ${LOG_HASH}"
-        else
-          echo "[!] release_compare_${FINAL_BUILD_NUMBER}.log 不存在（首次构建或比较失败）"
-        fi
         
         # 验证压缩包完整性
         if unzip -t "icons.zip" > /dev/null 2>&1; then
