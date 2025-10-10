@@ -156,6 +156,23 @@ jobs:
         export PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         
         python -u main.py
+    
+    - name: 生成图标版本metadata.json
+      run: |
+        echo "[+] 生成图标版本metadata.json"
+        
+        # 调用icon_version_update.py生成metadata.json
+        python -u scripts/icon_version_update.py \
+          --api-url "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest"
+        
+        # 验证metadata.json是否生成
+        if [ ! -f "output_icons/metadata.json" ]; then
+          echo "[x] 错误：metadata.json生成失败"
+          exit 1
+        fi
+        
+        echo "[+] metadata.json生成成功"
+        cat output_icons/metadata.json
         
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
@@ -197,13 +214,24 @@ jobs:
           exit 1
         fi
         
+        # 复制metadata.json（必须存在）
+        if [ ! -f "output_icons/metadata.json" ]; then
+          echo "[x] 错误：metadata.json不存在"
+          exit 1
+        fi
+        
+        cp "output_icons/metadata.json" "metadata.json"
+        echo "[+] metadata.json复制完成"
+        echo "[+] metadata.json内容:"
+        cat metadata.json
+        
         # 创建SDE数据压缩包（直接压缩output_sde目录为ZIP格式）
         cd output_sde
         zip -r "../sde.zip" .
         cd ..
         
         echo "[+] SDE数据压缩包创建完成: sde.zip"
-        ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
+        ls -la icons.zip sde.zip metadata.json release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
       id: verify-packages
@@ -295,6 +323,21 @@ jobs:
         ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
         SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
         
+        # 从metadata.json读取icon_version（必须存在）
+        if [ ! -f "metadata.json" ]; then
+          echo "[x] 错误：metadata.json不存在"
+          exit 1
+        fi
+        
+        ICON_VERSION=$(cat metadata.json | jq -r '.icon_version')
+        
+        if [ -z "$ICON_VERSION" ] || [ "$ICON_VERSION" = "null" ]; then
+          echo "[x] 错误：无法从metadata.json读取icon_version"
+          exit 1
+        fi
+        
+        echo "[+] 从metadata.json读取icon_version: ${ICON_VERSION}"
+        
         # 创建简短的Release说明
         RELEASE_NOTES_FILE="release_notes_${FINAL_BUILD_NUMBER}.md"
         
@@ -305,6 +348,7 @@ jobs:
         if [ "$PATCH_VERSION" != "0" ]; then
           echo "- **Patch Version**: ${PATCH_VERSION}" >> "$RELEASE_NOTES_FILE"
         fi
+        echo "- **Icon Version**: ${ICON_VERSION}" >> "$RELEASE_NOTES_FILE"
         echo "- **icon_sha256**: ${ICONS_SHA256}" >> "$RELEASE_NOTES_FILE"
         echo "- **sde_sha256**: ${SDE_SHA256}" >> "$RELEASE_NOTES_FILE"
         echo "- **Release Date**: ${RELEASE_DATE}" >> "$RELEASE_NOTES_FILE"
@@ -320,6 +364,7 @@ jobs:
         echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
         echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
         echo "- **sde.zip**: SDE数据压缩包" >> "$RELEASE_NOTES_FILE"
+        echo "- **metadata.json**: 版本元数据文件（包含icon_version等信息）" >> "$RELEASE_NOTES_FILE"
         echo "- **release_compare_${FINAL_BUILD_NUMBER}.md**: 详细比较报告" >> "$RELEASE_NOTES_FILE"
         
         echo "[+] Release说明已生成: $RELEASE_NOTES_FILE"
@@ -330,6 +375,7 @@ jobs:
         files: |
           icons.zip
           sde.zip
+          metadata.json
           release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
         name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}

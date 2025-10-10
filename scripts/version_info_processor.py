@@ -30,6 +30,7 @@ class VersionInfoProcessor:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 build_number INTEGER NOT NULL,
                 patch_number INTEGER DEFAULT 0,
+                icon_version INTEGER DEFAULT 0,
                 release_date TEXT,
                 build_key TEXT,
                 description TEXT DEFAULT 'EVE SDE Database Version Information'
@@ -61,14 +62,14 @@ class VersionInfoProcessor:
             patch_number = 0
         
         cursor.execute('''
-            INSERT INTO version_info (build_number, patch_number, release_date, build_key)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO version_info (build_number, patch_number, icon_version, release_date, build_key)
+            VALUES (?, ?, 0, ?, ?)
         ''', (base_number, patch_number, release_date, build_key))
         
         if patch_number > 0:
-            print(f"[+] 插入版本信息: build_number={base_number}, patch_number={patch_number}, release_date={release_date}")
+            print(f"[+] 插入版本信息: build_number={base_number}, patch_number={patch_number}, icon_version=0, release_date={release_date}")
         else:
-            print(f"[+] 插入版本信息: build_number={base_number}, release_date={release_date}")
+            print(f"[+] 插入版本信息: build_number={base_number}, icon_version=0, release_date={release_date}")
     
     def process_version_info_for_language(self, language: str, build_number, release_date: str = None, build_key: str = None) -> bool:
         """
