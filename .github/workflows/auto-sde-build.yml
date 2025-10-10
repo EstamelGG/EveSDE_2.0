@@ -157,13 +157,67 @@ jobs:
         
         python -u main.py
     
-    - name: 生成图标版本metadata.json
+    - name: 生成metadata.json
       run: |
-        echo "[+] 生成图标版本metadata.json"
+        echo "[+] 生成metadata.json"
         
-        # 调用icon_version_update.py生成metadata.json
-        python -u scripts/icon_version_update.py \
-          --api-url "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest"
+        # 计算icons.zip的SHA256
+        ICONS_SHA256=$(sha256sum output_icons/icons.zip | cut -d' ' -f1)
+        echo "[+] 本地icons.zip SHA256: $ICONS_SHA256"
+        
+        # 尝试从最新Release获取metadata.json
+        echo "[+] 获取远程metadata.json..."
+        METADATA_URL=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" | \
+          jq -r '.assets[] | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
+        
+        # 计算icon_version
+        NEW_ICON_VERSION=0
+        if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ]; then
+          echo "[+] 找到远程metadata.json: $METADATA_URL"
+          
+          # 下载并解析旧的metadata
+          OLD_METADATA=$(curl -s "$METADATA_URL" 2>/dev/null || echo "{}")
+          OLD_ICONS_SHA=$(echo "$OLD_METADATA" | jq -r '.icon_sha256 // ""')
+          OLD_ICON_VERSION=$(echo "$OLD_METADATA" | jq -r '.icon_version // 0')
+          
+          echo "[+] 远程icons.zip SHA256: $OLD_ICONS_SHA"
+          echo "[+] 旧版icon_version: $OLD_ICON_VERSION"
+          
+          # 比较SHA256
+          if [ "$ICONS_SHA256" != "$OLD_ICONS_SHA" ]; then
+            NEW_ICON_VERSION=$((OLD_ICON_VERSION + 1))
+            echo "[+] SHA256不同，图标包已更新，新版本号: $NEW_ICON_VERSION"
+          else
+            NEW_ICON_VERSION=$OLD_ICON_VERSION
+            echo "[+] SHA256相同，图标包未更新，版本号保持: $NEW_ICON_VERSION"
+          fi
+        else
+          echo "[!] 未找到远程metadata.json，使用默认版本号: 0"
+          NEW_ICON_VERSION=0
+        fi
+        
+        # 从数据库读取版本信息
+        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
+        PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
+        
+        echo "[+] 创建metadata.json..."
+        
+        # 创建metadata.json（sde_sha256稍后添加）
+        jq -n \
+          --argjson icon_version "$NEW_ICON_VERSION" \
+          --arg icon_sha256 "$ICONS_SHA256" \
+          --argjson build_number "$BUILD_NUMBER" \
+          --argjson patch_number "$PATCH_VERSION" \
+          --arg release_date "$RELEASE_DATE" \
+          '{
+            icon_version: $icon_version,
+            icon_sha256: $icon_sha256,
+            sde_sha256: null,
+            build_number: $build_number,
+            patch_number: $patch_number,
+            release_date: $release_date
+          }' > output_icons/metadata.json
         
         # 验证metadata.json是否生成
         if [ ! -f "output_icons/metadata.json" ]; then
@@ -172,6 +226,7 @@ jobs:
         fi
         
         echo "[+] metadata.json生成成功"
+        echo "[+] metadata.json内容:"
         cat output_icons/metadata.json
         
     - name: 上传构建产物
