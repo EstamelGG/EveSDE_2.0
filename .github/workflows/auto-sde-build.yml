@@ -203,11 +203,16 @@ jobs:
         # 获取最新release信息并下载旧版本SDE
         echo "[+] 获取最新release信息..."
         LATEST_RELEASE=$(curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -s \
-          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest")
+          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" || echo "")
+        
+        # 检查API调用是否成功
+        if [ -z "$LATEST_RELEASE" ]; then
+          echo "[!] 无法获取release信息，可能是网络问题或首次构建"
+        fi
         
         # 检查是否有历史release
-        if [ "$(echo "$LATEST_RELEASE" | jq -r '.message // empty')" = "Not Found" ]; then
-          echo "[+] 首次构建，图标版本号设为1"
+        if [ "$(echo "$LATEST_RELEASE" | jq -r '.message // empty')" = "Not Found" ] || [ -z "$LATEST_RELEASE" ]; then
+          echo "[+] 首次构建（无历史release），图标版本号设为1"
           ICON_VERSION=1
         else
           echo "[+] 下载旧版本SDE以获取图标版本号..."
@@ -229,26 +234,37 @@ jobs:
             
             # 从旧版本sqlite数据库中读取图标版本号
             OLD_ICON_VERSION=1  # 默认值
+            HAS_ICON_VERSION_COLUMN=false
             for lang in en zh; do
               OLD_DB_PATH="$OLD_SDE_DIR/db/item_db_${lang}.sqlite"
               if [ -f "$OLD_DB_PATH" ]; then
                 # 检查是否有icon_version列
-                HAS_ICON_VERSION=$(sqlite3 "$OLD_DB_PATH" "PRAGMA table_info(version_info);" | grep -c "icon_version" || echo "0")
+                HAS_ICON_VERSION=$(sqlite3 "$OLD_DB_PATH" "PRAGMA table_info(version_info);" | grep -c "icon_version" 2>/dev/null || echo "0")
+                # 去除可能的换行符
+                HAS_ICON_VERSION=$(echo "$HAS_ICON_VERSION" | tr -d '\n\r')
                 if [ "$HAS_ICON_VERSION" -gt 0 ]; then
                   # 读取图标版本号
                   OLD_ICON_VERSION=$(sqlite3 "$OLD_DB_PATH" "SELECT icon_version FROM version_info LIMIT 1;" 2>/dev/null || echo "1")
+                  # 去除可能的换行符
+                  OLD_ICON_VERSION=$(echo "$OLD_ICON_VERSION" | tr -d '\n\r')
                   echo "[+] 从旧版本数据库读取图标版本号: $OLD_ICON_VERSION"
+                  HAS_ICON_VERSION_COLUMN=true
                   break
                 fi
               fi
             done
             
+            if [ "$HAS_ICON_VERSION_COLUMN" = false ]; then
+              echo "[+] 旧版本数据库没有icon_version列，默认为1"
+              OLD_ICON_VERSION=1
+            fi
+            
             # 清理临时文件
             rm -rf "$TEMP_DIR"
             
             # 比较图标包SHA256（这里我们需要获取旧版本的图标包SHA256）
-            # 从release body中提取旧版本图标包SHA256
-            OLD_ICON_SHA256=$(echo "$LATEST_RELEASE" | jq -r '.body' | grep -o 'icon_sha256: [a-f0-9]*' | cut -d' ' -f2)
+            # 从assets的digest字段获取旧版本图标包SHA256
+            OLD_ICON_SHA256=$(echo "$LATEST_RELEASE" | jq -r '.assets[] | select(.name=="icons.zip") | .digest' | sed 's/sha256://')
             
             if [ -z "$OLD_ICON_SHA256" ] || [ "$OLD_ICON_SHA256" = "null" ]; then
               echo "[+] 未找到历史图标包SHA256，图标版本号递增"
@@ -264,6 +280,12 @@ jobs:
                 echo "[+] 图标包已变化，版本号递增"
                 ICON_VERSION=$((OLD_ICON_VERSION + 1))
               fi
+            fi
+            
+            # 特殊处理：如果旧版本没有icon_version列，且图标哈希相同，则保持版本号1
+            if [ "$HAS_ICON_VERSION_COLUMN" = false ] && [ "$CURRENT_ICON_SHA256" = "$OLD_ICON_SHA256" ]; then
+              echo "[+] 旧版本没有icon_version列且图标哈希相同，保持版本号1"
+              ICON_VERSION=1
             fi
           else
             echo "[+] 未找到旧版本SDE，图标版本号设为1"
@@ -313,19 +335,71 @@ jobs:
                         cursor.execute('ALTER TABLE version_info ADD COLUMN icon_version INTEGER DEFAULT 1')
                         print(f'[+] 添加icon_version列到 {db_path.name}')
                     
-                    # 更新version_info表中的icon_version
-                    cursor.execute('UPDATE version_info SET icon_version = ?', (icon_version,))
+                    # 检查是否有version_info记录
+                    cursor.execute('SELECT COUNT(*) FROM version_info')
+                    count = cursor.fetchone()[0]
+                    
+                    if count == 0:
+                        # 如果没有记录，插入新记录（首次构建的情况）
+                        cursor.execute('''
+                            INSERT INTO version_info (build_number, patch_number, icon_version, release_date, build_key, description)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (0, 0, icon_version, '', '', 'EVE SDE Database Version Information'))
+                        print(f'[+] 插入新记录到 {db_path.name} (首次构建)')
+                    else:
+                        # 更新现有记录的icon_version
+                        cursor.execute('UPDATE version_info SET icon_version = ?', (icon_version,))
+                        print(f'[+] 更新现有记录到 {db_path.name}')
+                    
                     conn.commit()
                     conn.close()
                     
                     print(f'[+] 更新完成: {db_path.name}')
                 except Exception as e:
                     print(f'[x] 更新失败: {db_path.name} - {e}')
+                    import traceback
+                    traceback.print_exc()
             else:
                 print(f'[!] 数据库文件不存在: {db_path}')
         
         print('[+] 图标版本号更新完成')
         "
+
+    - name: 验证图标版本号写入
+      run: |
+        ICON_VERSION="${{ steps.process-icon-version.outputs.icon_version }}"
+        
+        echo "[+] 验证图标版本号是否已正确写入数据库..."
+        
+        # 验证数据库中的图标版本号
+        for lang in en zh; do
+          DB_PATH="output_sde/db/item_db_${lang}.sqlite"
+          if [ -f "$DB_PATH" ]; then
+            # 检查是否有icon_version列
+            HAS_ICON_VERSION=$(sqlite3 "$DB_PATH" "PRAGMA table_info(version_info);" | grep -c "icon_version" 2>/dev/null || echo "0")
+            # 去除可能的换行符
+            HAS_ICON_VERSION=$(echo "$HAS_ICON_VERSION" | tr -d '\n\r')
+            if [ "$HAS_ICON_VERSION" -gt 0 ]; then
+              # 读取图标版本号
+              DB_ICON_VERSION=$(sqlite3 "$DB_PATH" "SELECT icon_version FROM version_info LIMIT 1;" 2>/dev/null || echo "0")
+              # 去除可能的换行符
+              DB_ICON_VERSION=$(echo "$DB_ICON_VERSION" | tr -d '\n\r')
+              if [ "$DB_ICON_VERSION" = "$ICON_VERSION" ]; then
+                echo "[+] 验证通过: ${lang} 数据库图标版本号 = $DB_ICON_VERSION"
+              else
+                echo "[x] 验证失败: ${lang} 数据库图标版本号 = $DB_ICON_VERSION，期望 = $ICON_VERSION"
+                exit 1
+              fi
+            else
+              echo "[x] 验证失败: ${lang} 数据库没有icon_version列"
+              exit 1
+            fi
+          else
+            echo "[!] 数据库文件不存在: $DB_PATH"
+          fi
+        done
+        
+        echo "[+] 图标版本号验证完成"
 
     - name: 创建压缩包
       run: |
