@@ -183,6 +183,7 @@ class IconVersionUpdater:
         """
         创建metadata.json文件
         包含icon_version和icon_sha256信息
+        注意：sde_sha256会在GitHub Actions中后续添加
         """
         try:
             # 从数据库读取build_number等信息
@@ -207,10 +208,11 @@ class IconVersionUpdater:
                 except Exception as e:
                     print(f"[!] 读取数据库版本信息时出错: {e}")
             
-            # 创建metadata
+            # 创建metadata（sde_sha256将在GitHub Actions中添加）
             metadata = {
                 "icon_version": icon_version,
                 "icon_sha256": icon_sha256,
+                "sde_sha256": None,
                 "build_number": build_number,
                 "patch_number": patch_number,
                 "release_date": release_date
@@ -227,6 +229,7 @@ class IconVersionUpdater:
             
             print(f"[+] 已创建metadata.json: {metadata_path}")
             print(f"[+] icon_version: {icon_version}, icon_sha256: {icon_sha256[:16]}...")
+            print(f"[!] sde_sha256将在压缩包创建后添加")
             
             return True
             

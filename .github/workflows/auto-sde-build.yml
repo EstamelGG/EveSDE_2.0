@@ -221,9 +221,7 @@ jobs:
         fi
         
         cp "output_icons/metadata.json" "metadata.json"
-        echo "[+] metadata.json复制完成"
-        echo "[+] metadata.json内容:"
-        cat metadata.json
+        echo "[+] metadata.json复制完成（未包含sde_sha256）"
         
         # 创建SDE数据压缩包（直接压缩output_sde目录为ZIP格式）
         cd output_sde
@@ -313,6 +311,24 @@ jobs:
         
         echo "[+] 压缩包验证完成"
     
+    - name: 更新metadata.json添加sde_sha256
+      run: |
+        echo "[+] 更新metadata.json添加sde_sha256..."
+        
+        SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
+        
+        # 使用jq更新metadata.json
+        if [ -f "metadata.json" ]; then
+          jq --arg sde_sha256 "$SDE_SHA256" '.sde_sha256 = $sde_sha256' metadata.json > metadata_updated.json
+          mv metadata_updated.json metadata.json
+          
+          echo "[+] metadata.json已更新"
+          echo "[+] 完整metadata.json内容:"
+          cat metadata.json
+        else
+          echo "[x] 错误：metadata.json不存在"
+          exit 1
+        fi
     
     - name: 创建Release说明
       run: |
