@@ -175,10 +175,32 @@ jobs:
         if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ]; then
           echo "[+] 找到远程metadata.json: $METADATA_URL"
           
-          # 下载并解析旧的metadata
-          OLD_METADATA=$(curl -s "$METADATA_URL" 2>/dev/null || echo "{}")
+          # 下载并解析旧的metadata（-L跟随重定向）
+          OLD_METADATA=$(curl -sL "$METADATA_URL" 2>/dev/null)
+          
+          # 检查下载是否成功
+          if [ -z "$OLD_METADATA" ] || [ "$OLD_METADATA" = "{}" ]; then
+            echo "[x] 错误：远程metadata.json下载失败或为空"
+            exit 1
+          fi
+          
+          echo "[+] 远程metadata.json下载成功"
+          echo "[+] 远程metadata.json内容: $OLD_METADATA"
+          
+          # 解析字段
           OLD_ICONS_SHA=$(echo "$OLD_METADATA" | jq -r '.icon_sha256 // ""')
           OLD_ICON_VERSION=$(echo "$OLD_METADATA" | jq -r '.icon_version // 0')
+          
+          # 验证解析结果
+          if [ -z "$OLD_ICONS_SHA" ] || [ "$OLD_ICONS_SHA" = "null" ]; then
+            echo "[x] 错误：无法从metadata.json解析icon_sha256"
+            exit 1
+          fi
+          
+          if [ -z "$OLD_ICON_VERSION" ] || [ "$OLD_ICON_VERSION" = "null" ]; then
+            echo "[x] 错误：无法从metadata.json解析icon_version"
+            exit 1
+          fi
           
           echo "[+] 远程icons.zip SHA256: $OLD_ICONS_SHA"
           echo "[+] 旧版icon_version: $OLD_ICON_VERSION"
