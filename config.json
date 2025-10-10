@@ -3,9 +3,9 @@
     "sde_input": "./sde_jsonl",
     "icons_input": "./icons_input",
     "sde_zip": "./sde_jsonl_zip",
-    "icons_output": "./output/icons",
-    "map_output": "./output/maps",
-    "db_output": "./output/db",
+    "icons_output": "./output_icons",
+    "map_output": "./output_sde/maps",
+    "db_output": "./output_sde/db",
     "localization": "./localization/",
     "sde_jsonl": "./sde_jsonl"
   },

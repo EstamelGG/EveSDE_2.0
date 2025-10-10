@@ -280,43 +280,21 @@ def rebuild_output_directory(config):
         shutil.rmtree(output_icons_dir)
 
 
-def update_config_paths(config):
-    """更新配置中的路径，指向新的输出目录结构"""
-    project_root = Path(__file__).parent
-    
-    # 更新配置中的路径
-    config["paths"]["db_output"] = "./output_sde/db"
-    config["paths"]["icons_output"] = "./output_icons"
-    config["paths"]["map_output"] = "./output_sde/maps"
-    
-    return config
-
 def ensure_directories(config):
     """确保所有必要的目录存在"""
     project_root = Path(__file__).parent
     
-    # 创建新的输出目录结构
-    output_sde_dir = project_root / "output_sde"
-    output_icons_dir = project_root / "output_icons"
-    
-    # 创建SDE相关目录
-    (output_sde_dir / "db").mkdir(parents=True, exist_ok=True)
-    (output_sde_dir / "maps").mkdir(parents=True, exist_ok=True)
-    (output_sde_dir / "localization").mkdir(parents=True, exist_ok=True)
-    
-    # 创建图标目录
-    output_icons_dir.mkdir(parents=True, exist_ok=True)
-    
-    print(f"[+] 确保目录存在: {output_sde_dir}")
-    print(f"[+] 确保目录存在: {output_icons_dir}")
-    
-    # 保持原有的临时目录结构
+    # 创建所有配置中的目录
     paths = config.get("paths", {})
     for path_name, path_value in paths.items():
-        if path_name not in ["db_output", "icons_output", "map_output"]:  # 跳过这些，使用新的目录结构
-            full_path = project_root / path_value
-            full_path.mkdir(parents=True, exist_ok=True)
-            print(f"[+] 确保目录存在: {full_path}")
+        full_path = project_root / path_value
+        full_path.mkdir(parents=True, exist_ok=True)
+        print(f"[+] 确保目录存在: {full_path}")
+    
+    # 创建output_sde/localization目录（用于存放本地化输出）
+    output_sde_localization = project_root / "output_sde" / "localization"
+    output_sde_localization.mkdir(parents=True, exist_ok=True)
+    print(f"[+] 确保目录存在: {output_sde_localization}")
 
 
 def safe_execute_processor(processor_func, processor_name, config):
@@ -407,10 +385,7 @@ def main():
     print("=" * 30)
     rebuild_output_directory(config)
     
-    # 更新配置路径
-    config = update_config_paths(config)
-    
-    # 确保其他目录存在
+    # 确保所有必要的目录存在
     ensure_directories(config)
     
     # 处理本地化数据（第四步）
