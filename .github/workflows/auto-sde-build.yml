@@ -157,100 +157,6 @@ jobs:
         
         python -u main.py
     
-    - name: 生成metadata.json
-      run: |
-        echo "[+] 生成metadata.json"
-        
-        # 计算icons.zip的SHA256
-        ICONS_SHA256=$(sha256sum output_icons/icons.zip | cut -d' ' -f1)
-        echo "[+] 本地icons.zip SHA256: $ICONS_SHA256"
-        
-        # 尝试从最新Release获取metadata.json
-        echo "[+] 获取远程metadata.json..."
-        METADATA_URL=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" | \
-          jq -r '.assets[] | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
-        
-        # 计算icon_version
-        NEW_ICON_VERSION=0
-        if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ]; then
-          echo "[+] 找到远程metadata.json: $METADATA_URL"
-          
-          # 下载并解析旧的metadata（-L跟随重定向）
-          OLD_METADATA=$(curl -sL "$METADATA_URL" 2>/dev/null)
-          
-          # 检查下载是否成功
-          if [ -z "$OLD_METADATA" ] || [ "$OLD_METADATA" = "{}" ]; then
-            echo "[x] 错误：远程metadata.json下载失败或为空"
-            exit 1
-          fi
-          
-          echo "[+] 远程metadata.json下载成功"
-          echo "[+] 远程metadata.json内容: $OLD_METADATA"
-          
-          # 解析字段
-          OLD_ICONS_SHA=$(echo "$OLD_METADATA" | jq -r '.icon_sha256 // ""')
-          OLD_ICON_VERSION=$(echo "$OLD_METADATA" | jq -r '.icon_version // 0')
-          
-          # 验证解析结果
-          if [ -z "$OLD_ICONS_SHA" ] || [ "$OLD_ICONS_SHA" = "null" ]; then
-            echo "[x] 错误：无法从metadata.json解析icon_sha256"
-            exit 1
-          fi
-          
-          if [ -z "$OLD_ICON_VERSION" ] || [ "$OLD_ICON_VERSION" = "null" ]; then
-            echo "[x] 错误：无法从metadata.json解析icon_version"
-            exit 1
-          fi
-          
-          echo "[+] 远程icons.zip SHA256: $OLD_ICONS_SHA"
-          echo "[+] 旧版icon_version: $OLD_ICON_VERSION"
-          
-          # 比较SHA256
-          if [ "$ICONS_SHA256" != "$OLD_ICONS_SHA" ]; then
-            NEW_ICON_VERSION=$((OLD_ICON_VERSION + 1))
-            echo "[+] SHA256不同，图标包已更新，新版本号: $NEW_ICON_VERSION"
-          else
-            NEW_ICON_VERSION=$OLD_ICON_VERSION
-            echo "[+] SHA256相同，图标包未更新，版本号保持: $NEW_ICON_VERSION"
-          fi
-        else
-          echo "[!] 未找到远程metadata.json，使用默认版本号: 0"
-          NEW_ICON_VERSION=0
-        fi
-        
-        # 从数据库读取版本信息
-        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
-        PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
-        RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
-        
-        echo "[+] 创建metadata.json..."
-        
-        # 创建metadata.json（sde_sha256稍后添加）
-        jq -n \
-          --argjson icon_version "$NEW_ICON_VERSION" \
-          --arg icon_sha256 "$ICONS_SHA256" \
-          --argjson build_number "$BUILD_NUMBER" \
-          --argjson patch_number "$PATCH_VERSION" \
-          --arg release_date "$RELEASE_DATE" \
-          '{
-            icon_version: $icon_version,
-            icon_sha256: $icon_sha256,
-            sde_sha256: null,
-            build_number: $build_number,
-            patch_number: $patch_number,
-            release_date: $release_date
-          }' > output_icons/metadata.json
-        
-        # 验证metadata.json是否生成
-        if [ ! -f "output_icons/metadata.json" ]; then
-          echo "[x] 错误：metadata.json生成失败"
-          exit 1
-        fi
-        
-        echo "[+] metadata.json生成成功"
-        echo "[+] metadata.json内容:"
-        cat output_icons/metadata.json
-        
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
       with:
@@ -291,22 +197,13 @@ jobs:
           exit 1
         fi
         
-        # 复制metadata.json（必须存在）
-        if [ ! -f "output_icons/metadata.json" ]; then
-          echo "[x] 错误：metadata.json不存在"
-          exit 1
-        fi
-        
-        cp "output_icons/metadata.json" "metadata.json"
-        echo "[+] metadata.json复制完成（未包含sde_sha256）"
-        
         # 创建SDE数据压缩包（直接压缩output_sde目录为ZIP格式）
         cd output_sde
         zip -r "../sde.zip" .
         cd ..
         
         echo "[+] SDE数据压缩包创建完成: sde.zip"
-        ls -la icons.zip sde.zip metadata.json release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
+        ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
       id: verify-packages
@@ -388,24 +285,165 @@ jobs:
         
         echo "[+] 压缩包验证完成"
     
-    - name: 更新metadata.json添加sde_sha256
+    - name: 生成完整的metadata.json
+      id: generate-metadata
       run: |
-        echo "[+] 更新metadata.json添加sde_sha256..."
+        echo "[+] 生成完整的metadata.json..."
         
+        # 验证必需的参数
+        ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
         SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
+        BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
+        PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
         
-        # 使用jq更新metadata.json
-        if [ -f "metadata.json" ]; then
-          jq --arg sde_sha256 "$SDE_SHA256" '.sde_sha256 = $sde_sha256' metadata.json > metadata_updated.json
-          mv metadata_updated.json metadata.json
-          
-          echo "[+] metadata.json已更新"
-          echo "[+] 完整metadata.json内容:"
-          cat metadata.json
-        else
-          echo "[x] 错误：metadata.json不存在"
+        # 严格验证所有必需参数
+        if [ -z "$ICONS_SHA256" ] || [ "$ICONS_SHA256" = "null" ]; then
+          echo "[x] 错误：icons.zip SHA256未计算或为空"
           exit 1
         fi
+        
+        if [ -z "$SDE_SHA256" ] || [ "$SDE_SHA256" = "null" ]; then
+          echo "[x] 错误：sde.zip SHA256未计算或为空"
+          exit 1
+        fi
+        
+        if [ -z "$BUILD_NUMBER" ] || [ "$BUILD_NUMBER" = "null" ]; then
+          echo "[x] 错误：build_number未设置"
+          exit 1
+        fi
+        
+        if [ -z "$RELEASE_DATE" ] || [ "$RELEASE_DATE" = "null" ]; then
+          echo "[x] 错误：release_date未设置"
+          exit 1
+        fi
+        
+        echo "[+] icons.zip SHA256: $ICONS_SHA256"
+        echo "[+] sde.zip SHA256: $SDE_SHA256"
+        echo "[+] Build Number: $BUILD_NUMBER"
+        echo "[+] Patch Version: $PATCH_VERSION"
+        echo "[+] Release Date: $RELEASE_DATE"
+        
+        # 尝试从最新Release获取metadata.json以计算icon_version
+        echo "[+] 获取远程metadata.json以计算icon_version..."
+        METADATA_URL=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" | \
+          jq -r '.assets[] | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
+        
+        # 计算icon_version
+        if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ]; then
+          echo "[+] 找到远程metadata.json: $METADATA_URL"
+          
+          # 下载并解析旧的metadata（-L跟随重定向）
+          OLD_METADATA=$(curl -sL "$METADATA_URL" 2>/dev/null)
+          
+          # 检查下载是否成功
+          if [ -z "$OLD_METADATA" ] || [ "$OLD_METADATA" = "{}" ]; then
+            echo "[x] 错误：找到了metadata.json但下载失败或为空"
+            echo "[x] 这是一个致命错误，因为旧版本存在但无法访问"
+            exit 1
+          fi
+          
+          echo "[+] 远程metadata.json下载成功"
+          
+          # 解析字段
+          OLD_ICONS_SHA=$(echo "$OLD_METADATA" | jq -r '.icon_sha256 // ""')
+          OLD_ICON_VERSION=$(echo "$OLD_METADATA" | jq -r '.icon_version // ""')
+          
+          # 验证解析结果（如果找到了metadata，这些字段必须存在）
+          if [ -z "$OLD_ICONS_SHA" ] || [ "$OLD_ICONS_SHA" = "null" ]; then
+            echo "[x] 错误：找到了metadata.json但无法解析icon_sha256字段"
+            echo "[x] 这是一个致命错误，metadata.json可能已损坏"
+            exit 1
+          fi
+          
+          if [ -z "$OLD_ICON_VERSION" ] || [ "$OLD_ICON_VERSION" = "null" ]; then
+            echo "[x] 错误：找到了metadata.json但无法解析icon_version字段"
+            echo "[x] 这是一个致命错误，metadata.json可能已损坏"
+            exit 1
+          fi
+          
+          echo "[+] 远程icons.zip SHA256: $OLD_ICONS_SHA"
+          echo "[+] 旧版icon_version: $OLD_ICON_VERSION"
+          
+          # 比较SHA256
+          if [ "$ICONS_SHA256" != "$OLD_ICONS_SHA" ]; then
+            NEW_ICON_VERSION=$((OLD_ICON_VERSION + 1))
+            echo "[+] SHA256不同，图标包已更新，新版本号: $NEW_ICON_VERSION"
+          else
+            NEW_ICON_VERSION=$OLD_ICON_VERSION
+            echo "[+] SHA256相同，图标包未更新，版本号保持: $NEW_ICON_VERSION"
+          fi
+        else
+          # 首次运行，没有旧版本metadata.json
+          echo "[!] 未找到远程metadata.json（首次运行）"
+          echo "[+] 设置初始图标版本号: 1"
+          NEW_ICON_VERSION=1
+        fi
+        
+        # 生成完整的metadata.json
+        echo "[+] 创建完整的metadata.json..."
+        jq -n \
+          --argjson icon_version "$NEW_ICON_VERSION" \
+          --arg icon_sha256 "$ICONS_SHA256" \
+          --arg sde_sha256 "$SDE_SHA256" \
+          --argjson build_number "$BUILD_NUMBER" \
+          --argjson patch_number "$PATCH_VERSION" \
+          --arg release_date "$RELEASE_DATE" \
+          '{
+            icon_version: $icon_version,
+            icon_sha256: $icon_sha256,
+            sde_sha256: $sde_sha256,
+            build_number: $build_number,
+            patch_number: $patch_number,
+            release_date: $release_date
+          }' > metadata.json
+        
+        # 严格验证metadata.json是否生成
+        if [ ! -f "metadata.json" ]; then
+          echo "[x] 错误：metadata.json文件未生成"
+          exit 1
+        fi
+        
+        # 验证metadata.json内容
+        echo "[+] 验证metadata.json内容..."
+        VERIFY_ICON_VERSION=$(cat metadata.json | jq -r '.icon_version // ""')
+        VERIFY_ICON_SHA=$(cat metadata.json | jq -r '.icon_sha256 // ""')
+        VERIFY_SDE_SHA=$(cat metadata.json | jq -r '.sde_sha256 // ""')
+        VERIFY_BUILD=$(cat metadata.json | jq -r '.build_number // ""')
+        VERIFY_DATE=$(cat metadata.json | jq -r '.release_date // ""')
+        
+        # 验证所有必需字段
+        if [ -z "$VERIFY_ICON_VERSION" ] || [ "$VERIFY_ICON_VERSION" = "null" ]; then
+          echo "[x] 错误：metadata.json中icon_version字段缺失或为空"
+          exit 1
+        fi
+        
+        if [ -z "$VERIFY_ICON_SHA" ] || [ "$VERIFY_ICON_SHA" = "null" ]; then
+          echo "[x] 错误：metadata.json中icon_sha256字段缺失或为空"
+          exit 1
+        fi
+        
+        if [ -z "$VERIFY_SDE_SHA" ] || [ "$VERIFY_SDE_SHA" = "null" ]; then
+          echo "[x] 错误：metadata.json中sde_sha256字段缺失或为空"
+          exit 1
+        fi
+        
+        if [ -z "$VERIFY_BUILD" ] || [ "$VERIFY_BUILD" = "null" ]; then
+          echo "[x] 错误：metadata.json中build_number字段缺失或为空"
+          exit 1
+        fi
+        
+        if [ -z "$VERIFY_DATE" ] || [ "$VERIFY_DATE" = "null" ]; then
+          echo "[x] 错误：metadata.json中release_date字段缺失或为空"
+          exit 1
+        fi
+        
+        echo "[+] metadata.json所有字段验证通过"
+        echo "[+] 完整metadata.json内容:"
+        cat metadata.json
+        
+        # 输出icon_version供后续使用
+        echo "icon-version=${NEW_ICON_VERSION}" >> $GITHUB_OUTPUT
     
     - name: 创建Release说明
       run: |
@@ -415,21 +453,9 @@ jobs:
         RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
         ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
         SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
+        ICON_VERSION="${{ steps.generate-metadata.outputs.icon-version }}"
         
-        # 从metadata.json读取icon_version（必须存在）
-        if [ ! -f "metadata.json" ]; then
-          echo "[x] 错误：metadata.json不存在"
-          exit 1
-        fi
-        
-        ICON_VERSION=$(cat metadata.json | jq -r '.icon_version')
-        
-        if [ -z "$ICON_VERSION" ] || [ "$ICON_VERSION" = "null" ]; then
-          echo "[x] 错误：无法从metadata.json读取icon_version"
-          exit 1
-        fi
-        
-        echo "[+] 从metadata.json读取icon_version: ${ICON_VERSION}"
+        echo "[+] Icon Version: ${ICON_VERSION}"
         
         # 创建简短的Release说明
         RELEASE_NOTES_FILE="release_notes_${FINAL_BUILD_NUMBER}.md"
