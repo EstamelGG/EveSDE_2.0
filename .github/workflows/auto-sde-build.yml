@@ -184,9 +184,154 @@ jobs:
         name: sde-output-${{ needs.get-build-info.outputs.final-build-number }}
         path: ./
     
+    - name: 处理图标版本号
+      id: process-icon-version
+      run: |
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        
+        echo "[+] 开始处理图标版本号..."
+        
+        # 计算当前图标包的SHA256
+        if [ -f "output_icons/icons.zip" ]; then
+          CURRENT_ICON_SHA256=$(sha256sum "output_icons/icons.zip" | cut -d' ' -f1)
+          echo "[+] 当前图标包SHA256: $CURRENT_ICON_SHA256"
+        else
+          echo "[x] 图标压缩包不存在: output_icons/icons.zip"
+          exit 1
+        fi
+        
+        # 获取最新release信息并下载旧版本SDE
+        echo "[+] 获取最新release信息..."
+        LATEST_RELEASE=$(curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -s \
+          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest")
+        
+        # 检查是否有历史release
+        if [ "$(echo "$LATEST_RELEASE" | jq -r '.message // empty')" = "Not Found" ]; then
+          echo "[+] 首次构建，图标版本号设为1"
+          ICON_VERSION=1
+        else
+          echo "[+] 下载旧版本SDE以获取图标版本号..."
+          
+          # 下载旧版本的sde.zip
+          SDE_DOWNLOAD_URL=$(echo "$LATEST_RELEASE" | jq -r '.assets[] | select(.name=="sde.zip") | .browser_download_url')
+          if [ -n "$SDE_DOWNLOAD_URL" ] && [ "$SDE_DOWNLOAD_URL" != "null" ]; then
+            # 创建临时目录
+            TEMP_DIR=$(mktemp -d)
+            OLD_SDE_ZIP="$TEMP_DIR/sde.zip"
+            OLD_SDE_DIR="$TEMP_DIR/sde_old"
+            
+            # 下载旧版本SDE
+            curl -L -o "$OLD_SDE_ZIP" "$SDE_DOWNLOAD_URL"
+            
+            # 解压旧版本SDE
+            mkdir -p "$OLD_SDE_DIR"
+            unzip -q "$OLD_SDE_ZIP" -d "$OLD_SDE_DIR"
+            
+            # 从旧版本sqlite数据库中读取图标版本号
+            OLD_ICON_VERSION=1  # 默认值
+            for lang in en zh; do
+              OLD_DB_PATH="$OLD_SDE_DIR/db/item_db_${lang}.sqlite"
+              if [ -f "$OLD_DB_PATH" ]; then
+                # 检查是否有icon_version列
+                HAS_ICON_VERSION=$(sqlite3 "$OLD_DB_PATH" "PRAGMA table_info(version_info);" | grep -c "icon_version" || echo "0")
+                if [ "$HAS_ICON_VERSION" -gt 0 ]; then
+                  # 读取图标版本号
+                  OLD_ICON_VERSION=$(sqlite3 "$OLD_DB_PATH" "SELECT icon_version FROM version_info LIMIT 1;" 2>/dev/null || echo "1")
+                  echo "[+] 从旧版本数据库读取图标版本号: $OLD_ICON_VERSION"
+                  break
+                fi
+              fi
+            done
+            
+            # 清理临时文件
+            rm -rf "$TEMP_DIR"
+            
+            # 比较图标包SHA256（这里我们需要获取旧版本的图标包SHA256）
+            # 从release body中提取旧版本图标包SHA256
+            OLD_ICON_SHA256=$(echo "$LATEST_RELEASE" | jq -r '.body' | grep -o 'icon_sha256: [a-f0-9]*' | cut -d' ' -f2)
+            
+            if [ -z "$OLD_ICON_SHA256" ] || [ "$OLD_ICON_SHA256" = "null" ]; then
+              echo "[+] 未找到历史图标包SHA256，图标版本号递增"
+              ICON_VERSION=$((OLD_ICON_VERSION + 1))
+            else
+              echo "[+] 最新release图标包SHA256: $OLD_ICON_SHA256"
+              
+              # 比较SHA256
+              if [ "$CURRENT_ICON_SHA256" = "$OLD_ICON_SHA256" ]; then
+                echo "[+] 图标包未变化，保持当前版本号"
+                ICON_VERSION=$OLD_ICON_VERSION
+              else
+                echo "[+] 图标包已变化，版本号递增"
+                ICON_VERSION=$((OLD_ICON_VERSION + 1))
+              fi
+            fi
+          else
+            echo "[+] 未找到旧版本SDE，图标版本号设为1"
+            ICON_VERSION=1
+          fi
+        fi
+        
+        echo "[+] 图标版本号: $ICON_VERSION"
+        echo "icon_version=$ICON_VERSION" >> $GITHUB_OUTPUT
+        echo "icon_sha256=$CURRENT_ICON_SHA256" >> $GITHUB_OUTPUT
+
+    - name: 更新数据库中的图标版本号
+      run: |
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        ICON_VERSION="${{ steps.process-icon-version.outputs.icon_version }}"
+        
+        echo "[+] 更新数据库中的图标版本号: $ICON_VERSION"
+        
+        # 运行Python脚本更新数据库
+        python3 -c "
+        import sqlite3
+        import os
+        from pathlib import Path
+        
+        # 获取配置
+        project_root = Path('.')
+        db_output_path = project_root / 'output_sde' / 'db'
+        languages = ['en', 'zh']  # 根据实际配置调整
+        
+        icon_version = int('$ICON_VERSION')
+        
+        print(f'[+] 更新图标版本号: {icon_version}')
+        
+        for lang in languages:
+            db_path = db_output_path / f'item_db_{lang}.sqlite'
+            if db_path.exists():
+                try:
+                    conn = sqlite3.connect(str(db_path))
+                    cursor = conn.cursor()
+                    
+                    # 检查version_info表是否存在icon_version列
+                    cursor.execute('PRAGMA table_info(version_info)')
+                    columns = [column[1] for column in cursor.fetchall()]
+                    
+                    if 'icon_version' not in columns:
+                        # 添加icon_version列
+                        cursor.execute('ALTER TABLE version_info ADD COLUMN icon_version INTEGER DEFAULT 1')
+                        print(f'[+] 添加icon_version列到 {db_path.name}')
+                    
+                    # 更新version_info表中的icon_version
+                    cursor.execute('UPDATE version_info SET icon_version = ?', (icon_version,))
+                    conn.commit()
+                    conn.close()
+                    
+                    print(f'[+] 更新完成: {db_path.name}')
+                except Exception as e:
+                    print(f'[x] 更新失败: {db_path.name} - {e}')
+            else:
+                print(f'[!] 数据库文件不存在: {db_path}')
+        
+        print('[+] 图标版本号更新完成')
+        "
+
     - name: 创建压缩包
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        ICON_VERSION="${{ steps.process-icon-version.outputs.icon_version }}"
+        ICON_SHA256="${{ steps.process-icon-version.outputs.icon_sha256 }}"
         
         # 创建图标压缩包（从output_icons/icons.zip复制）
         if [ -f "output_icons/icons.zip" ]; then
@@ -203,6 +348,8 @@ jobs:
         cd ..
         
         echo "[+] SDE数据压缩包创建完成: sde.zip"
+        echo "[+] 图标版本号: $ICON_VERSION"
+        echo "[+] 图标SHA256: $ICON_SHA256"
         ls -la icons.zip sde.zip release_compare_${FINAL_BUILD_NUMBER}.md 2>/dev/null || ls -la icons.zip sde.zip
     
     - name: 验证压缩包
@@ -292,6 +439,8 @@ jobs:
         PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
         RELEASE_DATE="${{ needs.get-build-info.outputs.release-date }}"
+        ICON_VERSION="${{ steps.process-icon-version.outputs.icon_version }}"
+        ICON_SHA256="${{ steps.process-icon-version.outputs.icon_sha256 }}"
         ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
         SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
         
@@ -305,7 +454,8 @@ jobs:
         if [ "$PATCH_VERSION" != "0" ]; then
           echo "- **Patch Version**: ${PATCH_VERSION}" >> "$RELEASE_NOTES_FILE"
         fi
-        echo "- **icon_sha256**: ${ICONS_SHA256}" >> "$RELEASE_NOTES_FILE"
+        echo "- **icon_version**: ${ICON_VERSION}" >> "$RELEASE_NOTES_FILE"
+        echo "- **icon_sha256**: ${ICON_SHA256}" >> "$RELEASE_NOTES_FILE"
         echo "- **sde_sha256**: ${SDE_SHA256}" >> "$RELEASE_NOTES_FILE"
         echo "- **Release Date**: ${RELEASE_DATE}" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
