@@ -445,6 +445,13 @@ jobs:
         # 输出icon_version供后续使用
         echo "icon-version=${NEW_ICON_VERSION}" >> $GITHUB_OUTPUT
     
+    - name: 生成时间戳用于文件名
+      id: timestamp
+      run: |
+        TIMESTAMP=$(date -u +"%Y%m%d_%H%M%S")
+        echo "value=${TIMESTAMP}" >> $GITHUB_OUTPUT
+        echo "[+] 生成时间戳: ${TIMESTAMP}"
+    
     - name: 创建Release说明
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
@@ -454,8 +461,10 @@ jobs:
         ICONS_SHA256="${{ steps.verify-packages.outputs.icons-sha256 }}"
         SDE_SHA256="${{ steps.verify-packages.outputs.sde-sha256 }}"
         ICON_VERSION="${{ steps.generate-metadata.outputs.icon-version }}"
+        TIMESTAMP="${{ steps.timestamp.outputs.value }}"
         
         echo "[+] Icon Version: ${ICON_VERSION}"
+        echo "[+] Timestamp: ${TIMESTAMP}"
         
         # 创建简短的Release说明
         RELEASE_NOTES_FILE="release_notes_${FINAL_BUILD_NUMBER}.md"
@@ -476,7 +485,7 @@ jobs:
         echo "" >> "$RELEASE_NOTES_FILE"
         echo "详细的版本比较报告已保存到仓库：" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
-        echo "[查看比较报告](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/history/release_compare_${FINAL_BUILD_NUMBER}.md)" >> "$RELEASE_NOTES_FILE"
+        echo "[查看比较报告](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/history/release_compare_${FINAL_BUILD_NUMBER}_${TIMESTAMP}.md)" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
         echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
         echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
@@ -502,19 +511,25 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
     
-    - name: 保存比对文件位置
+    - name: 保存比对文件位置和带时间戳的文件名
       id: save-compare-file
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        TIMESTAMP="${{ steps.timestamp.outputs.value }}"
         COMPARE_FILE="release_compare_${FINAL_BUILD_NUMBER}.md"
         
         # 检查比对文件是否存在
         if [ -f "$COMPARE_FILE" ]; then
+          # 生成带时间戳的新文件名
+          NEW_COMPARE_FILE="release_compare_${FINAL_BUILD_NUMBER}_${TIMESTAMP}.md"
+          
           # 保存绝对路径
           COMPARE_FILE_PATH=$(realpath "$COMPARE_FILE")
           echo "path=${COMPARE_FILE_PATH}" >> $GITHUB_OUTPUT
+          echo "new-filename=${NEW_COMPARE_FILE}" >> $GITHUB_OUTPUT
           echo "exists=true" >> $GITHUB_OUTPUT
           echo "[+] 比对文件存在: $COMPARE_FILE_PATH"
+          echo "[+] 新文件名: $NEW_COMPARE_FILE"
         else
           echo "exists=false" >> $GITHUB_OUTPUT
           echo "[!] 比对文件不存在"
@@ -532,10 +547,11 @@ jobs:
       if: steps.save-compare-file.outputs.exists == 'true'
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
-        COMPARE_FILE="release_compare_${FINAL_BUILD_NUMBER}.md"
+        NEW_COMPARE_FILE="${{ steps.save-compare-file.outputs.new-filename }}"
         COMPARE_FILE_PATH="${{ steps.save-compare-file.outputs.path }}"
         
         echo "[+] 准备将比对记录推送到仓库..."
+        echo "[+] 目标文件名: $NEW_COMPARE_FILE"
         
         cd repo
         
@@ -546,11 +562,11 @@ jobs:
         # 创建history目录（如果不存在）
         mkdir -p history
         
-        # 复制比对文件到history目录
-        cp "$COMPARE_FILE_PATH" "history/$COMPARE_FILE"
+        # 复制比对文件到history目录（使用带时间戳的新文件名）
+        cp "$COMPARE_FILE_PATH" "history/$NEW_COMPARE_FILE"
         
         # 添加文件到git
-        git add "history/$COMPARE_FILE"
+        git add "history/$NEW_COMPARE_FILE"
         
         # 检查是否有变更
         if git diff --staged --quiet; then
@@ -562,7 +578,7 @@ jobs:
           # 推送到远程仓库
           git push origin main
           
-          echo "[+] 比对记录已推送到仓库: history/$COMPARE_FILE"
+          echo "[+] 比对记录已推送到仓库: history/$NEW_COMPARE_FILE"
         fi
 
   notify-completion:
