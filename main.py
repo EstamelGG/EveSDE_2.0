@@ -553,13 +553,13 @@ def main():
     
     # 提取英文版物品详细信息
     print("[+] 提取英文版物品详细信息")
-    en_db_path = config["paths"]["db_output"] / "item_db_en.sqlite"
+    en_db_path = Path(config["paths"]["db_output"]) / "item_db_en.sqlite"
     en_output_dir = "item_detail_en"
     en_success = item_detail_extractor.item_detail_extract(str(en_db_path), str(en_output_dir))
     
     # 提取中文版物品详细信息
     print("[+] 提取中文版物品详细信息")
-    zh_db_path = config["paths"]["db_output"] / "item_db_zh.sqlite"
+    zh_db_path = Path(config["paths"]["db_output"]) / "item_db_zh.sqlite"
     zh_output_dir = "item_detail_zh"
     zh_success = item_detail_extractor.item_detail_extract(str(zh_db_path), str(zh_output_dir))
     
