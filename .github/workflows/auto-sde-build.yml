@@ -591,17 +591,23 @@ jobs:
         if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
           echo "[+] 处理物品详情目录"
           
-          # 复制物品详情目录
-          if [ -d "../item_detail_en" ]; then
-            echo "[+] 复制英文版物品详情目录"
-            cp -r "../item_detail_en" .
+          # 复制物品详情目录到repo目录
+          if [ -d "item_detail_en" ]; then
+            echo "[+] 复制英文版物品详情目录到repo"
+            cp -r "item_detail_en" repo/
             git add "item_detail_en/"
+            echo "[+] 英文版物品详情目录已添加到git"
+          else
+            echo "[!] 英文版物品详情目录不存在"
           fi
           
-          if [ -d "../item_detail_zh" ]; then
-            echo "[+] 复制中文版物品详情目录"
-            cp -r "../item_detail_zh" .
+          if [ -d "item_detail_zh" ]; then
+            echo "[+] 复制中文版物品详情目录到repo"
+            cp -r "item_detail_zh" repo/
             git add "item_detail_zh/"
+            echo "[+] 中文版物品详情目录已添加到git"
+          else
+            echo "[!] 中文版物品详情目录不存在"
           fi
         fi
         
