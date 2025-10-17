@@ -182,9 +182,11 @@ jobs:
         if [ -d "item_detail_en" ] && [ -d "item_detail_zh" ]; then
           echo "item-detail-extracted=true" >> $GITHUB_OUTPUT
           echo "[+] 物品详情目录已生成"
+          echo "[+] 设置输出: item-detail-extracted=true"
         else
           echo "item-detail-extracted=false" >> $GITHUB_OUTPUT
           echo "[!] 物品详情目录未生成"
+          echo "[+] 设置输出: item-detail-extracted=false"
         fi
     
     - name: 上传构建产物
@@ -580,7 +582,7 @@ jobs:
         token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
     
     - name: 提交比对记录和物品详情到仓库
-      if: steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true'
+      if: steps.save-compare-file.outputs.exists == 'true'
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         NEW_COMPARE_FILE="${{ steps.save-compare-file.outputs.new-filename }}"
@@ -609,36 +611,35 @@ jobs:
         fi
         
         # 提交物品详情目录
-        echo "[+] 检查物品详情提取状态: ${{ steps.build-sde.outputs.item-detail-extracted }}"
-        if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
-          echo "[+] 处理物品详情目录"
-          echo "[+] 当前目录内容:"
-          ls -la
-          
-          # 复制物品详情目录到repo目录
-          if [ -d "item_detail_en" ]; then
-            echo "[+] 复制英文版物品详情目录到repo"
-            echo "[+] 英文版目录大小:"
-            du -sh item_detail_en/
-            cp -r "item_detail_en" repo/
-            git add "item_detail_en/"
-            echo "[+] 英文版物品详情目录已添加到git"
-          else
-            echo "[!] 英文版物品详情目录不存在"
-          fi
-          
-          if [ -d "item_detail_zh" ]; then
-            echo "[+] 复制中文版物品详情目录到repo"
-            echo "[+] 中文版目录大小:"
-            du -sh item_detail_zh/
-            cp -r "item_detail_zh" repo/
-            git add "item_detail_zh/"
-            echo "[+] 中文版物品详情目录已添加到git"
-          else
-            echo "[!] 中文版物品详情目录不存在"
-          fi
+        echo "[+] 检查物品详情提取状态: '${{ steps.build-sde.outputs.item-detail-extracted }}'"
+        echo "[+] 比对文件存在状态: '${{ steps.save-compare-file.outputs.exists }}'"
+        echo "[+] 当前目录内容:"
+        ls -la
+        
+        # 总是尝试处理物品详情目录（不依赖outputs状态）
+        echo "[+] 尝试处理物品详情目录"
+        
+        # 复制物品详情目录到repo目录
+        if [ -d "item_detail_en" ]; then
+          echo "[+] 复制英文版物品详情目录到repo"
+          echo "[+] 英文版目录大小:"
+          du -sh item_detail_en/
+          cp -r "item_detail_en" repo/
+          git add "item_detail_en/"
+          echo "[+] 英文版物品详情目录已添加到git"
         else
-          echo "[!] 物品详情未提取，跳过提交"
+          echo "[!] 英文版物品详情目录不存在"
+        fi
+        
+        if [ -d "item_detail_zh" ]; then
+          echo "[+] 复制中文版物品详情目录到repo"
+          echo "[+] 中文版目录大小:"
+          du -sh item_detail_zh/
+          cp -r "item_detail_zh" repo/
+          git add "item_detail_zh/"
+          echo "[+] 中文版物品详情目录已添加到git"
+        else
+          echo "[!] 中文版物品详情目录不存在"
         fi
         
         # 检查是否有变更
