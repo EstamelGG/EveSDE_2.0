@@ -159,6 +159,26 @@ jobs:
         python -u main.py
         
         # 检查物品详情目录是否生成
+        echo "[+] 检查物品详情目录..."
+        echo "[+] 当前目录内容:"
+        ls -la
+        
+        if [ -d "item_detail_en" ]; then
+          echo "[+] 英文版物品详情目录存在"
+          echo "[+] 英文版目录内容:"
+          ls -la item_detail_en/ | head -10
+        else
+          echo "[!] 英文版物品详情目录不存在"
+        fi
+        
+        if [ -d "item_detail_zh" ]; then
+          echo "[+] 中文版物品详情目录存在"
+          echo "[+] 中文版目录内容:"
+          ls -la item_detail_zh/ | head -10
+        else
+          echo "[!] 中文版物品详情目录不存在"
+        fi
+        
         if [ -d "item_detail_en" ] && [ -d "item_detail_zh" ]; then
           echo "item-detail-extracted=true" >> $GITHUB_OUTPUT
           echo "[+] 物品详情目录已生成"
@@ -168,6 +188,7 @@ jobs:
         fi
     
     - name: 上传构建产物
+      id: upload-artifact
       uses: actions/upload-artifact@v4
       with:
         name: sde-output-${{ needs.get-build-info.outputs.final-build-number }}
@@ -588,12 +609,17 @@ jobs:
         fi
         
         # 提交物品详情目录
+        echo "[+] 检查物品详情提取状态: ${{ steps.build-sde.outputs.item-detail-extracted }}"
         if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
           echo "[+] 处理物品详情目录"
+          echo "[+] 当前目录内容:"
+          ls -la
           
           # 复制物品详情目录到repo目录
           if [ -d "item_detail_en" ]; then
             echo "[+] 复制英文版物品详情目录到repo"
+            echo "[+] 英文版目录大小:"
+            du -sh item_detail_en/
             cp -r "item_detail_en" repo/
             git add "item_detail_en/"
             echo "[+] 英文版物品详情目录已添加到git"
@@ -603,12 +629,16 @@ jobs:
           
           if [ -d "item_detail_zh" ]; then
             echo "[+] 复制中文版物品详情目录到repo"
+            echo "[+] 中文版目录大小:"
+            du -sh item_detail_zh/
             cp -r "item_detail_zh" repo/
             git add "item_detail_zh/"
             echo "[+] 中文版物品详情目录已添加到git"
           else
             echo "[!] 中文版物品详情目录不存在"
           fi
+        else
+          echo "[!] 物品详情未提取，跳过提交"
         fi
         
         # 检查是否有变更
