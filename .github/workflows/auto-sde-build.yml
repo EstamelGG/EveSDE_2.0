@@ -145,6 +145,7 @@ jobs:
         pip install -r requirements.txt
     
     - name: 执行SDE构建
+      id: build-sde
       run: |
         echo "[+] 执行SDE构建"
         echo "[+] Build Number: ${{ needs.get-build-info.outputs.build-number }}"
@@ -156,6 +157,15 @@ jobs:
         export PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         
         python -u main.py
+        
+        # 检查物品详情目录是否生成
+        if [ -d "item_detail_en" ] && [ -d "item_detail_zh" ]; then
+          echo "item-detail-extracted=true" >> $GITHUB_OUTPUT
+          echo "[+] 物品详情目录已生成"
+        else
+          echo "item-detail-extracted=false" >> $GITHUB_OUTPUT
+          echo "[!] 物品详情目录未生成"
+        fi
     
     - name: 上传构建产物
       uses: actions/upload-artifact@v4
@@ -164,8 +174,13 @@ jobs:
         path: |
           output_sde/
           output_icons/
+          item_detail_en/
+          item_detail_zh/
           release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
         retention-days: 30
+    
+    outputs:
+      item-detail-extracted: ${{ steps.build-sde.outputs.item-detail-extracted }}
 
   create-release:
     name: 创建Release
@@ -535,23 +550,22 @@ jobs:
           echo "[!] 比对文件不存在"
         fi
     
-    - name: 检出代码用于提交历史记录
-      if: steps.save-compare-file.outputs.exists == 'true'
+    - name: 检出代码用于提交历史记录和物品详情
+      if: steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true'
       uses: actions/checkout@v4
       with:
         ref: main
         path: repo
         token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
     
-    - name: 提交比对记录到history目录
-      if: steps.save-compare-file.outputs.exists == 'true'
+    - name: 提交比对记录和物品详情到仓库
+      if: steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true'
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         NEW_COMPARE_FILE="${{ steps.save-compare-file.outputs.new-filename }}"
         COMPARE_FILE_PATH="${{ steps.save-compare-file.outputs.path }}"
         
-        echo "[+] 准备将比对记录推送到仓库..."
-        echo "[+] 目标文件名: $NEW_COMPARE_FILE"
+        echo "[+] 准备将比对记录和物品详情推送到仓库..."
         
         cd repo
         
@@ -559,26 +573,66 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         
-        # 创建history目录（如果不存在）
-        mkdir -p history
+        # 提交比对记录
+        if [ "${{ steps.save-compare-file.outputs.exists }}" = "true" ]; then
+          echo "[+] 处理比对记录: $NEW_COMPARE_FILE"
+          
+          # 创建history目录（如果不存在）
+          mkdir -p history
+          
+          # 复制比对文件到history目录（使用带时间戳的新文件名）
+          cp "$COMPARE_FILE_PATH" "history/$NEW_COMPARE_FILE"
+          
+          # 添加文件到git
+          git add "history/$NEW_COMPARE_FILE"
+        fi
         
-        # 复制比对文件到history目录（使用带时间戳的新文件名）
-        cp "$COMPARE_FILE_PATH" "history/$NEW_COMPARE_FILE"
-        
-        # 添加文件到git
-        git add "history/$NEW_COMPARE_FILE"
+        # 提交物品详情目录
+        if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
+          echo "[+] 处理物品详情目录"
+          
+          # 复制物品详情目录
+          if [ -d "../item_detail_en" ]; then
+            echo "[+] 复制英文版物品详情目录"
+            cp -r "../item_detail_en" .
+            git add "item_detail_en/"
+          fi
+          
+          if [ -d "../item_detail_zh" ]; then
+            echo "[+] 复制中文版物品详情目录"
+            cp -r "../item_detail_zh" .
+            git add "item_detail_zh/"
+          fi
+        fi
         
         # 检查是否有变更
         if git diff --staged --quiet; then
           echo "[+] 没有新的变更需要提交"
         else
+          # 构建提交信息
+          COMMIT_MSG="Update SDE data for build ${FINAL_BUILD_NUMBER} [skip ci]"
+          
+          if [ "${{ steps.save-compare-file.outputs.exists }}" = "true" ]; then
+            COMMIT_MSG="${COMMIT_MSG}\n- Add release compare: history/$NEW_COMPARE_FILE"
+          fi
+          
+          if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
+            COMMIT_MSG="${COMMIT_MSG}\n- Update item detail directories (en/zh)"
+          fi
+          
           # 提交变更
-          git commit -m "Add release compare for build ${FINAL_BUILD_NUMBER} [skip ci]"
+          git commit -m "$COMMIT_MSG"
           
           # 推送到远程仓库
           git push origin main
           
-          echo "[+] 比对记录已推送到仓库: history/$NEW_COMPARE_FILE"
+          echo "[+] 数据已推送到仓库"
+          if [ "${{ steps.save-compare-file.outputs.exists }}" = "true" ]; then
+            echo "[+] 比对记录: history/$NEW_COMPARE_FILE"
+          fi
+          if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
+            echo "[+] 物品详情目录: item_detail_en/, item_detail_zh/"
+          fi
         fi
 
   notify-completion:

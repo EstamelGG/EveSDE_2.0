@@ -545,6 +545,32 @@ def main():
     print("\n[+] 写入版本日志")
     print("=" * 30)
     write_latest_log(current_build_number, current_release_date)
+    
+    # 执行物品详细信息提取
+    print("\n[+] 执行物品详细信息提取")
+    print("=" * 30)
+    import scripts.item_detail_extractor as item_detail_extractor
+    
+    # 提取英文版物品详细信息
+    print("[+] 提取英文版物品详细信息")
+    en_db_path = config["paths"]["db_output"] / "item_db_en.sqlite"
+    en_output_dir = "item_detail_en"
+    en_success = item_detail_extractor.item_detail_extract(str(en_db_path), str(en_output_dir))
+    
+    # 提取中文版物品详细信息
+    print("[+] 提取中文版物品详细信息")
+    zh_db_path = config["paths"]["db_output"] / "item_db_zh.sqlite"
+    zh_output_dir = "item_detail_zh"
+    zh_success = item_detail_extractor.item_detail_extract(str(zh_db_path), str(zh_output_dir))
+    
+    if en_success and zh_success:
+        print("[+] 物品详细信息提取完成")
+    else:
+        print("[!] 物品详细信息提取部分失败")
+        if not en_success:
+            print("[!] 英文版提取失败")
+        if not zh_success:
+            print("[!] 中文版提取失败")
 
     print("\n[+] 所有处理完成")
 
