@@ -8,6 +8,7 @@
 import sqlite3
 import json
 import os
+import shutil
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import time
@@ -31,7 +32,11 @@ class ItemDetailExtractor:
         if not self.db_path.exists():
             raise FileNotFoundError(f"数据库文件不存在: {self.db_path}")
         
-        # 创建输出目录
+        # 清空并重新创建输出目录
+        if self.output_dir.exists():
+            print(f"[+] 清空现有输出目录: {self.output_dir}")
+            shutil.rmtree(self.output_dir)
+        
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         print(f"[+] 初始化物品详细信息提取器")
