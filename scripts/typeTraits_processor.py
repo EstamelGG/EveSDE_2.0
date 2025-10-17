@@ -65,7 +65,7 @@ class TypeTraitsProcessor:
                                 prefix = f"<b>{bonus_num}</b> "
                             content = prefix + content
                         
-                        results.append((type_id, content, None, bonus.get('importance', 999999), "roleBonuses"))
+                        results.append((type_id, content, -1, bonus.get('importance', 999999), "roleBonuses"))
         
         # 处理 typeBonuses
         if 'types' in traits_data:
@@ -118,7 +118,7 @@ class TypeTraitsProcessor:
                                 prefix = f"<b>{bonus_num}</b> "
                             content = prefix + content
                         
-                        results.append((type_id, content, None, bonus.get('importance', 999999), "miscBonuses"))
+                        results.append((type_id, content, -1, bonus.get('importance', 999999), "miscBonuses"))
         
         # 按importance排序
         return sorted(results, key=lambda x: x[3])
@@ -129,7 +129,7 @@ class TypeTraitsProcessor:
             CREATE TABLE IF NOT EXISTS traits (
                 typeid INTEGER NOT NULL,
                 content TEXT NOT NULL,
-                skill INTEGER,
+                skill INTEGER NOT NULL DEFAULT -1,
                 importance INTEGER,
                 bonus_type TEXT,
                 PRIMARY KEY (typeid, content, skill)
