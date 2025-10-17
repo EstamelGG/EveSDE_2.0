@@ -618,28 +618,29 @@ jobs:
         
         # 总是尝试处理物品详情目录（不依赖outputs状态）
         echo "[+] 尝试处理物品详情目录"
+        echo "[+] 检查artifact目录中的物品详情..."
         
-        # 复制物品详情目录到repo目录
-        if [ -d "item_detail_en" ]; then
+        # 复制物品详情目录到repo目录（从artifact下载的目录复制）
+        if [ -d "../item_detail_en" ]; then
           echo "[+] 复制英文版物品详情目录到repo"
           echo "[+] 英文版目录大小:"
-          du -sh item_detail_en/
-          cp -r "item_detail_en" repo/
+          du -sh ../item_detail_en/
+          cp -r "../item_detail_en" .
           git add "item_detail_en/"
           echo "[+] 英文版物品详情目录已添加到git"
         else
-          echo "[!] 英文版物品详情目录不存在"
+          echo "[!] 英文版物品详情目录不存在于artifact中"
         fi
         
-        if [ -d "item_detail_zh" ]; then
+        if [ -d "../item_detail_zh" ]; then
           echo "[+] 复制中文版物品详情目录到repo"
           echo "[+] 中文版目录大小:"
-          du -sh item_detail_zh/
-          cp -r "item_detail_zh" repo/
+          du -sh ../item_detail_zh/
+          cp -r "../item_detail_zh" .
           git add "item_detail_zh/"
           echo "[+] 中文版物品详情目录已添加到git"
         else
-          echo "[!] 中文版物品详情目录不存在"
+          echo "[!] 中文版物品详情目录不存在于artifact中"
         fi
         
         # 检查是否有变更
