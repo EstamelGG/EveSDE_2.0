@@ -136,10 +136,13 @@ class TypeDogmaProcessor:
         processed_effects = 0
         processed_harvests = 0
         
-        for type_id, details in dogma_data.items():
+        # 按type_id排序处理，确保插入顺序一致
+        for type_id in sorted(dogma_data.keys()):
+            details = dogma_data[type_id]
             # 处理dogmaAttributes数据
             if 'dogmaAttributes' in details:
-                for attribute in details['dogmaAttributes']:
+                # 按attribute_id排序，确保插入顺序一致
+                for attribute in sorted(details['dogmaAttributes'], key=lambda x: x['attributeID']):
                     attribute_id = attribute['attributeID']
                     value = attribute['value']
                     unit_id = attribute_unit_map.get(attribute_id)  # 获取对应的unitID
@@ -163,7 +166,8 @@ class TypeDogmaProcessor:
             
             # 处理dogmaEffects数据
             if 'dogmaEffects' in details:
-                for effect in details['dogmaEffects']:
+                # 按effect_id排序，确保插入顺序一致
+                for effect in sorted(details['dogmaEffects'], key=lambda x: x['effectID']):
                     effect_batch.append((type_id, effect['effectID'], effect['isDefault']))
                     processed_effects += 1
                     

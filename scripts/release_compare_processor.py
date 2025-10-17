@@ -244,7 +244,7 @@ class ReleaseCompareProcessor:
                 # 执行sqldiff比较
                 try:
                     result = subprocess.run(
-                        [str(sqldiff_path), str(old_db), str(current_db)],
+                        [str(sqldiff_path), '--primarykey', str(old_db), str(current_db)],
                         capture_output=True,
                         text=True,
                         timeout=300
