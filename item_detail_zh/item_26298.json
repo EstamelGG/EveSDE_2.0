@@ -1,7 +1,7 @@
 {
   "type_id": 26298,
   "name": "大型远程维修增效器 II",
-  "description": "这个飞船改装件通过牺牲舰船的最大速度来减少远程装甲维修装备的电容需求。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26253>装甲改装技术</a>技能降低影响。",
+  "description": "该舰船改装件以牺牲灵活性为代价，可降低舰船远程装甲维修装备对电容器的依赖。可通过训练<a href=showinfo:26253>装甲改装</a>技能来降低装配该改装件所带来的负面影响。",
   "volume": 20.0,
   "repackaged_volume": null,
   "capacity": null,
