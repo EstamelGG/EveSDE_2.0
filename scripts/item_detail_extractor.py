@@ -117,13 +117,21 @@ class ItemDetailExtractor:
                         FROM typeAttributes ta
                         LEFT JOIN dogmaAttributes da ON ta.attribute_id = da.attribute_id
                         WHERE ta.type_id = ?
-                        ORDER BY da.categoryID, ta.attribute_id
+                        ORDER BY ta.attribute_id
                     ),
                     'traits', (
                         SELECT json_group_array(json_object('content', content))
                         FROM traits 
                         WHERE typeid = ?
-                        ORDER BY content
+                        ORDER BY 
+                            CASE 
+                                WHEN bonus_type = 'roleBonuses' THEN 1
+                                WHEN bonus_type = 'typeBonuses' THEN 2  
+                                WHEN bonus_type = 'miscBonuses' THEN 3
+                                ELSE 4
+                            END,
+                            COALESCE(importance, 999) ASC,
+                            content ASC
                     )
                 ) as item_data
             FROM types t
