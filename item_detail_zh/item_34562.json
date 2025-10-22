@@ -630,6 +630,9 @@
       "content": "<b>33%</b> <a href=showinfo:3302>小型射弹炮台</a>伤害加成"
     },
     {
+      "content": "<b>33.3%</b> bonus to <a href=showinfo:3422>Remote Shield Booster</a> repair amount and reduction in activation cost while <i>Defense Mode</i> is enabled"
+    },
+    {
       "content": "<b>33.3%</b> 启用<i>狙击模式</i>后<a href=showinfo:3302>小型射弹炮台</a>伤害加成"
     },
     {
@@ -637,9 +640,6 @@
     },
     {
       "content": "<b>33.3%</b> 启用<i>防御模式</i>后护盾和装甲抗性加成"
-    },
-    {
-      "content": "<b>33.3%</b> 启用<i>防御模式</i>时，<a href=showinfo:3422>远程护盾回充增量器</a>的修复量提高，启动消耗降低。"
     },
     {
       "content": "<b>33.3%</b> 启用<i>高速模式</i>后惯性系数加成"

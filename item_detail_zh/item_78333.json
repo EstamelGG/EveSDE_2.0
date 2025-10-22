@@ -637,7 +637,7 @@
       "content": "<b>25%</b> 跃迁速度和跃迁加速加成"
     },
     {
-      "content": "<b>50%</b> <a href=showinfo:3302>小型射弹炮台</a>失准范围加成"
+      "content": "<b>50%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> falloff"
     },
     {
       "content": "<b>7.5%</b> <a href=showinfo:3302>小型射弹炮台</a>追踪速度加成"

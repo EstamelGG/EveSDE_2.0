@@ -1,7 +1,7 @@
 {
   "type_id": 89689,
-  "name": "高级装甲覆层",
-  "description": "能够安全高效地安装升级装甲附甲板的高级技能，可以降低其对舰船敏捷性和速度的影响。每升一级，装甲板的质量惩罚降低2%。",
+  "name": "Advanced Armor Layering",
+  "description": "Advanced skill at installing upgraded armor plates efficiently and securely, reducing the impact they have on agility and speed. Grants a 2% reduction to armor plate mass penalty per level.",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

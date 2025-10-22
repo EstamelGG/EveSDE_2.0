@@ -799,7 +799,7 @@
       "content": "<a href=\"showinfo:11579\">隐形装置</a>重启延时降到5秒"
     },
     {
-      "content": "<b>1+</b> <a href=showinfo:447>跃迁扰频器</a>干扰强度"
+      "content": "<b>1+</b> scramble strength to all <a href=showinfo:447>Warp Scramblers</a>"
     },
     {
       "content": "<b>10%</b> <a href=\"showinfo:3307\">大型混合炮台</a>伤害加成"
@@ -808,7 +808,7 @@
       "content": "<b>10%</b> <a href=\"showinfo:3436\">无人机</a>伤害和HP加成"
     },
     {
-      "content": "<b>10%</b> <a href=showinfo:3436>跃迁扰频器</a>范围加成"
+      "content": "<b>10%</b> <a href=showinfo:3439>后勤无人机</a>维修量加成"
     },
     {
       "content": "<b>100%</b> <a href=showinfo:3425>护盾扩展装置</a>护盾值加成"
@@ -832,10 +832,10 @@
       "content": "<b>75%</b> 减少跳跃距离对产生跳跃疲劳的影响"
     },
     {
-      "content": "可以装配<a href=showinfo:21096>诱导力场发生器</a>、<a href=showinfo:28646>隐秘诱导力场发生器</a>和<a href=showinfo:28652>隐秘跳跃通道发生器</a>装备"
+      "content": "Sin bonuses do not apply to <a href=showinfo:3242>Warp Disruptors</a>"
     },
     {
-      "content": "罪恶级加成不适用于<a href=showinfo:3242>跃迁扰断器</a>"
+      "content": "可以装配<a href=showinfo:21096>诱导力场发生器</a>、<a href=showinfo:28646>隐秘诱导力场发生器</a>和<a href=showinfo:28652>隐秘跳跃通道发生器</a>装备"
     },
     {
       "content": "重新启动<a href=\"showinfo:11579\">隐形装置</a>后不遭受锁定延时副作用"
