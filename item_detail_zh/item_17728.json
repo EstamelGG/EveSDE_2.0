@@ -641,7 +641,7 @@
       "content": "<b>100%</b> <a href=showinfo:3425>护盾扩展装置</a>护盾值加成"
     },
     {
-      "content": "<b>15%</b> reduction in <a href=showinfo:3394>Armor Plate</a> mass penalty"
+      "content": "<b>15%</b> <a href=showinfo:3394>装甲板</a>质量惩罚降低"
     },
     {
       "content": "<b>5%</b> <a href=\"showinfo:3307\">大型混合炮台</a>射速加成"

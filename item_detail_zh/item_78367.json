@@ -624,7 +624,7 @@
       "content": "<b>10%</b> 动能和热能导弹伤害加成"
     },
     {
-      "content": "<b>25%</b> bonus to <a href=showinfo:3436>Drone</a> max velocity"
+      "content": "<b>25%</b> <a href=showinfo:3436>无人机</a>最大速度加成"
     },
     {
       "content": "<b>300%</b> <a href=showinfo:24241>轻型战斗无人机</a>伤害和HP加成"
