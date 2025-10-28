@@ -430,6 +430,13 @@
       "unit_name": "Level"
     },
     {
+      "attribute_name": "shipBonusAC2",
+      "value": 20.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "shipBonusMC2",
       "value": 20.0,
       "categoryID": 9,
@@ -452,7 +459,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 100.0,
+      "value": 125.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -605,6 +612,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "shipBonusAC3",
+      "value": 10.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -631,10 +645,16 @@
       "content": "<a href=showinfo:3423>Energy Nosferatu</a> fitted to this ship will drain targeted ship's capacitor regardless of your own capacitor level"
     },
     {
-      "content": "<b>100%</b> bonus to <a href=showinfo:3306>Medium Energy Turret</a> damage"
+      "content": "<b>10%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> falloff range"
+    },
+    {
+      "content": "<b>125%</b> bonus to <a href=showinfo:3306>Medium Energy Turret</a> damage"
     },
     {
       "content": "<b>15%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> drain amount"
+    },
+    {
+      "content": "<b>20%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> optimal range"
     },
     {
       "content": "<b>20%</b> bonus to <a href=showinfo:526>Stasis Webifier</a> range"

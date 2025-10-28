@@ -430,6 +430,13 @@
       "unit_name": "等级"
     },
     {
+      "attribute_name": "shipBonusAC2",
+      "value": 20.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "shipBonusMC2",
       "value": 20.0,
       "categoryID": 9,
@@ -452,7 +459,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 100.0,
+      "value": 125.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -605,6 +612,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "shipBonusAC3",
+      "value": 10.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -628,13 +642,19 @@
   ],
   "traits": [
     {
-      "content": "<b>100%</b> <a href=showinfo:3306>中型能量炮台</a>伤害加成"
+      "content": "<b>10%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> falloff range"
+    },
+    {
+      "content": "<b>125%</b> <a href=showinfo:3306>中型能量炮台</a>伤害加成"
     },
     {
       "content": "<b>15%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>吸取量加成"
     },
     {
       "content": "<b>20%</b> <a href=\"showinfo:526\">停滞缠绕光束</a>射程加成"
+    },
+    {
+      "content": "<b>20%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> optimal range"
     },
     {
       "content": "这艘舰船的<a href=showinfo:3423>掠能器</a>可以无视自身剩余电容量而对目标舰船的电容无限吸取"
