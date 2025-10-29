@@ -10,10 +10,7 @@ on:
         type: boolean
   schedule:
     # 每天固定时间（UTC时间）
-    - cron: '0 0 * * *'    # 北京时间 08:00
-    - cron: '0 4 * * *'    # 北京时间 12:00
-    - cron: '*/15 11-12 * * *'   # 北京时间 19:00 后每15分钟执行一次
-    - cron: '0 14 * * *'   # 北京时间 22:00
+    - cron: '*/20 11 * * *'   # 北京时间 19:00 后每15分钟执行一次
 
 concurrency:
   group: ${{ github.workflow }}
