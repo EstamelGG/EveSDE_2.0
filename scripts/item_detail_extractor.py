@@ -61,7 +61,7 @@ class ItemDetailExtractor:
             SELECT type_id 
             FROM types 
             WHERE published = 1 
-            AND NOT categoryID IN (91, 2118)
+            AND NOT categoryID IN (91, 2118, 30, 2100)
             ORDER BY type_id
             """
             
