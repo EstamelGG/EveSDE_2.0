@@ -468,6 +468,37 @@ class LoyaltyStoresProcessor:
         results = asyncio.run(self.process_all_corporations_async())
         return results
     
+    def calculate_statistics(self, results: List[Tuple[int, Optional[List[Dict[str, Any]]]]]):
+        """
+        计算统计数据（不更新self.stats，只返回统计结果）
+        
+        Args:
+            results: 所有军团的数据列表
+        
+        Returns:
+            统计信息字典
+        """
+        stats = {
+            "total_corporations": len(results),
+            "processed_corporations": 0,
+            "failed_corporations": 0,
+            "total_offers": 0,
+            "total_required_items": 0
+        }
+        
+        for corporation_id, offers in results:
+            if offers is not None and len(offers) > 0:
+                stats["processed_corporations"] += 1
+                stats["total_offers"] += len(offers)
+                # 计算required_items总数
+                for offer in offers:
+                    required_items = offer.get('required_items', [])
+                    stats["total_required_items"] += len(required_items)
+            else:
+                stats["failed_corporations"] += 1
+        
+        return stats
+    
     def save_all_data_to_database(
         self,
         cursor: sqlite3.Cursor,
@@ -480,7 +511,7 @@ class LoyaltyStoresProcessor:
             cursor: 数据库游标
             results: 所有军团的数据列表
         """
-        print("\n[+] 开始保存数据到数据库...")
+        print("[+] 开始保存数据到数据库...")
         save_start_time = time.time()
         
         for corporation_id, offers in results:
@@ -515,8 +546,16 @@ class LoyaltyStoresProcessor:
             print("[x] 没有获取到任何LP商店数据，无法继续处理")
             return
         
-        print(f"\n[+] 获取完成，共 {len(results)} 个军团的数据")
-        print(f"[+] 开始将数据写入到 {len(self.languages)} 个语言的数据库...")
+        # 计算并输出统计数据
+        stats = self.calculate_statistics(results)
+        print(f"\n[+] 数据获取完成，统计信息：")
+        print(f"    - 总军团数: {stats['total_corporations']}")
+        print(f"    - 有LP商店的军团: {stats['processed_corporations']}")
+        print(f"    - 无LP商店的军团: {stats['failed_corporations']}")
+        print(f"    - 总offer数: {stats['total_offers']}")
+        print(f"    - 总required_items数: {stats['total_required_items']}")
+        
+        print(f"\n[+] 开始将数据写入到 {len(self.languages)} 个语言的数据库...")
         
         # 为每种语言的数据库分别插入相同的数据
         for lang in self.languages:
@@ -534,16 +573,6 @@ class LoyaltyStoresProcessor:
                 # 清空现有数据
                 self.clear_existing_data(cursor)
                 
-                # 重置统计数据（除了total_corporations）
-                old_total_corps = self.stats["total_corporations"]
-                self.stats = {
-                    "total_corporations": old_total_corps,
-                    "processed_corporations": 0,
-                    "failed_corporations": 0,
-                    "total_offers": 0,
-                    "total_required_items": 0
-                }
-                
                 # 将数据保存到数据库
                 self.save_all_data_to_database(cursor, results)
                 
@@ -552,11 +581,6 @@ class LoyaltyStoresProcessor:
                 conn.close()
                 
                 print(f"[+] 数据库 {lang} 更新完成")
-                print(f"    - 总军团数: {self.stats['total_corporations']}")
-                print(f"    - 有LP商店的军团: {self.stats['processed_corporations']}")
-                print(f"    - 无LP商店的军团: {self.stats['failed_corporations']}")
-                print(f"    - 总offer数: {self.stats['total_offers']}")
-                print(f"    - 总required_items数: {self.stats['total_required_items']}")
                 
             except Exception as e:
                 print(f"[x] 处理数据库 {db_filename} 时出错: {e}")
