@@ -170,24 +170,26 @@ class LoyaltyStoresProcessor:
         # 1. 创建忠诚点商店商品表
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loyalty_offers (
-                offer_id INTEGER PRIMARY KEY,
                 corporation_id INTEGER NOT NULL,
+                offer_id INTEGER NOT NULL,
                 type_id INTEGER NOT NULL,
                 quantity INTEGER NOT NULL DEFAULT 1,
                 isk_cost INTEGER NOT NULL DEFAULT 0,
                 lp_cost INTEGER NOT NULL DEFAULT 0,
-                ak_cost INTEGER NOT NULL DEFAULT 0
+                ak_cost INTEGER NOT NULL DEFAULT 0,
+                PRIMARY KEY (corporation_id, offer_id)
             )
         ''')
         
         # 2. 创建忠诚点商店商品所需物品表
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loyalty_offer_required_items (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                corporation_id INTEGER NOT NULL,
                 offer_id INTEGER NOT NULL,
                 required_type_id INTEGER NOT NULL,
                 required_quantity INTEGER NOT NULL,
-                FOREIGN KEY (offer_id) REFERENCES loyalty_offers(offer_id) ON DELETE CASCADE
+                PRIMARY KEY (corporation_id, offer_id, required_type_id),
+                FOREIGN KEY (corporation_id, offer_id) REFERENCES loyalty_offers(corporation_id, offer_id) ON DELETE CASCADE
             )
         ''')
         
@@ -217,10 +219,6 @@ class LoyaltyStoresProcessor:
             ON loyalty_offer_required_items(required_type_id)
         ''')
         
-        cursor.execute('''
-            CREATE UNIQUE INDEX IF NOT EXISTS idx_loyalty_offer_required_items_unique 
-            ON loyalty_offer_required_items(offer_id, required_type_id)
-        ''')
         
         print("[+] 数据库表结构创建完成")
     
@@ -289,6 +287,7 @@ class LoyaltyStoresProcessor:
                 required_type_id = req_item.get('type_id')
                 required_quantity = req_item.get('quantity', 1)
                 required_items_batch.append((
+                    corporation_id,
                     offer_id,
                     required_type_id,
                     required_quantity
@@ -323,18 +322,19 @@ class LoyaltyStoresProcessor:
         
         # 批量插入required_items
         if required_items_batch:
-            # 先删除该offer的旧required_items，避免重复
-            offer_ids = list(set([item[0] for item in required_items_batch]))
-            for offer_id in offer_ids:
+            # 先删除该军团的该offer的旧required_items，避免重复
+            # 获取唯一的 (corporation_id, offer_id) 组合
+            unique_keys = list(set([(item[0], item[1]) for item in required_items_batch]))
+            for corp_id, offer_id in unique_keys:
                 cursor.execute('''
                     DELETE FROM loyalty_offer_required_items 
-                    WHERE offer_id = ?
-                ''', (offer_id,))
+                    WHERE corporation_id = ? AND offer_id = ?
+                ''', (corp_id, offer_id))
             
             cursor.executemany('''
                 INSERT INTO loyalty_offer_required_items
-                (offer_id, required_type_id, required_quantity)
-                VALUES (?, ?, ?)
+                (corporation_id, offer_id, required_type_id, required_quantity)
+                VALUES (?, ?, ?, ?)
             ''', required_items_batch)
             self.stats["total_required_items"] += len(required_items_batch)
     
