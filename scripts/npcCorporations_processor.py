@@ -12,7 +12,7 @@ import asyncio
 import aiohttp
 import os
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import scripts.jsonl_loader as jsonl_loader
 
 
@@ -31,6 +31,10 @@ class NpcCorporationsProcessor:
         
         # 缓存数据
         self.corporations_data = {}
+        # ESI API配置
+        self.esi_base_url = "https://esi.evetech.net"
+        self.max_concurrent = 20  # 最大并发数
+        self.request_timeout = aiohttp.ClientTimeout(total=30)
     
     def load_corporations_data(self):
         """加载NPC公司数据"""
@@ -104,6 +108,100 @@ class NpcCorporationsProcessor:
         # 返回结果字典
         return {corp_id: filename for corp_id, filename in zip(corp_ids, results) if filename}
     
+    async def fetch_corporation_faction(
+        self,
+        session: aiohttp.ClientSession,
+        semaphore: asyncio.Semaphore,
+        corporation_id: int
+    ) -> Optional[int]:
+        """
+        获取单个军团的faction_id（异步）
+        
+        Args:
+            session: aiohttp会话
+            semaphore: 并发控制信号量
+            corporation_id: 军团ID
+        
+        Returns:
+            faction_id，如果不是卫队军团则返回None
+        """
+        async with semaphore:
+            url = f"{self.esi_base_url}/corporations/{corporation_id}"
+            try:
+                async with session.get(url) as response:
+                    if response.status == 404:
+                        # 404表示该军团不存在，返回None
+                        return None
+                    elif response.status == 429:
+                        # 429表示请求过多，等待后返回None（让调用者重试）
+                        retry_after = int(response.headers.get('Retry-After', 60))
+                        print(f"    [!] 请求频率限制，等待 {retry_after} 秒...")
+                        await asyncio.sleep(retry_after)
+                        return None
+                    elif response.status >= 400:
+                        print(f"    [-] HTTP错误 {response.status} for corporation {corporation_id}")
+                        return None
+                    
+                    data = await response.json()
+                    faction_id = data.get('faction_id', 0)
+                    
+                    # 如果faction_id存在且不为0，则认为是卫队军团
+                    if faction_id and faction_id != 0:
+                        return faction_id
+                    else:
+                        return None
+                        
+            except asyncio.TimeoutError:
+                print(f"    [-] 请求超时: corporation {corporation_id}")
+                return None
+            except Exception as e:
+                print(f"    [-] 请求失败: corporation {corporation_id} - {str(e)}")
+                return None
+    
+    async def fetch_all_corporations_factions(self, corporation_ids: List[int]) -> Dict[int, int]:
+        """
+        并发获取所有军团的faction_id信息
+        
+        Args:
+            corporation_ids: 军团ID列表
+        
+        Returns:
+            字典，key为corporation_id，value为faction_id（如果不是卫队军团则为None）
+        """
+        print(f"[+] 开始并发获取 {len(corporation_ids)} 个军团的faction_id信息...")
+        print(f"[+] 并发数: {self.max_concurrent}")
+        
+        connector = aiohttp.TCPConnector(limit=100)
+        headers = {"User-Agent": "EveSDE_2.0/1.0"}
+        
+        async with aiohttp.ClientSession(
+            connector=connector,
+            timeout=self.request_timeout,
+            headers=headers
+        ) as session:
+            semaphore = asyncio.Semaphore(self.max_concurrent)
+            
+            # 创建所有任务
+            tasks = [
+                self.fetch_corporation_faction(session, semaphore, corp_id)
+                for corp_id in corporation_ids
+            ]
+            
+            # 并发执行
+            results = await asyncio.gather(*tasks)
+            
+            # 构建结果字典
+            faction_map = {}
+            militia_count = 0
+            
+            for corp_id, faction_id in zip(corporation_ids, results):
+                if faction_id is not None:
+                    faction_map[corp_id] = faction_id
+                    militia_count += 1
+            
+            print(f"[+] 获取完成：{militia_count} 个卫队军团，{len(corporation_ids) - militia_count} 个非卫队军团")
+            return faction_map
+    
     def create_npc_corporations_table(self, cursor: sqlite3.Cursor):
         """创建 npcCorporations 表"""
         cursor.execute('''
@@ -120,6 +218,7 @@ class NpcCorporationsProcessor:
                 zh_name TEXT,
                 description TEXT,
                 faction_id INTEGER,
+                militia_faction INTEGER,
                 icon_filename TEXT
             )
         ''')
@@ -127,15 +226,26 @@ class NpcCorporationsProcessor:
         # 创建索引以优化查询性能
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_npcCorporations_faction_id ON npcCorporations(faction_id)')
     
-    async def process_corporations_data_async(self, cursor: sqlite3.Cursor, lang: str = 'en'):
-        """处理 npcCorporations 数据并插入数据库（异步版本）"""
+    def process_corporations_data_to_db(
+        self,
+        cursor: sqlite3.Cursor,
+        lang: str,
+        militia_faction_map: Dict[int, int],
+        icon_filenames: Dict[int, str]
+    ):
+        """
+        处理 npcCorporations 数据并插入数据库
+        
+        Args:
+            cursor: 数据库游标
+            lang: 语言代码
+            militia_faction_map: 卫队军团faction_id映射字典
+            icon_filenames: 图标文件名映射字典
+        """
         self.create_npc_corporations_table(cursor)
         
         # 获取所有军团ID
         corp_ids = list(self.corporations_data.keys())
-        
-        # 下载所有图标
-        icon_filenames = await self.download_all_corporation_icons(corp_ids, self.custom_icons_path)
         
         # 用于存储批量插入的数据
         batch_data = []
@@ -165,6 +275,9 @@ class NpcCorporationsProcessor:
             # 获取其他信息
             faction_id = corp_info.get('factionID', 500021)
             
+            # 获取卫队军团faction_id（如果存在）
+            militia_faction = militia_faction_map.get(corp_id)
+            
             # 获取图标文件名
             icon_filename = icon_filenames.get(corp_id, "corporations_default.png")
             
@@ -182,6 +295,7 @@ class NpcCorporationsProcessor:
                 names['zh'],
                 description,
                 faction_id,
+                militia_faction,
                 icon_filename
             ))
             
@@ -195,8 +309,9 @@ class NpcCorporationsProcessor:
                         ja_name, ko_name, ru_name, zh_name,
                         description,
                         faction_id,
+                        militia_faction,
                         icon_filename
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', batch_data)
                 batch_data = []  # 清空批处理列表
         
@@ -210,8 +325,9 @@ class NpcCorporationsProcessor:
                     ja_name, ko_name, ru_name, zh_name,
                     description,
                     faction_id,
+                    militia_faction,
                     icon_filename
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', batch_data)
         
         # 统计信息
@@ -219,30 +335,16 @@ class NpcCorporationsProcessor:
         corporations_count = cursor.fetchone()[0]
         print(f"[+] NPC公司数据处理完成: {corporations_count} 个")
     
-    def process_corporations_data(self, cursor: sqlite3.Cursor, lang: str = 'en'):
-        """处理YAML数据并写入数据库（同步包装器）"""
-        # 运行异步版本
-        asyncio.run(self.process_corporations_data_async(cursor, lang))
-    
-    def process_corporations_to_db(self, cursor: sqlite3.Cursor, lang: str = 'en'):
+    def update_all_databases(self, config) -> bool:
         """
-        处理所有NPC公司数据并插入数据库
+        更新所有语言的数据库
         
         Args:
-            cursor: 数据库游标
-            lang: 数据库使用的语言代码
+            config: 配置字典
+        
+        Returns:
+            bool: 处理是否成功
         """
-        print(f"[+] 开始处理NPC公司数据 (语言: {lang})...")
-        start_time = time.time()
-        
-        # 处理NPC公司数据
-        self.process_corporations_data(cursor, lang)
-        
-        end_time = time.time()
-        print(f"[+] NPC公司数据处理完成，耗时: {end_time - start_time:.2f} 秒")
-    
-    def update_all_databases(self, config):
-        """更新所有语言的数据库"""
         project_root = Path(__file__).parent.parent
         db_output_path = project_root / config["paths"]["db_output"]
         languages = config.get("languages", ["en"])
@@ -250,7 +352,36 @@ class NpcCorporationsProcessor:
         # 加载NPC公司数据
         self.load_corporations_data()
         
-        # 为每种语言创建数据库并处理数据
+        if not self.corporations_data:
+            print("[x] 没有加载到NPC公司数据，无法继续处理")
+            return False
+        
+        # 获取所有军团ID
+        corp_ids = list(self.corporations_data.keys())
+        
+        # 只枚举一次：并发获取所有军团的faction_id信息
+        print("\n[+] 开始获取所有军团的faction_id信息（仅枚举一次）...")
+        try:
+            militia_faction_map = asyncio.run(self.fetch_all_corporations_factions(corp_ids))
+        except Exception as e:
+            print(f"[x] 获取faction_id信息失败: {e}")
+            import traceback
+            traceback.print_exc()
+            return False
+        
+        # 下载所有图标（异步）
+        print("\n[+] 开始下载所有军团图标...")
+        try:
+            icon_filenames = asyncio.run(self.download_all_corporation_icons(corp_ids, self.custom_icons_path))
+        except Exception as e:
+            print(f"[x] 下载图标失败: {e}")
+            import traceback
+            traceback.print_exc()
+            return False
+        
+        print(f"\n[+] 开始将数据写入到 {len(languages)} 个语言的数据库...")
+        
+        # 为每种语言的数据库分别插入相同的数据
         for lang in languages:
             db_filename = db_output_path / f'item_db_{lang}.sqlite'
             
@@ -260,8 +391,8 @@ class NpcCorporationsProcessor:
                 conn = sqlite3.connect(str(db_filename))
                 cursor = conn.cursor()
                 
-                # 处理NPC公司数据
-                self.process_corporations_to_db(cursor, lang)
+                # 处理NPC公司数据（使用相同的militia_faction_map和icon_filenames）
+                self.process_corporations_data_to_db(cursor, lang, militia_faction_map, icon_filenames)
                 
                 # 提交事务
                 conn.commit()
@@ -271,6 +402,15 @@ class NpcCorporationsProcessor:
                 
             except Exception as e:
                 print(f"[x] 处理数据库 {db_filename} 时出错: {e}")
+                import traceback
+                traceback.print_exc()
+                try:
+                    conn.close()
+                except:
+                    pass
+                return False
+        
+        return True
 
 
 def main(config=None):
@@ -286,9 +426,14 @@ def main(config=None):
     
     # 创建处理器并执行
     processor = NpcCorporationsProcessor(config)
-    processor.update_all_databases(config)
+    success = processor.update_all_databases(config)
     
-    print("\n[+] NPC公司处理器完成")
+    if success:
+        print("\n[+] NPC公司处理器完成")
+    else:
+        print("\n[x] NPC公司处理器失败")
+    
+    return success
 
 
 if __name__ == "__main__":
