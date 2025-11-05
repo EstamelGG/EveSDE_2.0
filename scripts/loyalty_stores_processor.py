@@ -172,8 +172,6 @@ class LoyaltyStoresProcessor:
             CREATE TABLE IF NOT EXISTS loyalty_offers (
                 corporation_id INTEGER NOT NULL,
                 offer_id INTEGER NOT NULL,
-                type_id INTEGER NOT NULL,
-                quantity INTEGER NOT NULL DEFAULT 1,
                 isk_cost INTEGER NOT NULL DEFAULT 0,
                 lp_cost INTEGER NOT NULL DEFAULT 0,
                 ak_cost INTEGER NOT NULL DEFAULT 0,
@@ -181,7 +179,16 @@ class LoyaltyStoresProcessor:
             )
         ''')
         
-        # 2. 创建忠诚点商店商品所需物品表
+        # 2. 创建忠诚点商店商品产出表
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS loyalty_offer_outputs (
+                offer_id INTEGER PRIMARY KEY,
+                type_id INTEGER NOT NULL,
+                quantity INTEGER NOT NULL DEFAULT 1
+            )
+        ''')
+        
+        # 3. 创建忠诚点商店商品所需物品表
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loyalty_offer_required_items (
                 corporation_id INTEGER NOT NULL,
@@ -200,13 +207,13 @@ class LoyaltyStoresProcessor:
         ''')
         
         cursor.execute('''
-            CREATE INDEX IF NOT EXISTS idx_loyalty_offers_type_id 
-            ON loyalty_offers(type_id)
+            CREATE INDEX IF NOT EXISTS idx_loyalty_offers_lp_cost 
+            ON loyalty_offers(lp_cost)
         ''')
         
         cursor.execute('''
-            CREATE INDEX IF NOT EXISTS idx_loyalty_offers_lp_cost 
-            ON loyalty_offers(lp_cost)
+            CREATE INDEX IF NOT EXISTS idx_loyalty_offer_outputs_type_id 
+            ON loyalty_offer_outputs(type_id)
         ''')
         
         cursor.execute('''
@@ -232,6 +239,7 @@ class LoyaltyStoresProcessor:
         print("[+] 清空现有数据...")
         cursor.execute('DELETE FROM loyalty_offer_required_items')
         cursor.execute('DELETE FROM loyalty_offers')
+        cursor.execute('DELETE FROM loyalty_offer_outputs')
         print("[+] 数据清空完成")
     
     def process_corporation_data(
@@ -247,7 +255,7 @@ class LoyaltyStoresProcessor:
             offers: LP商店offer列表
         
         Returns:
-            (offers_batch, required_items_batch) 元组，如果没有数据返回None
+            (offers_batch, outputs_batch, required_items_batch) 元组，如果没有数据返回None
         """
         # 如果返回None，可能是404（没有LP商店）或其他错误
         if offers is None:
@@ -260,6 +268,7 @@ class LoyaltyStoresProcessor:
         
         # 批量准备offer数据
         offers_batch = []
+        outputs_batch = []
         required_items_batch = []
         
         for offer in offers:
@@ -271,15 +280,20 @@ class LoyaltyStoresProcessor:
             ak_cost = offer.get('ak_cost', 0)
             required_items = offer.get('required_items', [])
             
-            # 准备offer数据
+            # 准备offer数据（不包含产出信息）
             offers_batch.append((
-                offer_id,
                 corporation_id,
-                type_id,
-                quantity,
+                offer_id,
                 isk_cost,
                 lp_cost,
                 ak_cost
+            ))
+            
+            # 准备产出数据（每个offer只存储一次）
+            outputs_batch.append((
+                offer_id,
+                type_id,
+                quantity
             ))
             
             # 准备required_items数据
@@ -293,13 +307,14 @@ class LoyaltyStoresProcessor:
                     required_quantity
                 ))
         
-        return (offers_batch, required_items_batch)
+        return (offers_batch, outputs_batch, required_items_batch)
     
     def save_corporation_data(
         self,
         cursor: sqlite3.Cursor,
         corporation_id: int,
         offers_batch: List,
+        outputs_batch: List,
         required_items_batch: List
     ):
         """
@@ -308,17 +323,26 @@ class LoyaltyStoresProcessor:
         Args:
             cursor: 数据库游标
             corporation_id: 军团ID
-            offers_batch: offer数据列表
+            offers_batch: offer数据列表（不包含产出信息）
+            outputs_batch: 产出数据列表
             required_items_batch: required_items数据列表
         """
-        # 批量插入offers
+        # 批量插入offers（不包含产出信息）
         if offers_batch:
             cursor.executemany('''
                 INSERT OR REPLACE INTO loyalty_offers
-                (offer_id, corporation_id, type_id, quantity, isk_cost, lp_cost, ak_cost)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                (corporation_id, offer_id, isk_cost, lp_cost, ak_cost)
+                VALUES (?, ?, ?, ?, ?)
             ''', offers_batch)
             self.stats["total_offers"] += len(offers_batch)
+        
+        # 批量插入产出数据（每个offer只插入一次，使用INSERT OR IGNORE避免重复）
+        if outputs_batch:
+            cursor.executemany('''
+                INSERT OR IGNORE INTO loyalty_offer_outputs
+                (offer_id, type_id, quantity)
+                VALUES (?, ?, ?)
+            ''', outputs_batch)
         
         # 批量插入required_items
         if required_items_batch:
@@ -492,9 +516,9 @@ class LoyaltyStoresProcessor:
         for corporation_id, offers in results:
             data = self.process_corporation_data(corporation_id, offers)
             if data:
-                offers_batch, required_items_batch = data
+                offers_batch, outputs_batch, required_items_batch = data
                 self.save_corporation_data(
-                    cursor, corporation_id, offers_batch, required_items_batch
+                    cursor, corporation_id, offers_batch, outputs_batch, required_items_batch
                 )
         
         save_elapsed_time = time.time() - save_start_time
