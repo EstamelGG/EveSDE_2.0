@@ -167,30 +167,20 @@ class LoyaltyStoresProcessor:
         Args:
             cursor: 数据库游标
         """
-        # 1. 创建忠诚点商店表
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS loyalty_stores (
-                store_id INTEGER PRIMARY KEY,
-                corporation_id INTEGER,
-                store_name TEXT
-            )
-        ''')
-        
-        # 2. 创建忠诚点商店商品表
+        # 1. 创建忠诚点商店商品表
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loyalty_offers (
                 offer_id INTEGER PRIMARY KEY,
-                store_id INTEGER NOT NULL,
+                corporation_id INTEGER NOT NULL,
                 type_id INTEGER NOT NULL,
                 quantity INTEGER NOT NULL DEFAULT 1,
                 isk_cost INTEGER NOT NULL DEFAULT 0,
                 lp_cost INTEGER NOT NULL DEFAULT 0,
-                ak_cost INTEGER NOT NULL DEFAULT 0,
-                FOREIGN KEY (store_id) REFERENCES loyalty_stores(store_id) ON DELETE CASCADE
+                ak_cost INTEGER NOT NULL DEFAULT 0
             )
         ''')
         
-        # 3. 创建忠诚点商店商品所需物品表
+        # 2. 创建忠诚点商店商品所需物品表
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loyalty_offer_required_items (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -203,8 +193,8 @@ class LoyaltyStoresProcessor:
         
         # 创建索引
         cursor.execute('''
-            CREATE INDEX IF NOT EXISTS idx_loyalty_offers_store_id 
-            ON loyalty_offers(store_id)
+            CREATE INDEX IF NOT EXISTS idx_loyalty_offers_corporation_id 
+            ON loyalty_offers(corporation_id)
         ''')
         
         cursor.execute('''
@@ -244,7 +234,6 @@ class LoyaltyStoresProcessor:
         print("[+] 清空现有数据...")
         cursor.execute('DELETE FROM loyalty_offer_required_items')
         cursor.execute('DELETE FROM loyalty_offers')
-        cursor.execute('DELETE FROM loyalty_stores')
         print("[+] 数据清空完成")
     
     def process_corporation_data(
@@ -323,18 +312,11 @@ class LoyaltyStoresProcessor:
             offers_batch: offer数据列表
             required_items_batch: required_items数据列表
         """
-        # 插入商店记录
-        cursor.execute('''
-            INSERT OR REPLACE INTO loyalty_stores 
-            (store_id, corporation_id)
-            VALUES (?, ?)
-        ''', (corporation_id, corporation_id))
-        
         # 批量插入offers
         if offers_batch:
             cursor.executemany('''
                 INSERT OR REPLACE INTO loyalty_offers
-                (offer_id, store_id, type_id, quantity, isk_cost, lp_cost, ak_cost)
+                (offer_id, corporation_id, type_id, quantity, isk_cost, lp_cost, ak_cost)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', offers_batch)
             self.stats["total_offers"] += len(offers_batch)
