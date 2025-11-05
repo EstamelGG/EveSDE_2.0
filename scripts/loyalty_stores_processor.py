@@ -315,7 +315,7 @@ class LoyaltyStoresProcessor:
         corporation_id: int,
         offers_batch: List,
         outputs_batch: List,
-        required_items_batch: List
+        requirements_batch: List
     ):
         """
         将处理好的数据保存到数据库
@@ -515,12 +515,15 @@ class LoyaltyStoresProcessor:
         save_elapsed_time = time.time() - save_start_time
         print(f"[+] 数据保存完成，耗时: {save_elapsed_time:.2f} 秒")
     
-    def update_all_databases(self, config: Dict[str, Any]):
+    def update_all_databases(self, config: Dict[str, Any]) -> bool:
         """
         更新所有语言的数据库
         
         Args:
             config: 配置字典
+        
+        Returns:
+            bool: 处理是否成功
         """
         print("[+] 开始处理LP商店数据...")
         print(f"[+] 支持语言: {', '.join(self.languages)}")
@@ -530,11 +533,17 @@ class LoyaltyStoresProcessor:
         
         # 只枚举一次所有LP商店数据
         print("\n[+] 开始获取所有NPC军团的LP商店数据（仅枚举一次）...")
-        results = self.fetch_all_corporations_data()
+        try:
+            results = self.fetch_all_corporations_data()
+        except Exception as e:
+            print(f"[x] 获取LP商店数据失败: {e}")
+            import traceback
+            traceback.print_exc()
+            return False
         
         if not results:
             print("[x] 没有获取到任何LP商店数据，无法继续处理")
-            return
+            return False
         
         # 计算并输出统计数据
         stats = self.calculate_statistics(results)
@@ -576,6 +585,15 @@ class LoyaltyStoresProcessor:
                 print(f"[x] 处理数据库 {db_filename} 时出错: {e}")
                 import traceback
                 traceback.print_exc()
+                # 关闭连接（如果存在）
+                try:
+                    conn.close()
+                except:
+                    pass
+                # 返回失败
+                return False
+        
+        return True
 
 
 def main(config=None):
@@ -591,9 +609,14 @@ def main(config=None):
     
     # 创建处理器并执行
     processor = LoyaltyStoresProcessor(config)
-    processor.update_all_databases(config)
+    success = processor.update_all_databases(config)
     
-    print("\n[+] LP商店数据处理器完成")
+    if success:
+        print("\n[+] LP商店数据处理器完成")
+    else:
+        print("\n[x] LP商店数据处理器失败")
+    
+    return success
 
 
 if __name__ == "__main__":
