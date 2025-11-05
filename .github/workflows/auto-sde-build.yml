@@ -8,6 +8,11 @@ on:
         required: false
         default: false
         type: boolean
+      debug:
+        description: '调试模式（只执行构建，不创建release、不commit、不push）'
+        required: false
+        default: false
+        type: boolean
   schedule:
     # 每天固定时间（UTC时间）
     - cron: '20 11 * * *'   # 北京时间 19:20
@@ -30,6 +35,7 @@ jobs:
       new-build: ${{ steps.get-build-info.outputs.new-build }}
       patch-version: ${{ steps.get-build-info.outputs.patch-version }}
       final-build-number: ${{ steps.get-build-info.outputs.final-build-number }}
+      debug-mode: ${{ steps.get-build-info.outputs.debug-mode }}
     
     steps:
     - name: 获取SDE版本信息并检查重复
@@ -48,9 +54,31 @@ jobs:
         echo "Release date: ${RELEASE_DATE}"
         echo "Build key: ${BUILD_KEY}"
         
+        # 检查是否为调试模式
+        DEBUG_MODE="${{ github.event.inputs.debug }}"
+        echo "Debug mode: ${DEBUG_MODE}"
+        
         # 检查是否为补丁包构建
         BUILD_PATCH="${{ github.event.inputs.build_patch }}"
         echo "Build patch mode: ${BUILD_PATCH}"
+        
+        # 如果是调试模式，跳过release检查，直接设置new-build=true
+        if [ "$DEBUG_MODE" = "true" ]; then
+          echo "[+] 调试模式：跳过Release检查，只执行构建"
+          NEW_BUILD="true"
+          FINAL_BUILD_NUMBER="${BUILD_NUMBER}"
+          PATCH_VERSION=0
+          echo "patch-version=${PATCH_VERSION}" >> $GITHUB_OUTPUT
+          echo "final-build-number=${FINAL_BUILD_NUMBER}" >> $GITHUB_OUTPUT
+          echo "build-number=${BUILD_NUMBER}" >> $GITHUB_OUTPUT
+          echo "release-date=${RELEASE_DATE}" >> $GITHUB_OUTPUT
+          echo "build-key=${BUILD_KEY}" >> $GITHUB_OUTPUT
+          echo "new-build=${NEW_BUILD}" >> $GITHUB_OUTPUT
+          echo "debug-mode=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        
+        echo "debug-mode=false" >> $GITHUB_OUTPUT
         
         # 首先检查原始buildNumber的release是否已存在
         TAG_NAME="sde-build-${BUILD_NUMBER}"
@@ -208,7 +236,7 @@ jobs:
     runs-on: ubuntu-latest
     
     needs: [get-build-info, build-sde]
-    if: needs.get-build-info.outputs.new-build == 'true'
+    if: needs.get-build-info.outputs.new-build == 'true' && needs.get-build-info.outputs.debug-mode != 'true'
     
     steps:
     - name: 检出代码
@@ -576,7 +604,7 @@ jobs:
         fi
     
     - name: 检出代码用于提交历史记录和物品详情
-      if: steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true'
+      if: (steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true') && needs.get-build-info.outputs.debug-mode != 'true'
       uses: actions/checkout@v4
       with:
         ref: main
@@ -584,7 +612,7 @@ jobs:
         token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
     
     - name: 提交比对记录和物品详情到仓库
-      if: steps.save-compare-file.outputs.exists == 'true'
+      if: steps.save-compare-file.outputs.exists == 'true' && needs.get-build-info.outputs.debug-mode != 'true'
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         NEW_COMPARE_FILE="${{ steps.save-compare-file.outputs.new-filename }}"
@@ -678,7 +706,7 @@ jobs:
   notify-completion:
     name: 通知完成
     runs-on: ubuntu-latest
-    needs: [get-build-info, build-sde, create-release]
+    needs: [get-build-info, build-sde]
     if: always() && needs.get-build-info.outputs.new-build == 'true'
     
     steps:
@@ -686,14 +714,20 @@ jobs:
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
+        DEBUG_MODE="${{ needs.get-build-info.outputs.debug-mode }}"
         
-        if [ "${{ needs.build-sde.result }}" == "success" ] && [ "${{ needs.create-release.result }}" == "success" ]; then
-          echo "[+] SDE构建成功完成"
-          echo "Final Build Number: $FINAL_BUILD_NUMBER"
-          if [ "$PATCH_VERSION" != "0" ]; then
-            echo "Patch Version: $PATCH_VERSION"
+        if [ "${{ needs.build-sde.result }}" == "success" ]; then
+          if [ "$DEBUG_MODE" == "true" ]; then
+            echo "[+] 调试模式：SDE构建成功完成（未创建Release）"
+            echo "Final Build Number: $FINAL_BUILD_NUMBER"
+          else
+            echo "[+] SDE构建成功完成"
+            echo "Final Build Number: $FINAL_BUILD_NUMBER"
+            if [ "$PATCH_VERSION" != "0" ]; then
+              echo "Patch Version: $PATCH_VERSION"
+            fi
+            echo "[+] 注意：Release创建状态请查看 create-release job"
           fi
-          echo "Release: https://github.com/${GITHUB_REPOSITORY}/releases/tag/sde-build-$FINAL_BUILD_NUMBER"
         else
           echo "[x] SDE构建失败"
           echo "Final Build Number: $FINAL_BUILD_NUMBER"
