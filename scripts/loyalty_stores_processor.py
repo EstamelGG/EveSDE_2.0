@@ -16,7 +16,6 @@ import asyncio
 import aiohttp
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
-from datetime import datetime
 
 
 class LoyaltyStoresProcessor:
@@ -173,9 +172,7 @@ class LoyaltyStoresProcessor:
             CREATE TABLE IF NOT EXISTS loyalty_stores (
                 store_id INTEGER PRIMARY KEY,
                 corporation_id INTEGER,
-                store_name TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                store_name TEXT
             )
         ''')
         
@@ -189,8 +186,6 @@ class LoyaltyStoresProcessor:
                 isk_cost INTEGER NOT NULL DEFAULT 0,
                 lp_cost INTEGER NOT NULL DEFAULT 0,
                 ak_cost INTEGER NOT NULL DEFAULT 0,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (store_id) REFERENCES loyalty_stores(store_id) ON DELETE CASCADE
             )
         ''')
@@ -202,7 +197,6 @@ class LoyaltyStoresProcessor:
                 offer_id INTEGER NOT NULL,
                 required_type_id INTEGER NOT NULL,
                 required_quantity INTEGER NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (offer_id) REFERENCES loyalty_offers(offer_id) ON DELETE CASCADE
             )
         ''')
@@ -298,8 +292,7 @@ class LoyaltyStoresProcessor:
                 quantity,
                 isk_cost,
                 lp_cost,
-                ak_cost,
-                datetime.now().isoformat()
+                ak_cost
             ))
             
             # 准备required_items数据
@@ -333,16 +326,16 @@ class LoyaltyStoresProcessor:
         # 插入商店记录
         cursor.execute('''
             INSERT OR REPLACE INTO loyalty_stores 
-            (store_id, corporation_id, updated_at)
-            VALUES (?, ?, ?)
-        ''', (corporation_id, corporation_id, datetime.now().isoformat()))
+            (store_id, corporation_id)
+            VALUES (?, ?)
+        ''', (corporation_id, corporation_id))
         
         # 批量插入offers
         if offers_batch:
             cursor.executemany('''
                 INSERT OR REPLACE INTO loyalty_offers
-                (offer_id, store_id, type_id, quantity, isk_cost, lp_cost, ak_cost, updated_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                (offer_id, store_id, type_id, quantity, isk_cost, lp_cost, ak_cost)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', offers_batch)
             self.stats["total_offers"] += len(offers_batch)
         
