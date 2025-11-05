@@ -12,14 +12,11 @@
 import json
 import sqlite3
 import time
-import requests
-import urllib3
+import asyncio
+import aiohttp
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime
-
-# 禁用SSL警告
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class LoyaltyStoresProcessor:
@@ -38,8 +35,9 @@ class LoyaltyStoresProcessor:
         
         # 请求配置
         self.max_retries = 5
-        self.request_timeout = 30
+        self.request_timeout = aiohttp.ClientTimeout(total=30)
         self.retry_delay = 1.0
+        self.max_concurrent = 20  # 最大并发数
         
         # 统计数据
         self.stats = {
@@ -50,11 +48,17 @@ class LoyaltyStoresProcessor:
             "total_required_items": 0
         }
     
-    def fetch_with_retry(self, url: str, max_retries: Optional[int] = None) -> Optional[Any]:
+    async def fetch_with_retry(
+        self, 
+        session: aiohttp.ClientSession,
+        url: str, 
+        max_retries: Optional[int] = None
+    ) -> Optional[Any]:
         """
-        带重试机制的API请求
+        带重试机制的异步API请求
         
         Args:
+            session: aiohttp会话
             url: 请求的URL
             max_retries: 最大重试次数，默认使用self.max_retries
         
@@ -66,63 +70,66 @@ class LoyaltyStoresProcessor:
         
         for attempt in range(max_retries):
             try:
-                response = requests.get(
-                    url,
-                    timeout=self.request_timeout,
-                    verify=False,
-                    headers={"User-Agent": "EveSDE_2.0/1.0"}
-                )
-                response.raise_for_status()
-                return response.json()
-                
-            except requests.exceptions.Timeout:
+                async with session.get(url) as response:
+                    if response.status == 404:
+                        # 404表示该军团没有LP商店，这是正常的
+                        return None
+                    elif response.status == 429:
+                        # 429表示请求过多，需要等待
+                        retry_after = int(response.headers.get('Retry-After', 60))
+                        if attempt < max_retries - 1:
+                            print(f"    [!] 请求频率限制，等待 {retry_after} 秒...")
+                            await asyncio.sleep(retry_after)
+                            continue
+                        else:
+                            print(f"    [x] 请求频率限制，已达到最大重试次数")
+                            return None
+                    elif response.status >= 400:
+                        if attempt < max_retries - 1:
+                            wait_time = self.retry_delay * (attempt + 1)
+                            print(f"    [-] HTTP错误 {response.status}，{wait_time:.1f}秒后重试 ({attempt+1}/{max_retries})")
+                            await asyncio.sleep(wait_time)
+                            continue
+                        else:
+                            print(f"    [x] HTTP错误 {response.status}，已达到最大重试次数")
+                            return None
+                    
+                    # 成功响应
+                    return await response.json()
+                    
+            except asyncio.TimeoutError:
                 if attempt < max_retries - 1:
                     wait_time = self.retry_delay * (attempt + 1)
                     print(f"    [-] 请求超时，{wait_time:.1f}秒后重试 ({attempt+1}/{max_retries})")
-                    time.sleep(wait_time)
+                    await asyncio.sleep(wait_time)
                 else:
                     print(f"    [x] 请求超时，已达到最大重试次数")
                     return None
                     
-            except requests.exceptions.HTTPError as e:
-                if e.response.status_code == 404:
-                    # 404表示该军团没有LP商店，这是正常的
-                    return None
-                elif e.response.status_code == 429:
-                    # 429表示请求过多，需要等待
-                    retry_after = int(e.response.headers.get('Retry-After', 60))
-                    print(f"    [!] 请求频率限制，等待 {retry_after} 秒...")
-                    time.sleep(retry_after)
-                    continue
-                elif attempt < max_retries - 1:
-                    wait_time = self.retry_delay * (attempt + 1)
-                    print(f"    [-] HTTP错误 {e.response.status_code}，{wait_time:.1f}秒后重试 ({attempt+1}/{max_retries})")
-                    time.sleep(wait_time)
-                else:
-                    print(f"    [x] HTTP错误 {e.response.status_code}，已达到最大重试次数")
-                    return None
-                    
-            except requests.exceptions.RequestException as e:
+            except aiohttp.ClientError as e:
                 if attempt < max_retries - 1:
                     wait_time = self.retry_delay * (attempt + 1)
                     print(f"    [-] 请求失败: {str(e)}，{wait_time:.1f}秒后重试 ({attempt+1}/{max_retries})")
-                    time.sleep(wait_time)
+                    await asyncio.sleep(wait_time)
                 else:
                     print(f"    [x] 请求失败: {str(e)}，已达到最大重试次数")
                     return None
         
         return None
     
-    def fetch_npc_corporations(self) -> List[int]:
+    async def fetch_npc_corporations(self, session: aiohttp.ClientSession) -> List[int]:
         """
-        获取所有NPC军团ID列表
+        获取所有NPC军团ID列表（异步）
+        
+        Args:
+            session: aiohttp会话
         
         Returns:
             NPC军团ID列表
         """
         print(f"[+] 获取NPC军团列表: {self.npccorps_url}")
         
-        corporations = self.fetch_with_retry(self.npccorps_url)
+        corporations = await self.fetch_with_retry(session, self.npccorps_url)
         
         if corporations is None:
             print("[x] 获取NPC军团列表失败")
@@ -136,18 +143,23 @@ class LoyaltyStoresProcessor:
         self.stats["total_corporations"] = len(corporations)
         return corporations
     
-    def fetch_loyalty_offers(self, corporation_id: int) -> Optional[List[Dict[str, Any]]]:
+    async def fetch_loyalty_offers(
+        self, 
+        session: aiohttp.ClientSession,
+        corporation_id: int
+    ) -> Optional[List[Dict[str, Any]]]:
         """
-        获取指定军团的LP商店数据
+        获取指定军团的LP商店数据（异步）
         
         Args:
+            session: aiohttp会话
             corporation_id: 军团ID
         
         Returns:
             LP商店offer列表，失败返回None
         """
         url = f"{self.esi_base_url}/loyalty/stores/{corporation_id}/offers"
-        return self.fetch_with_retry(url)
+        return await self.fetch_with_retry(session, url)
     
     def create_tables(self, cursor: sqlite3.Cursor):
         """
@@ -241,40 +253,31 @@ class LoyaltyStoresProcessor:
         cursor.execute('DELETE FROM loyalty_stores')
         print("[+] 数据清空完成")
     
-    def process_corporation_offers(
+    def process_corporation_data(
         self, 
-        cursor: sqlite3.Cursor, 
-        corporation_id: int
-    ) -> bool:
+        corporation_id: int,
+        offers: Optional[List[Dict[str, Any]]]
+    ) -> Optional[Tuple[List, List]]:
         """
-        处理单个军团的LP商店数据
+        处理单个军团的数据（不涉及数据库操作）
         
         Args:
-            cursor: 数据库游标
             corporation_id: 军团ID
+            offers: LP商店offer列表
         
         Returns:
-            处理是否成功
+            (offers_batch, required_items_batch) 元组，如果没有数据返回None
         """
-        offers = self.fetch_loyalty_offers(corporation_id)
-        
         # 如果返回None，可能是404（没有LP商店）或其他错误
         if offers is None:
             # 404是正常的，不是所有军团都有LP商店
-            return False
+            return None
         
         if not isinstance(offers, list) or len(offers) == 0:
             # 空列表表示该军团没有LP商店
-            return False
+            return None
         
-        # 插入商店记录
-        cursor.execute('''
-            INSERT OR REPLACE INTO loyalty_stores 
-            (store_id, corporation_id, updated_at)
-            VALUES (?, ?, ?)
-        ''', (corporation_id, corporation_id, datetime.now().isoformat()))
-        
-        # 批量插入offer数据
+        # 批量准备offer数据
         offers_batch = []
         required_items_batch = []
         
@@ -309,6 +312,31 @@ class LoyaltyStoresProcessor:
                     required_quantity
                 ))
         
+        return (offers_batch, required_items_batch)
+    
+    def save_corporation_data(
+        self,
+        cursor: sqlite3.Cursor,
+        corporation_id: int,
+        offers_batch: List,
+        required_items_batch: List
+    ):
+        """
+        将处理好的数据保存到数据库
+        
+        Args:
+            cursor: 数据库游标
+            corporation_id: 军团ID
+            offers_batch: offer数据列表
+            required_items_batch: required_items数据列表
+        """
+        # 插入商店记录
+        cursor.execute('''
+            INSERT OR REPLACE INTO loyalty_stores 
+            (store_id, corporation_id, updated_at)
+            VALUES (?, ?, ?)
+        ''', (corporation_id, corporation_id, datetime.now().isoformat()))
+        
         # 批量插入offers
         if offers_batch:
             cursor.executemany('''
@@ -334,46 +362,125 @@ class LoyaltyStoresProcessor:
                 VALUES (?, ?, ?)
             ''', required_items_batch)
             self.stats["total_required_items"] += len(required_items_batch)
+    
+    async def process_single_corporation(
+        self,
+        session: aiohttp.ClientSession,
+        semaphore: asyncio.Semaphore,
+        corporation_id: int,
+        idx: int,
+        total: int
+    ) -> Tuple[int, Optional[List[Dict[str, Any]]]]:
+        """
+        异步处理单个军团的LP商店数据
         
-        return True
+        Args:
+            session: aiohttp会话
+            semaphore: 并发控制信号量
+            corporation_id: 军团ID
+            idx: 当前索引
+            total: 总数
+        
+        Returns:
+            (corporation_id, offers) 元组
+        """
+        async with semaphore:
+            try:
+                offers = await self.fetch_loyalty_offers(session, corporation_id)
+                return (corporation_id, offers)
+            except Exception as e:
+                print(f"    [!] 处理军团 {corporation_id} 时出错: {e}")
+                return (corporation_id, None)
+    
+    async def process_all_corporations_async(self) -> List[Tuple[int, Optional[List[Dict[str, Any]]]]]:
+        """
+        异步处理所有NPC军团的LP商店数据
+        
+        Returns:
+            所有军团的数据列表，格式为 (corporation_id, offers)
+        """
+        print("[+] 开始获取所有NPC军团...")
+        
+        # 创建aiohttp会话
+        connector = aiohttp.TCPConnector(limit=100)
+        headers = {"User-Agent": "EveSDE_2.0/1.0"}
+        
+        async with aiohttp.ClientSession(
+            connector=connector,
+            timeout=self.request_timeout,
+            headers=headers
+        ) as session:
+            # 获取NPC军团列表
+            corporations = await self.fetch_npc_corporations(session)
+            
+            if not corporations:
+                print("[x] 没有获取到NPC军团列表，无法继续处理")
+                return []
+            
+            print(f"[+] 开始异步处理 {len(corporations)} 个军团的LP商店数据...")
+            print(f"[+] 并发数: {self.max_concurrent}")
+            print(f"[+] 注意：不是所有军团都有LP商店，404错误是正常的")
+            
+            start_time = time.time()
+            
+            # 创建信号量控制并发数
+            semaphore = asyncio.Semaphore(self.max_concurrent)
+            
+            # 创建所有任务
+            tasks = [
+                self.process_single_corporation(
+                    session, semaphore, corp_id, idx + 1, len(corporations)
+                )
+                for idx, corp_id in enumerate(corporations)
+            ]
+            
+            # 使用asyncio.as_completed显示进度
+            results = []
+            completed = 0
+            
+            for coro in asyncio.as_completed(tasks):
+                result = await coro
+                results.append(result)
+                completed += 1
+                
+                corporation_id, offers = result
+                if offers is not None and len(offers) > 0:
+                    print(f"[{completed}/{len(corporations)}] 军团 {corporation_id}: ✓ 成功 ({len(offers)} 个offers)")
+                    self.stats["processed_corporations"] += 1
+                else:
+                    print(f"[{completed}/{len(corporations)}] 军团 {corporation_id}: ✗ 跳过（无LP商店）")
+                    self.stats["failed_corporations"] += 1
+            
+            elapsed_time = time.time() - start_time
+            print(f"\n[+] 异步处理完成，耗时: {elapsed_time:.2f} 秒")
+            print(f"[+] 平均速度: {len(corporations) / elapsed_time:.2f} 个军团/秒")
+            
+            return results
     
     def process_all_corporations(self, cursor: sqlite3.Cursor):
         """
-        处理所有NPC军团的LP商店数据
+        处理所有NPC军团的LP商店数据（同步接口，内部使用异步）
         
         Args:
             cursor: 数据库游标
         """
-        print("[+] 开始获取所有NPC军团...")
-        corporations = self.fetch_npc_corporations()
+        # 运行异步处理
+        results = asyncio.run(self.process_all_corporations_async())
         
-        if not corporations:
-            print("[x] 没有获取到NPC军团列表，无法继续处理")
-            return
+        # 将结果保存到数据库
+        print("\n[+] 开始保存数据到数据库...")
+        save_start_time = time.time()
         
-        print(f"[+] 开始处理 {len(corporations)} 个军团的LP商店数据...")
-        print(f"[+] 注意：不是所有军团都有LP商店，404错误是正常的")
+        for corporation_id, offers in results:
+            data = self.process_corporation_data(corporation_id, offers)
+            if data:
+                offers_batch, required_items_batch = data
+                self.save_corporation_data(
+                    cursor, corporation_id, offers_batch, required_items_batch
+                )
         
-        start_time = time.time()
-        
-        for idx, corporation_id in enumerate(corporations, 1):
-            print(f"[{idx}/{len(corporations)}] 处理军团 {corporation_id}...", end=" ")
-            
-            success = self.process_corporation_offers(cursor, corporation_id)
-            
-            if success:
-                print("✓ 成功")
-                self.stats["processed_corporations"] += 1
-            else:
-                print("✗ 跳过（无LP商店）")
-                self.stats["failed_corporations"] += 1
-            
-            # 每10个请求后稍作延迟，避免触发频率限制
-            if idx % 10 == 0:
-                time.sleep(0.5)
-        
-        elapsed_time = time.time() - start_time
-        print(f"\n[+] 处理完成，耗时: {elapsed_time:.2f} 秒")
+        save_elapsed_time = time.time() - save_start_time
+        print(f"[+] 数据保存完成，耗时: {save_elapsed_time:.2f} 秒")
     
     def update_all_databases(self, config: Dict[str, Any]):
         """
