@@ -33,6 +33,7 @@ import scripts.metagroups_processor as metagroups_processor
 import scripts.stations_processor as stations_processor
 import scripts.factions_processor as factions_processor
 import scripts.npcCorporations_processor as npcCorporations_processor
+import scripts.loyalty_stores_processor as loyalty_stores_processor
 import scripts.agents_processor as agents_processor
 import scripts.agent_localization_processor as agent_localization_processor
 import scripts.divisions_processor as divisions_processor
@@ -448,6 +449,9 @@ def main():
     
     # 处理NPC公司数据
     safe_execute_processor(npcCorporations_processor.main, "NPC公司数据", config)
+    
+    # 处理LP商店数据
+    safe_execute_processor(loyalty_stores_processor.main, "LP商店数据", config)
     
     # 处理代理人数据
     safe_execute_processor(agents_processor.main, "代理人数据", config)
