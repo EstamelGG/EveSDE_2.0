@@ -457,17 +457,29 @@ class LoyaltyStoresProcessor:
             
             return results
     
-    def process_all_corporations(self, cursor: sqlite3.Cursor):
+    def fetch_all_corporations_data(self) -> List[Tuple[int, Optional[List[Dict[str, Any]]]]]:
         """
-        处理所有NPC军团的LP商店数据（同步接口，内部使用异步）
+        获取所有NPC军团的LP商店数据（只枚举一次）
         
-        Args:
-            cursor: 数据库游标
+        Returns:
+            所有军团的数据列表，格式为 (corporation_id, offers)
         """
         # 运行异步处理
         results = asyncio.run(self.process_all_corporations_async())
+        return results
+    
+    def save_all_data_to_database(
+        self,
+        cursor: sqlite3.Cursor,
+        results: List[Tuple[int, Optional[List[Dict[str, Any]]]]]
+    ):
+        """
+        将获取到的所有数据保存到数据库
         
-        # 将结果保存到数据库
+        Args:
+            cursor: 数据库游标
+            results: 所有军团的数据列表
+        """
         print("\n[+] 开始保存数据到数据库...")
         save_start_time = time.time()
         
@@ -492,16 +504,27 @@ class LoyaltyStoresProcessor:
         print("[+] 开始处理LP商店数据...")
         print(f"[+] 支持语言: {', '.join(self.languages)}")
         
-        # 为每种语言创建数据库并处理数据
+        # 确保数据库目录存在
+        self.db_output_path.mkdir(parents=True, exist_ok=True)
+        
+        # 只枚举一次所有LP商店数据
+        print("\n[+] 开始获取所有NPC军团的LP商店数据（仅枚举一次）...")
+        results = self.fetch_all_corporations_data()
+        
+        if not results:
+            print("[x] 没有获取到任何LP商店数据，无法继续处理")
+            return
+        
+        print(f"\n[+] 获取完成，共 {len(results)} 个军团的数据")
+        print(f"[+] 开始将数据写入到 {len(self.languages)} 个语言的数据库...")
+        
+        # 为每种语言的数据库分别插入相同的数据
         for lang in self.languages:
             db_filename = self.db_output_path / f'item_db_{lang}.sqlite'
             
             print(f"\n[+] 处理数据库: {db_filename}")
             
             try:
-                # 确保数据库目录存在
-                self.db_output_path.mkdir(parents=True, exist_ok=True)
-                
                 conn = sqlite3.connect(str(db_filename))
                 cursor = conn.cursor()
                 
@@ -511,8 +534,18 @@ class LoyaltyStoresProcessor:
                 # 清空现有数据
                 self.clear_existing_data(cursor)
                 
-                # 处理所有军团数据
-                self.process_all_corporations(cursor)
+                # 重置统计数据（除了total_corporations）
+                old_total_corps = self.stats["total_corporations"]
+                self.stats = {
+                    "total_corporations": old_total_corps,
+                    "processed_corporations": 0,
+                    "failed_corporations": 0,
+                    "total_offers": 0,
+                    "total_required_items": 0
+                }
+                
+                # 将数据保存到数据库
+                self.save_all_data_to_database(cursor, results)
                 
                 # 提交事务
                 conn.commit()
