@@ -272,7 +272,7 @@ class LocalizationExtractor:
         for lang_code, source_path in localization_pickles.items():
             # 所有文件都是从网络下载到raw目录的，直接使用
             result[lang_code] = source_path
-            print(f"[+] 网络下载的文件已就位: {source_path}")
+            print(f"[+] 已下载本地化pickle文件: {source_path}")
         
         return result
     
