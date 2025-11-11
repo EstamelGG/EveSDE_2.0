@@ -1,7 +1,7 @@
 {
   "type_id": 90893,
-  "name": "Women's Empire Exploration Suit crate",
-  "description": "This crate grants a <b>women's</b> version of the <b>exploration suit</b> based on the capsuleer's <b>starting empire</b>.",
+  "name": "女式帝国探索套装箱",
+  "description": "打开此箱子可获得<b>女式</b>帝国<b>探索套装</b>，其样式将根据克隆飞行员的<b>起始帝国</b>而定。",
   "volume": 4.0,
   "repackaged_volume": null,
   "capacity": null,

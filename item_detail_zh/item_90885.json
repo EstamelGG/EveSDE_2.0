@@ -1,7 +1,7 @@
 {
   "type_id": 90885,
-  "name": "Historic SOE SKINs Crate",
-  "description": "This crate has a 4.16% chance to grant a random Sisters of EVE ship SKIN from the following lines: Crystal Blast, One Eden, Sanctuary, Spectral Shift, SOE Blue Cell, SOE Fire Cell, SOE Gold Cell, and Yoiul Festival YC121.",
+  "name": "年代久远的EVE姐妹会涂装箱",
+  "description": "打开此箱子有4.16%的几率获取以下EVE姐妹会舰船涂装：晶体爆破、天下大同、避难会、光谱偏移、EVE姐妹会蓝色细胞、EVE姐妹会火焰细胞、EVE姐妹会金色细胞和YC121年尤尔节涂装。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
