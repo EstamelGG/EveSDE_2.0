@@ -52,6 +52,7 @@ import scripts.dogma_effect_patch_processor as dogma_effect_patch_processor
 import scripts.compressable_types_processor as compressable_types_processor
 import scripts.compression_processor as compression_processor
 import scripts.typeTraits_processor as typeTraits_processor
+import scripts.ore_color_processor as ore_color_processor
 import scripts.update_categories_icons as update_categories_icons
 import scripts.map_generator as map_generator
 import scripts.version_info_processor as version_info_processor
@@ -473,6 +474,9 @@ def main():
     
     # 处理物品详情数据
     safe_execute_processor(types_processor.main, "物品详情数据", config)
+    
+    # 处理矿石主题色数据
+    safe_execute_processor(ore_color_processor.main, "矿石主题色数据", config)
     
     # 处理dbuff集合数据
     safe_execute_processor(dbuffCollections_processor.main, "dbuff集合数据", config)
