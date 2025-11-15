@@ -95,9 +95,89 @@ class OreColorProcessor:
         print(f"[+] 共 {len(icon_groups)} 个不同的图标")
         return dict(icon_groups)
     
+    def apply_mosaic(self, img: Image.Image, grid_size: int = 32) -> Image.Image:
+        """
+        对图片应用马赛克效果（模糊化处理）
+        
+        处理流程：
+        1. 处理透明图片：将RGBA转换为RGB，使用白色背景
+        2. 按指定网格大小进行模糊化处理
+        
+        Args:
+            img: PIL Image 对象
+            grid_size: 马赛克强度，表示横纵各分成多少个色块（数值越大越清晰，越小越模糊）
+        
+        Returns:
+            马赛克处理后的图片
+        """
+        # 处理透明图片：将RGBA转换为RGB，使用白色背景
+        if img.mode == "RGBA":
+            # 创建白色背景
+            rgb_img = Image.new("RGB", img.size, (255, 255, 255))
+            rgb_img.paste(img, mask=img.split()[3])  # 使用alpha通道作为mask
+            img = rgb_img
+        elif img.mode != "RGB":
+            img = img.convert("RGB")
+        
+        width, height = img.size
+        pixels = img.load()
+        
+        # 创建新图片
+        mosaic_img = Image.new("RGB", (width, height))
+        mosaic_pixels = mosaic_img.load()
+        
+        # 计算每个网格块的尺寸
+        block_width = width / grid_size
+        block_height = height / grid_size
+        
+        # 遍历每个网格块
+        for grid_y in range(grid_size):
+            for grid_x in range(grid_size):
+                # 计算当前块在图片中的像素范围
+                x_start = int(grid_x * block_width)
+                y_start = int(grid_y * block_height)
+                x_end = int((grid_x + 1) * block_width)
+                y_end = int((grid_y + 1) * block_height)
+                
+                # 确保不越界
+                x_end = min(x_end, width)
+                y_end = min(y_end, height)
+                
+                # 计算该块的平均颜色
+                r_sum, g_sum, b_sum = 0, 0, 0
+                pixel_count = 0
+                
+                for y in range(y_start, y_end):
+                    for x in range(x_start, x_end):
+                        r, g, b = pixels[x, y]
+                        r_sum += r
+                        g_sum += g
+                        b_sum += b
+                        pixel_count += 1
+                
+                if pixel_count > 0:
+                    avg_r = int(r_sum / pixel_count)
+                    avg_g = int(g_sum / pixel_count)
+                    avg_b = int(b_sum / pixel_count)
+                    
+                    # 用平均颜色填充整个块
+                    for y in range(y_start, y_end):
+                        for x in range(x_start, x_end):
+                            mosaic_pixels[x, y] = (avg_r, avg_g, avg_b)
+        
+        return mosaic_img
+    
     def get_highlight_color(self, image_path: Path) -> Optional[Tuple[int, int, int]]:
         """
-        提取图片最"亮眼"的颜色：
+        提取图片最"亮眼"的颜色
+        
+        处理流程：
+        1. 加载原图片
+        2. 应用背景色处理（解决PNG透明度问题）
+        3. 应用模糊化处理（grid_size=32）
+        4. 从模糊后的图片中提取特征色
+        
+        提取规则：
         - 忽略灰度色（饱和度 < 0.25）
         - 忽略黑色（亮度 V < 0.2）
         - 忽略白色（亮度 V > 0.95）
@@ -110,12 +190,22 @@ class OreColorProcessor:
             tuple: (r, g, b) 或 None
         """
         try:
-            img = Image.open(image_path).convert("RGBA")
-            pixels = img.getdata()
+            # 1. 加载原图片
+            original_img = Image.open(image_path)
+            
+            # 2. 应用模糊化处理（内部会处理透明背景）
+            mosaic_img = self.apply_mosaic(original_img, grid_size=32)
+            
+            # 3. 从模糊后的图片中提取特征色
+            # 转换为RGBA以便处理（虽然已经是RGB，但为了统一处理）
+            if mosaic_img.mode != "RGBA":
+                mosaic_img = mosaic_img.convert("RGBA")
+            
+            pixels = mosaic_img.getdata()
             candidates = []
             
             for r, g, b, a in pixels:
-                if a < 32:   # 忽略透明
+                if a < 32:   # 忽略透明（虽然模糊后应该没有透明了，但保留检查）
                     continue
                 
                 # 转换到 HSV（0~1 浮点）
