@@ -390,11 +390,79 @@ jobs:
         
         # 尝试从最新Release获取metadata.json以计算icon_version
         echo "[+] 获取远程metadata.json以计算icon_version..."
-        METADATA_URL=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" | \
-          jq -r '.assets[] | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
+        
+        METADATA_URL=""
+        
+        # 策略1: 尝试使用/releases/latest API
+        echo "[+] 尝试使用/releases/latest API..."
+        LATEST_RELEASE=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" 2>/dev/null)
+        
+        # 检查/releases/latest是否成功（非404）
+        if [ -n "$LATEST_RELEASE" ] && [ "$LATEST_RELEASE" != "null" ] && echo "$LATEST_RELEASE" | jq -e '.assets' > /dev/null 2>&1; then
+          echo "[+] 成功获取/releases/latest API响应"
+          METADATA_URL=$(echo "$LATEST_RELEASE" | jq -r '.assets[] | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
+          
+          # 如果/releases/latest成功但没有metadata.json，这是异常情况，应该报错
+          if [ -z "$METADATA_URL" ] || [ "$METADATA_URL" = "null" ] || [ "$METADATA_URL" = "" ]; then
+            echo "[x] 错误：/releases/latest API成功但未找到metadata.json"
+            echo "[x] 这是一个致命错误，最新release必须包含metadata.json"
+            exit 1
+          fi
+          
+          echo "[+] 从/releases/latest找到metadata.json: $METADATA_URL"
+        else
+          # /releases/latest失败（可能是404），尝试策略2
+          echo "[!] /releases/latest API未找到或返回404，尝试回退策略..."
+          
+          # 策略2: 回退到/releases API，找到id最大的release
+          echo "[+] 请求/releases API获取所有releases..."
+          ALL_RELEASES=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" 2>/dev/null)
+          
+          # 严格验证/releases API响应
+          if [ -z "$ALL_RELEASES" ] || [ "$ALL_RELEASES" = "null" ]; then
+            echo "[x] 错误：/releases API请求失败或返回null"
+            exit 1
+          fi
+          
+          # 验证是否为有效数组
+          if ! echo "$ALL_RELEASES" | jq -e 'type == "array"' > /dev/null 2>&1; then
+            echo "[x] 错误：/releases API返回的不是有效数组"
+            exit 1
+          fi
+          
+          # 检查数组是否为空（没有release）
+          RELEASE_COUNT=$(echo "$ALL_RELEASES" | jq 'length' 2>/dev/null || echo "0")
+          if [ "$RELEASE_COUNT" = "0" ]; then
+            echo "[+] /releases API返回空数组，说明没有任何release（首次创建）"
+            echo "[+] 设置初始图标版本号: 1"
+            METADATA_URL=""  # 确保METADATA_URL为空，以便后续逻辑设置版本为1
+          else
+            # 有release，找到id最大的release（排除draft和prerelease）
+            echo "[+] 找到 $RELEASE_COUNT 个release，查找id最大的release..."
+            LATEST_RELEASE=$(echo "$ALL_RELEASES" | jq '[.[] | select(.draft == false and .prerelease == false)] | sort_by(.id | tonumber) | reverse | .[0]' 2>/dev/null)
+            
+            # 验证是否找到有效的release
+            if [ -z "$LATEST_RELEASE" ] || [ "$LATEST_RELEASE" = "null" ]; then
+              echo "[x] 错误：未找到有效的release（排除draft和prerelease后为空）"
+              exit 1
+            fi
+            
+            echo "[+] 找到id最大的release"
+            METADATA_URL=$(echo "$LATEST_RELEASE" | jq -r '.assets[]? | select(.name == "metadata.json") | .browser_download_url' 2>/dev/null || echo "")
+            
+            # 如果找到release但没有metadata.json，这是异常情况，应该报错
+            if [ -z "$METADATA_URL" ] || [ "$METADATA_URL" = "null" ] || [ "$METADATA_URL" = "" ]; then
+              echo "[x] 错误：id最大的release中没有metadata.json"
+              echo "[x] 这是一个致命错误，release必须包含metadata.json"
+              exit 1
+            fi
+            
+            echo "[+] 从/releases找到metadata.json: $METADATA_URL"
+          fi
+        fi
         
         # 计算icon_version
-        if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ]; then
+        if [ -n "$METADATA_URL" ] && [ "$METADATA_URL" != "null" ] && [ "$METADATA_URL" != "" ]; then
           echo "[+] 找到远程metadata.json: $METADATA_URL"
           
           # 下载并解析旧的metadata（-L跟随重定向）
