@@ -407,6 +407,22 @@ class AccountingTypesLocalizer:
                     "{name1}为{itemname}的损失而对{name2}保险赔付",
                     "{name1}支付给{name2}的保险金"
                 ]
+            },
+            "planetary_import_tax": {
+                "en": [
+                    "Planetary Import Tax: {name1} imported to {location}"
+                ],
+                "zh": [
+                    "行星进口税: 由 {name1} 进口到 {location}"
+                ]
+            },
+            "planetary_export_tax": {
+                "en": [
+                    "Planetary Export Tax: {name1} exported from {location}"
+                ],
+                "zh": [
+                    "行星出口税: 由 {name1} 从 {location} 出口"
+                ]
             }
         }
     
