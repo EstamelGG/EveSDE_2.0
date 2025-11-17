@@ -1188,7 +1188,9 @@ def main():
                     return obj.decode('utf-8', errors='ignore')
                 return super(FSDJSONEncoder, self).default(obj)
 
-        output_file = 'brackets_output.json'
+        # 使用脚本所在目录的绝对路径，确保文件生成在正确的位置
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        output_file = os.path.join(script_dir, 'brackets_output.json')
         # Python 3: open() supports encoding parameter
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(all_data, f, indent=2, ensure_ascii=False, cls=FSDJSONEncoder, default=str)
