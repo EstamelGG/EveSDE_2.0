@@ -58,7 +58,9 @@ import scripts.update_categories_icons as update_categories_icons
 import scripts.map_generator as map_generator
 import scripts.version_info_processor as version_info_processor
 import scripts.release_compare_processor as release_compare_processor
+from brackets_decode.parse_brackets_standalone import main as parse_brackets_main
 import clean
+
 # 本地化处理通过调用localization/main.py完成
 
 
@@ -412,6 +414,11 @@ def main():
         sys.exit(1)
     
     print("[+] SDE数据准备完成，继续后续处理...")
+    
+    # 生成 brackets_output.json（用于NPC船只分类）
+    print("\n[+] 生成 brackets_output.json")
+    print("=" * 30)
+    parse_brackets_main()
     
     # 执行图标构造（使用eve_icon_builder）
     safe_execute_processor(icon_builder_processor.main, "图标构造", config)

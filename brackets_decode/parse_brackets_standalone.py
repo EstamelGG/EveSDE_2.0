@@ -1126,7 +1126,7 @@ def main():
         if has_error:
             print("\n[x] 数据解析存在错误，不生成 brackets_output.json 文件")
             print("[x] 请检查错误信息并修复后重试")
-            sys.exit(1)
+            return
         
         print("[+] 所有必需字段解析成功，数据完整性检查通过")
         
@@ -1210,7 +1210,8 @@ def main():
         print("\n✗ 发生错误: %s" % str(e))
         import traceback
         traceback.print_exc()
-        sys.exit(1)
+        print("[!] brackets_output.json 生成失败")
+        return
 
 
 if __name__ == '__main__':
