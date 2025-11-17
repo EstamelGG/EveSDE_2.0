@@ -331,7 +331,7 @@ class NPCShipClassifier:
             
             # 获取所有categoryID为11的NPC船只（categoryID=11表示Ship）
             cursor.execute('''
-                SELECT type_id, en_name, group_name, categoryID, groupID
+                SELECT type_id, en_name, zh_name, group_name, categoryID, groupID
                 FROM types
                 WHERE categoryID = 11
             ''')
@@ -344,8 +344,9 @@ class NPCShipClassifier:
                 npc_classification_cache.clear()
                 update_batch = []
                 batch_size = 1000
+                unmatched_items = []  # 记录未命中的物品
                 
-                for type_id, en_name, group_name, category_id, group_id in npc_ships:
+                for type_id, en_name, zh_name, group_name, category_id, group_id in npc_ships:
                     # 计算分类
                     npc_ship_scene_en = self.get_npc_ship_scene(group_name, 'en')
                     npc_ship_scene_zh = self.get_npc_ship_scene(group_name, 'zh')
@@ -354,6 +355,14 @@ class NPCShipClassifier:
                     npc_ship_type_en = self.get_npc_ship_type(cursor, type_id, group_name, en_name, group_id, category_id, 'en')
                     npc_ship_type_zh = self.get_npc_ship_type(cursor, type_id, group_name, en_name, group_id, category_id, 'zh')
                     npc_ship_faction_icon = self.get_faction_icon(npc_ship_faction_en)
+                    
+                    # 检查是否未命中（三个方法都失败，返回 Other/其他）
+                    if npc_ship_type_en == "Other" or npc_ship_type_zh == "其他":
+                        unmatched_items.append({
+                            'type_id': type_id,
+                            'en_name': en_name,
+                            'zh_name': zh_name or en_name  # 如果zh_name为空，使用en_name
+                        })
                     
                     # 保存到缓存
                     npc_classification_cache[type_id] = {
@@ -397,6 +406,16 @@ class NPCShipClassifier:
                 
                 print(f"[+] 英文数据库：成功分类 {len(npc_ships)} 个NPC船只")
                 
+                # 打印未命中的物品
+                if unmatched_items:
+                    print(f"\n[!] 未命中分类的物品（三个方法都失败）: {len(unmatched_items)} 个")
+                    print("=" * 80)
+                    for item in unmatched_items:
+                        print(f"  type_id: {item['type_id']:>8}, en_name: {item['en_name']:<40}, zh_name: {item['zh_name']}")
+                    print("=" * 80)
+                else:
+                    print("[+] 所有NPC船只都已成功分类")
+                
             else:
                 # 其他语言从缓存获取分类结果
                 if not npc_classification_cache:
@@ -407,7 +426,7 @@ class NPCShipClassifier:
                 batch_size = 1000
                 updated_count = 0
                 
-                for type_id, en_name, group_name, category_id, group_id in npc_ships:
+                for type_id, en_name, zh_name, group_name, category_id, group_id in npc_ships:
                     if type_id in npc_classification_cache:
                         cached_data = npc_classification_cache[type_id]
                         
