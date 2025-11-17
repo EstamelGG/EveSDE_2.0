@@ -41,6 +41,7 @@ import scripts.dogmaAttributeCategories_processor as dogmaAttributeCategories_pr
 import scripts.dogmaAttributes_processor as dogmaAttributes_processor
 import scripts.typeDogma_processor as typeDogma_processor
 import scripts.types_processor as types_processor
+import scripts.npc_ship_classifier as npc_ship_classifier
 import scripts.dbuffCollections_processor as dbuffCollections_processor
 import scripts.marketGroups_processor as marketGroups_processor
 import scripts.typeMaterials_processor as typeMaterials_processor
@@ -474,6 +475,9 @@ def main():
     
     # 处理物品详情数据
     safe_execute_processor(types_processor.main, "物品详情数据", config)
+    
+    # 处理NPC船只分类数据
+    safe_execute_processor(npc_ship_classifier.main, "NPC船只分类数据", config)
     
     # 处理矿石主题色数据
     safe_execute_processor(ore_color_processor.main, "矿石主题色数据", config)

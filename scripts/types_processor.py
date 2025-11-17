@@ -20,83 +20,6 @@ from pathlib import Path
 from typing import Dict, Any, Optional, List, Tuple
 import scripts.icon_finder as icon_finder
 
-# NPC船只场景映射
-NPC_SHIP_SCENES = [
-    {"en": "Asteroid ", "zh": "小行星带"},
-    {"en": "Deadspace ", "zh": "死亡空间"},
-    {"en": "FW ", "zh": "势力战争"},
-    {"en": "Ghost Site ", "zh": "幽灵站点"},
-    {"en": "Incursion ", "zh": "入侵"},
-    {"en": "Mission ", "zh": "任务"},
-    {"en": "Storyline ", "zh": "故事线"},
-    {"en": "Abyssal ", "zh": "深渊"}
-]
-
-# NPC船只势力映射
-NPC_SHIP_FACTIONS = [
-    {"en": "Angel Cartel", "zh": "天使"},
-    {"en": "Blood Raider", "zh": "血袭者"},
-    {"en": "Guristas", "zh": "古斯塔斯"},
-    {"en": "Mordu", "zh": "莫德团"},
-    {"en": "Rogue Drone", "zh": "自由无人机"},
-    {"en": "Sansha", "zh": "萨沙共和国"},
-    {"en": "Serpentis", "zh": "天蛇"},
-    {"en": "Overseer", "zh": "监察官"},
-    {"en": "Sleeper", "zh": "冬眠者"},
-    {"en": "Drifter", "zh": "流浪者"},
-    {"en": "Amarr Empire", "zh": "艾玛帝国"},
-    {"en": "Gallente Federation", "zh": "盖伦特联邦"},
-    {"en": "Minmatar Republic", "zh": "米玛塔尔共和国"},
-    {"en": "Caldari State", "zh": "加达里合众国"},
-    {"en": "CONCORD", "zh": "统合部"},
-    {"en": "Faction", "zh": "势力特属"},
-    {"en": "Generic", "zh": "任务通用"},
-    {"en": "Khanid", "zh": "卡尼迪"},
-    {"en": "Thukker", "zh": "图克尔"}
-]
-
-# NPC势力ICON映射
-NPC_FACTION_ICON_MAP = {
-    "Angel Cartel": "faction_500011.png",
-    "Blood Raider": "faction_500012.png",
-    "Guristas": "faction_500010.png",
-    "Mordu": "faction_500018.png",
-    "Rogue Drone": "faction_500025.png",
-    "Sansha": "faction_500019.png",
-    "Serpentis": "faction_500020.png",
-    "Overseer": "faction_500021.png",  # 使用默认图标
-    "Sleeper": "faction_500005.png",
-    "Drifter": "faction_500024.png",
-    "Amarr Empire": "faction_500003.png",
-    "Gallente Federation": "faction_500004.png",
-    "Minmatar Republic": "faction_500002.png",
-    "Caldari State": "faction_500001.png",
-    "CONCORD": "faction_500006.png",
-    "Faction": "faction_500021.png",  # 使用默认图标
-    "Generic": "faction_500021.png",  # 使用默认图标
-    "Other": "faction_500021.png",  # 使用默认图标
-    "Khanid": "faction_500008.png",
-    "Thukker": "faction_500015.png"
-}
-
-# NPC船只类型映射
-NPC_SHIP_TYPES = [
-    {"en": " Frigate", "zh": "护卫舰"},
-    {"en": " Destroyer", "zh": "驱逐舰"},
-    {"en": " Battlecruiser", "zh": "战列巡洋舰"},
-    {"en": " Cruiser", "zh": "巡洋舰"},
-    {"en": " Battleship", "zh": "战列舰"},
-    {"en": " Hauler", "zh": "运输舰"},
-    {"en": " Transports", "zh": "运输舰"},
-    {"en": " Dreadnought", "zh": "无畏舰"},
-    {"en": " Titan", "zh": "泰坦"},
-    {"en": " Supercarrier", "zh": "超级航母"},
-    {"en": " Carrier", "zh": "航空母舰"},
-    {"en": " Officer", "zh": "官员"},
-    {"en": " Sentry", "zh": "岗哨"},
-    {"en": " Drone", "zh": "无人机"}
-]
-
 # 虫洞目标映射
 WORMHOLE_TARGET_MAP = {
     1: {"zh": "1级虫洞空间", "other": "W-Space C1"},
@@ -128,7 +51,6 @@ WORMHOLE_SIZE_MAP = {
 }
 
 # 全局缓存
-npc_classification_cache = {}
 type_en_name_cache = {}
 icon_md5_cache = {}  # MD5 -> 目标文件名映射
 
@@ -327,47 +249,6 @@ class TypesProcessor:
             print(f"[!] 获取组和分类信息时出错: {e}")
         
         return group_to_category, category_id_to_name, group_id_to_name
-    
-    def get_npc_ship_scene(self, group_name: str, lang: str) -> Optional[str]:
-        """
-        获取NPC船只场景
-        """
-        for scene in NPC_SHIP_SCENES:
-            if group_name.startswith(scene["en"]):
-                if scene["en"].strip() == "FW":
-                    return "Faction Warfare" if lang == "en" else "势力战争"
-                return scene[lang].strip()
-        return "Other" if lang == "en" else "其他"
-    
-    def get_npc_ship_faction(self, group_name: str, lang: str) -> Optional[str]:
-        """
-        获取NPC船只势力
-        """
-        for faction in NPC_SHIP_FACTIONS:
-            if faction["en"] in group_name:
-                return faction[lang].strip()
-        return "Other" if lang == "en" else "其他"
-    
-    def get_npc_ship_type(self, group_name: str, name: str, lang: str) -> Optional[str]:
-        """
-        获取NPC船只类型
-        """
-        # 首先检查组名是否以Officer结尾
-        if group_name.endswith("Officer"):
-            return "Officer" if lang == "en" else "官员"
-
-        # 然后检查物品名称是否以指定类型结尾
-        for ship_type in NPC_SHIP_TYPES:
-            if name.endswith(ship_type["en"]) or group_name.endswith(ship_type["en"]):
-                return ship_type[lang].strip()
-
-        return "Other" if lang == "en" else "其他"
-    
-    def get_faction_icon(self, cursor: sqlite3.Cursor, faction_name: str) -> Optional[str]:
-        """
-        获取势力图标
-        """
-        return NPC_FACTION_ICON_MAP.get(faction_name, "faction_500021.png")
     
     def calculate_file_md5(self, file_path: Path) -> str:
         """
@@ -681,10 +562,6 @@ class TypesProcessor:
         create_wormholes_table = self.create_wormholes_table
         fetch_and_process_data = self.fetch_and_process_data
         read_repackaged_volumes = self.read_repackaged_volumes
-        get_npc_ship_scene = self.get_npc_ship_scene
-        get_npc_ship_faction = self.get_npc_ship_faction
-        get_npc_ship_type = self.get_npc_ship_type
-        get_faction_icon = self.get_faction_icon
         copy_and_rename_icon = self.copy_and_rename_icon
         get_attributes_value = self.get_attributes_value
         process_wormhole_data = self.process_wormhole_data
@@ -696,9 +573,8 @@ class TypesProcessor:
         # 读取repackaged_volumes数据
         repackaged_volumes = read_repackaged_volumes()
 
-        # 如果是英文数据库，清空缓存并建立英文名称映射
+        # 如果是英文数据库，建立英文名称映射
         if lang == 'en':
-            npc_classification_cache.clear()
             type_en_name_cache.clear()
             # 预处理所有英文名称
             for type_id, item in types_data.items():
@@ -741,48 +617,11 @@ class TypesProcessor:
             category_id = group_to_category.get(groupID, 0)
             category_name = category_id_to_name.get(category_id, 'Unknown')
 
-            # 处理NPC船只分类
+            # NPC船只分类字段将在后续的npc_ship_classifier阶段处理，这里先设置为null
             npc_ship_scene = None
             npc_ship_faction = None
             npc_ship_type = None
             npc_ship_faction_icon = None
-
-            if category_id == 11:  # 对所有语言的数据库都处理分类
-                if lang == 'en':  # 英文数据库处理并缓存
-                    # 同时缓存中英文版本
-                    npc_ship_scene_en = get_npc_ship_scene(group_name, 'en')
-                    npc_ship_scene_zh = get_npc_ship_scene(group_name, 'zh')
-                    npc_ship_faction_en = get_npc_ship_faction(group_name, 'en')
-                    npc_ship_faction_zh = get_npc_ship_faction(group_name, 'zh')
-                    npc_ship_type_en = get_npc_ship_type(group_name, name, 'en')
-                    npc_ship_type_zh = get_npc_ship_type(group_name, name, 'zh')
-                    npc_ship_faction_icon = get_faction_icon(cursor, npc_ship_faction_en)
-
-                    # 保存到缓存
-                    npc_classification_cache[type_id] = {
-                        'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
-                        'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
-                        'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
-                        'faction_icon': npc_ship_faction_icon
-                    }
-
-                    # 使用英文版本
-                    npc_ship_scene = npc_ship_scene_en
-                    npc_ship_faction = npc_ship_faction_en
-                    npc_ship_type = npc_ship_type_en
-                elif type_id in npc_classification_cache:  # 其他语言从缓存获取
-                    cached_data = npc_classification_cache[type_id]
-                    if lang == 'zh':
-                        # 中文数据库使用中文版本
-                        npc_ship_scene = cached_data['scene']['zh']
-                        npc_ship_faction = cached_data['faction']['zh']
-                        npc_ship_type = cached_data['type']['zh']
-                    else:
-                        # 其他语言使用英文版本
-                        npc_ship_scene = cached_data['scene']['en']
-                        npc_ship_faction = cached_data['faction']['en']
-                        npc_ship_type = cached_data['type']['en']
-                    npc_ship_faction_icon = cached_data['faction_icon']
 
             copied_file, bpc_copied_file = copy_and_rename_icon(type_id, category_id)
             res = get_attributes_value(cursor, type_id, [30, 50, 1153, 114, 118, 117, 116, 14, 13, 12, 1154, 102, 101])
