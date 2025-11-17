@@ -8,6 +8,8 @@ NPC船只分类处理器模块
 """
 
 import sqlite3
+import json
+import subprocess
 from pathlib import Path
 from typing import Dict, Any, Optional
 
@@ -101,6 +103,7 @@ class NPCShipClassifier:
         self.project_root = Path(__file__).parent.parent
         self.db_output_path = self.project_root / config["paths"]["db_output"]
         self.languages = config.get("languages", ["en"])
+        self.brackets_data = None  # 缓存 brackets_output.json 数据
     
     def get_npc_ship_scene(self, group_name: str, lang: str) -> Optional[str]:
         """
@@ -122,17 +125,121 @@ class NPCShipClassifier:
                 return faction[lang].strip()
         return "Other" if lang == "en" else "其他"
     
-    def get_npc_ship_type(self, cursor: sqlite3.Cursor, type_id: int, group_name: str, name: str, lang: str) -> Optional[str]:
+    def get_faction_icon(self, faction_name: str) -> Optional[str]:
         """
-        获取NPC船只类型
-        优先通过typeAttributes表的attribute_id=1766获取型号group_id，然后从groups表查询
-        如果查不到，再使用映射作为兜底
+        获取势力图标
         """
-        # 首先检查组名是否以Officer结尾
-        if group_name.endswith("Officer"):
-            return "Officer" if lang == "en" else "官员"
+        return NPC_FACTION_ICON_MAP.get(faction_name, "faction_500021.png")
+    
+    def load_brackets_data(self) -> bool:
+        """
+        加载 brackets_output.json 数据
+        如果文件不存在，尝试执行 parse_brackets_standalone.py 生成
+        """
+        brackets_output_path = self.project_root / "brackets_decode" / "brackets_output.json"
         
-        # 优先通过typeAttributes表查询attribute_id=1766的值（型号group_id）
+        # 如果文件不存在，尝试执行脚本生成
+        if not brackets_output_path.exists():
+            print("[+] brackets_output.json 不存在，尝试执行 parse_brackets_standalone.py...")
+            try:
+                script_path = self.project_root / "brackets_decode" / "parse_brackets_standalone.py"
+                if script_path.exists():
+                    result = subprocess.run(
+                        ["python", str(script_path)],
+                        cwd=str(self.project_root / "brackets_decode"),
+                        capture_output=True,
+                        text=True,
+                        timeout=300
+                    )
+                    if result.returncode != 0:
+                        print(f"[!] 执行 parse_brackets_standalone.py 失败: {result.stderr}")
+                        return False
+                    print("[+] parse_brackets_standalone.py 执行完成")
+                else:
+                    print(f"[!] 找不到 parse_brackets_standalone.py: {script_path}")
+                    return False
+            except Exception as e:
+                print(f"[!] 执行 parse_brackets_standalone.py 时出错: {e}")
+                return False
+        
+        # 读取 brackets_output.json
+        try:
+            with open(brackets_output_path, 'r', encoding='utf-8') as f:
+                self.brackets_data = json.load(f)
+            print("[+] 成功加载 brackets_output.json")
+            return True
+        except Exception as e:
+            print(f"[!] 读取 brackets_output.json 失败: {e}")
+            self.brackets_data = None
+            return False
+    
+    def get_bracket_name_from_brackets_data(self, type_id: int, group_id: int, category_id: int) -> Optional[str]:
+        """
+        从 brackets_data 中获取 name
+        优先级：bracketsByType -> bracketsByGroup -> bracketsByCategory
+        """
+        if not self.brackets_data:
+            return None
+        
+        try:
+            # 方法1: 从 bracketsByType 查找
+            brackets_by_type = self.brackets_data.get('bracketsByType', {})
+            type_id_str = str(type_id)
+            if type_id_str in brackets_by_type:
+                bracket_info = brackets_by_type[type_id_str]
+                if isinstance(bracket_info, dict):
+                    name = bracket_info.get('name', '')
+                    if name:
+                        return name
+            
+            # 方法2: 从 bracketsByGroup 查找
+            brackets_by_group = self.brackets_data.get('bracketsByGroup', {})
+            group_id_str = str(group_id)
+            if group_id_str in brackets_by_group:
+                bracket_info = brackets_by_group[group_id_str]
+                if isinstance(bracket_info, dict):
+                    name = bracket_info.get('name', '')
+                    if name:
+                        return name
+            
+            # 方法3: 从 bracketsByCategory 查找
+            brackets_by_category = self.brackets_data.get('bracketsByCategory', {})
+            category_id_str = str(category_id)
+            if category_id_str in brackets_by_category:
+                bracket_info = brackets_by_category[category_id_str]
+                if isinstance(bracket_info, dict):
+                    name = bracket_info.get('name', '')
+                    if name:
+                        return name
+            
+            return None
+        except Exception as e:
+            # 如果解析失败，返回 None
+            return None
+    
+    def classify_ship_type_from_name(self, name: str, lang: str) -> Optional[str]:
+        """
+        根据 name 使用 NPC_SHIP_TYPES 进行分类
+        特殊处理 "Super Carrier" -> Supercarrier/超级航母
+        """
+        if not name:
+            return None
+        
+        # 特殊处理 "Super Carrier"
+        if name == "Super Carrier":
+            return "Supercarrier" if lang == "en" else "超级航母"
+        
+        # 使用 NPC_SHIP_TYPES 匹配
+        for ship_type in NPC_SHIP_TYPES:
+            if name.endswith(ship_type["en"]) or name == ship_type["en"].strip():
+                return ship_type[lang].strip()
+        
+        return None
+    
+    def get_npc_ship_type_method2(self, cursor: sqlite3.Cursor, type_id: int, lang: str) -> Optional[str]:
+        """
+        方法2: 根据属性1766获取型号group_id，然后从groups表查询
+        """
         try:
             cursor.execute('''
                 SELECT value
@@ -156,21 +263,65 @@ class NPCShipClassifier:
                 if group_result and group_result[0]:
                     return group_result[0].strip()
         except Exception as e:
-            # 如果查询失败，继续使用兜底逻辑
             pass
         
-        # 兜底：使用字符串匹配映射
+        return None
+    
+    def get_npc_ship_type_method3(self, cursor: sqlite3.Cursor, type_id: int, group_id: int, category_id: int, lang: str) -> Optional[str]:
+        """
+        方法3: 从 brackets_output.json 中查找 name，然后使用 NPC_SHIP_TYPES 分类
+        """
+        if not self.brackets_data:
+            return None
+        
+        try:
+            # 从 brackets_data 中获取 name
+            bracket_name = self.get_bracket_name_from_brackets_data(type_id, group_id, category_id)
+            if bracket_name:
+                # 使用 name 进行分类
+                return self.classify_ship_type_from_name(bracket_name, lang)
+        except Exception as e:
+            pass
+        
+        return None
+    
+    def get_npc_ship_type_method1(self, group_name: str, name: str, lang: str) -> Optional[str]:
+        """
+        方法1: 使用字符串匹配映射（兜底方法）
+        """
+        # 首先检查组名是否以Officer结尾
+        if group_name.endswith("Officer"):
+            return "Officer" if lang == "en" else "官员"
+        
+        # 使用字符串匹配映射
         for ship_type in NPC_SHIP_TYPES:
             if name.endswith(ship_type["en"]) or group_name.endswith(ship_type["en"]):
                 return ship_type[lang].strip()
-
-        return "Other" if lang == "en" else "其他"
+        
+        return None
     
-    def get_faction_icon(self, faction_name: str) -> Optional[str]:
+    def get_npc_ship_type(self, cursor: sqlite3.Cursor, type_id: int, group_name: str, name: str, group_id: int, category_id: int, lang: str) -> Optional[str]:
         """
-        获取势力图标
+        获取NPC船只类型
+        优先级：方法2（属性1766）-> 方法3（brackets_output）-> 方法1（字符串匹配）
         """
-        return NPC_FACTION_ICON_MAP.get(faction_name, "faction_500021.png")
+        # 方法2: 根据属性1766获取型号group_id
+        result = self.get_npc_ship_type_method2(cursor, type_id, lang)
+        if result:
+            return result
+        
+        # 方法3: 从 brackets_output.json 中查找
+        result = self.get_npc_ship_type_method3(cursor, type_id, group_id, category_id, lang)
+        if result:
+            return result
+        
+        # 方法1: 使用字符串匹配映射（兜底）
+        result = self.get_npc_ship_type_method1(group_name, name, lang)
+        if result:
+            return result
+        
+        # 全部失败，返回 Other
+        return "Other" if lang == "en" else "其他"
     
     def classify_npc_ships_for_language(self, language: str) -> bool:
         """
@@ -190,9 +341,13 @@ class NPCShipClassifier:
             conn = sqlite3.connect(str(db_path))
             cursor = conn.cursor()
             
+            # 加载 brackets_output.json 数据（仅在英文数据库时加载一次）
+            if language == 'en':
+                self.load_brackets_data()
+            
             # 获取所有categoryID为11的NPC船只（categoryID=11表示Ship）
             cursor.execute('''
-                SELECT type_id, en_name, group_name, categoryID
+                SELECT type_id, en_name, group_name, categoryID, groupID
                 FROM types
                 WHERE categoryID = 11
             ''')
@@ -206,14 +361,14 @@ class NPCShipClassifier:
                 update_batch = []
                 batch_size = 1000
                 
-                for type_id, en_name, group_name, category_id in npc_ships:
+                for type_id, en_name, group_name, category_id, group_id in npc_ships:
                     # 计算分类
                     npc_ship_scene_en = self.get_npc_ship_scene(group_name, 'en')
                     npc_ship_scene_zh = self.get_npc_ship_scene(group_name, 'zh')
                     npc_ship_faction_en = self.get_npc_ship_faction(group_name, 'en')
                     npc_ship_faction_zh = self.get_npc_ship_faction(group_name, 'zh')
-                    npc_ship_type_en = self.get_npc_ship_type(cursor, type_id, group_name, en_name, 'en')
-                    npc_ship_type_zh = self.get_npc_ship_type(cursor, type_id, group_name, en_name, 'zh')
+                    npc_ship_type_en = self.get_npc_ship_type(cursor, type_id, group_name, en_name, group_id, category_id, 'en')
+                    npc_ship_type_zh = self.get_npc_ship_type(cursor, type_id, group_name, en_name, group_id, category_id, 'zh')
                     npc_ship_faction_icon = self.get_faction_icon(npc_ship_faction_en)
                     
                     # 保存到缓存
@@ -268,7 +423,7 @@ class NPCShipClassifier:
                 batch_size = 1000
                 updated_count = 0
                 
-                for type_id, en_name, group_name, category_id in npc_ships:
+                for type_id, en_name, group_name, category_id, group_id in npc_ships:
                     if type_id in npc_classification_cache:
                         cached_data = npc_classification_cache[type_id]
                         
