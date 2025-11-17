@@ -9,7 +9,6 @@ NPC船只分类处理器模块
 
 import sqlite3
 import json
-import subprocess
 from pathlib import Path
 from typing import Dict, Any, Optional
 
@@ -134,33 +133,14 @@ class NPCShipClassifier:
     def load_brackets_data(self) -> bool:
         """
         加载 brackets_output.json 数据
-        如果文件不存在，尝试执行 parse_brackets_standalone.py 生成
+        如果文件不存在，跳过此分类方法（不尝试生成）
         """
         brackets_output_path = self.project_root / "brackets_decode" / "brackets_output.json"
         
-        # 如果文件不存在，尝试执行脚本生成
+        # 如果文件不存在，直接返回 False（跳过此分类方法）
         if not brackets_output_path.exists():
-            print("[+] brackets_output.json 不存在，尝试执行 parse_brackets_standalone.py...")
-            try:
-                script_path = self.project_root / "brackets_decode" / "parse_brackets_standalone.py"
-                if script_path.exists():
-                    result = subprocess.run(
-                        ["python", str(script_path)],
-                        cwd=str(self.project_root / "brackets_decode"),
-                        capture_output=True,
-                        text=True,
-                        timeout=300
-                    )
-                    if result.returncode != 0:
-                        print(f"[!] 执行 parse_brackets_standalone.py 失败: {result.stderr}")
-                        return False
-                    print("[+] parse_brackets_standalone.py 执行完成")
-                else:
-                    print(f"[!] 找不到 parse_brackets_standalone.py: {script_path}")
-                    return False
-            except Exception as e:
-                print(f"[!] 执行 parse_brackets_standalone.py 时出错: {e}")
-                return False
+            print("[!] brackets_output.json 不存在，跳过 brackets 分类方法")
+            return False
         
         # 读取 brackets_output.json
         try:
@@ -168,8 +148,12 @@ class NPCShipClassifier:
                 self.brackets_data = json.load(f)
             print("[+] 成功加载 brackets_output.json")
             return True
+        except json.JSONDecodeError as e:
+            print(f"[!] brackets_output.json JSON 格式错误: {e}，跳过 brackets 分类方法")
+            self.brackets_data = None
+            return False
         except Exception as e:
-            print(f"[!] 读取 brackets_output.json 失败: {e}")
+            print(f"[!] 读取 brackets_output.json 失败: {e}，跳过 brackets 分类方法")
             self.brackets_data = None
             return False
     

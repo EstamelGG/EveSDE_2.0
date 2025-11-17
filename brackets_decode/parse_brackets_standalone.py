@@ -1093,6 +1093,43 @@ def main():
                 if not all_data:
                     all_data = {"error": "无法从在线服务器下载，且本地目录不存在"}
 
+        # 检查是否有任何错误，如果有错误则不生成文件
+        print("\n" + "=" * 60)
+        print("检查数据完整性...")
+        print("=" * 60)
+        
+        has_error = False
+        required_fields = ['brackets', 'bracketsByType', 'bracketsByGroup', 'bracketsByCategory']
+        
+        # 检查顶层错误
+        if 'error' in all_data:
+            print("[x] 顶层错误: %s" % all_data.get('error'))
+            has_error = True
+        
+        # 检查必需字段是否存在且有效
+        for field in required_fields:
+            if field not in all_data:
+                print("[x] 缺少必需字段: %s" % field)
+                has_error = True
+            else:
+                field_data = all_data[field]
+                if not isinstance(field_data, dict):
+                    print("[x] 字段 %s 不是有效的字典类型" % field)
+                    has_error = True
+                elif 'error' in field_data:
+                    print("[x] 字段 %s 解析失败: %s" % (field, field_data.get('error')))
+                    has_error = True
+                elif len(field_data) == 0:
+                    print("[x] 字段 %s 为空" % field)
+                    has_error = True
+        
+        if has_error:
+            print("\n[x] 数据解析存在错误，不生成 brackets_output.json 文件")
+            print("[x] 请检查错误信息并修复后重试")
+            sys.exit(1)
+        
+        print("[+] 所有必需字段解析成功，数据完整性检查通过")
+        
         print("\n" + "=" * 60)
         print("优化数据结构，合并 name 信息...")
         
