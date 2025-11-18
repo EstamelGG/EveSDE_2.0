@@ -420,16 +420,16 @@ class NPCShipClassifier:
                     unmatched_items.append({
                         'type_id': type_id,
                         'en_name': en_name,
-                    'zh_name': zh_name or en_name
-                })
+                        'zh_name': zh_name or en_name
+                    })
                 
                 # 保存到内存
                 classifications[type_id] = {
-                'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
-                'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
-                'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
-                'faction_icon': npc_ship_faction_icon,
-                'icon_filename': icon_filename
+                    'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
+                    'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
+                    'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
+                    'faction_icon': npc_ship_faction_icon,
+                    'icon_filename': icon_filename
                 }
                 
                 # 保存到全局缓存
@@ -439,44 +439,45 @@ class NPCShipClassifier:
                     'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
                     'faction_icon': npc_ship_faction_icon
                 }
-                
-                print(f"[+] 英文数据库：成功分类 {len(npc_ships)} 个NPC船只")
-                
-                # 打印未命中的物品
-                if unmatched_items:
-                    print(f"\n[!] 未命中分类的物品（三个方法都失败）: {len(unmatched_items)} 个")
-                    print("=" * 80)
-                    for item in unmatched_items:
-                        print(f"  type_id: {item['type_id']:>8}, en_name: {item['en_name']:<40}, zh_name: {item['zh_name']}")
-                    print("=" * 80)
-                else:
-                    print("[+] 所有NPC船只都已成功分类")
-                
+            
+            # 打印英文数据库处理结果（在循环外部）
+            print(f"[+] 英文数据库：成功分类 {len(npc_ships)} 个NPC船只")
+            
+            # 打印未命中的物品（在循环外部）
+            if unmatched_items:
+                print(f"\n[!] 未命中分类的物品（三个方法都失败）: {len(unmatched_items)} 个")
+                print("=" * 80)
+                for item in unmatched_items:
+                    print(f"  type_id: {item['type_id']:>8}, en_name: {item['en_name']:<40}, zh_name: {item['zh_name']}")
+                print("=" * 80)
             else:
-                # 其他语言从缓存获取分类结果
-                if not npc_classification_cache:
-                    print("[!] 警告：缓存为空，请先处理英文数据库")
-                    return False
-                
-                updated_count = 0
-                
+                print("[+] 所有NPC船只都已成功分类")
+        
+        else:
+            # 其他语言从缓存获取分类结果
+            if not npc_classification_cache:
+                print("[!] 警告：缓存为空，请先处理英文数据库")
+                return False
+            
+            updated_count = 0
+            
             for type_id, en_name, zh_name, group_name, category_id, group_id, icon_filename in npc_ships:
-                    if type_id in npc_classification_cache:
-                        cached_data = npc_classification_cache[type_id]
-                        
-                        # 根据语言选择对应的值
-                        if language == 'zh':
-                            npc_ship_scene = cached_data['scene']['zh']
-                            npc_ship_faction = cached_data['faction']['zh']
-                            npc_ship_type = cached_data['type']['zh']
-                        else:
-                            # 其他语言使用英文版本
-                            npc_ship_scene = cached_data['scene']['en']
-                            npc_ship_faction = cached_data['faction']['en']
-                            npc_ship_type = cached_data['type']['en']
-                        
-                        npc_ship_faction_icon = cached_data['faction_icon']
-                        
+                if type_id in npc_classification_cache:
+                    cached_data = npc_classification_cache[type_id]
+                    
+                    # 根据语言选择对应的值
+                    if language == 'zh':
+                        npc_ship_scene = cached_data['scene']['zh']
+                        npc_ship_faction = cached_data['faction']['zh']
+                        npc_ship_type = cached_data['type']['zh']
+                    else:
+                        # 其他语言使用英文版本
+                        npc_ship_scene = cached_data['scene']['en']
+                        npc_ship_faction = cached_data['faction']['en']
+                        npc_ship_type = cached_data['type']['en']
+                    
+                    npc_ship_faction_icon = cached_data['faction_icon']
+                    
                     # 保存到内存
                     classifications[type_id] = {
                         'scene': npc_ship_scene,
