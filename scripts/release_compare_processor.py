@@ -15,13 +15,13 @@ import tempfile
 import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 
 class ReleaseCompareProcessor:
     """Release比较处理器"""
     
-    def __init__(self, config: Dict[str, Any], build_number: int):
+    def __init__(self, config: Dict[str, Any], build_number: Union[int, str]):
         """初始化Release比较处理器"""
         self.config = config
         self.build_number = build_number
@@ -53,15 +53,15 @@ class ReleaseCompareProcessor:
             f.write(content)
     
     def get_latest_release_info(self) -> Optional[Dict[str, Any]]:
-        """获取最新Release信息"""
+        """
+        获取最新Release信息
+        直接访问/releases API，找到id最大的release（排除draft和prerelease）
+        """
         try:
             # 获取仓库信息
             github_repo = self.config.get('github_repo', '')
             if not github_repo:
                 return None
-            
-            # 构建API URL
-            repo_url = f"https://api.github.com/repos/{github_repo}/releases/latest"
             
             # 准备请求头
             headers = {
@@ -69,11 +69,27 @@ class ReleaseCompareProcessor:
                 'User-Agent': 'EVE-SDE-Processor'
             }
             
+            # 直接访问/releases API，获取所有releases
+            repo_url = f"https://api.github.com/repos/{github_repo}/releases"
             response = requests.get(repo_url, headers=headers, timeout=30)
             response.raise_for_status()
             
-            release_info = response.json()
-            return release_info
+            all_releases = response.json()
+            if not isinstance(all_releases, list):
+                return None
+            
+            # 过滤掉draft和prerelease
+            valid_releases = [
+                r for r in all_releases 
+                if not r.get('draft', False) and not r.get('prerelease', False)
+            ]
+            
+            if not valid_releases:
+                return None
+            
+            # 按id排序，返回id最大的（最新的）
+            valid_releases.sort(key=lambda x: x.get('id', 0), reverse=True)
+            return valid_releases[0]
             
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 404:
@@ -441,7 +457,7 @@ class ReleaseCompareProcessor:
             return False
 
 
-def main(config: Dict[str, Any], build_number: int) -> bool:
+def main(config: Dict[str, Any], build_number: Union[int, str]) -> bool:
     """主函数"""
     with ReleaseCompareProcessor(config, build_number) as processor:
         return processor.process_release_compare()
