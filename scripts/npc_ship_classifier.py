@@ -391,7 +391,7 @@ class NPCShipClassifier:
         type_attributes_cache = data['type_attributes_cache']
         groups_cache = data['groups_cache']
         
-            print(f"[+] 找到 {len(npc_ships)} 个NPC船只需要分类")
+        print(f"[+] 找到 {len(npc_ships)} 个NPC船只需要分类")
         print(f"[+] 加载了 {len(type_attributes_cache)} 个属性1766记录")
         print(f"[+] 加载了 {len(groups_cache)} 个groups记录")
         
