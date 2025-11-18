@@ -398,47 +398,47 @@ class NPCShipClassifier:
         # 在内存中存储所有分类结果
         classifications = {}  # {type_id: {scene, faction, type, faction_icon}}
             
-            # 如果是英文数据库，处理并缓存分类结果
-            if language == 'en':
-                npc_classification_cache.clear()
-                unmatched_items = []  # 记录未命中的物品
-                
+        # 如果是英文数据库，处理并缓存分类结果
+        if language == 'en':
+            npc_classification_cache.clear()
+            unmatched_items = []  # 记录未命中的物品
+            
             for type_id, en_name, zh_name, group_name, category_id, group_id, icon_filename in npc_ships:
-                    # 计算分类
-                    npc_ship_scene_en = self.get_npc_ship_scene(group_name, 'en')
-                    npc_ship_scene_zh = self.get_npc_ship_scene(group_name, 'zh')
-                    npc_ship_faction_en = self.get_npc_ship_faction(group_name, 'en')
-                    npc_ship_faction_zh = self.get_npc_ship_faction(group_name, 'zh')
+                # 计算分类
+                npc_ship_scene_en = self.get_npc_ship_scene(group_name, 'en')
+                npc_ship_scene_zh = self.get_npc_ship_scene(group_name, 'zh')
+                npc_ship_faction_en = self.get_npc_ship_faction(group_name, 'en')
+                npc_ship_faction_zh = self.get_npc_ship_faction(group_name, 'zh')
                 npc_ship_type_en = self.get_npc_ship_type(type_id, group_name, en_name, group_id, category_id, 'en',
-                                                          type_attributes_cache, groups_cache)
+                                                      type_attributes_cache, groups_cache)
                 npc_ship_type_zh = self.get_npc_ship_type(type_id, group_name, en_name, group_id, category_id, 'zh',
-                                                          type_attributes_cache, groups_cache)
-                    npc_ship_faction_icon = self.get_faction_icon(npc_ship_faction_en)
-                    
-                    # 检查是否未命中（三个方法都失败，返回 Other/其他）
-                    if npc_ship_type_en == "Other" or npc_ship_type_zh == "其他":
-                        unmatched_items.append({
-                            'type_id': type_id,
-                            'en_name': en_name,
-                        'zh_name': zh_name or en_name
-                    })
+                                                      type_attributes_cache, groups_cache)
+                npc_ship_faction_icon = self.get_faction_icon(npc_ship_faction_en)
+                
+                # 检查是否未命中（三个方法都失败，返回 Other/其他）
+                if npc_ship_type_en == "Other" or npc_ship_type_zh == "其他":
+                    unmatched_items.append({
+                        'type_id': type_id,
+                        'en_name': en_name,
+                    'zh_name': zh_name or en_name
+                })
                 
                 # 保存到内存
                 classifications[type_id] = {
-                    'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
-                    'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
-                    'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
-                    'faction_icon': npc_ship_faction_icon,
-                    'icon_filename': icon_filename
+                'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
+                'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
+                'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
+                'faction_icon': npc_ship_faction_icon,
+                'icon_filename': icon_filename
                 }
                 
                 # 保存到全局缓存
-                    npc_classification_cache[type_id] = {
-                        'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
-                        'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
-                        'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
-                        'faction_icon': npc_ship_faction_icon
-                    }
+                npc_classification_cache[type_id] = {
+                    'scene': {'en': npc_ship_scene_en, 'zh': npc_ship_scene_zh},
+                    'faction': {'en': npc_ship_faction_en, 'zh': npc_ship_faction_zh},
+                    'type': {'en': npc_ship_type_en, 'zh': npc_ship_type_zh},
+                    'faction_icon': npc_ship_faction_icon
+                }
                 
                 print(f"[+] 英文数据库：成功分类 {len(npc_ships)} 个NPC船只")
                 
@@ -576,7 +576,7 @@ class NPCShipClassifier:
                 corrected_count += 1
         
         if corrected_count > 0:
-            print(f"[+] 内存中修正了 {corrected_count} 个"其他"分类")
+            print(f"[+] 内存中修正了 {corrected_count} 个'其他'分类")
     
     def write_classifications_to_db(self, language: str, classifications: Dict[int, Dict[str, Any]]) -> bool:
         """
@@ -613,28 +613,16 @@ class NPCShipClassifier:
                 
                 faction_icon = data['faction_icon']
                 
-                        update_batch.append((
+                update_batch.append((
                     scene,
                     faction,
                     ship_type,
                     faction_icon,
-                            type_id
-                        ))
-                        
-                        # 批量更新
-                        if len(update_batch) >= batch_size:
-                            cursor.executemany('''
-                                UPDATE types
-                                SET npc_ship_scene = ?,
-                                    npc_ship_faction = ?,
-                                    npc_ship_type = ?,
-                                    npc_ship_faction_icon = ?
-                                WHERE type_id = ?
-                            ''', update_batch)
-                            update_batch = []
+                    type_id
+                ))
                 
-                # 处理剩余的数据
-                if update_batch:
+                # 批量更新
+                if len(update_batch) >= batch_size:
                     cursor.executemany('''
                         UPDATE types
                         SET npc_ship_scene = ?,
@@ -642,6 +630,18 @@ class NPCShipClassifier:
                             npc_ship_type = ?,
                             npc_ship_faction_icon = ?
                         WHERE type_id = ?
+                    ''', update_batch)
+                    update_batch = []
+                
+                # 处理剩余的数据
+                if update_batch:
+                    cursor.executemany('''
+                UPDATE types
+                SET npc_ship_scene = ?,
+                    npc_ship_faction = ?,
+                    npc_ship_type = ?,
+                    npc_ship_faction_icon = ?
+                WHERE type_id = ?
                     ''', update_batch)
             
             # 提交更改
