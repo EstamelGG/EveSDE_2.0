@@ -3,7 +3,7 @@
   "name": "台风级",
   "description": "台风级战列舰一向都是宇宙中最具争议的飞行器——支持者对它赞赏有加，反对者对它恶语中伤。它最引人瞩目的方面——同时也是多数争论的根源——是它的纯粹多功能性，有人认为这种设计缺乏重点，也有人觉得这是特意留给飞行员的装配自由。",
   "volume": 414000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 780.0,
   "mass": 100600000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

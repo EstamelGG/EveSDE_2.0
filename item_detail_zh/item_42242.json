@@ -3,7 +3,7 @@
   "name": "大衮级",
   "description": "<i>当心那些微笑着帮助你并用言语鼓励你的人，他们都是虚情假意的。那些必须奉献生命才能长存的人才是更可靠且动机单纯的。永恒召唤着萨比克，但是愿意踏上此路的人必须以弱者的鲜血沐浴自身，并在强者和纯洁之人的鲜血中得以重生。只对那些真正的同行者施以援手，他们也会在旅途中对你施以回报。”</i>\n\n\n\n- 奥玛·萨利库萨，血红圣杯的冥思",
   "volume": 18135000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2400.0,
   "mass": 1310000000.0,
   "category_name": "舰船",
@@ -662,7 +662,7 @@
     },
     {
       "attribute_name": "specialFuelBayCapacity",
-      "value": 3000.0,
+      "value": 6000.0,
       "categoryID": 40,
       "display_name": "燃料舱容量",
       "unit_name": "m3"

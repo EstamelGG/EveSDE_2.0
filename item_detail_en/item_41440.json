@@ -3,7 +3,7 @@
   "name": "'Phalarica' Thermal Lance",
   "description": "The Gallente Federation was the first of the other empires to acquire the ‘Reaper’ directed energy beam technology developed principally by the Amarr Empire. Seeing an opportunity to modify the device into a powerful variant focused along a specific target line, the Federation’s weapon labs came up with a capital level ‘Thermal Lance’ that they dubbed the ‘Phalarica’. The Amarr were quick to see the potential and, after analyzing the focusing method used by the Gallente, quickly created their own variant of the weapon, followed swiftly by the other empires.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

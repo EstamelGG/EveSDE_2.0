@@ -3,7 +3,7 @@
   "name": "Utu",
   "description": "The Utu is a highly advanced drone platform specially commissioned for the 8th Alliance Tournament. While based on the Ishkur's design, this ship features design elements that go above and beyond the original blueprint.\n\nIn addition to revolutionary heat dispersion field projectors, the Utu is equipped with cutting-edge hardwired drone protocols and upgraded warp scrambling capability. Combined with the sturdy armor plating, these qualities make the Utu a powerful ally in any combat encounter.",
   "volume": 29500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1216000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

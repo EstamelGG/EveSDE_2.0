@@ -3,7 +3,7 @@
   "name": "狐鼬级",
   "description": "狐鼬级是獾级MKII运载舰的升级版本，能够达到加达里工程师所能实现的标准货物运输舰船最大运载能力。",
   "volume": 270000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 7300.0,
   "mass": 13000000.0,
   "category_name": "舰船",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

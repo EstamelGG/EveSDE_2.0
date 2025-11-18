@@ -3,7 +3,7 @@
   "name": "Revelation",
   "description": "The Revelation represents the pinnacle of Amarrian military technology. Maintaining their proud tradition of producing the strongest armor plating to be found anywhere, the Empire's engineers outdid themselves in creating what is arguably the most resilient dreadnought in existence.\n\nAdded to that, the Revelation's ability to fire capital beams makes its position on the battlefield a unique one. When extended sieges are the order of the day, this is the ship you call in.",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2175.0,
   "mass": 1290000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "狮鹫级",
   "description": "狮鹫级常被加达里海军用作战斗中队的支援舰船，它出色的电子设备阵列能干扰目标舰船的运作，使得它们成为常规战斗舰船炮下待宰的羔羊。",
   "volume": 19400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 260.0,
   "mass": 1056000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

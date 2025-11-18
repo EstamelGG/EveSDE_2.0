@@ -1,6 +1,6 @@
 {
   "type_id": 6717,
-  "name": "Small Focused Afocal Maser I",
+  "name": "Small Focused Afocal Laser I",
   "description": "A high-powered beam energy weapon. Good for medium range encounters. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 5.0,
   "repackaged_volume": null,

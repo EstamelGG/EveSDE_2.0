@@ -3,7 +3,7 @@
   "name": "Omen",
   "description": "The Omen is a stereotypical example of the Amarrian School of thinking when it comes to ship design: thick armor and hard hitting lasers. Advancements in heat dissipation allow the Omen to fire its lasers faster than other ships without this technology.",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 13000000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

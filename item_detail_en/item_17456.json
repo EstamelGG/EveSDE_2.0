@@ -1,7 +1,7 @@
 {
   "type_id": 17456,
-  "name": "Rich Plagioclase",
-  "description": "With rich plagioclase, having 10% better yield than the normal one, miners can finally regard plagioclase as a mineral that provides a noteworthy profit.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\nAvailable primarily in high security status star systems.",
+  "name": "Plagioclase III-Grade",
+  "description": "With rich or III-Grade plagioclase having 10% better yield than the normal one, miners can finally regard plagioclase as a mineral that provides a noteworthy profit.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\nAvailable primarily in high security status star systems.",
   "volume": 0.35,
   "repackaged_volume": null,
   "capacity": null,

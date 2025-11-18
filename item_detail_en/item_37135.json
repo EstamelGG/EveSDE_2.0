@@ -3,7 +3,7 @@
   "name": "Endurance",
   "description": "After the success of the Venture mining frigate, ORE spun their growing frontier exploration, exploitation and technology divisions into new subsidiaries. One of the first projects undertaken by the newly configured ORE conglomerate was the development of a new line of Expedition frigates, designed to meet the needs of the riskiest and most lucrative harvesting operations.\n\nThe Endurance is being released under ORE’s ‘Frostline’ branding and combines improved ice mining systems with the well-proven mining frigate frame that served so well as the basis of the Venture and Prospect classes. Unique subsystems and fittings, coupled with a new compact ice mining laser design, give the Endurance the unique ability to harvest ice from a frigate class hull. In addition to this, the creators of the Endurance managed to retain much of the stealth technology that Expedition frigates have become known for.",
   "volume": 50000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 200.0,
   "mass": 1600000.0,
   "category_name": "Ship",
@@ -633,6 +633,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -722,6 +729,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

@@ -3,7 +3,7 @@
   "name": "Merlin",
   "description": "The Merlin is the most powerful combat frigate of the Caldari. Its role has evolved through the years, and while its defenses have always remained exceptionally strong for a Caldari vessel, its offensive capabilities have evolved from versatile, jack-of-all-trades attack patterns into focused and deadly gunfire tactics. The Merlin's primary aim is to have its turrets punch holes in opponents' hulls.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 997000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

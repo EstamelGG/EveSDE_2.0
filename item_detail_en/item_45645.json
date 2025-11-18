@@ -3,7 +3,7 @@
   "name": "Loggerhead",
   "description": "\"Technology is a wonderful thing and once you embrace it, you don't look back. Take me. I'm auged up to the eyeballs. That speech impediment I used to have? Neurovocal implant took care of that. I tried working on it but didn't have the time. Too busy with the restructure, new technologies, planning megaheists and all the rest of it.\n\n\"What? Oh, yeah, listen. S-s-see what, I m-m-mean? I can edit it back in any time I like. It's my party piece, when I have drinks with the OG. Reminds them of the old days. But anyway, back to technology. We live for it, we're at the cutting edge. And we make it ourselves. We don't nick it, like the Angels. What? Fatal? You're asking about that? OK, look that's enough. Interview's over.\"\n\n– Korako 'The Rabbit' Kosakami, interview with Ret Gloriaxx of the Scope's Galactic Hour with Ret Gloriaxx",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2600.0,
   "mass": 1300000000.0,
   "category_name": "Ship",
@@ -662,7 +662,7 @@
     },
     {
       "attribute_name": "specialFuelBayCapacity",
-      "value": 3000.0,
+      "value": 6000.0,
       "categoryID": 40,
       "display_name": "Fuel Bay Capacity",
       "unit_name": "m3"

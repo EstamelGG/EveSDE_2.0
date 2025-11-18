@@ -3,7 +3,7 @@
   "name": "Myrmidon Navy Issue",
   "description": "Following a successful re-engineering process, Duvolle Laboratories developed a new method of transmitting energy to remote stasis webification drones, greatly increasing the factor by which they could ensnare a ship. The research corporation then went on to win a bid to apply this new development to Gallente Navy ship designs. The bulky nature of this technology prohibited integration with the Gallente Navy's smaller vessels and so the Myrmidon was identified as an ideal choice for field testing. \n\nThis webification drone technology, combined with an upgraded Myrmidon, proved a potent combination: the drones being able to snare distant targets, allowing this spiked column of destruction to slowly fall upon its prey.",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 560.0,
   "mass": 12700000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

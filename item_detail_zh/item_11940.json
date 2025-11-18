@@ -3,7 +3,7 @@
   "name": "黄金富豪级",
   "description": "这艘船设计非常精美，如同一件奢侈品，是一小群精英皇家工程师孕育十多年才得出的成果。YC105年，当它作为艾玛冠军杯的奖品而面世的时候，这么多年的昂贵研究终于有了回报。\n\n第一艘黄金富豪级被奖励给了Ecliptical，以表彰他在YC105年多利安姆·柯埃佐冠军杯中的卓越表现。那艘著名的舰船最后被卖给了并在m0o军团的Tyrrax Thorrk，并在四位传奇海盗Lord Zap、DrStrangelove、Motaka和Omniwar的手中灰飞烟灭。\n\n\n\n近来关于四艘崭新的黄金富豪级已被生产出来用以奖励于YC117年和YC118年举办的艾玛继承人选举盛典的获胜者的消息将这艘已经埋入历史尘埃的舰船重新带回人们的视野中，为全宇宙的收藏大亨和精英飞行员们点燃了热情与梦想的火焰。",
   "volume": 22100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 300.0,
   "mass": 1500000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

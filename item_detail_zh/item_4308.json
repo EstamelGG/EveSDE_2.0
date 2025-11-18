@@ -3,7 +3,7 @@
   "name": "塔洛斯级",
   "description": "<a href=showinfo:30//500014>外空联合矿业集团(ORE)</a>在YC110年提出了塔洛斯级的研发概念。它最初的设计理念是一种在无法治地区开采矿石的巡逻舰，要不是黑鹰组织（<a href=showinfo:30//500004>盖伦特</a>政府下属的一支特别行动队）采纳了它的设计的话，塔洛斯级早就被彻底抛弃了。黑鹰组织去掉了塔洛斯级上那些不必要的系统，并为其加装了战列舰级别的武器装备，这样就创造了一艘专为游击战设计的、理想的快速突击舰船。 \n<br>塔洛斯级一直被作为军事机密，直到YC113年才正式对外公布为三级战列巡洋舰。现在，塔洛斯级由<a href=showinfo:2//1000109>度沃勒实验室</a>生产，将最初的ORE设计标准改良为盖伦特联邦标准。",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 600.0,
   "mass": 15552000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

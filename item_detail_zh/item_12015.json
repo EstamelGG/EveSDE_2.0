@@ -3,7 +3,7 @@
   "name": "缪宁级",
   "description": "为加强玛塔利部落并为舰队制造的重型导弹和其他武器拓宽市场，共和国舰队委派无限创造公司建造了缪宁级。它周身覆盖厚重的装甲，装配无数的导弹挂点，而且配备了最新的弹头优化技术，可以说是最为典型的重型突击舰。",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 515.0,
   "mass": 11000000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

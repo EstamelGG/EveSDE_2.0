@@ -1,13 +1,13 @@
 {
   "type_id": 2334,
-  "name": "Survey Scanner II Blueprint",
+  "name": "Mining Survey Chipset II Blueprint",
   "description": "",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "Blueprint",
-  "group_name": "Survey Scanner Blueprint",
+  "group_name": "Mining Survey Chipset Blueprint",
   "attributes": [
     {
       "attribute_name": "techLevel",

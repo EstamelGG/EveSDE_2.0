@@ -3,7 +3,7 @@
   "name": "Probe",
   "description": "The Probe is large compared to most Minmatar frigates and is considered a good scout and cargo-runner. Uncharacteristically for a Minmatar ship, its hard outer coating makes it difficult to destroy, while the limited weapon hardpoints force it to rely on drone assistance if engaged in combat.",
   "volume": 19500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1123000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

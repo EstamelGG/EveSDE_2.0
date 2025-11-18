@@ -3,7 +3,7 @@
   "name": "Leshak",
   "description": "A very heavy and well-armed warship that is clearly the Collective's frontline battleship, the Leshak has proven adaptable to capsuleer technology along with the other Triglavian ship designs recovered from Abyssal Deadspace.\n\nThe Leshak is capable of mounting Supratidal Entropic Disintegrators and an array of support weapons such as energy neutralizers and pulse weapons. The ship also makes use of drones and has a long-range remote repair capability.\n\n<i>Leshak Subclade of Veles Clade scattered the adaptation schema of reverse-time reclaimed adapation schema of 729 tactical troika classification vessel into the cladeflow without proving after Convocation of Triglav Outside the Struggle. Convocations of the Commune Troika have now-time pressure for dispersal to strategic troika.</i> – partial translation of data included in recovered design schematics of the Leshak",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 933.0,
   "mass": 78000000.0,
   "category_name": "Ship",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

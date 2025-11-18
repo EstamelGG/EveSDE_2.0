@@ -3,7 +3,7 @@
   "name": "Heretic",
   "description": "Interdictors are destroyer-sized vessels built to fill a single important tactical niche: the breaching of enemy warp tunnels. Capable of launching warp-disrupting interdiction spheres, interdictors are of great value in locations of strategic importance where enemy movement must be restricted. Additionally, much like their destroyer-class progenitors, they are well-suited to offensive strikes against frigate-sized craft.",
   "volume": 47000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 380.0,
   "mass": 1300000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

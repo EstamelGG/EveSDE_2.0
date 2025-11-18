@@ -3,7 +3,7 @@
   "name": "塔利亚级",
   "description": "塔利亚级后勤护卫舰由莱登船业研发，是其大受欢迎的奥内罗斯级后勤巡洋舰的小型版本。塔利亚级具有优秀的装甲维修能力，而且能跟得上护卫舰和巡洋舰队伍。YC117年底，联邦海军下达了大批量塔利亚级护卫舰订单，使得莱登船业的股票达到了7年来的新高。",
   "volume": 10000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 280.0,
   "mass": 1450000.0,
   "category_name": "舰船",
@@ -624,6 +624,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

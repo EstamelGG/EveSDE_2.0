@@ -3,7 +3,7 @@
   "name": "Charon",
   "description": "As the makers of the Charon, the Caldari State are generally credited with pioneering the freighter class. Recognizing the need for a massive transport vehicle as deep space installations constantly increase in number, they set about making the ultimate in efficient mass transport - and were soon followed by the other empires.\n\nRegardless, the Charon still stands out as the benchmark by which the other freighters were measured. Its massive size and titanic cargo hold are rivalled by none.",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 465000.0,
   "mass": 960000000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

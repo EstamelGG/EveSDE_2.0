@@ -3,7 +3,7 @@
   "name": "德拉古级",
   "description": "德拉古级是在三神裔的<i>奇奇莫拉级</i>驱逐舰基础之上改造而来，继承了三神裔舰船核心设计，成为了一艘强力的指挥驱逐舰。德拉古级汲取了米玛塔尔的<i>天梯级</i>指挥驱逐舰的设计理念和技术，同时还保留了三神裔舰船的能量系统和标志性的武器系统。\n\n\n\n作为一艘指挥驱逐舰，德拉古级能使用指挥脉冲波和微型跳跃力场发生器。而且得益于三神裔核心系统的威力，它还能使用能量中和器、脉冲武器和远程装甲维修器。\n\n\n\n<i>“奇奇莫拉级船体非常适合于改造成一艘指挥驱逐舰，我们有信心能将强大的能源系统用于微型跳跃力场发生器上。这种技术的融合以及相关的跃迁力场系统需要额外从武器系统的熵能辐射获得护盾，不过现在的船体承受能力足以让其支撑跳跃力场的使用。”T</i> – 节选自核心局面公司和图克尔混合企业于伊尔戈伊VIII举行的合作研发圆桌会议的提要",
   "volume": 43000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 360.0,
   "mass": 1450000.0,
   "category_name": "舰船",
@@ -603,6 +603,13 @@
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

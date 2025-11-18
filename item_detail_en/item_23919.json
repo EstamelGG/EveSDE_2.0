@@ -3,7 +3,7 @@
   "name": "Aeon",
   "description": "Ships like the Aeon have been with the Empire for a long time. They have remained a mainstay of Amarr expansion as, hopeful for a new beginning beyond the blasted horizon, whole cities of settlers sojourn from their time-worn homesteads to try their luck on infant worlds. The Aeon represents the largest ship of its kind in the history of the Empire, capable of functioning as a mobile citadel in addition to fielding powerful wings of fighter bombers.",
   "volume": 62000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1650.0,
   "mass": 1780000000.0,
   "category_name": "Ship",
@@ -864,6 +864,27 @@
       "unit_name": "typeID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Consumption Amount",
+      "unit_name": "units"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Passenger Count",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -876,6 +897,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "attributeID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "Conduit Passenger Bonus",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -893,6 +928,9 @@
     }
   ],
   "traits": [
+    {
+      "content": "<a href=showinfo:83094>Conduit Jump</a> capable"
+    },
     {
       "content": "<b>2%</b> bonus to <a href=showinfo:20494>Armored Command</a> and <a href=showinfo:20495>Information Command</a> burst strength and duration"
     },

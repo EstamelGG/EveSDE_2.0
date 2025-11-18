@@ -3,7 +3,7 @@
   "name": "胜利者级",
   "description": "在与守护天使集团签订打造全新超豪华巡洋舰系列的合同时，天蛇集团可谓下了血本，想要用其取代向印塔基联合财团租用的凯旋奢华游艇内部行政舰队。这些舰船需要保留原款的奢华和舒适，同时加入巨大的战斗能力，以保证天蛇集团最尊贵的VIP人物不会受到火力压制的威胁。天使工程师给出的最终舰船设计包含了隐形特勤能力、强大的混合炮台和停滞缠绕能力，新伊甸史上的任何舰船都无法与之媲美。第一艘完成建造的胜利者级力场侦察舰归萨瓦多尔·萨巴蒂所有，作为他的私有巡洋舰。",
   "volume": 116000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 11650000.0,
   "category_name": "舰船",
@@ -637,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

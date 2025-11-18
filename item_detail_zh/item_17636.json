@@ -3,7 +3,7 @@
   "name": "乌鸦级海军型",
   "description": "乌鸦级海军型是加达里在战场上最优秀舰船的代表：它是拥有强大电子作战能力的全方位突击舰。YC104年，古斯塔斯如潮水般出动，试图灭绝欧贝星系几个行星上的人口，为此加达里海军特勤指挥部将这种重型战舰编入军队。从那以后，它就一次次地向人们证明了自己的价值。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 800.0,
   "mass": 97300000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

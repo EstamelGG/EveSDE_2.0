@@ -248,6 +248,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "canFitShipGroup11",
+      "value": 4902.0,
+      "categoryID": 1,
+      "display_name": "可以装配至",
+      "unit_name": "组别ID"
+    },
+    {
       "attribute_name": "buffDuration",
       "value": 60000.0,
       "categoryID": 37,

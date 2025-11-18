@@ -3,7 +3,7 @@
   "name": "Orca",
   "description": "The Orca was developed as a joint venture between Outer Ring Excavations and Deep Core Mining Inc as a vessel to help meet the demands of New Eden's industry and provide a flexible platform from which mining operations can be more easily managed.\n\nThe Orca is also capable of using a large industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Orca having the flexibility to use a number of specialized large compressors.\n\nThe Orca uses much of the technology developed by ORE for the Rorqual and integrated with the latest advancements from Deep Core Mining research division has developed a vessel which offers a diverse role to all sizes of operations and needs.",
   "volume": 10250000.0,
-  "repackaged_volume": 500000.0,
+  "repackaged_volume": null,
   "capacity": 30000.0,
   "mass": 150000000.0,
   "category_name": "Ship",
@@ -591,13 +591,6 @@
       "unit_name": "%"
     },
     {
-      "attribute_name": "roleBonusSurveyScannerRange",
-      "value": 500.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": "%"
-    },
-    {
       "attribute_name": "rigSize",
       "value": 3.0,
       "categoryID": 7,
@@ -644,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {
@@ -757,6 +757,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -794,13 +801,10 @@
       "content": "<b>5%</b> reduction in <a href=showinfo:43702>Drone</a> ice harvesting cycle time"
     },
     {
-      "content": "<b>5%</b> reduction in fuel consumption for  <a href=showinfo:58945>Large Industrial Core</a>"
+      "content": "<b>5%</b> reduction in fuel consumption for <a href=showinfo:58945>Large Industrial Core</a>"
     },
     {
       "content": "<b>50%</b> bonus to <a href=showinfo:3348>Command and Mining Foreman Burst</a> area of effect range"
-    },
-    {
-      "content": "<b>500%</b> bonus to <a href=showinfo:444>Survey Scanner</a> range"
     },
     {
       "content": "<b>90%</b> reduction to effective distance traveled for jump fatigue"
@@ -810,6 +814,9 @@
     },
     {
       "content": "Can fit three <a href=showinfo:3348>Command Burst</a> modules"
+    },
+    {
+      "content": "can connect to <a href=showinfo:90037>Mobile Phase Anchor</a> deployables, providing <b>50</b> points of power"
     }
   ]
 }

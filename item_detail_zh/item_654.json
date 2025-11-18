@@ -3,7 +3,7 @@
   "name": "克琉斯级",
   "description": "除了具有运载舰的常规运载能力之外，克琉斯级还有两个额外的货柜舱。它们都配备了精确的温度和压力控制装置；前者专门用于运送矿物，后者可以在极低的温度下进行校准，主要用于采集空间中的冰。克琉斯级本来是伊特龙级的一个衍生品，但后来不断进化成为了一个完全独立的个体。",
   "volume": 245000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 12625000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

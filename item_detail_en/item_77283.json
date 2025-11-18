@@ -3,7 +3,7 @@
   "name": "Bane",
   "description": "<i>“And finally the Lord’s Avengers slew the false leaders of the misguided\nStriking them with spears of holy light and casting them down\nFor the Lord is the bane of all deceivers and false powers“\n – The Scriptures, Book II, Apocalypse 10:47</i>\n\nDeveloped in utmost secret as a collaboration between the Imperial Navy and Royal Khanid Navy, the Bane-class Lancer Dreadnought uses all the expertise of Khanid shipwrights and weapons engineers to marry the formidable Revelation hull with highly advanced missile and directed energy weapons. Like all Lancer Dreadnoughts, the Bane is capable of using the new “Disruptive Lance” variant of lance weaponry. Heavily armored, its secondary weapons are the missile weapons favored by Khanid designers, a decision that helps alleviate the massive energy requirements of the lance weapon.",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2925.0,
   "mass": 1290000000.0,
   "category_name": "Ship",

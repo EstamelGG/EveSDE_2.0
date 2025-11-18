@@ -3,7 +3,7 @@
   "name": "先驱者级",
   "description": "先驱者级战列巡洋舰自从出现在战场的那一刻起，便奠定了自己强大杀伤力武器的地位，它就像一束能直穿异教徒心脏的灼热激光。它所具备的一切都是为了实现这一使命——其机鼻和机翼的照明灯可以令异教徒无所遁形，而数量众多的高能量炮台槽位将把他们彻底摧毁。即使有人侥幸逃脱了先驱者的首轮攻击，也必定会丧命于它的无人机轮番攻击之下。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 375.0,
   "mass": 15500000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Huginn",
   "description": "Built to represent the last word in electronic warfare, combat recon ships have onboard facilities designed to maximize the effectiveness of electronic countermeasure modules of all kinds. Filling a role next to their class counterpart, the heavy assault cruiser, combat recon ships are the state of the art when it comes to anti-support support. They are also devastating adversaries in smaller skirmishes, possessing strong defensive capabilities in addition to their electronic superiority.",
   "volume": 85000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 315.0,
   "mass": 11550000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

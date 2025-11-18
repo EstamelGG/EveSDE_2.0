@@ -3,7 +3,7 @@
   "name": "复仇者级",
   "description": "在联邦海军万王宝座设计的基础上，守护天使的工程师们建造了一艘让任何胆敢与天使或天蛇作对的人不寒而栗的战舰。从这艘船已经享有的声誉来看，他们似乎已经大功告成了。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 850.0,
   "mass": 105200000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

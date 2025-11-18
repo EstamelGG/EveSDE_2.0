@@ -3,7 +3,7 @@
   "name": "Nereus",
   "description": "Originally set to sail under the guise of \"Iteron\", this new iteration of an old and stalwart hauler is fast and reliable. It is equally popular among civilians and militaries due to its low price and ability to be fitted in myriad different ways. Despite its speed and resilience, however, it may need to be guarded while in particularly unfriendly territories, which is why it has also been outfitted with a drone bay for extra protection.",
   "volume": 240000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 2700.0,
   "mass": 11250000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

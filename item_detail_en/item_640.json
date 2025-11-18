@@ -3,7 +3,7 @@
   "name": "Scorpion",
   "description": "The first Scorpion-class battleship was launched only a couple of years ago, and those that have been built are considered to be prototypes. Little is known of its capabilities, but what has been garnered suggests that the Scorpion is crammed to the brink with sophisticated hi-tech equipment that few can match.",
   "volume": 468000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 690.0,
   "mass": 103600000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

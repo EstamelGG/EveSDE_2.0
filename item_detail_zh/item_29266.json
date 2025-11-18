@@ -3,7 +3,7 @@
   "name": "神圣穿梭机",
   "description": "“孩子们，这是给你们五岁的生日礼物。祝愿你们在接下来的日子里憧憬满怀，并希望你们有一天能和我们并肩行走于宇宙之间。” <br><br><i>伊德梅·斯凡，理性思维社团，在太空飞行纪元五周年时发表的演说。</i>",
   "volume": 17400.0,
-  "repackaged_volume": 500.0,
+  "repackaged_volume": null,
   "capacity": 10.0,
   "mass": 1600000.0,
   "category_name": "舰船",
@@ -497,6 +497,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

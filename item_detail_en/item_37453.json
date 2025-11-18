@@ -3,7 +3,7 @@
   "name": "Crucifier Navy Issue",
   "description": "As YC117 came to a close, the Imperial Navy found itself facing the most significant series of crises in over seven years. The loss of Empress Jamyl Sarum to the hostile and enigmatic Drifter fleet followed by further Drifter incursions into the Empire left the Navy stretched thin and barely able to keep up with the demands of defending the throne worlds. In response to these challenges, the Empire has turned to their Capsuleer allies for support in their time of need.\n\nThe Crucifier Navy Issue is the first Navy vessel to be designed for Capsuleer use first and traditional navy use second. It combines powerful laser systems with overwhelming weapon disruption at close ranges, designed to meet the realities of capsuleer combat in the contested low security regions where the Empire's borders are in most need of bolstering.",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1064000.0,
   "category_name": "Ship",
@@ -582,6 +582,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

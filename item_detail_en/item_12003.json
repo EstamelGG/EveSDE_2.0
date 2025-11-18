@@ -3,7 +3,7 @@
   "name": "Zealot",
   "description": "The Zealot is built almost exclusively as a laser platform, designed to wreak as much havoc as its energy beams can be made to. As a vanguard vessel, its thick armor and dazzling destructive power make it capable of cutting through enemy fleets with striking ease. Zealots are currently being mass-produced by Viziam for the Imperial Navy. \n\nFor their first production-ready starship design, Viziam opted to focus on their core proficiencies - heavy armor and highly optimized weaponry. The result is an extremely focused design that, when used correctly, can go toe-to-toe with any contemporary cruiser design.",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 12580000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

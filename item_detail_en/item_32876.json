@@ -3,7 +3,7 @@
   "name": "Corax",
   "description": "The Corax adheres to the well-established Caldari design philosophy that there is strength in numbers, and that the messages sent to an enemy should be strong and unequivocal. This applies equally to peace talks as it does to actual engagements on the battlefield - there should be no doubt in the strength of Caldari spirit, nor in the fact that when one blow has been struck, others are going to follow.\n\nAs such, the Corax does not pepper its opponents with pellets from a gun, nor does it toast them with continuous beams of light. Instead, it delivers strong, hard-hitting payloads at a pace that's not only steady, but rapid enough to rock its targets and knock them off-balance.",
   "volume": 52000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 1750000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

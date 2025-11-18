@@ -3,7 +3,7 @@
   "name": "狂怒者级",
   "description": "狂怒者级是一艘强大的战舰，也适合扮演其它多种角色。狂怒者级在侦查可能潜伏着敌人的空域时尤其有效，因为它可以长时间工作而不必返回基地去补给。此外，它有极佳的自卫能力，足以抵挡敌人的集中攻击。",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 480.0,
   "mass": 11100000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

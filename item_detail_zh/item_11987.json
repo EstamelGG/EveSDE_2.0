@@ -3,7 +3,7 @@
   "name": "守卫级",
   "description": "守卫级是第一艘装备天主凝聚会新研制的电容电流最大化系统的舰船，这使得它能在电容器中存储更多能量，并可提供更多向其它飞船输送能量的设备。尽管守卫级具有天主凝聚会招牌式的装甲和船体强度，但是作为支援舰，它装配武器的空间十分有限。它的主要定位是全能支援舰，为舰队同伴提供实实在在的能源，以帮助它们取得胜利。",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 465.0,
   "mass": 11980000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

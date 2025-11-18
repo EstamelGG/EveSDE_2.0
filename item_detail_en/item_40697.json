@@ -3,7 +3,7 @@
   "name": "Sensor Dampening Burst Projector",
   "description": "Emits an area-of-effect burst, centered on the designated location. The burst reduces the range and speed of affected ships' sensors.\n\nNote: Only Supercarriers can fit modules of this type. Only one module of this type can be fit per Supercarrier.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "Module",

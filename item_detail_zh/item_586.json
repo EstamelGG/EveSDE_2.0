@@ -3,7 +3,7 @@
   "name": "探索级",
   "description": "探索级护卫舰是米玛塔尔护卫舰中的大家伙，是一艘不错的侦察舰和货运舰。与一般的米玛塔尔飞船不同，它坚硬的船体外壳使它很难被摧毁，但它有限的武器槽位使它在战斗中不得不依赖无人机的火力支援。",
   "volume": 19500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1123000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

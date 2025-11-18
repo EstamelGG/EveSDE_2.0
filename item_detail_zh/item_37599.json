@@ -263,7 +263,7 @@
     },
     {
       "attribute_name": "fighterAbilityEnergyNeutralizerAmount",
-      "value": 60.0,
+      "value": 70.0,
       "categoryID": 34,
       "display_name": "能量中和值（每架铁骑舰载机）",
       "unit_name": "GJ"

@@ -1,7 +1,7 @@
 {
   "type_id": 17452,
-  "name": "Luminous Kernite",
-  "description": "Prophets tell of the mystical nature endowed in luminous kernite. To the rest of us, it's an average looking ore that has 5% more yield than normal kernite and can make you rich if you mine it 24/7 and live to be very old.\n\nKernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low and null security status and wormhole systems.",
+  "name": "Kernite II-Grade",
+  "description": "Prophets tell of the mystical nature endowed in luminous kernite, the II-Grade kernite variant. To the rest of us, it's an average looking ore that has 5% more yield than normal kernite and can make you rich if you mine it 24/7 and live to be very old.\n\nKernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low and null security status and wormhole systems.",
   "volume": 1.2,
   "repackaged_volume": null,
   "capacity": null,
@@ -36,6 +36,13 @@
       "categoryID": 31,
       "display_name": "Asteroid radius size multiplier",
       "unit_name": null
+    },
+    {
+      "attribute_name": "asteroidRadiusUnitSize",
+      "value": 600.0,
+      "categoryID": 31,
+      "display_name": "Asteroid unit radius",
+      "unit_name": "m"
     },
     {
       "attribute_name": "stasisWebifierResistance",

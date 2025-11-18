@@ -3,7 +3,7 @@
   "name": "收藏家级",
   "description": "随着来自新伊甸的毒品团伙暴发户的竞争日益加剧，天蛇集团高层决定为守护天使集团精英特战队配备一艘全新设计的护卫舰。这些特战队需要能够在宇宙穿梭时不被觉察，同时有力量粉碎当地毒枭的任何激烈抵抗。\n\n\n\n舰船设计的结果是集纳美西斯级隐形轰炸舰和经典的夜魔侠级攻击护卫舰的所有特点于一身。有关这些舰船难以置信的强大性能的流言开始在新伊甸的黑道间流传开来。假如你想动天蛇集团生意的奶酪，最不可能触碰到的就是收藏家级舰船。",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 300.0,
   "mass": 1410000.0,
   "category_name": "舰船",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

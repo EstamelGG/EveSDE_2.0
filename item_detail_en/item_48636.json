@@ -3,7 +3,7 @@
   "name": "Hydra",
   "description": "Based on the Triglavian <i>Damavik</i>-class frigate, the <b>Hydra</b> is an experimental vessel from the Society of Conscious Thought that melds elements of Society technology and design philosophy, with the underlying hull and unique Triglavian systems. In particular, support for covert ops and scan probe technology was added to the ship's already formidable array of capabilities.\n\nIn mid YC120, the SoCT provided limited numbers of blueprints for the experimental Hydra design as part of their sponsorship of the capsuleer Alliance Tournament XVI.",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 213.0,
   "mass": 950000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

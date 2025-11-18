@@ -3,7 +3,7 @@
   "name": "娜迦级",
   "description": "娜迦级诞生于YC109年，由<a href=showinfo:2//1000043>联合警备队</a>设计，专门被用来对付<a href=showinfo:30//500010>古斯塔斯</a>舰船。为了装配战列舰级别的武器装备，它舍弃了<a href=showinfo:2//1000035>加达里海军</a>传统的坚固标准。<a href=showinfo:2//1000005>三岛集团</a>的管理层因为它的适用性过于狭窄而放弃了它的生产。 <br>它的设计图就一直躺在三岛集团的档案库中，被人遗忘（虽说它曾在盖伦特全息影像连续剧<i>流氓警备队</i>中露过一小面）。YC113年，加达里海军招标建造新型战列巡洋舰。三岛集团迅速提交了娜迦级的设计，并最终以低廉的价格压倒<a href=showinfo:2//1000010>卡拉吉塔集团</a>和<a href=showinfo:2//1000019>异株湖集团</a>，赢得了合同。",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 575.0,
   "mass": 15000000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "掘金者级",
   "description": "在推出了大获成功的冲锋者级采矿护卫舰之后，外空联合矿业集团将旗下的深空勘探、探索和技术部门改编为一个个独立的子公司。新成立的外空联合矿业企业集团的第一个项目是开发一种新的探索护卫舰，专门从事最危险，但也是回报最丰厚的采集业务。\n\n\n\n勘探级采用了冲锋者级的船体，保持了其出众的速度和灵活性，同时安装了更先进的小行星开采系统。它也是第一艘使用了隐秘行动隐形装置的外空联合矿业舰船，能够在隐形的状态下进行跃迁，这使得勘探级即使在最危险的敌对空域也能在小行星带间来去自如。",
   "volume": 50000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 1400000.0,
   "category_name": "舰船",
@@ -626,6 +626,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -715,6 +722,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

@@ -3,7 +3,7 @@
   "name": "送葬者级海军型",
   "description": "送葬者级海军型是应联邦海军要求建造，以满足现代星际战争对近距离疾速炮攻击舰艇日益增长的需求。尽管在速度上它不及同级别的一些对手，但作为近距攻击炮舰，它采用了先进的混合等离子线圈压缩子系统，在贴身肉搏时显得尤为致命。",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 465.0,
   "mass": 11280000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

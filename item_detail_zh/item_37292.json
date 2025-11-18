@@ -3,7 +3,7 @@
   "name": "快速鱼雷发射器 II",
   "description": "用来对抗战列舰等较小战斗舰船的旗舰级发射器。只能装载鱼雷。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 1.5,
   "mass": null,
   "category_name": "装备",

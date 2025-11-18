@@ -3,7 +3,7 @@
   "name": "Tempest Tribal Issue",
   "description": "Commissioned by the four ruling tribes of the Republic, the Tribal Issue of their Fleet's key vessel is presented only to those who have displayed unyielding valor in the Republic's interest, and a tireless commitment to maintenance of the Tribes' precious freedom. Given the ship's status as a badge of honour, it is not uncommon for pilots or ship crew to add special tattoos to their anatomy, celebrating both the gift of the ship and the honour of piloting it.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 600.0,
   "mass": 103300000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

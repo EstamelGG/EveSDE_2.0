@@ -3,7 +3,7 @@
   "name": "审判者级",
   "description": "审判者级是对帝国光辉岁月的致敬，体现了经典的艾玛设计哲学：舰船只要坚固、耐用、杀伤力大，就能投入战斗。这艘强力战舰在速度和机动性上有所欠缺，但它用多样的火力搭配和优秀的防御能力弥补了缺点。",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 1053900.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

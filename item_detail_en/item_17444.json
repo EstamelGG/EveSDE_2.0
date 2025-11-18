@@ -1,7 +1,7 @@
 {
   "type_id": 17444,
-  "name": "Vivid Hemorphite",
-  "description": "Hemorphite exists in many different color variations. Interestingly, the more colorful it becomes, the better yield it has. Vivid hemorphite has 5% better yield than its more bland brother.\n\nWith a large portion of <a href=showinfo:38>Nocxium</a>, hemorphite is always a good find. It is common enough that even novice miners can expect to run into it. Hemorphite also has some amount of <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low security status star systems.",
+  "name": "Hemorphite II-Grade",
+  "description": "Hemorphite exists in many different color variations. Interestingly, the more colorful it becomes, the better yield it has. Vivid or II-Grade hemorphite has 5% better yield than its more bland brother.\n\nWith a large portion of <a href=showinfo:38>Nocxium</a>, hemorphite is always a good find. It is common enough that even novice miners can expect to run into it. Hemorphite also has some amount of <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low security status star systems.",
   "volume": 3.0,
   "repackaged_volume": null,
   "capacity": null,
@@ -36,6 +36,13 @@
       "categoryID": 31,
       "display_name": "Asteroid radius size multiplier",
       "unit_name": null
+    },
+    {
+      "attribute_name": "asteroidRadiusUnitSize",
+      "value": 600.0,
+      "categoryID": 31,
+      "display_name": "Asteroid unit radius",
+      "unit_name": "m"
     },
     {
       "attribute_name": "stasisWebifierResistance",

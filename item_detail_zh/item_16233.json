@@ -3,7 +3,7 @@
   "name": "先知级",
   "description": "先知级的设计基于一种古代艾玛战船，可以追溯到星际飞船大战的最早期。最初的设想是把它塑造成一艘完备的战列舰，但在其早期原型与各类飞船交火后，设计者发现，先知级作为一艘移动迅速的小型炮火支援船更有效。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 15300000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

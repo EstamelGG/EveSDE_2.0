@@ -3,7 +3,7 @@
   "name": "Ferox",
   "description": "Designed as much to look like a killing machine as to be one, the Ferox will strike fear into the heart of anyone unlucky enough to get caught in its crosshairs. With the potential for sizable armament as well as tremendous electronic warfare capability, this versatile gunboat is at home in a great number of scenarios.",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 14250000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

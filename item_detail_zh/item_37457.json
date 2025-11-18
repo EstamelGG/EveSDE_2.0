@@ -3,7 +3,7 @@
   "name": "执事级",
   "description": "执事级是天主凝聚会工程师们的最新力作，被设计为一艘能跟得上快速移动的舰队（哪怕舰队里有广为流行的忏悔者级战术驱逐舰也不例外）的远程维修舰船。将大受欢迎的守卫级后勤巡洋舰上强力的远程装甲维修系统缩小到护卫舰可用并不是一件容易的事，但是天主凝聚会以几乎创纪录的高效和低成本完成了这一任务，这也得益于来自莱戴集团的科研人员的大力协助。",
   "volume": 28700.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1630000.0,
   "category_name": "舰船",
@@ -617,6 +617,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

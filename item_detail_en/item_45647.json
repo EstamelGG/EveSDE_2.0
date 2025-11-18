@@ -3,7 +3,7 @@
   "name": "Caiman",
   "description": "The Guristas Pirates are never ones to be left behind and the radical ship-design genius of Korako 'The Rabbit' Kosakami was quickly applied to capital ship development as other pirate and outlaw groups rolled out their fleets. The Caiman is a dreadnought that continues the Guristas emphasis on light strike capability among all their ships. Strong shields, together with powerful cruise missile and torpedo systems, round out a dreadnought that reflects the Rabbit's practice of taking Caldari hulls and twisting them to the preference of the Guristas.",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2750.0,
   "mass": 1270000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "磨难级",
   "description": "磨难级护卫舰的设计初衷是用于侦察及探索，但它的当前版本将原本用作科学研究的电子设备投入到了更具攻击性的用途上。磨难级的电子和计算机系统占据了大量船内空间，因此货舱和传统武器的空间就非常有限了。",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 265.0,
   "mass": 1064000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

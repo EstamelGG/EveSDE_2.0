@@ -3,7 +3,7 @@
   "name": "Nergal",
   "description": "Adapting the Collective's <i>Damavik</i>-class frigate design, the Nergal's basic premise is to turn the Triglavian light hull into an assault frigate that builds on the powerful capabilities of the core ship frame. The Nergal has been modified using a variety of designs but draws principally from the popular <i>Enyo</i>-class assault frigate, using the Triglavian energy systems and the light entropic disintegrator capacity create a fearsome attack ship.\n\nAs an assault frigate, the Nergal has improved microwarpdrive signature radius damping and can use an assault damage control for enhanced defense. This compact brawler also benefits from increased entropic disintegrator range and damage, while its Triglavian core systems give it advantages in the use of energy neutralizer and pulse weapons, as well as remote armor repairers.\n\n<i>\"Refitting the core Damavik hull type with the Enyo's assault modifications was relatively straightforward due to the larger size of the ship's frame. We were also able to install improved drone bays and control bandwidth. A note on drones: one of our technicians improperly accessed a locked out section of the Triglavian encryption database and inadvertently activated a dormant subversion routine. Damage to the testbed was extensive. Unfortunately, no disciplinary action is necessary and next of kin have been informed according to cover protocols. The Navy R&D Board should consider notifying the CreoDron research group to take extra precautions.\"</i> – excerpt from a report for the Federal Navy from Roden Shipyards Precursor Technology Research Group",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1043000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

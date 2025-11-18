@@ -3,7 +3,7 @@
   "name": "Rattlesnake",
   "description": "In the time-honored tradition of pirates everywhere, Korako ‘the Rabbit' Kosakami shamelessly stole the idea of the Scorpion-class battleship and put his own spin on it. The result: the fearsome Rattlesnake, flagship of any large Gurista attack force. There are, of course, also those who claim things were the other way around; that the notorious silence surrounding the Scorpion's own origins is, in fact, an indication of its having been designed by Kosakami all along.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 815.0,
   "mass": 99300000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

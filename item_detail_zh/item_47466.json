@@ -3,7 +3,7 @@
   "name": "实践级",
   "description": "<i>“动随形，形随意。吾辈常意之高远，今其形已现，当随之而动”</i> – 马许·拉什长老，理性思维社团，YC120.05.06。\n\n\n\n实践级战列舰是理性思维社团是其海军工程师用从最近获得的朱庇特造船技术中提取的理念打造的全新舰船。实践级被设计用于对抗新伊甸不断受到的威胁，而这种威胁在YC120年有愈演愈烈的态势。\n\n\n\n在克隆飞行员时代到来十五周年之际，理性思维社团向所有独立克隆飞行员开放了这款舰船。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 1200.0,
   "mass": 87000000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

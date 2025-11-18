@@ -3,7 +3,7 @@
   "name": "Vigil Fleet Issue",
   "description": "The Vigil Fleet Issue is the latest development from the Republic Fleet's innovative R&D labs. Designed with the demands of Capsuleer loyalist corporations in mind, this aggressive ship is intended to support new offensive operations into the Empire's vulnerable constellations in The Bleak Lands and Devoid regions. Long range stasis webifiers and high speed allow the Vigil Fleet Issue to chase down and catch the most evasive prey and pull them into range of its deadly rocket launchers.",
   "volume": 17400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1080000.0,
   "category_name": "Ship",
@@ -596,6 +596,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

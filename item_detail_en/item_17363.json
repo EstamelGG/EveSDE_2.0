@@ -3,7 +3,7 @@
   "name": "Small Audit Log Secure Container",
   "description": "This small audit log container is fitted with a password-protected security lock.",
   "volume": 100.0,
-  "repackaged_volume": 10.0,
+  "repackaged_volume": null,
   "capacity": 120.0,
   "mass": 10000.0,
   "category_name": "Celestial",

@@ -3,7 +3,7 @@
   "name": "勒沙克级",
   "description": "勒沙克级是三神裔设计的装备精良的战列舰级飞船，与克隆飞行员技术以及从深渊空间中发现的其他三神裔舰船设计都能相容。\n\n\n\n勒沙克级能够装配潮上熵能分解者以及诸如能量中和器和脉冲武器等的一系列辅助武器。这艘船还能使用无人机，并具备远距维修能力。\n\n\n\n<i>暗泽裔演化枝的勒沙克分枝分散了729战术三头分类的适应图谱。三头集合具备对分散战略三头的现时压力。</i> - 从勒沙克级设计图复原的数据的翻译节选",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 933.0,
   "mass": 78000000.0,
   "category_name": "舰船",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

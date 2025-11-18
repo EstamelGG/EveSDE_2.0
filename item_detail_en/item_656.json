@@ -3,7 +3,7 @@
   "name": "Miasmos",
   "description": "Aside from being endowed with the usual carrying capabilities of haulers, the Miasmos possesses an extra cargo bay. That bay is equipped with sealed, temperature-controlled vats, and is meant solely for ferrying all types of interstellar ore: ice, gasses and asteroids. The Miasmos was originally designed as a variant of the Iteron, but eventually evolved to perform an entirely separate role.",
   "volume": 265000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 12975000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

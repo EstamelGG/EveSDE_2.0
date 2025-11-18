@@ -3,7 +3,7 @@
   "name": "Scimitar",
   "description": "Built with special tracking support arrays, the Scimitar was designed in large part to assist heavy combat vessels in tracking fast-moving targets. Relatively nimble for a support cruiser, it can often be found ducking between battleships, protecting its own back while lending the behemoths the support they need to take out their enemies.",
   "volume": 89000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 12090000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

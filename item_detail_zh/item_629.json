@@ -3,7 +3,7 @@
   "name": "断崖级",
   "description": "断崖级巡洋舰比一般的米玛塔尔飞船要慢，但用其火力弥补了这一弱点。由于断崖级拥有极其强大的火力，米玛塔尔共和国用这种飞船来保护空间站等固定设施，并将其编入大规模攻击编队。",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 12200000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

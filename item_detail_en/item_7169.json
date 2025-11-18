@@ -1,6 +1,6 @@
 {
   "type_id": 7169,
-  "name": "Tachyon Afocal Maser I",
+  "name": "Tachyon Afocal Laser I",
   "description": "An ultra-heavy beam energy weapon designed for medium to long range engagements. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 20.0,
   "repackaged_volume": null,

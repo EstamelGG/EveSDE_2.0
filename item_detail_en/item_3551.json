@@ -1,7 +1,7 @@
 {
   "type_id": 3551,
   "name": "Survey",
-  "description": "Skill at operating ship, cargo and survey scanners. 5% improvement per level in the scan speeds of those module types.",
+  "description": "Skill at operating ship and cargo scanners. 5% improvement per level in the scan speeds of those module types.",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

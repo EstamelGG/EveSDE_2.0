@@ -3,7 +3,7 @@
   "name": "猛鲑级",
   "description": "猛鲑级战舰有着“沙场绞肉机”般的外观，给任何不幸落入它瞄准器的猎物带去恐怖和死亡。充足的武器装备以及惊人的电子战性能使这种全面型炮舰成为战争中不可或缺的角色。",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 14250000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

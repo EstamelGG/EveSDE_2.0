@@ -3,7 +3,7 @@
   "name": "Naglfar Fleet Issue",
   "description": "Versatility in fleet ship designs has long been a watchword of Minmatar naval doctrine, and the Naglfar Fleet Issue continues that tradition by building on the strengths of the already highly-adaptable base Naglfar-class. Across the board upgrades to defenses, improved repair systems, and enhanced projectile weapon systems significantly improve the performance and capabilities of the Republic Fleet's new variant of a revered capital ship design. Improvements to utility and energy systems round out a package that transforms an already formidable fleet and siege action platform into a vessel that any foe would rather avoid.\n\n<i>\"Jarvika the Fang was a raider by nature but did not stint when arming a full war host against his mightiest foes.\"</i> – Warlords of the Tronhadar (Caravanserai Press, 2nd Ed. YC119)",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2900.0,
   "mass": 1260000000.0,
   "category_name": "Ship",

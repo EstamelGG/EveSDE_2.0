@@ -3,7 +3,7 @@
   "name": "Bestla",
   "description": "The Bestla was originally the product of a development program that involved the eccentric and often clashing talents of Tapio Histvaari, Core Complexion's Chief of Missile Systems Development, and Hildara Rostavik, Core's Lead Designer of Autonomous Weapons. The program was an effort to cram as much missile firepower as possible into the Bestla heavy assault cruiser, and its Geri assault frigate counterpart, while also supporting the sophisticated control routines and bandwidth to operate stasis webification drones with massively uprated systems.\n\nDespite serious personality clashes between the Caldari missiles expert Histvaari and Minmatar drone designer Rostavik, the Bestla was brilliantly redesigned from its basic Rupture-hull format into an incredibly advanced, and incredibly expensive, heavy assault cruiser. While the performance of the Bestla's missiles and stasis drones was far above anything achieved in combination in such a compact format, the Republic Fleet balked at the prospect of paying for whole squadrons made up of the Bestla and the similarly expensive Geri. \n\nAlthough a few Bestlas are maintained by elite special tasks units of the Republic, a significant number of the initial production run were donated as prizes to the Independent Gaming Commission's Alliance Tournament XVIII by the Minmatar when the Republic became the principal sponsor of the event in YC124.",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 660.0,
   "mass": 11650000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

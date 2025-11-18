@@ -3,7 +3,7 @@
   "name": "奥内罗斯级",
   "description": "作为专门的装甲加强舰船，奥内罗斯级为前线的战舰提供额外的防御力量。此外，其本身惊人的防御力使它成为一块难啃的骨头。要是能突破一支有奥内罗斯级支援的编队，那绝对是件了不起的事情。莱登船业传统上只在乎纯粹的火力，后来在认识到额外的防御能力可以提高盖伦特飞船的整体效率后，他们制造了奥内罗斯级。据报道，该飞船引起了盖伦特海军官员们的强烈兴趣，正考虑将这种强大的防御舰编入他们的舰队阵型。",
   "volume": 113000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 600.0,
   "mass": 13160000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

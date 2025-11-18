@@ -3,7 +3,7 @@
   "name": "Vedmak",
   "description": "A powerful strike craft that is the Collective's conception of a cruiser, the Vedmak has proven adaptable to capsuleer technology along with the other Triglavian ship designs recovered from Abyssal Deadspace.\n\nThe Vedmak is capable of mounting Heavy Entropic Disintegrators and an array of support weapons such as energy neutralizers and pulse weapons. The ship also makes use of drones and has a long-range remote repair capability.\n\n<i>Vedmak Subclade of Svarog Clade relinquished the adaptation schema of reverse-time accepted 81 tactical troika classification into the cladeflow of Triglav after cladistic mortification by Dazhbog Subclade. Strategic troika have advancing-time pressure for adaptation into tactical subroles.</i> – partial translation of data included in recovered design schematics of the Vedmak",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 533.0,
   "mass": 9530000.0,
   "category_name": "Ship",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

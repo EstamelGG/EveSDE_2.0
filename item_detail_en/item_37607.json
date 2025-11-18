@@ -3,7 +3,7 @@
   "name": "Ninazu",
   "description": "<i>\"It is imperative that our Federation Navy capital ship fleets remain a match for any threat that may be posed by hostile entities or aggressive powers. To that end, let me assure the peoples of the Gallente Federation that I have issued the appropriate executive directives to our military and intelligence apparatus. Naturally these directives will be subject to democratic oversight in the best traditions of our Federation.\"</i> - Gallente President Jacus Roden, Address to the Peoples of the Federation, YC118.01.21\n\nMilitary experts within the Gallente Federation were not slow in recognizing the significance of the agreements made between the Empire and State at the Amarr-Caldari Capital Warfare Summit of January YC118. The military-industrial complex of the Federation was more than equal to the task of implementing the necessary changes to existing designs in line with the concepts inspired by capsuleer capital warfare practice.\n\nThe Federal Intelligence Office additionally recommended that the Gallente build a Force Auxiliary capital of their own to maintain parity with the Amarr-Caldari alliance. The resulting crash development program created the Ninazu-class Force Auxiliary.",
   "volume": 17020000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2800.0,
   "mass": 1250000000.0,
   "category_name": "Ship",
@@ -648,7 +648,7 @@
     },
     {
       "attribute_name": "specialFuelBayCapacity",
-      "value": 3000.0,
+      "value": 6000.0,
       "categoryID": 40,
       "display_name": "Fuel Bay Capacity",
       "unit_name": "m3"

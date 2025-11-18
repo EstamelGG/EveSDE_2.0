@@ -3,7 +3,7 @@
   "name": "朝圣级",
   "description": "力场侦察舰是隐秘护卫舰的巡洋舰级别版本。虽然生存能力不如战斗侦察舰，但力场侦察舰同样能高效行使侦察飞船的职能，这其中很大一部分原因就是：它们能使用隐秘行动隐形装置，并且能为即将跳入的旗舰创建诱导力场。",
   "volume": 120000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 315.0,
   "mass": 11370000.0,
   "category_name": "舰船",
@@ -609,6 +609,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

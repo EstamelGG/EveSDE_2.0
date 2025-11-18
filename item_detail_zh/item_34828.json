@@ -3,7 +3,7 @@
   "name": "寒鸦级",
   "description": "尽管在合众国内部弥漫着失望情绪，人们认为加达里在YC116年末到YC117年初的第二波冬眠者武器逆向研发竞赛中不敌艾玛帝国和米玛塔尔共和国，但不能否认其研究成果依然巨大。\n\n\n\n这艘威力巨大而又功能全面的寒鸦级，集导弹和护盾的前沿科技于一身，还装备有突破性的自组装式纳米晶格。任何加达里飞行员驾驶这艘飞船都会感到无比荣耀。",
   "volume": 47000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 1100000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

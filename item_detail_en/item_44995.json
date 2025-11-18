@@ -3,7 +3,7 @@
   "name": "Enforcer",
   "description": "Famously one of the most flexible and compact rapid-attack ships in the New Eden cluster, the Enforcer-class cruiser is iconic due to its repeated appearances in anticrime and recruitment media issued by CONCORD.\n\nWith a core design based on a combination of the Moa and Vexor cruiser subframes, CONCORD's Directive Enforcement Department became concerned early in the Drifter Crisis that the ship could no longer meet its needs. The Enforcer joined other ship classes in the DED inventory as part of CONCORD Aerospace's \"Force Majeure Program\" to develop enhanced variants.\n\nWhile CONCORD Aerospace successfully upgraded the Enforcer and other DED vessels with hyper-advanced technology, the program became a severe drain on CONCORD's resources. Consequently, the Inner Circle authorized a limited release of the Enforcer, stripped of CONCORD's advanced rapid-deployment and electronic warfare suites, to the capsuleer market via authorized dealers.",
   "volume": 100000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 300.0,
   "mass": 12500000.0,
   "category_name": "Ship",
@@ -700,6 +700,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -1,21 +1,14 @@
 {
   "type_id": 2333,
-  "name": "Survey Scanner II",
-  "description": "Scans the composition of asteroids, ice and gas clouds.",
+  "name": "Mining Survey Chipset II",
+  "description": "An upgraded chipset for a mining vessel's integrated Mining Surveyor that grants superior asteroid information, and increases the chance of optimal mining outcomes.\n\nIncreases mining laser and ice harvester critical success chance and critical success bonus yield.\nDecreases mining laser, ice harvester, and gas cloud harvester residue probability.\nEnhances the integrated Mining Surveyor present in mining vessels by adding information about the quantity of ore remaining in scanned asteroids.",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "Module",
-  "group_name": "Survey Scanner",
+  "group_name": "Mining Survey Chipset",
   "attributes": [
-    {
-      "attribute_name": "capacitorNeed",
-      "value": 6.0,
-      "categoryID": 5,
-      "display_name": "Activation Cost",
-      "unit_name": "GJ"
-    },
     {
       "attribute_name": "hp",
       "value": 40.0,
@@ -32,17 +25,10 @@
     },
     {
       "attribute_name": "cpu",
-      "value": 6.0,
+      "value": 12.0,
       "categoryID": 1,
       "display_name": "CPU usage",
       "unit_name": "tf"
-    },
-    {
-      "attribute_name": "duration",
-      "value": 4000.0,
-      "categoryID": 7,
-      "display_name": "Activation time / duration",
-      "unit_name": "s"
     },
     {
       "attribute_name": "requiredSkill1",
@@ -50,13 +36,6 @@
       "categoryID": 8,
       "display_name": "Primary Skill required",
       "unit_name": "typeID"
-    },
-    {
-      "attribute_name": "surveyScanRange",
-      "value": 22500.0,
-      "categoryID": 7,
-      "display_name": "Survey Scan Range",
-      "unit_name": "m"
     },
     {
       "attribute_name": "requiredSkill1Level",
@@ -80,11 +59,46 @@
       "unit_name": "Level"
     },
     {
-      "attribute_name": "disallowRepeatingActivation",
+      "attribute_name": "maxGroupOnline",
       "value": 1.0,
-      "categoryID": 7,
-      "display_name": "Cannot Auto Repeat",
-      "unit_name": "1=True 0=False"
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "maxGroupFitted",
+      "value": 1.0,
+      "categoryID": 9,
+      "display_name": "Max Modules Of This Group Allowed",
+      "unit_name": null
+    },
+    {
+      "attribute_name": "miningScannerUpgrade",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "miningCritChanceBonus",
+      "value": 20.0,
+      "categoryID": 51,
+      "display_name": "Mining Critical Success Chance Bonus",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYieldBonus",
+      "value": 20.0,
+      "categoryID": 51,
+      "display_name": "Mining Critical Success Yield Bonus",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningWasteProbabilityBonus",
+      "value": -20.0,
+      "categoryID": 51,
+      "display_name": "Residue Probability Reduction",
+      "unit_name": "%"
     }
   ],
   "traits": []

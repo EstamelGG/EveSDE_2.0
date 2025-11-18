@@ -3,7 +3,7 @@
   "name": "凯旋奢华游艇",
   "description": "为了印塔基联合财团空间站的管理人员和其他交往密切的成员的使用而研发，凯旋奢华游艇集宽敞的空间、强大的隐形能力和推进系统于一身，无论公事抑或休闲旅程都能提供安全与舒适的享受，不论去往去波伊托特、印塔基或者任何地方。\n\n为了掌握让这艘游艇在隐身的同时能够启动跃迁引擎的科技，辛迪加究竟付出了多大的代价，他们一直对此守口如瓶。\n\nYC117年初，什尔菲·恩·迪雅贝尔宣布辛迪加将赞助一项邀请赛，印制流程数有限的凯旋奢华游艇蓝图，奖励给所有该项邀请赛的冠军队的支持者。",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 30.0,
   "mass": 1000000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

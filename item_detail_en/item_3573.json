@@ -3,7 +3,7 @@
   "name": "CONCORD Hexa 2500mm Repeating Cannon",
   "description": "One of the largest weapons currently in existence, this massive autocannon is designed for extended sieges of stationary installations and other large targets.\nNote: May only be fitted to capital class ships.\n\nMust be loaded with any of the following regular and advanced projectile ammo types: Carbonized Lead, Depleted Uranium, EMP, Fusion, Nuclear, Phased Plasma, Proton, Titanium Sabot, Barrage, Hail.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 10.0,
   "mass": 75.0,
   "category_name": "Module",

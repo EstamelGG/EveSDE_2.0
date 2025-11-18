@@ -3,7 +3,7 @@
   "name": "Apocalypse Imperial Issue",
   "description": "Designed by master starship engineers and constructed in the royal shipyards of the Emperor himself, the imperial issue of the dreaded Apocalypse battleship is held in awe throughout the Empire. Given only as an award to those who have demonstrated their fealty to the Emperor in a most exemplary way, it is considered a huge honor to command -- let alone own -- one of these majestic and powerful battleships.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 675.0,
   "mass": 99300000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

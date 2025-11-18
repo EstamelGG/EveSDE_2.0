@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 15.0,
+      "value": 7.0,
       "categoryID": 5,
       "display_name": "Activation Cost",
       "unit_name": "GJ"
@@ -53,14 +53,14 @@
     },
     {
       "attribute_name": "duration",
-      "value": 160000.0,
+      "value": 80000.0,
       "categoryID": 7,
       "display_name": "Activation time / duration",
       "unit_name": "s"
     },
     {
       "attribute_name": "miningAmount",
-      "value": 200.0,
+      "value": 100.0,
       "categoryID": 51,
       "display_name": "Mining amount",
       "unit_name": "m3"

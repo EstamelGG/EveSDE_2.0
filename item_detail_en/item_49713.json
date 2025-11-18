@@ -3,7 +3,7 @@
   "name": "Zarmazd",
   "description": "The first modification of Triglavian ship design using the methods of Tech II invention and construction, the Zarmazd builds on the Collective's <i>Rodiva</i>-class support cruiser to create a logistics cruiser adapted for capsuleer use. The Zarmazd's design combines elements of the Amarr <i>Guardian</i>-class armor logistics cruiser's technology with the Triglavian ship frame, energy system and signature adaptive mutaplasmid repair system.\n\nThe Zarmazd's remote repair systems are considerably enhanced by adaptive armor-repair mutaplasmids that are used as nanite feedstock for its remote repair projectors. As the armor-repair mutaplasmid stream is able to adapt itself in real-time to specific target ship conditions far more efficiently than standard armor-repair nanites, the efficiency of armor repairing performed by the nanite stream on a given target increases over time towards a maximal repair output.\n\n<i>\"It proved possible to adapt the ship specifications provided to incorporate some of the improvements found in our own advanced logistics cruisers. The Guardian's high-output nanofabbers were readily altered to support the production of armor-repair mutaplasmids and, while the engineering challenges were novel, the increased flow and unusual nanotopography were ultimately incorporated without great difficulty. It should be noted that any competent nanotech engineer could reproduce these adaptations using the Rodiva's specifications as a basis.\"</i> – excerpt from a report from the Office of the Fabricator-General of the Imperial Navy",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 485.0,
   "mass": 10240000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

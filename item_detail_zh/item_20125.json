@@ -3,7 +3,7 @@
   "name": "诅咒级",
   "description": "战斗侦察舰是电子战的最新产物，其舰载系统能让各类电子对抗设备发挥最大效力。战斗侦察舰代表了反支援的最尖端，是对同级别的重型突击巡洋舰的最佳补充。鉴于其强大的防御能力和电子优势，它们还是较小规模冲突中的毁灭性力量。",
   "volume": 120000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 345.0,
   "mass": 11810000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

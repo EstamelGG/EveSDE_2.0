@@ -235,14 +235,14 @@
     },
     {
       "attribute_name": "industrialCoreLocalLogisticsDurationBonus",
-      "value": -30.0,
+      "value": -40.0,
       "categoryID": 37,
       "display_name": "Shield Booster Duration Bonus",
       "unit_name": "%"
     },
     {
       "attribute_name": "industrialCoreLocalLogisticsAmountBonus",
-      "value": 30.0,
+      "value": 50.0,
       "categoryID": 37,
       "display_name": "Shield Booster Amount Bonus",
       "unit_name": "%"

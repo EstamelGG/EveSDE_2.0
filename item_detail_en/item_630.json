@@ -3,7 +3,7 @@
   "name": "Bellicose",
   "description": "Being a highly versatile class of Minmatar ships, the Bellicose has been used as a combat juggernaut as well as a support ship for wings of frigates. While not quite in the league of newer navy cruisers, the Bellicose is still a very solid ship for most purposes, especially in terms of long range combat.",
   "volume": 85000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 315.0,
   "mass": 11550000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

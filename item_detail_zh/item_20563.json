@@ -204,6 +204,13 @@
       "categoryID": 7,
       "display_name": "稳定隐形持续时间",
       "unit_name": "s"
+    },
+    {
+      "attribute_name": "canFitShipType12",
+      "value": 89607.0,
+      "categoryID": 1,
+      "display_name": "可以装配至",
+      "unit_name": "类别ID"
     }
   ],
   "traits": []

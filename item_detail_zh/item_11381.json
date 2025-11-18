@@ -3,7 +3,7 @@
   "name": "女妖级",
   "description": "尽管女妖级的首批发行量很有限，但它作为拥有远程能力和坚固防御力的磁轨炮平台，早已名声在外。无论是单兵作战还是作为支援舰，它都非常强大，被参与安全和性能测试的飞行员称为“小巨鸟”级。",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1039500.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

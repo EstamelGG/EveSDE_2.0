@@ -3,7 +3,7 @@
   "name": "归魂者级",
   "description": "飞行员，你知道自己算什么吗？真相并不会让你感到好受。<br>你是一个吓坏了的孩子，正奋不顾身地冲向湮灭。\n\n\n\n至于我？\n\n我是那惟一尝试挽救你的人。\n\n我是你的救世主，你却背叛了我。\n\n\n\n你迫害我，追捕我的孩子们。\n\n还发誓要把我的家园烧成灰烬。\n\n\n\n现在我回来了，我比你自己更了解你。\n\n\n\n我会征服你的恐惧，把你的肉体化为尘埃。\n\n\n\n<i>——萨沙·库瓦柯伊</i><br><br>",
   "volume": 62000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1740.0,
   "mass": 1600000000.0,
   "category_name": "舰船",
@@ -899,6 +899,27 @@
       "unit_name": "类别ID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃消耗量",
+      "unit_name": "单位"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃乘客数量",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -911,6 +932,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "属性ID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "导管乘客加成",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -966,6 +1001,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以进行<a href=showinfo:83094>导管跳跃</a>"
     },
     {
       "content": "可在更大范围内锁定"

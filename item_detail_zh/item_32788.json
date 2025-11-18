@@ -3,7 +3,7 @@
   "name": "魔裔级",
   "description": "加达里执政官提波斯·赫特多年来一直坚持认为现代武器一定要能够不断进化革新，而魔裔级就是他这一理念的产物。尽管人们谣传执政官的努力只不过是在碰运气罢了（它带来了巨大的科技进步，但代价是一系列令人震惊的灾难性事件），但是没有人可以否认魔裔级是一项伟大的创造——只有在这样的政治环境下才能有这样成功的壮举。 \n\n魔裔级是一个不折不扣的战斗能手，与小鹰级（一艘快速战斗护卫舰）类似，它的设计理念就是迅速加入战斗，超载所有装备，扫平一切可见目标，最后在敌人清醒过来之前从战场上消失。",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 997000.0,
   "category_name": "舰船",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "提亚玛特级",
   "description": "基于三神裔<i>维德马克级</i>巡洋舰打造，<b>提亚玛特级</b>是理性思维社团的一艘试验性舰船，它融合了理性思维社团的设计哲学以及三神裔独特的系统。隐形特勤能力和扫描探针技术的加入使得舰船本已强悍的功能更加如虎添翼。\n\n\n\nYC120年中，理性思维社团提供了提亚玛特级的设计图作为他们对联盟锦标赛XVI的赞助的一部分，数量非常有限。",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 533.0,
   "mass": 9530000.0,
   "category_name": "舰船",
@@ -609,6 +609,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

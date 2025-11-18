@@ -3,7 +3,7 @@
   "name": "Moros Navy Issue",
   "description": "The shift of Gallente naval doctrine from over-reliance on drones to an acceptance of the reality that heavy guns mounted on well-protected platforms are a key element in winning fleet actions in space is dramatically illustrated by the changing role of the venerable Moros-class dreadnought. Once a vessel that was essentially a super-heavy drone carrier, the Moros-class has fallen into line with other dreadnoughts as a formidable capital gun platform. The Moros Navy Issue variant has been upgraded with heavy armor and repair systems meaning it can sustain tremendous punishment while its upgraded weapons systems deal out destruction on those targets pinned by its enhanced warp disruptors.\n\n<i>\"The Second Siege of Cylle was lifted when the invaders' assault faltered in the traps and was repulsed by our own siege engines.\"</i> – War Commentaries of dos Rouvenor",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2550.0,
   "mass": 1250000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "万王宝座级联邦型",
   "description": "万王宝座级是最令人望而生畏的战列舰之一。自从大约20年前首次露面以来，万王宝座级在联邦边境星系的多事地区做出了巨大的贡献，为盖伦特的巩固扩张立下了汗马功劳。“万王宝座”联邦型是独一无二的型号，由联邦总统佛里坦特许嘉奖给那些为联邦作出卓越贡献的人。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 675.0,
   "mass": 105200000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

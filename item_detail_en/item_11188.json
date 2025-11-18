@@ -3,7 +3,7 @@
   "name": "Anathema",
   "description": "Designed for commando and espionage operation, its main strength is the ability to travel unseen through enemy territory and to avoid unfavorable encounters.",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 190.0,
   "mass": 1147000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

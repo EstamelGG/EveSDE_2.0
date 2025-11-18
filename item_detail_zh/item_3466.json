@@ -3,7 +3,7 @@
   "name": "中型安全货柜",
   "description": "这个中型集装箱安装了由密码保护的安全锁。\n\n\n\n注意：安全货柜必须在锚定过后才能启动密码保护功能。只能在安全等级等于或者低于0.7的恒星系锚定安全货柜。",
   "volume": 325.0,
-  "repackaged_volume": 33.0,
+  "repackaged_volume": null,
   "capacity": 390.0,
   "mass": 100000.0,
   "category_name": "天体",

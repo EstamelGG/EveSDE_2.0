@@ -3,7 +3,7 @@
   "name": "Iteron Mark V",
   "description": "This lumbering giant is the latest and last iteration in a chain of haulers. It is the only one to retain the original \"Iteron\"-class callsign, but while all the others eventually evolved into specialized versions, the Iteron Mk. V still does what haulers do best: Transporting enormous amounts of goods and commodities between the stars.",
   "volume": 275000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5800.0,
   "mass": 13500000.0,
   "category_name": "Ship",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

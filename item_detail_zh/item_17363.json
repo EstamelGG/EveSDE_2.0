@@ -3,7 +3,7 @@
   "name": "小型审计安全密码集装箱",
   "description": "这个小型审计安全密码集装箱安装了密码保护安全锁装置。",
   "volume": 100.0,
-  "repackaged_volume": 10.0,
+  "repackaged_volume": null,
   "capacity": 120.0,
   "mass": 10000.0,
   "category_name": "天体",

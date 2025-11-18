@@ -3,7 +3,7 @@
   "name": "仇恨级",
   "description": "<i>“联邦仍然觉得他们能够轻易掌控人类的未来，就如同他们怎样看待我父亲的毕生心血一样。\n\n\n\n我会证明给他们看。他们毁了一个人，他本来能够革新神经增效体的科学与应用。\n\n\n\n我也会毁了他们，让他们看看这片科学领域的力量有多强大。这次决不妥协。怀念伊吉尔·萨帕蒂并以他的名义，我发誓此仇必报。”</i>\n\n\n\n- V·萨瓦多尔·萨巴蒂, 应邀视角传媒的阿尔顿·哈维利的采访时说道。",
   "volume": 58200000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1750.0,
   "mass": 1600000000.0,
   "category_name": "舰船",
@@ -892,6 +892,27 @@
       "unit_name": "类别ID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃消耗量",
+      "unit_name": "单位"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃乘客数量",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -904,6 +925,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "属性ID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "导管乘客加成",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -959,6 +994,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以进行<a href=showinfo:83094>导管跳跃</a>"
     },
     {
       "content": "可在更大范围内锁定"

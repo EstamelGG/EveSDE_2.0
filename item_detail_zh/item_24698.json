@@ -3,7 +3,7 @@
   "name": "幼龙级",
   "description": "幼龙级战列巡洋舰的诞生继承了加达里赖以成名的精益求精的舰船制造技术。加达里长久以来高超的导弹技术在它身上被表现得淋漓尽致，更不用说其强劲的CPU性能保证它优越的电子战能力了。",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 13500000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

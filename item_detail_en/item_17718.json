@@ -3,7 +3,7 @@
   "name": "Phantasm",
   "description": "As with other Sansha ships, not much is known about the origin of this design. Its form - while harshly alien in shape - bears the mark of extremely advanced physics research, lines and corners coalescing to form a shape whose resilience and structural integrity are hard to match. Coupled with advanced hardpoint technology and an extremely efficient powercore, the Phantasm's legendary status is well-deserved.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 410.0,
   "mass": 9600000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

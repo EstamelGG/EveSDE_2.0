@@ -3,7 +3,7 @@
   "name": "Rupture",
   "description": "The Rupture is slow for a Minmatar ship, but it more than makes up for it in power. The Rupture has superior firepower and is used by the Minmatar Republic both to defend space stations and other stationary objects and as part of massive attack formations.",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 12200000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

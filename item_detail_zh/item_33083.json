@@ -3,7 +3,7 @@
   "name": "违逆者级",
   "description": "违逆者级是天蛇舰船中体型最小的一种。天蛇集团从盖伦特偷来了违逆者级的设计理念，不过也对它的内部设计做了些改良，以便更好地适应天蛇海盗的生存方式：在继承了盖伦特出众的混合炮打击能力之余，违逆者级还善于使用停滞缠绕光束让敌人动弹不得，随后再尽情蹂躏。",
   "volume": 24500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 1148000.0,
   "category_name": "舰船",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

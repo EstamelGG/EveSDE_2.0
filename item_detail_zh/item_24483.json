@@ -3,7 +3,7 @@
   "name": "尼铎格尔级",
   "description": "尼铎格尔级航母是其兄长型号冥府级航母的浓缩版，不过与后者一样令人畏惧。该舰的制造初衷就是用于全面战争，而且尼铎格尔级也确实能应对自如。毫无疑问，它将成为众多战场上的中流砥柱。尼铎格尔级能够生成一个<a href=showinfo:83094>跳跃导管星门</a>，并立即将自身和附近的舰队成员传送到指定的诱导信标。可以通过导管移动的舰船级别包括：护卫舰、驱逐舰、巡洋舰、战列巡洋舰和战列舰。",
   "volume": 11250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 860.0,
   "mass": 1230000000.0,
   "category_name": "舰船",
@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 3760000.0,
+      "value": 305000.0,
       "categoryID": 6,
       "display_name": "锁定范围上限",
       "unit_name": "m"
@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "maximumRangeCap",
-      "value": 1000000000.0,
+      "value": 750000.0,
       "categoryID": 6,
       "display_name": "锁定范围理论上限值",
       "unit_name": "m"
@@ -508,7 +508,7 @@
     },
     {
       "attribute_name": "shipMaintenanceBayCapacity",
-      "value": 1000000.0,
+      "value": 2000000.0,
       "categoryID": 40,
       "display_name": "舰船维护舱容量",
       "unit_name": "m3"
@@ -697,7 +697,7 @@
     },
     {
       "attribute_name": "fighterCapacity",
-      "value": 65000.0,
+      "value": 70000.0,
       "categoryID": 38,
       "display_name": "铁骑舰载机挂舱容量",
       "unit_name": "m3"
@@ -746,7 +746,7 @@
     },
     {
       "attribute_name": "fighterTubes",
-      "value": 3.0,
+      "value": 4.0,
       "categoryID": 38,
       "display_name": "铁骑舰载机中队发射管",
       "unit_name": null
@@ -760,7 +760,7 @@
     },
     {
       "attribute_name": "fighterSupportSlots",
-      "value": 1.0,
+      "value": 2.0,
       "categoryID": 38,
       "display_name": "后勤铁骑舰载机中队限制",
       "unit_name": null
@@ -890,11 +890,21 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusCarrierM5",
+      "value": 2.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
     {
       "content": "<b>1%</b> <a href=showinfo:3350>护盾指挥</a>和<a href=showinfo:3349>游击战指挥</a>脉冲波强度和持续时间加成"
+    },
+    {
+      "content": "<b>2%</b> 德洛米<a href=showinfo:40573>后勤铁骑舰载机</a>停滞缠绕强度加成"
     },
     {
       "content": "<b>2.5%</b> <a href=showinfo:23069>铁骑舰载机</a>速度加成"
@@ -924,7 +934,7 @@
       "content": "可在更大范围内锁定"
     },
     {
-      "content": "可装配<a href=showinfo:41411>联网感应器阵列</a>"
+      "content": "可装配<a href=showinfo:90475>联网感应器阵列</a>"
     },
     {
       "content": "可释放<a href=showinfo:40572>轻型</a>和<a href=showinfo:40573>后勤</a> <a href=showinfo:23069>铁骑舰载机</a>"

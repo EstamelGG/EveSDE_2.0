@@ -3,7 +3,7 @@
   "name": "Venture",
   "description": "Recognizing the dire need for a ship capable of fast operation in unsafe territories, <a href=showinfo:30//500014>ORE</a> created the Venture. It was conceived as a vessel primed and ready for any capsuleer, no matter how new to the dangers of New Eden they might be, who wishes to engage in the respectable trade of mining.\n\nThe Venture has amazing abilities to quickly drill through to the ores and gases it's after, harvesting them at the speed necessary for mining in hostile space, and getting out relatively unscathed.",
   "volume": 29500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 50.0,
   "mass": 1200000.0,
   "category_name": "Ship",
@@ -619,6 +619,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -673,6 +680,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

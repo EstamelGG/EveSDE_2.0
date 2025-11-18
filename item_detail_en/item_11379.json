@@ -3,7 +3,7 @@
   "name": "Hawk",
   "description": "Following in the footsteps of Caldari vessels since time immemorial, the Hawk relies on tremendously powerful shield systems to see it through combat, blending launchers and turrets to provide for a powerful, well-rounded combat vessel.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 300.0,
   "mass": 1095300.0,
   "category_name": "Ship",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

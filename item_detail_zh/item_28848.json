@@ -3,7 +3,7 @@
   "name": "安莎尔级",
   "description": "西顿构想出安莎尔级速度之快让很多人吃惊不小，因为该舰型和他们传统的无人机中心舰设计迥然不同。安莎尔级专门开发的货物操纵无人机让西顿可以充分利用该舰宽大的载货空间以及舰船内部每个角落和缝隙，确保其在同类中最优秀的载货能力。",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 137500.0,
   "mass": 940000000.0,
   "category_name": "舰船",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

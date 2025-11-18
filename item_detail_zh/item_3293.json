@@ -3,7 +3,7 @@
   "name": "中型标准货柜",
   "description": "标准货柜集装箱，用于运输普通货物。",
   "volume": 325.0,
-  "repackaged_volume": 33.0,
+  "repackaged_volume": null,
   "capacity": 390.0,
   "mass": 100000.0,
   "category_name": "天体",

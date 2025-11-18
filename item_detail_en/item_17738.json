@@ -3,7 +3,7 @@
   "name": "Machariel",
   "description": "While its utilitarian look may not give much of an indication, many are convinced that the Machariel is based on an ancient Jovian design uncovered by the Angel Cartel in one of their extensive exploratory raids into uncharted territory some years ago. Whatever the case may be, this behemoth appeared on the scene suddenly and with little fanfare, and has very quickly become one of the Arch Angels' staple war vessels.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 860.0,
   "mass": 94680000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

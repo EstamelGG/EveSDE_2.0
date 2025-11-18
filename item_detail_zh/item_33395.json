@@ -3,7 +3,7 @@
   "name": "莫拉查级",
   "description": "莫拉查级是黑夜中的行者，也是海盗军团的终极利器。这艘侦察舰融合了电子战和隐秘行动能力，并有着天使集团巡洋舰特有的高速和强劲攻击力。作为第一艘使用了伊克西翁级船体的克隆飞行员战舰，莫拉查级那独特的外观和出众的战斗能力使得它无论是单兵作战还是团队出击都表现出色。",
   "volume": 100000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 320.0,
   "mass": 8700000.0,
   "category_name": "舰船",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

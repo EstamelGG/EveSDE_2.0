@@ -3,7 +3,7 @@
   "name": "Pontifex",
   "description": "Command Destroyers represent a versatile addition to fleets of all sizes. Being the smallest and most agile platforms for Command Burst technology positions them as the premier support option for fast-moving wolf packs. Unique access to Micro Jump Field Generators also allows them to perform maneuvers that rapidly reposition other ships, be they friend or foe.",
   "volume": 47000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 380.0,
   "mass": 1250000.0,
   "category_name": "Ship",
@@ -617,6 +617,13 @@
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

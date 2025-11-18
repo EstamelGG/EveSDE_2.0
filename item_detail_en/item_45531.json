@@ -3,7 +3,7 @@
   "name": "Victor",
   "description": "The Serpentis Corporation spared no expense when they contracted the Guardian Angels to create a new line of ultra-exclusive cruisers intended to replace their internal executive fleet of Victorieux Luxury Yachts leased from the Intaki Syndicate. These ships would need to maintain the exquisite luxury and discretion of the yachts while adding devastating combat ability to ensure that Serpentis Corporation VIPs never find themselves outgunned.\n\nThe final ship design delivered by the Cartel engineers included covert ops cloaking capability, powerful hybrid turret hardpoints, and stasis webifier capabilities unmatched by any other ship in the history of New Eden.\n\nThe first Victor-class Force Recon Ship to complete construction was claimed by Salvador Sarpati himself to serve as his personal cruiser.",
   "volume": 116000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 11650000.0,
   "category_name": "Ship",
@@ -637,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

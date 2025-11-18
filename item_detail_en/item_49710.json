@@ -3,7 +3,7 @@
   "name": "Kikimora",
   "description": "A light, long-range combat ship that may be considered the Collective's approach to standoff destroyer designs, the Kikimora is another Triglavian design that has proven adaptable to capsuleer technology, as with previously recovered examples of ship architecture recovered from Abyssal Deadspace.\n\nAs with other light combat vessels in the Triglavian lineup, the Kikimora is capable of mounting Light Entropic Disintegrators and an array of support weapons such as energy neutralizers and pulse weapons.\n\n<i>Kikimora Subclade of Svarog Clade revised adaptation schema for cladeship of the 9 tactical troika classification has been accepted for imprinting in advancing-time generations after reverse-time reclamation following audience communion with reverse-time proving from ancient noema. Tactical subrole dispersal is subject to suspended-time pressure contingent on proving anew.</i> – partial translation of data included in recovered design schematics of the Kikimora",
   "volume": 43000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 360.0,
   "mass": 1560000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

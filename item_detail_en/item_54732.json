@@ -3,7 +3,7 @@
   "name": "Stormbringer",
   "description": "The <i>Stormbringer</i>-class cruiser was commissioned from Upwell by the New Eden Common Defense Initiative while the organization was still a counter-Triglavian strategy group headed by Provost Marshal Kasiha Valkanir. When EDENCOM was officially announced as the new central command for the defense of New Eden in YC122, the research and development of a line of ships capable of bearing radical new weaponry was widely rumored following Triglavian raids on Upwell development facilities.\n\nThe Upwell Consortium had been working on adapting Arcing Vorton Projector weaponry to a ship-based form since the success of the technology as an anti-fleet weapon on Keepstar Citadels. The first Triglavian invasions in mid-YC121 spurred that effort on even before EDENCOM underwrote the project, providing access to scientists and engineers from the secret weapons programs of the four core empires, and even the SoCT.\n\nThe <i>Stormbringer</i>-class is equipped with strong shields and is capable of striking from afar with optimally-tuned Arcing Vorton Projectors. Intended for use in rapid response cruiser fleets, this powerful attack vessel provides valuable flexibility in EDENCOM's war effort.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 473.0,
   "mass": 11640000.0,
   "category_name": "Ship",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

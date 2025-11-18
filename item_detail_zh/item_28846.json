@@ -3,7 +3,7 @@
   "name": "游牧者级",
   "description": "人们不断猜测图克尔人巨大的商队是如何在几乎难以察觉的情况下进行移动的，但当图克尔人创造出游牧者级时，他们在跳跃引擎方面的专业技术显露无遗。游牧者级现在为图克尔先驱分遣队提供广泛的服务，它正快速成为图克尔人除巨大的商队之外，生活中的另一基本部分。",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 132000.0,
   "mass": 820000000.0,
   "category_name": "舰船",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

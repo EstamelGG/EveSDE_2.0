@@ -3,7 +3,7 @@
   "name": "Cambion",
   "description": "The Cambion is the result of Caldari State Executor Tibus Heth's insistence that modern weapons of war be able to continually outperform previous standardized versions. While that effort is rumored to have been hit-and-miss (resulting in great scientific advances at the cost of a stunning array of misfortunes), it is absolutely undeniable that the Cambion has been one of its great successes, a feat that likely could not have been achieved in a different political milieu. \n\nThe Cambion is an out-and-out brawler. Taking note from the Merlin – a versatile combat frigate in its own right – this ship is intended to rush in, overheat everything it runs, hit hard with everything it has and get out moments before death can find it.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 997000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

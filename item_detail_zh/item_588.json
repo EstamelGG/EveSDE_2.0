@@ -3,7 +3,7 @@
   "name": "死神号",
   "description": "死神号轻型护卫舰是最小的米玛塔尔护卫舰之一，刚好超过有人舰载机级别，达到新手船标准。死神号很便宜，被米玛塔尔黑白两道在危险的游击行动中大量使用。",
   "volume": 15800.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 120.0,
   "mass": 1157000.0,
   "category_name": "舰船",
@@ -549,6 +549,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -568,6 +575,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

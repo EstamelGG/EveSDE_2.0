@@ -3,7 +3,7 @@
   "name": "Legion",
   "description": "Revelation burrows through the material world, devours creation's soil, digests the thoughtless void, and produces significance with God's grace. From emptiness comes meaning, essence from existence, soul from matter.\n\nIs God through the wormhole? Did God grant us this boon, this new technology, a revelation from on high? These weapons are God's new prophecy, domain, and blessing. Let us use God's grace and prepare New Eden. We are God's soldiers, weapons, glory. Our people are God's army. Together, we are the legion.\n\n    -<i>The Heresies of Hinketsu</i>",
   "volume": 118000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 14500000.0,
   "category_name": "Ship",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

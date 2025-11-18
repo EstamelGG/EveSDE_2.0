@@ -1,7 +1,7 @@
 {
   "type_id": 28423,
-  "name": "Batch Compressed Rich Plagioclase",
-  "description": "With rich plagioclase, having 10% better yield than the normal one, miners can finally regard plagioclase as a mineral that provides a noteworthy profit.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "Batch Compressed Plagioclase III-Grade",
+  "description": "With rich or III-Grade plagioclase having 10% better yield than the normal one, miners can finally regard plagioclase as a mineral that provides a noteworthy profit.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 0.15,
   "repackaged_volume": null,
   "capacity": null,

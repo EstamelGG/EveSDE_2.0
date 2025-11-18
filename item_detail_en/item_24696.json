@@ -3,7 +3,7 @@
   "name": "Harbinger",
   "description": "Right from its very appearance on a battlefield, the Harbinger proclaims its status as a massive weapon, a laser burning through the heart of the ungodly. Everything about it exhibits this focused intent, from the lights on its nose and wings that root out the infidels, to the large number of turreted high slots that serve to destroy them. Should any heathens be left alive after the Harbinger's initial assault, its drones will take care of them.",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 375.0,
   "mass": 15500000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

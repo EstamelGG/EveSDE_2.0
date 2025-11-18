@@ -3,7 +3,7 @@
   "name": "Naglfar",
   "description": "The Naglfar is based on a Matari design believed to date back to the earliest annals of antiquity. While the exact evolution of memes informing its figure is unclear, the same distinctive vertical monolith form has shown up time and time again in the wind-scattered remnants of Matari legend.\n\nBoasting an impressive versatility in firepower options, the Naglfar is capable of holding its own against opponents of all sizes and shapes. While its defenses don't go to extremes as herculean as those of its counterparts, the uniformity of resilience - coupled with the sheer amount of devastation it can dish out - make this beast an invaluable addition to any fleet.",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2900.0,
   "mass": 1260000000.0,
   "category_name": "Ship",

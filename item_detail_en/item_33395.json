@@ -3,7 +3,7 @@
   "name": "Moracha",
   "description": "The Moracha is what goes bump in the night. Built to be the ultimate tool of piracy and terror, this Recon Ship combines the electronic warfare and covert abilities of its class with the speed and ferocity that Angel Cartel cruisers are known for. The first ever capsuleer ship to use the Ixion ship hull, the distinctive appearance of the Moracha goes along with incredible combat capabilities that make it ideal for both solo and wolfpack hunting.",
   "volume": 100000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 320.0,
   "mass": 8700000.0,
   "category_name": "Ship",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

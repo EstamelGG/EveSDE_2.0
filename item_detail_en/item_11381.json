@@ -3,7 +3,7 @@
   "name": "Harpy",
   "description": "Already possessing a reputation despite its limited initial circulation, the Harpy is a powerful railgun platform with long range capability and strong defensive systems. Formidable both one-on-one and as a support ship, it was referred to as the \"little Moa\" by the pilots who participated in its safety and performance testing.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1039500.0,
   "category_name": "Ship",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

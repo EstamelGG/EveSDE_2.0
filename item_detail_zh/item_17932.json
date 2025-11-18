@@ -3,7 +3,7 @@
   "name": "德拉米尔级",
   "description": "在天使企业联合体的所有船只中，德拉米尔级护卫舰服役时间最长，使用频率最高。该舰称得上是护卫舰中吃苦耐劳的役马；如果掉以轻心的话，很可能会被这个牙尖齿利的小美人狠狠咬上一口。",
   "volume": 27289.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 130.0,
   "mass": 950000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

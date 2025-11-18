@@ -3,7 +3,7 @@
   "name": "Kestrel",
   "description": "The Kestrel is a heavy missile boat with one of the most sophisticated sensor arrays around. Interestingly enough, it has been used by both the Caldari Navy and several wealthy trade corporations as a cargo-hauling vessel. It is one of few trading vessels with good punching power, making it ideal for solo trade-runs in dangerous areas. The Kestrel was designed so that it could take up to four missile launchers but as a result it can not be equipped with turret weapons nor with mining lasers.",
   "volume": 19700.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 160.0,
   "mass": 1113000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

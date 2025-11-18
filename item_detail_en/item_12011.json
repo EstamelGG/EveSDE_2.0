@@ -3,7 +3,7 @@
   "name": "Eagle",
   "description": "Built on the shoulders of the sturdy Moa and improving on its durability and range, the Eagle is the next generation in Caldari gunboats. Able to fire accurately and do tremendous damage at ranges considered extreme by any cruiser pilot, this powerhouse will be the bane of anyone careless enough to think himself out of its range. \n\nCaldari starship design is showing a growing trend towards armaments effective at high ranges, and in this arena, as in others, Ishukone do not let themselves get left behind; the Eagle was intended by them as a counter to the fearsome long-range capabilities of Lai Dai's Cerberus ship.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 11720000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

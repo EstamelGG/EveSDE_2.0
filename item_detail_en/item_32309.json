@@ -3,7 +3,7 @@
   "name": "Scorpion Navy Issue",
   "description": "This ship's design represents a radical turnaround in Caldari philosophy, particularly when compared to that of its regular Scorpion-class counterpart. Abandoning the concept of an electronic warfare platform, this vessel's creators instead set their sights on direct combat, with superior shielding and offensive capabilities giving this monster the undeniable upper hand in a vast range of tactical situations.",
   "volume": 468000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 815.0,
   "mass": 103600000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

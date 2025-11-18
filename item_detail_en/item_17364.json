@@ -3,7 +3,7 @@
   "name": "Medium Audit Log Secure Container",
   "description": "This medium audit log container is fitted with a password-protected security lock.",
   "volume": 325.0,
-  "repackaged_volume": 33.0,
+  "repackaged_volume": null,
   "capacity": 390.0,
   "mass": 100000.0,
   "category_name": "Celestial",

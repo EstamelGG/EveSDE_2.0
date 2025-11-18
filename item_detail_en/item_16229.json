@@ -3,7 +3,7 @@
   "name": "Brutix",
   "description": "One of the most ferocious war vessels to ever spring from Gallente starship design, the Brutix is a behemoth in every sense of the word. When this hard-hitting monster appears, the battlefield takes notice.",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 11800000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

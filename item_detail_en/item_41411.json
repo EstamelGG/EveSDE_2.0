@@ -1,9 +1,9 @@
 {
   "type_id": 41411,
   "name": "Networked Sensor Array",
-  "description": "An electronic interface designed to augment and enhance a carrier's sensors. By redirecting power from offensive electronic warfare systems and warp drive, the networked sensor array greatly enhances the resolution of ship's targeting arrays, and the sensor strength of the ship and its fighter squadrons. \n\nNote: This module can only be fit to Carriers and Supercarrier class ships.",
+  "description": "An electronic interface designed to augment and enhance a Supercarrier's sensors. By redirecting power from offensive electronic warfare systems and warp drive, the networked sensor array greatly enhances the resolution of ship's targeting arrays, and the sensor strength of the ship and its fighter squadrons. \n\nNote: This module can only be fit to Supercarrier class ships.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "Module",

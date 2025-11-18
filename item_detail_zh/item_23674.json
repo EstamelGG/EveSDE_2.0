@@ -3,7 +3,7 @@
   "name": "'赫姆达洱之咆哮'爆炸末日武器",
   "description": "如同正义的怒火从天而降，这个武器能对目标释放出无可匹敌的毁灭性杀伤力。\n\n\n\n注：这个武器只能对旗舰级或更大的舰船使用。使用后，你会在三十秒内无法移动、并在五分钟内无法停靠、驻留、隐形或使用跳跃引擎。",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "装备",

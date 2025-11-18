@@ -3,7 +3,7 @@
   "name": "Chremoas",
   "description": "The Chremoas is the Angel Cartel's take on the Covert Ops ship. Don't let the class designation fool you, the Chremoas is a more than capable combat vessel that takes advantage of a covert cloak, advanced targeting systems previously only seen on stealth bombers, and ample medium power module slots to pick and control the fights it knows it can win. By the time you see a Chremoas decloak, the fight is already over.",
   "volume": 28000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 190.0,
   "mass": 930000.0,
   "category_name": "Ship",
@@ -651,6 +651,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

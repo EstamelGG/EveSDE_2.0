@@ -3,7 +3,7 @@
   "name": "'Holy Destiny' Electromagnetic Lance",
   "description": "While the Amarr Empire had first developed the ‘Reaper’ directed energy device, the Gallente were the first to modify the concept into a focused, static energy beam they called a ‘Lance’.  In truth, the Amarr had not entirely cracked the problem of holding this particular form of pseudo-stable energy on a single point before the Gallente came up with a method of focusing the beam reliably. The Amarr were quite taken with the solution the Federation had developed and at once produced their own electromagnetic variation codenamed ‘Holy Destiny’.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

@@ -3,7 +3,7 @@
   "name": "Osprey Navy Issue",
   "description": "Caldari ships have never been renowned for their speed. With this in mind, Caldari Navy engineers set about designing the Osprey Navy Issue. The fastest Caldari cruiser in existence and a formidable missile boat, this vessel gives Navy personnel and State loyalists alike greater opportunities to conduct true skirmish warfare than ever before.",
   "volume": 107000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 460.0,
   "mass": 11780000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

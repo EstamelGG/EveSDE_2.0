@@ -3,7 +3,7 @@
   "name": "奉献级",
   "description": "重型拦截巡洋舰结合了截击舰的拦截能力和重型突击巡洋舰的防御能力，使其在局部冲突中无论是进攻还是防守都具有不可估量的价值。重型拦截巡洋舰是所有舰种中唯一能够使用跃迁扰断力场发生器的舰船 - 该发生器是一种能够产生随船体移动的跃迁扰断力场的设备。",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 375.0,
   "mass": 16200000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

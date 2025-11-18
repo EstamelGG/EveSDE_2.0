@@ -3,7 +3,7 @@
   "name": "Consortium Capital Tractor Beam",
   "description": "By manipulating gravity fields, this module can pull cargo containers towards the ship. \n\nNote: This tractor beam can only be fitted on the Rorqual ORE Capital Ship.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 0.8,
   "mass": 50.0,
   "category_name": "Module",

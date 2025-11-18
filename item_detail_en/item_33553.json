@@ -3,7 +3,7 @@
   "name": "Stratios Emergency Responder",
   "description": "The Stratios Emergency Responder is a variation on the Stratios designed by the Sanctuary specifically for fast assessment and evaluation of major cosmic events in New Eden. Its official role to quickly appraise incidents of all kinds and relay information back to the Sisters of EVE also serves as an opportunity to take care of any sensitivities before they become apparent to external parties.\n\nIt is particularly adept at venturing into dangerous territories, not merely in recovering whatever may be of interest but also in being able to safely bring it back. Its engines have alternate power sources that come into play should any of its cargo - for which it has plenty of room - cause serious interference with internal systems. Its weaponry runs best on renewable sources, an ideal for a ship that doesn't know how long it'll be in deep space. Its carapace is extremely well armored for a ship this agile, and covered in sensors capable of letting its crew track a myriad of different organic signatures. The crew itself is safely protected from any number of transmittable ailments from rescues and other unexpected passengers, thanks to special quarantine bays that are conveniently located near jettisonable openings. \n\nAnd lastly, an ingenious but cryptic transfer in part of the warp core functionality to an outlying cylindrical structure means the Stratios Emergency Responder is able to run certain higher-level cloaking functions with very little technical cost, and minimal interference from warp. The Sisters of EVE have refused to comment on this technology, other than to recommend it not be tampered with.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 9350000.0,
   "category_name": "Ship",
@@ -130,7 +130,7 @@
     },
     {
       "attribute_name": "turretSlotsLeft",
-      "value": 4.0,
+      "value": 3.0,
       "categoryID": 1,
       "display_name": "Turret Hardpoints",
       "unit_name": "hardpoints"
@@ -619,6 +619,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -671,7 +678,7 @@
       "content": "<b>4%</b> bonus to all armor resistances"
     },
     {
-      "content": "<b>50%</b> bonus to <a href=showinfo:3306>Medium Energy Turret</a> optimal range"
+      "content": "<b>50%</b> bonus to <a href=showinfo:3306>Medium Energy Turret</a> optimal range and damage"
     },
     {
       "content": "Can fit <a href=showinfo:11578>Covert Ops Cloaking Device</a>"

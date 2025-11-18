@@ -3,7 +3,7 @@
   "name": "大鸨级",
   "description": "深层空间运输舰在设计时就充分考虑到了在不受法律管制的深层空间的作业。它们的防御力远超标准工业舰，因此能够有力保护其巨大船舱内装运的任何货物。不过，它们也是太空中速度最慢的舰船之一。",
   "volume": 390000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5000.0,
   "mass": 20000000.0,
   "category_name": "舰船",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

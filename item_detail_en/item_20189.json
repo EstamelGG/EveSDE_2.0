@@ -3,7 +3,7 @@
   "name": "Fenrir",
   "description": "Third in line to jump on the freighter bandwagon, the Republic decided early in the design process to focus on a balance between all ship systems. True to form, their creation is comparatively lightweight - though lightweight is certainly not a term easily applicable to this giant.",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 435000.0,
   "mass": 820000000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

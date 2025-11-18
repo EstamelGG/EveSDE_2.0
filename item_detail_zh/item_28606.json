@@ -3,7 +3,7 @@
   "name": "逆戟鲸级",
   "description": "作为外空联合矿业(ORE)与深核矿业(DCM)的合作产品，逆戟鲸级不仅可满足新伊甸的工业需求，也是一款灵活的采矿作业管理平台。\n\n\n\n逆戟鲸级能够使用大型工业核心来大幅提高工业效能，并增强防御能力。启用工业核心后，逆戟鲸级能够灵活地使用一系列专用大型压缩装置。\n\n\n\n逆戟鲸级传承了ORE应用在长须鲸级上的很多技术，并融合了DCM研发部门的最新成果，它多样化的能力可以支持各种规模的作业与需求。",
   "volume": 10250000.0,
-  "repackaged_volume": 500000.0,
+  "repackaged_volume": null,
   "capacity": 30000.0,
   "mass": 150000000.0,
   "category_name": "舰船",
@@ -591,13 +591,6 @@
       "unit_name": "%"
     },
     {
-      "attribute_name": "roleBonusSurveyScannerRange",
-      "value": 500.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": "%"
-    },
-    {
       "attribute_name": "rigSize",
       "value": 3.0,
       "categoryID": 7,
@@ -644,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {
@@ -757,6 +757,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -791,16 +798,13 @@
       "content": "<b>5%</b> <a href=showinfo:43702>无人机</a>冰矿开采循环时间缩短"
     },
     {
-      "content": "<b>5%</b> 大型工业核心  <a href=showinfo:58945>燃料消耗降低</a>"
+      "content": "<b>5%</b> <a href=showinfo:58945>大型工业核心</a>燃料消耗降低"
     },
     {
       "content": "<b>5%</b> 舰船货舱和矿石舱容量加成"
     },
     {
       "content": "<b>50%</b> <a href=showinfo:3348>指挥脉冲波和开采先锋脉冲波</a>效果范围加成"
-    },
-    {
-      "content": "<b>500%</b> <a href=showinfo:444>测量扫描器</a>距离加成"
     },
     {
       "content": "<b>90%</b> 减少跳跃距离对产生跳跃疲劳的影响"
@@ -810,6 +814,9 @@
     },
     {
       "content": "可以装配三个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以连接到<a href=showinfo:90037>移动相位锚标</a>可部署设备，提供<b>50</b>点能量"
     }
   ]
 }

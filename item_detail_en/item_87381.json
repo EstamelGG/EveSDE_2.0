@@ -3,7 +3,7 @@
   "name": "Sarathiel",
   "description": "The rapid warp capabilities of the Sarathiel make it uniquely fast amongst dreadnoughts. Its development began under the shadow of the Drifter Crisis, and though its exterior does not look anything like a Drifter vessel, it is rumored to incorporate elements of their technology procured during those dark days. \n\nIn addition to its outstanding warp capabilities, this Dreadnought is able to house jump field generators. It is this capability that means the sight of a Sarathiel strikes fear into the citizens of New Eden, for it is often the first sign of a devastating ambush.",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2900.0,
   "mass": 1130000000.0,
   "category_name": "Ship",

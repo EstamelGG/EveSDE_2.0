@@ -3,7 +3,7 @@
   "name": "Deacon",
   "description": "The Deacon is the latest success from the engineers at Carthum Conglomerate, designed as a remote repairing ship that can keep up with fast moving fleets including those containing the extremely popular Confessor-class Tactical Destroyer. Managing to miniaturize the powerful remote armor repairing systems from their best-selling Guardian Logistics Cruiser onto a frigate-sized hull was no simple task, but Carthum was able to release the Deacon in nearly record time and under-budget thanks in part to extensive cooperation with researchers from the Lai Dai megacorp.",
   "volume": 28700.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1630000.0,
   "category_name": "Ship",
@@ -617,6 +617,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

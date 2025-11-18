@@ -3,7 +3,7 @@
   "name": "噩梦级",
   "description": "自其恐怖的身影第一次现身于幽暗的星海后，围绕着噩梦级战列舰设计理念的谣言就从没有停歇过，据传它被打上了萨沙·库瓦柯伊独有的疯狂烙印。还能有谁——阴谋论者争论道——会使用这么古怪却又性能惊人的设计？\n\n\n\n各种这样那样的流言都在萨沙于YC111-112年间发动的入侵行动中得以证实——遮云蔽日的噩梦级舰队向星球上的居民以及飞行员们发动了猛烈攻击，将效忠于他们的首领萨沙·库瓦柯伊视为最高荣耀。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 830.0,
   "mass": 99300000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

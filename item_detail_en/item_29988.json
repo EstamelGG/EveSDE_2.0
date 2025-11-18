@@ -3,7 +3,7 @@
   "name": "Proteus",
   "description": "Freedom is liquid, supple, mellifluous. It surrounds us, engulfs our bodies, drowns our fear. We plumb freedom's depths and consume the nourishment within. From these waters, we are born; when we die, we shall return to those waters. \n\nOut there, among the stars, are the waters, freedom incarnate. That dark, endless void is our destiny, our path, our goal. We must not fear it, nor should we control it. Rather, we should embrace it, trust it, love it. Its ever-changing face, its protean existence, is our very essence. We are those stars, the void, the awesome waters of space: ancient, forever, free.\n\n    - Jinsente Parmen, <i>The Gallente in New Eden</i>",
   "volume": 115000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 13300000.0,
   "category_name": "Ship",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

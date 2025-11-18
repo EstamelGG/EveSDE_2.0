@@ -3,7 +3,7 @@
   "name": "阿什姆级",
   "description": "在帝国的某些地方，顽皮的孩子们一听到血袭者的惊悚传说就会吓得停止哭泣。众所周知，阿什姆级巡洋舰上骇人的阿什姆之矛会带来比死亡更为恐怖的灾难。小孩子和飞行员之间的共识不多，但这是其中之一。",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 430.0,
   "mass": 11010000.0,
   "category_name": "舰船",
@@ -619,6 +619,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -642,7 +649,7 @@
   ],
   "traits": [
     {
-      "content": "<b>10%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> falloff range"
+      "content": "<b>10%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>失准范围加成"
     },
     {
       "content": "<b>125%</b> <a href=showinfo:3306>中型能量炮台</a>伤害加成"
@@ -654,7 +661,7 @@
       "content": "<b>20%</b> <a href=\"showinfo:526\">停滞缠绕光束</a>射程加成"
     },
     {
-      "content": "<b>20%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> optimal range"
+      "content": "<b>20%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>最佳射程加成"
     },
     {
       "content": "这艘舰船的<a href=showinfo:3423>掠能器</a>可以无视自身剩余电容量而对目标舰船的电容无限吸取"

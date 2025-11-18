@@ -3,7 +3,7 @@
   "name": "永灭级",
   "description": "指挥舰专为在大规模战役中大量杀敌而设计。这些舰船装备了先进的指挥模块接口，在大型遭遇战中足以扭转乾坤。指挥舰代表了终极的指挥脉冲波效率，它在战斗中给予战友的强力协助使其成为任何一支能力全面的舰队必不可少的要素。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 645.0,
   "mass": 13500000.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

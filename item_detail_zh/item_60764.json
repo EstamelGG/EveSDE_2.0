@@ -3,7 +3,7 @@
   "name": "猎獒级",
   "description": "<i>“阻击是机动战中的关键要素，必须由快速且强韧的队伍担当。侦察兵干不了阻击的活，但有坐骑的步兵可以承担此重任。无论如何，在试图拖住敌人之前一定要先了解对方的实力。”\n\n\n\n“洛维诺国王说的多好啊。别瞎猜，我可没有对他的战争理念阴阳怪气。我也曾见过侦察兵牵着战列舰的鼻子走，但这不重要。运用不同的轻型兵种以及合适的工具来牵制住强大的敌人，这才是意义所在。不过当然，别尝试用一艘加姆级去干扰夜神级，那不会有好下场的。”</i>\n\n\n\n– 穆瑞亚·莫德，援引洛维诺国王的战争评论",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 420.0,
   "mass": 10298000.0,
   "category_name": "舰船",
@@ -637,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

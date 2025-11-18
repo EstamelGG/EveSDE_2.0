@@ -3,7 +3,7 @@
   "name": "Barghest",
   "description": "In YC 116, Mordu’s Legion intelligence reported to command that the Guristas pirates were developing new and advanced strike craft capabilities using unknown technologies. In response to these reports, Mordu’s Legion accelerated a program of ship development that was itself a response to trends in capsuleer tactics and warfare. The crash development and manufacturing effort resulted in a new family of fast strike ships integrated with one another to provide tactical flexibility and firepower across ship class lines.\n\nThe Barghest represents the pinnacle of the Legion’s ambitions for its new strike craft doctrine: A fast battleship with high-speed missile delivery systems, fully capable of contesting the field with more traditional heavy skirmishers.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 830.0,
   "mass": 98467000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

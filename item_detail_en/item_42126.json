@@ -3,7 +3,7 @@
   "name": "Vanquisher",
   "description": "<i>“The Molyneux hijack showed me that capsuleers will do extraordinary things when there’s blood in the water. For a while there, I wasn’t sure we’d get away.\n\nNot because of the Feds. No, they were a joke. But the eggers nearly got me. The amusing thing is that they fought one another as much as they tried to catch me. \n\nSome of them even helped out. You know, the trail of destruction we left in our wake was almost entirely due to them. I think it would be amusing to give them some more toys, don’t you?”</i>\n\n- V. Salvador Sarpati, interviewed by Alton Haveri of the Scope.",
   "volume": 145500000.0,
-  "repackaged_volume": 10000000.0,
+  "repackaged_volume": null,
   "capacity": 18000.0,
   "mass": 2100000000.0,
   "category_name": "Ship",

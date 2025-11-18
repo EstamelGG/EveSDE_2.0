@@ -3,7 +3,7 @@
   "name": "富豪级海军型",
   "description": "富豪级最初是帝国工程师根据艾玛贵族的潮流和癖好而打造的附属产品，不过现在重生的军务部和帝国海军提出新的需求，要打造一艘专用于侦查和探索的护卫舰。\n\n\n\n出于这个目的，富豪级专门为安装扫描探针发射器而扩容，并搭载了更强的能量武器系统。帝国海军对打扫战场没有兴趣，因此舍弃了原有的专业打捞系统。",
   "volume": 22100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1072000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

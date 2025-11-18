@@ -3,7 +3,7 @@
   "name": "Khizriel",
   "description": "Following battle-tested Angel Cartel doctrines, the <i>Khizriel</i>-class battlecruiser makes a virtue out of speed of striking and the ability to rain destruction on its targets from just out of reach of any counterfire. Engineers of the Cartel's Salvation Angels group have labored on this design's warp drive to eke out every last bit of acceleration and warp speed possible for such a large ship. While this gunboat lacks the flexibility of missile options, it is able to deploy a covering flight of drones should it need to distract and disrupt any enemies.\n\nThe speed and formidable firepower of the Khizriel is enhanced by top-of-the-line shield and armor systems protecting an unusually agile battlecruiser. The Khizriel's ability to strike from surprise, destroy its targets, and rapidly evade reprisals may be unmatched among pirate vessels, and is clearly intended to be a serious thorn in the side of empire border patrols and CONCORD security forces.",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 425.0,
   "mass": 11520000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

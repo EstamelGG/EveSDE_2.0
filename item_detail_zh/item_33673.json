@@ -3,7 +3,7 @@
   "name": "长尾蜥级",
   "description": "YC115年底，《视角》使用了这样一条标题“<i>卡拉吉塔集团生产的截击舰是宇宙中最好的吗？</i>”大多数读者都把这当成是一次吸引人气的炒作罢了。 \n\n“野兔”卡萨加米却把这视为了一种自我挑战。",
   "volume": 18000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 1000000.0,
   "category_name": "舰船",
@@ -644,6 +644,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

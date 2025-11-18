@@ -3,7 +3,7 @@
   "name": "凝血级",
   "description": "斑驳、暗红色及形如水蛭，凝血级为血袭者的理念做了一个恰如其分的比喻。该船的设计理念就是专门利用它们那效果好得令人恐怖的吸能加停滞缠绕战术。它是任何一支血袭者舰船中都不可或缺的基石，且在更标准的队伍中，能产生更细腻的作用。",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 1003000.0,
   "category_name": "舰船",
@@ -626,6 +626,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -649,7 +656,7 @@
   ],
   "traits": [
     {
-      "content": "<b>10%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> falloff range"
+      "content": "<b>10%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>失准范围加成"
     },
     {
       "content": "<b>125%</b> <a href=\"showinfo:3303\">小型能量炮台</a>伤害加成"
@@ -661,7 +668,7 @@
       "content": "<b>20%</b> <a href=\"showinfo:526\">停滞缠绕光束</a>射程加成"
     },
     {
-      "content": "<b>20%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> optimal range"
+      "content": "<b>20%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>最佳射程加成"
     },
     {
       "content": "这艘舰船的<a href=showinfo:3423>掠能器</a>可以无视自身剩余电容量而对目标舰船的电容无限吸取"

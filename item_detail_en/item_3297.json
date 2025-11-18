@@ -3,7 +3,7 @@
   "name": "Small Standard Container",
   "description": "A standard cargo container, used for common freight.",
   "volume": 100.0,
-  "repackaged_volume": 10.0,
+  "repackaged_volume": null,
   "capacity": 120.0,
   "mass": 10000.0,
   "category_name": "Celestial",

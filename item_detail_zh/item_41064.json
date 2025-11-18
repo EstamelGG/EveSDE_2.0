@@ -3,7 +3,7 @@
   "name": "阳极视野型四联超级脉冲激光器",
   "description": "专业化高角度炮台装配三门四管武器，被设计用来应对非旗舰级别舰船的威胁。\n\n注：只能用于旗舰级舰船。\n\n\n\n使用的频率晶体弹药类型：伽玛、红外线、微波、多频、射频、标准、紫外线和X射线。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 1.0,
   "mass": 40000.0,
   "category_name": "装备",

@@ -3,7 +3,7 @@
   "name": "Bosonic Field Generator",
   "description": "The Society of Conscious Thought has long been at the forefront of making new technologies available to capsuleers but their decision to release certain types of spacetime weaponry on the open market represents a significant escalation in the level of power that the Society is willing to place in the hands of independent pilots. The Bosonic Field Generator provides a means to massively distort localized spacetime at short ranges, placing enormous stresses on any object in the affected area. In practical terms, the device is a weapon that can literally tear apart ships caught in its kill zone.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

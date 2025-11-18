@@ -3,7 +3,7 @@
   "name": "'Judgment' Electromagnetic Doomsday",
   "description": "The ultimate expression of God's Divine wrath, this weapon projects a beam of the Lord's holy light, designed to put sinners in their proper place.\n\nNotes: This weapon can only fire on ships that are capital-sized or larger. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

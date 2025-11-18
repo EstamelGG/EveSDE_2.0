@@ -3,7 +3,7 @@
   "name": "先知级海军型",
   "description": "先知级海军型是这艘古老而值得尊敬的战舰的最新改版，它回归了艾玛昔日的坚固装甲和大火力能量武器的传统。它继承了先知级大获成功的坚固中轴线，优化了舰载无人机控制系统，释放出了额外的空间用以安装更先进的晶体聚焦技术。\n\n\n\n对于艾玛人来说，没有什么比亲眼目睹火焰光束从天而降将异教徒化为灰烬更美妙的场景了。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 15300000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

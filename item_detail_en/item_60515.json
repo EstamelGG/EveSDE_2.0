@@ -1,7 +1,7 @@
 {
   "type_id": 60515,
   "name": "Mutated Drone Specialization",
-  "description": "Specialization in the operation of mutated drones created using rogue drone and Triglavian technology, applying techniques developed by ORE to pacify and control rogue drones. Users are recommended to update their information warfare countermeasures, wetware-nanotech interface security, and intrusion response hunter-killer programs regularly.\n\n2% bonus per skill level to the damage of light, medium, heavy and sentry drones requiring Mutated Drone Specialization.",
+  "description": "Specialization in the operation of mutated drones created using rogue drone and Triglavian technology, applying techniques developed by ORE to pacify and control rogue drones. Users are recommended to update their information warfare countermeasures, wetware-nanotech interface security, and intrusion response hunter-killer programs regularly.\n\n2% bonus per skill level to the damage of light, medium, heavy and sentry drones requiring Mutated Drone Specialization.\n\n2% bonus to the mining yield of drones requiring Mutated Drone Specialization per level.",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
@@ -84,6 +84,13 @@
       "value": 2.0,
       "categoryID": 7,
       "display_name": "Damage Multiplier Bonus",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningAmountBonus",
+      "value": 2.0,
+      "categoryID": 51,
+      "display_name": "Mining Amount Bonus",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "巴戈龙级",
   "description": "以吞食孩子的艾玛传奇精灵为名，巴戈龙级是血袭者同盟的骄傲与幸福。尽管大家都知道它的设计基于末日沙场级蓝图，但没人知道该设计的最初源头。在怪异妖孽的仪式中，那些迷信似的教唆不绝于耳。但对于大多数人来说，实际景象就足以说明一切：但你在地平线上看到有血色恐怖若隐若现时，也就是你应该浑身颤抖的时候。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

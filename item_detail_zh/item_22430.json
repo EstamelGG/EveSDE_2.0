@@ -3,7 +3,7 @@
   "name": "罪恶级",
   "description": "黑隐特勤战列舰的作用是渗透进敌人后方实施侦查活动。通过使用跳跃引擎以及跳跃通道发生器，它们能够生成一条只允许隐形特勤舰只通过的跳跃通道。这使得它们能够隐秘地在敌后进行侦查和间谍任务。你要是想找执行秘密任务的行家，那就非它莫属了。作为太空中最大的无人机开发商和制造商，西顿工业在无人机航母方面有着先天优势。虽然罪恶级指挥舰在防御能力上稍弱，但它依然能撂倒强悍的对手，当然前提是飞行员使用了最先进的西顿工业无人机。",
   "volume": 454500.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 800.0,
   "mass": 141700000.0,
   "category_name": "舰船",
@@ -693,6 +693,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

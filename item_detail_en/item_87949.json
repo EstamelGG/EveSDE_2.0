@@ -8,6 +8,14 @@
   "mass": 1000.0,
   "category_name": "Infrastructure Upgrades",
   "group_name": "Sovereignty Hub System Effect Generator Upgrades",
-  "attributes": [],
+  "attributes": [
+    {
+      "attribute_name": "distributionID01",
+      "value": 4108.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    }
+  ],
   "traits": []
 }

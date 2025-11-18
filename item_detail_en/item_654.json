@@ -3,7 +3,7 @@
   "name": "Kryos",
   "description": "Aside from being endowed with the usual hauling capabilities of haulers, the Kryos possesses two extra cargo bays. They are both equipped with precise temperature and pressure controls; the first is celebrated specifically for ferrying minerals, while the second is calibrated at the extremely low temperatures required for harvested cosmic ice. \n\nThe Kryos was originally designed as a variant of the Iteron, but eventually evolved to perform an entirely separate role.",
   "volume": 245000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 12625000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

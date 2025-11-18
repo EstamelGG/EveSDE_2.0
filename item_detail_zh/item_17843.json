@@ -3,7 +3,7 @@
   "name": "狂怒者级海军型",
   "description": "狂怒者级海军型最近被联邦海军工程师加以改造，提高了它的装甲维修能力和混合武器威力。它现在是一艘强到可怕的战斗巡洋舰，能将新伊甸中的任何敌人轰上天。",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 460.0,
   "mass": 9700000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

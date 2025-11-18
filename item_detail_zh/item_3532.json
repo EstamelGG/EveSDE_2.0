@@ -3,7 +3,7 @@
   "name": "梯队级",
   "description": "在YC112年年底，一部分限量生产的这种舰船被分配给克隆飞行员。这项举措是统合部为了让 <url=showinfo:3581>大量缴获的萨沙数据分析仪</url> 得到利用而实行的。当萨沙在全宇宙中发动有组织的侵略行为时，统合部希望克隆飞行员能找到运用该硬件对抗萨沙的办法。<br><br> 萨沙数据分析仪技术的特殊性使得它不能与标准的数据总线兼容。但该船独特的船体有一个可自动适应的同步外壳，使该船能与其他非标准硬件互通数据。统合部对该船的设计来源缄口不言。但许多业余分析人士都宣传他们之前已经多次秘密观察到配置与其相近并载有SCC与DED收发机的舰船。",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 1124000.0,
   "category_name": "舰船",
@@ -546,6 +546,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

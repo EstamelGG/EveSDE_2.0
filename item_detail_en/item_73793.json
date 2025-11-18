@@ -3,7 +3,7 @@
   "name": "Phoenix Navy Issue",
   "description": "Caldari doctrine focuses on distributed fleets with well-equipped and independently operating squadrons of agile strikeforces, nevertheless the State has always maintained a powerful capital fleet capability. Military reforms in the wake of losses suffered by the State during the Triglavian Invasions included significant programs aimed at improving the core dreadnought fleets of the Caldari Navy. The result is the Phoenix Navy Issue: a vessel equipped with heavier shields, significantly upgraded capital missile systems, and enhanced with target-painting technology to improve the application of its powerful weapons against any target this heavily-fanged monster cares to destroy.",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2750.0,
   "mass": 1270000000.0,
   "category_name": "Ship",

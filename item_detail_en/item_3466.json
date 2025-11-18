@@ -3,7 +3,7 @@
   "name": "Medium Secure Container",
   "description": "This medium container is fitted with a password-protected security lock.\n\nNote: The container must be anchored to enable password functionality. Anchoring containers is only possible in solar systems with a security status of 0.7 or lower.",
   "volume": 325.0,
-  "repackaged_volume": 33.0,
+  "repackaged_volume": null,
   "capacity": 390.0,
   "mass": 100000.0,
   "category_name": "Celestial",

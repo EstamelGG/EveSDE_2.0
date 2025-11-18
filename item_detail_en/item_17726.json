@@ -3,7 +3,7 @@
   "name": "Apocalypse Navy Issue",
   "description": "The Empire's inner circle of armaments manufacturers has long been proud of the expert methods utilized to harden the Navy Issue Apocalypse's armor plating and structural framework to such an amazing degree. Its shield systems are also state-of-the-art, rivalling even Caldari Prime's best. Fearsome by reputation, this is the flagship vessel of the Imperial Navy's elite wing. Not many are unfortunate enough to have ever actually met one on the field of battle, and those who do usually do not live to tell the tale.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 790.0,
   "mass": 97100000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 240.0,
+      "value": 60.0,
       "categoryID": 5,
       "display_name": "启用耗电量",
       "unit_name": "GJ"
@@ -53,14 +53,14 @@
     },
     {
       "attribute_name": "duration",
-      "value": 60000.0,
+      "value": 15000.0,
       "categoryID": 7,
       "display_name": "作用时间/单次运转时间",
       "unit_name": "s"
     },
     {
       "attribute_name": "miningAmount",
-      "value": 40.0,
+      "value": 10.0,
       "categoryID": 51,
       "display_name": "开采量",
       "unit_name": "m3"
@@ -115,13 +115,6 @@
       "unit_name": "等级"
     },
     {
-      "attribute_name": "crystalsGetDamaged",
-      "value": 1.0,
-      "categoryID": 7,
-      "display_name": "晶体损耗",
-      "unit_name": "1=True 0=False"
-    },
-    {
       "attribute_name": "typeColorScheme",
       "value": 11346.0,
       "categoryID": 7,
@@ -140,6 +133,20 @@
       "value": 0.0,
       "categoryID": 51,
       "display_name": "残渣几率",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritChance",
+      "value": 0.01,
+      "categoryID": 51,
+      "display_name": "暴击成功率",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYield",
+      "value": 2.0,
+      "categoryID": 51,
+      "display_name": "成功暴击额外收益",
       "unit_name": "%"
     }
   ],

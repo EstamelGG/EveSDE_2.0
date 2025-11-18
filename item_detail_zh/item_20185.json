@@ -3,7 +3,7 @@
   "name": "渡神级",
   "description": "作为渡神级的制造者，加达里通常被誉为货舰行业的领头人。他们意识到，随着深空装置数目不断显著增长，对于大型运输工具的需求必定大增，因此他们着手制造终极大规模运输工具——其他帝国不久纷纷跟进。\n\n\n\n尽管如此，渡神级依然是衡量其他货舰的标尺。它巨大的体形和货舱容量无船能及。",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 465000.0,
   "mass": 960000000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

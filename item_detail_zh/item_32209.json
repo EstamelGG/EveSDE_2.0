@@ -3,7 +3,7 @@
   "name": "弥米尔级",
   "description": "米玛塔尔科学家制造的概念性验证用原型机，意图在于将其前线的各种重型突击巡洋舰的特点融为一体。这艘船装配了极强的装甲以及更多的炮台，可绝对不是好惹的。\n\n现在很难看到它的身影，通常它只会用做对于那些在战场上有优秀表现的飞行员的奖励。",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 11650000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Whiptail",
   "description": "When The Scope ran a headline in late YC115 asking \"<i>Has Kaalakiota built the perfect Interceptor?</i>\" most observers viewed it as a provocative ploy to increase readership. \n\nThe Rabbit viewed it as a personal challenge.",
   "volume": 18000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 1000000.0,
   "category_name": "Ship",
@@ -644,6 +644,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

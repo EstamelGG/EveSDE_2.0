@@ -3,7 +3,7 @@
   "name": "Probe Fleet Issue",
   "description": "To satisfy a growing need for brute-force intelligence retrieval, the Minmatar sought a ship which was capable of hit and run operations – one which was capable of striking hard and fast against exposed targets and outrunning their defenders before they had a chance to react.\n\nA solution was found in the commissioning of the Probe Fleet Issue: a ship which combined the delicate data extraction capabilities of the Probe, while abandoning superfluous salvager systems, with the firepower to make a ship as equally capable of cracking encryption codes as it is cracking open the hull of a diplomat's shuttle.",
   "volume": 19500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1123000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

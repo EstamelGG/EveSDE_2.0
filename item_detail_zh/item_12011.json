@@ -3,7 +3,7 @@
   "name": "银鹰级",
   "description": "银鹰级的设计站在巨鸟级坚实的肩膀上，改进了其持久性和有效范围，是新一代的加达里炮舰。它精准的射击能力及巨大的破坏力在巡洋舰级别内傲视群雄，谁要是低估银鹰级的射程，结果只有葬身炮下。加达里星舰的设计越来越趋向于发挥远程武器的功效，异株湖集团向来不甘于人后，在这一领域自然也不例外；银鹰级的设计目标就是具备与它的竞争对手——莱戴集团的希尔博拉斯级舰船——一样令人生畏的远程打击能力。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 11720000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

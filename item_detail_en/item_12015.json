@@ -3,7 +3,7 @@
   "name": "Muninn",
   "description": "Commissioned by the Republic Fleet to create a powerful assault vessel for the strengthening of the Matari tribes as well as a commercial platform for the Heavy Missiles and other weapons produced by the Fleet, Boundless Creation came up with the Muninn. Heavily armored, laden with missile hardpoints and sporting the latest in warhead optimization technology, this is the very definition of heavy assault.",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 515.0,
   "mass": 11000000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

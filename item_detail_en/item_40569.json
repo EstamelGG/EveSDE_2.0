@@ -284,28 +284,28 @@
     },
     {
       "attribute_name": "fighterAbilityECMStrengthGravimetric",
-      "value": 2.3,
+      "value": 3.0,
       "categoryID": 34,
       "display_name": "Gravimetric ECM Jammer Strength (Per Fighter)",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthLadar",
-      "value": 2.3,
+      "value": 3.0,
       "categoryID": 34,
       "display_name": "Ladar ECM Jammer Strength (Per Fighter)",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthMagnetometric",
-      "value": 2.3,
+      "value": 3.0,
       "categoryID": 34,
       "display_name": "Magnetometric ECM Jammer Strength (Per Fighter)",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthRadar",
-      "value": 2.3,
+      "value": 3.0,
       "categoryID": 34,
       "display_name": "Radar ECM Jammer Strength (Per Fighter)",
       "unit_name": null

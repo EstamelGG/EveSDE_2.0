@@ -3,7 +3,7 @@
   "name": "Anshar",
   "description": "CreoDron surprised many by their quick conception of the Anshar, a stark diversification from their usual drone centric ship designs. The Anshar's specially-developed cargo-manipulation drones allowed CreoDron to optimize their loading algorithms and fully utilize every nook and cranny of the ship's spacious interior, ensuring it more than holds its own amongst its peers.",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 137500.0,
   "mass": 940000000.0,
   "category_name": "Ship",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

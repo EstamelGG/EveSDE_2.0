@@ -1,7 +1,7 @@
 {
   "type_id": 17453,
-  "name": "Fiery Kernite",
-  "description": "Known as Rage Stone to veteran miners after a discovery of a particularly rich vein of it caused a bar brawl of epic proportions in the Intaki Syndicate. It has a 10% higher yield than basic kernite.\n\nKernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low and null security status and wormhole systems.",
+  "name": "Kernite III-Grade",
+  "description": "Known as Rage Stone or fiery kernite to veteran miners after a discovery of a particularly rich vein of it caused a bar brawl of epic proportions in the Intaki Syndicate. It has a 10% higher yield than basic kernite.\n\nKernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\nAvailable primarily in low and null security status and wormhole systems.",
   "volume": 1.2,
   "repackaged_volume": null,
   "capacity": null,
@@ -36,6 +36,13 @@
       "categoryID": 31,
       "display_name": "Asteroid radius size multiplier",
       "unit_name": null
+    },
+    {
+      "attribute_name": "asteroidRadiusUnitSize",
+      "value": 600.0,
+      "categoryID": 31,
+      "display_name": "Asteroid unit radius",
+      "unit_name": "m"
     },
     {
       "attribute_name": "stasisWebifierResistance",

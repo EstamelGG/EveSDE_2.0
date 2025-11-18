@@ -1,7 +1,7 @@
 {
   "type_id": 28425,
-  "name": "Batch Compressed Solid Pyroxeres",
-  "description": "Solid Pyroxeres, sometimes called the Flame of Dam'Torsad, is a relative of normal Pyroxeres. The Flame has 5% higher yield than its more common cousin. \n\nPyroxeres is a common ore available in all regions of space. It has fair amounts of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:36>Mexallon</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "Batch Compressed Pyroxeres II-Grade",
+  "description": "II-Grade pyroxeres, sometimes called solid pyroxeres or the Flame of Dam'Torsad, has a 5% higher yield than its more common cousin. \n\nPyroxeres is a common ore available in all regions of space. It has fair amounts of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:36>Mexallon</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 0.16,
   "repackaged_volume": null,
   "capacity": null,

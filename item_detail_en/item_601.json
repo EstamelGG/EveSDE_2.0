@@ -3,7 +3,7 @@
   "name": "Ibis",
   "description": "The Caldari Ibis corvette is a small but stout vessel that fits admirably well as a cargo hauler or small-scale miner. Its reliability makes it a good choice for novice ship captains.",
   "volume": 15000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 125.0,
   "mass": 1163000.0,
   "category_name": "Ship",
@@ -549,6 +549,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -568,6 +575,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

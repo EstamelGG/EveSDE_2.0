@@ -1,7 +1,7 @@
 {
   "type_id": 28430,
-  "name": "Batch Compressed Concentrated Veldspar",
-  "description": "Clusters of veldspar with 5% higher yield, called concentrated veldspar, are sometimes found in areas where normal veldspar is already in abundance.\n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "Batch Compressed Veldspar II-Grade",
+  "description": "Clusters of veldspar with 5% higher yield, called II-Grade or concentrated veldspar, are sometimes found in areas where normal veldspar is already in abundance.\n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 0.15,
   "repackaged_volume": null,
   "capacity": null,

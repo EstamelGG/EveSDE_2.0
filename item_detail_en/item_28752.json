@@ -127,6 +127,20 @@
       "categoryID": 51,
       "display_name": "Residue Probability",
       "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritChance",
+      "value": 0.01,
+      "categoryID": 51,
+      "display_name": "Critical Success Chance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYield",
+      "value": 2.0,
+      "categoryID": 51,
+      "display_name": "Critical Success Bonus Yield",
+      "unit_name": "%"
     }
   ],
   "traits": []

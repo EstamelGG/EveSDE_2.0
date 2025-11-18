@@ -3,7 +3,7 @@
   "name": "Large Audit Log Secure Container",
   "description": "This large audit log container is fitted with a password-protected security lock.",
   "volume": 650.0,
-  "repackaged_volume": 65.0,
+  "repackaged_volume": null,
   "capacity": 780.0,
   "mass": 1000000.0,
   "category_name": "Celestial",

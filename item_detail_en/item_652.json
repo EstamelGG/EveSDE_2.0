@@ -3,7 +3,7 @@
   "name": "Mammoth",
   "description": "The Mammoth is the largest hauler in the Minmatar Republic's light cargo ship fleets. It was designed with aid from the Gallente Federation, making the Mammoth both large and powerful yet also nimble and technologically advanced. A very good buy.",
   "volume": 255000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5500.0,
   "mass": 11500000.0,
   "category_name": "Ship",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

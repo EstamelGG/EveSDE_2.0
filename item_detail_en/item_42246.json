@@ -3,7 +3,7 @@
   "name": "Caedes",
   "description": "<i>\"Terror and murder are tools that serve our great work well but only fools mistake them for ends in themselves. When an atmosphere of unremitting fear is to our purpose, by all means we should horrify and cow the weak with the ferocity of slaughter we bring to their pitiful communities. Even still, the greatest terror can be evoked with the hidden blade and subtle whispers from the shadows unseen. The Great Truth can only be approached by those who master all the ways of power: bloodthirsty fools and unreasoning murderers can never make progress on our path.\"</i>\n\n– Omir Sarikusa, Meditations on a Crimson Chalice",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 170.0,
   "mass": 1200000.0,
   "category_name": "Ship",
@@ -672,6 +672,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

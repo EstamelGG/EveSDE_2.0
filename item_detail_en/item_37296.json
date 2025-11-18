@@ -3,7 +3,7 @@
   "name": "Quad Mega Pulse Laser II",
   "description": "Three specialized high angle turrets fitted with quad-barreled weapons are designed for engaging sub-capital threats.\nNote: May only be fitted to capital class ships.\n\nRequires either regular or advanced frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray, Conflagration, Scorch.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 1.0,
   "mass": 40000.0,
   "category_name": "Module",

@@ -3,7 +3,7 @@
   "name": "Ikitursa",
   "description": "Using the Triglavian <i>Vedmak</i>-class cruiser as a basis, the designers of the Ikitursa have fashioned a powerful heavy assault cruiser from the already potent core design. The Ikitursa has been adapted for capsuleer service using systems based on the venerable <i>Eagle</i>-class heavy assault cruiser and has the powerful defenses and hard striking power one would expect of such a vessel wielding heavy entropic disintegrators.\n\nAs a heavy assault cruiser, the Ikitursa can use an assault damage control for enhanced defense and benefits from increased entropic disintegrator range and damage, while its Triglavian core systems give it advantages in the use of energy neutralizer and pulse weapons, as well as remote armor repairers.\n\n<i>\"We can confirm that Ishukone's proprietary Heavy Assault Cruiser Enhancement Package can be adapted for use in conversion of the Vedmak design to a heavy assault configuration. The basic technology allowing for damage resistance spiking will function on command and microwarpdrive bloom is reduced using the standard techniques. We did attempt to improve shield systems on prototype 2 but overtuning the thermo-kinetic shielding caused a singularity instability alert and the experiment was aborted. Recommend further research and experimentation in an isolated test location.\"</i> – excerpt from report to Caldari Navy Design Bureau 47 from Ishukone Corporation",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 11900000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

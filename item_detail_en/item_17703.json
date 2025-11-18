@@ -3,7 +3,7 @@
   "name": "Imperial Navy Slicer",
   "description": "The Slicer is the Imperial Navy's pride and joy, and one of its biggest weapons in the continual fight against Matari insurgents. Boasting tremendous range and versatility in equipment fittings, a great deal of armor strength and a powerful capacitor, the skilled Slicer pilot is able to take out most frigates with ease.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 130.0,
   "mass": 1003000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

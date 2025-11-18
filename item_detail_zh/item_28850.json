@@ -3,7 +3,7 @@
   "name": "方舟级",
   "description": "世界到了末日，他们便会降临。关注靠近的方舟，因为在那船里，载着救赎。<i>——圣典，灾难诗篇32:6</i>",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 135000.0,
   "mass": 900000000.0,
   "category_name": "舰船",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "戴默斯级",
   "description": "戴默斯级所使用的战术更接近较小的舰船，而不是同级别的类似舰船，它代表了巡洋舰近身缠斗的终极力量。谁要是胆敢过于接近这家伙，只能等着被秒杀。据传，度沃勒实验室在与不明组织签约之后才建造出这种使用疾速炮的终极近战巡洋舰。他们的工程师和设计师的确不辱使命；但那位客户的身份一直是个谜。",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 415.0,
   "mass": 11460000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

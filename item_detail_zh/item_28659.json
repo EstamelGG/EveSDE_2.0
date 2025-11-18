@@ -3,7 +3,7 @@
   "name": "帕拉丁级",
   "description": "旨在成为多用途且能够长时间部署于敌方区域的掠夺舰，代表了当代战舰科技的最前沿。它不仅皮糙肉厚、火力凶猛，还能够使用堡垒科技克敌制胜。这种科技与旗舰的配置技术类似，开启堡垒装备后，舰船的火力大幅提高，同时能够承受巨额伤害，但代价是无法移动。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 1125.0,
   "mass": 160000000.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

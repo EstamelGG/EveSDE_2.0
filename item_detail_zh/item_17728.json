@@ -3,7 +3,7 @@
   "name": "万王宝座级海军型",
   "description": "强大的万王宝座级战列舰终结了针对联邦安全大量的威胁，而且自身也在不停地改进。对最初设计的新近改善，使其适用范围更加广泛，一跃成为联邦最有用的战舰之一。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 840.0,
   "mass": 98400000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

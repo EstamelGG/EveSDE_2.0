@@ -3,7 +3,7 @@
   "name": "Pacifier",
   "description": "Notorious across New Eden, the Pacifier-class frigate has made its name as CONCORD's premier fast-attack frigate, capable of laying waste even to the Angel Cartel's legendary Dramiel-class high-performance frigates.\n\nOriginally based on a hybridization of the Punisher and Rifter frigate hulls, CONCORD's Directive Enforcement Department became concerned early in the Drifter Crisis that the design could no longer meet its needs. The Pacifier joined other ship classes in the DED inventory as part of CONCORD Aerospace's \"Force Majeure Program\" to develop enhanced variants.\n\nWhile CONCORD Aerospace successfully upgraded the Pacifier and other DED vessels with hyper-advanced technology, the program became a severe drain on CONCORD's resources. Consequently, the Inner Circle authorized a limited release of the Pacifier, stripped of CONCORD's advanced rapid-deployment and electronic warfare suites, to the capsuleer market via authorized dealers.",
   "volume": 20000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 1400000.0,
   "category_name": "Ship",
@@ -714,6 +714,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

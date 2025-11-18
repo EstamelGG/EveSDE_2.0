@@ -3,7 +3,7 @@
   "name": "涅鲁斯级",
   "description": "涅鲁斯级最初是伊特龙级运载舰的衍生版本，不仅快速，而且可靠。由于价格低廉且具有无数种装配可能性，它广受新伊甸居民和武装人员的喜爱。尽管它快速且结实，但是在敌对领地中进行运输任务的话最好还是配备支护航队，这也是为什么涅鲁斯级有一个无人机挂舱的原因。",
   "volume": 240000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 2700.0,
   "mass": 11250000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

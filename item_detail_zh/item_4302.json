@@ -3,7 +3,7 @@
   "name": "预言级",
   "description": "YC113年，女皇贾米尔·萨拉姆一世责令<a href=showinfo:30//500003>艾玛</a>舰船制造商建造一种能够打破势力战争僵局的新型战列巡洋舰。<a href=showinfo:2//1000066>维鲜集团</a>的工程师背离了古板的大杀伤力和厚重护甲理念，反而从<a href=showinfo:30//500001>加达里</a>的历史中获得了灵感。\n<br>在盖伦特-加达里战争中，加达里发明了一种轻型而高机动性的舰船以对抗<a href=showinfo:30//500004>盖伦特联邦</a>缓慢而笨重的船只。以此为基本理念，再加上顶尖的动力系统和超轻合金装甲，预言级就此诞生了。\n<br>帝国立即下令将舰船投产。女皇还以个人名义向维鲜集团首席研究员<a href=showinfo:1383//3014474>帕鲁得·瓦克罗克</a>表示祝贺，称预言级为“神赐帝国之恩典，神赐敌人之惩罚”。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 500.0,
   "mass": 14760000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -1,7 +1,7 @@
 {
   "type_id": 17470,
-  "name": "Concentrated Veldspar",
-  "description": "Clusters of veldspar with 5% higher yield, called concentrated veldspar, are sometimes found in areas where normal veldspar is already in abundance.\n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\nAvailable primarily in high security status star systems.",
+  "name": "Veldspar II-Grade",
+  "description": "Clusters of veldspar with 5% higher yield, called II-Grade or concentrated veldspar, are sometimes found in areas where normal veldspar is already in abundance.\n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\nAvailable primarily in high security status star systems.",
   "volume": 0.1,
   "repackaged_volume": null,
   "capacity": null,

@@ -3,7 +3,7 @@
   "name": "方尖塔级",
   "description": "针对加达里的货舰渡神级，联邦设计了方尖塔级。两者拥有相似的特性，但方尖塔级货舰的适应力更佳。这个庞然大物代表了盖伦特最新最优秀的运输技术。",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 440000.0,
   "mass": 940000000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

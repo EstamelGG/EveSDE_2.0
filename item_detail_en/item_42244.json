@@ -1,9 +1,9 @@
 {
   "type_id": 42244,
   "name": "Porpoise",
-  "description": "When new lower-mass wormhole connections began appearing across Anoikis in late YC116, ORE tasked the engineers at its advanced Outer Ring Development labs with creating a mining foreman vessel capable of passing through these gateways and exploiting the unspoiled riches available within. Creating such a compact ship while preserving much of the utility of the larger Orca and Rorqual designs proved a significant challenge, but the end result was a ship that had great potential for capsuleer mining operations in all areas of space.\n\nThe Porpoise can use a medium industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Porpoise also having this capability, although limited to using medium gas and asteroid ore compressors.\n\nThe Porpoise is a smaller, more mobile and more affordable mining foreman platform that is perfect for supporting mining operations in dangerous space. It is capable of providing support to its allies through mining foreman bursts, remote shield boosters and survey scanners. The Porpoise also enjoys strong bonuses to mining drones, allowing it to pull in its own share of the ore in any mining operation.",
+  "description": "When new lower-mass wormhole connections began appearing across Anoikis in late YC116, ORE tasked the engineers at its advanced Outer Ring Development labs with creating a mining foreman vessel capable of passing through these gateways and exploiting the unspoiled riches available within. Creating such a compact ship while preserving much of the utility of the larger Orca and Rorqual designs proved a significant challenge, but the end result was a ship that had great potential for capsuleer mining operations in all areas of space.\n\nThe Porpoise can use a medium industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Porpoise also having this capability, although limited to using medium gas and asteroid ore compressors.\n\nThe Porpoise is a smaller, more mobile and more affordable mining foreman platform that is perfect for supporting mining operations in dangerous space. It is capable of providing support to its allies through mining foreman bursts and remote shield boosters. The Porpoise also enjoys strong bonuses to mining drones, allowing it to pull in its own share of the ore in any mining operation.",
   "volume": 400000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 500.0,
   "mass": 4500000.0,
   "category_name": "Ship",
@@ -584,13 +584,6 @@
       "unit_name": "%"
     },
     {
-      "attribute_name": "roleBonusSurveyScannerRange",
-      "value": 300.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": "%"
-    },
-    {
       "attribute_name": "rigSize",
       "value": 2.0,
       "categoryID": 7,
@@ -645,6 +638,13 @@
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",
@@ -757,6 +757,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -768,9 +775,6 @@
     },
     {
       "content": "<b>2%</b> bonus to <a href=showinfo:22536>Mining Foreman Burst</a> effect strength and duration"
-    },
-    {
-      "content": "<b>300%</b> bonus to <a href=showinfo:444>Survey Scanner</a> range"
     },
     {
       "content": "<b>400%</b> bonus to <a href=showinfo:3422>Remote Shield Booster</a> optimal range"
@@ -795,6 +799,9 @@
     },
     {
       "content": "Can use two <a href=showinfo:3348>Command Burst</a> modules"
+    },
+    {
+      "content": "can connect to <a href=showinfo:90037>Mobile Phase Anchor</a> deployables, providing <b>35</b> points of power"
     },
     {
       "content": "can fit <a href=showinfo:62590>Medium Industrial Core</a>"

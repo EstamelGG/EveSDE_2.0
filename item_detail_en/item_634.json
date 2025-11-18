@@ -3,7 +3,7 @@
   "name": "Exequror",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. Both Frigate and Cruiser-class ships were put under the microscope, and in the Gallente Federation the outcome of the re-evaluation process led, among other developments, to a redesign and redeployment of the Exequror.\n\nThe Exequror was a heavy cargo cruiser originally strong enough to defend itself against raiding frigates, though it lacked prowess in heavier combat situations. After its redesign, it had some of that bulk - and, necessarily, some of that strength - yanked out and replaced with the capability to help others in heavy combat situations, in particular those who needed armor repairs.",
   "volume": 113000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 495.0,
   "mass": 11020000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

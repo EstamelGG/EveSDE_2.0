@@ -3,7 +3,7 @@
   "name": "Hurricane",
   "description": "The force with which this ship hits is more than sufficient to leave a trail of shattered enemies, floating around like so much lifeless debris. An adaptable vessel, it has enough turret hardpoints for a full-scale assault while remaining versatile enough to allow for plenty of missile fire, and has both sufficient speed to outrun its enemies and sufficient capacitor charge to outlast them.",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 425.0,
   "mass": 12800000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

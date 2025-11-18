@@ -3,7 +3,7 @@
   "name": "奥鸟级",
   "description": "在图克尔人使用这种能够跳跃的货舰后不久，其他集团便发现了这种舰船的内在战术价值。经过旷日持久的谈判后，异株湖终于达成了购买一项未公开专利的协议。这些数据让他们在核心技术基础上创新强化了图克尔部族的设计，并快速生产出了最大的战略货舰——奥鸟级——星际中真正的庞然大物。",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 144000.0,
   "mass": 960000000.0,
   "category_name": "舰船",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

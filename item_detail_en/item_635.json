@@ -3,7 +3,7 @@
   "name": "Opux Luxury Yacht",
   "description": "The Opux Luxury Yachts are normally used by the entertainment industry for pleasure tours for wealthy Gallente citizens. These Opux Luxury Yacht cruisers are rarely seen outside of Gallente controlled space, but are extremely popular within the Federation.",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 1750.0,
   "mass": 13075000.0,
   "category_name": "Ship",
@@ -546,6 +546,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

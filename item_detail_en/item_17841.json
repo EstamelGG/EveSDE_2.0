@@ -3,7 +3,7 @@
   "name": "Federation Navy Comet",
   "description": "The Comet's design comes from one Arnerore Rylerave, an engineer and researcher of the Roden Shipyards corporation. Originally created as a standard-issue police patrol vessel, its tremendous maneuverability and great offensive capabilities catapulted it into the Navy's ranks, where it is now a widely-used skirmish vessel.",
   "volume": 16500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 145.0,
   "mass": 970000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "弓头鲸级",
   "description": "作为外空联合矿业面向克隆飞行员群体的新产品，弓头鲸级货舰是一艘专精于运送舰船的运输舰。得益于运用在逆戟鲸级和长须鲸级上的舰船处理技术，外空联合开发打造了这样一艘船，致力于实现大批已组装舰船的快速运输。\n\n外空联合矿业针对弓头鲸级的市场策略是把它打造成一个灵活性强的运输平台，为宇宙各地的舰队后勤运输提供方便。",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 4000.0,
   "mass": 400000000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

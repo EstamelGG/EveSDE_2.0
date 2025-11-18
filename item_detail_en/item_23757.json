@@ -3,7 +3,7 @@
   "name": "Archon",
   "description": "The Archon was commissioned by the Imperial Navy to act as a personnel and fighter carrier. The order to create the ship came as part of a unilateral initiative issued by Navy Command in the wake of Emperor Kor-Azor's assassination. Sporting the latest in fighter command interfacing technology and possessing characteristically strong defenses, the Archon is a powerful aid in any engagement.\n\nThe Archon is capable of generating a <a href=showinfo:83094>Jump Conduit Portal</a> which allows it to instantaneously transport itself and nearby fleet members to a target cynosural beacon. Ship classes that can be moved via conduit: Frigates, Destroyers, Cruisers, Battlecruisers, and Battleships.",
   "volume": 13950000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 825.0,
   "mass": 1260000000.0,
   "category_name": "Ship",
@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 3950000.0,
+      "value": 315000.0,
       "categoryID": 6,
       "display_name": "Maximum Targeting Range",
       "unit_name": "m"
@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "maximumRangeCap",
-      "value": 1000000000.0,
+      "value": 750000.0,
       "categoryID": 6,
       "display_name": "Theoretical Maximum Targeting Range",
       "unit_name": "m"
@@ -508,7 +508,7 @@
     },
     {
       "attribute_name": "shipMaintenanceBayCapacity",
-      "value": 1000000.0,
+      "value": 2000000.0,
       "categoryID": 40,
       "display_name": "Ship Maintenance Bay Capacity",
       "unit_name": "m3"
@@ -697,7 +697,7 @@
     },
     {
       "attribute_name": "fighterCapacity",
-      "value": 60000.0,
+      "value": 65000.0,
       "categoryID": 38,
       "display_name": "Fighter Hangar Capacity",
       "unit_name": "m3"
@@ -746,7 +746,7 @@
     },
     {
       "attribute_name": "fighterTubes",
-      "value": 3.0,
+      "value": 4.0,
       "categoryID": 38,
       "display_name": "Fighter Squadron Launch Tubes",
       "unit_name": null
@@ -760,7 +760,7 @@
     },
     {
       "attribute_name": "fighterSupportSlots",
-      "value": 1.0,
+      "value": 2.0,
       "categoryID": 38,
       "display_name": "Support Fighter Squadron Limit",
       "unit_name": null
@@ -890,6 +890,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusCarrierA5",
+      "value": 2.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -898,6 +905,9 @@
     },
     {
       "content": "<b>1%</b> bonus to <a href=showinfo:20494>Armored Command</a> and <a href=showinfo:20495>Information Command</a> burst strength and duration"
+    },
+    {
+      "content": "<b>2%</b> bonus to Cenobite <a href=showinfo:40573>Support Fighter</a> neutralization strength"
     },
     {
       "content": "<b>200%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"
@@ -912,10 +922,10 @@
       "content": "<b>5x</b> penalty to <a href=showinfo:34593>Entosis Link</a> duration"
     },
     {
-      "content": "Can fit <a href=showinfo:41411>Networked Sensor Array</a>"
+      "content": "Can fit <a href=showinfo:83465>Capital Micro Jump Drive</a> and <a href=showinfo:83485>Capital Micro Jump Field Generator</a>"
     },
     {
-      "content": "Can fit <a href=showinfo:83465>Capital Micro Jump Drive</a> and <a href=showinfo:83485>Capital Micro Jump Field Generator</a>"
+      "content": "Can fit <a href=showinfo:90475>Integrated Sensor Array</a>"
     },
     {
       "content": "Can fit two <a href=showinfo:3348>Command Burst</a> modules"

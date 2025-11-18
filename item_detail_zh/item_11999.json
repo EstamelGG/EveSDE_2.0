@@ -3,7 +3,7 @@
   "name": "流浪级",
   "description": "它是迄今为止速度最快的巡洋舰，最适合速度和火力同样重要的游击战。其舰载能源核心可能难以承受某些较大型的武器的需求，不过在游击战中，流浪级所向披靡。图克尔混合企业改进了刺客级的最初设计，据此创造出的流浪级是具有巡洋舰尺寸的突击舰，既能胜任保护移动设施的任务，又可以对敌人发动闪电袭击。他们向来擅长制造星际航线上飞行速度最快的舰船，并一直恪守这一传统，流浪级可说是他们的巅峰作之一。",
   "volume": 80000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 460.0,
   "mass": 11590000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

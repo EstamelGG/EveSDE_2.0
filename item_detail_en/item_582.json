@@ -3,7 +3,7 @@
   "name": "Bantam",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. In the Caldari State, this led to the redesign and redeployment of the Bantam.\n\nThe Bantam, a strong and sturdy craft, was originally an extremely effective mining frigate. After its redesign, the Bantam's large structure had to give way for logistics systems that ate up some of its interior room but allowed it to focus extensively on shield support for fellow vessels.",
   "volume": 20000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 270.0,
   "mass": 1480000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

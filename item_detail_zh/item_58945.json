@@ -235,14 +235,14 @@
     },
     {
       "attribute_name": "industrialCoreLocalLogisticsDurationBonus",
-      "value": -30.0,
+      "value": -40.0,
       "categoryID": 37,
       "display_name": "护盾回充增量器持续时间加成",
       "unit_name": "%"
     },
     {
       "attribute_name": "industrialCoreLocalLogisticsAmountBonus",
-      "value": 20.0,
+      "value": 40.0,
       "categoryID": 37,
       "display_name": "护盾回充增量器回充量加成",
       "unit_name": "%"

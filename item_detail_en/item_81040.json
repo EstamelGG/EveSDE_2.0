@@ -3,7 +3,7 @@
   "name": "Avalanche",
   "description": "Designed to be the ultimate solution to all solar system infrastructure hauling needs, the <i>Avalanche</i>-class Freighter was conceived. Expertise provided by ORE's experience with their Bowhead design was invaluable in installing the gigantic infrastructure hold and powered slots for modules, while scientists from Mordu's Legion were able to outfit the Avalanche with new advanced missile guidance routines for auto-targeting missiles as well as installing missile armaments that could put most Battleships to shame.\n\nThe Avalanche is also capable of fitting capital sized shield flex hardener modules, thanks to a collaborative effort between Chemal Tech, Eifyr and Co and Propel Dynamics, although this, on top of the gigantic infrastructure hold it possesses has come at the expense of it having far too large and turbulent of a digital signature to be able to use a cloaking device.",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 205000.0,
   "mass": 960000000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

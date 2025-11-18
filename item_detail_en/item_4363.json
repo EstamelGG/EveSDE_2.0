@@ -3,7 +3,7 @@
   "name": "Miasmos Quafe Ultra Edition",
   "description": "The Miasmos Quafe Ultra Edition was commissioned by the Quafe Corporation as a specialized vessel for the distribution of Quafe throughout the New Eden cluster.\n\nTo this end, the ship has been made more agile, given a faster warp engine and fitted with an upgraded cargohold that can carry vast amounts of sweet, sweet Quafe. Additionally, the controls have been simplified so that new pilots can be trained quickly and efficiently, allowing for optimal transport labor wages.\n\nA later addition under the new \"Miasmos\" moniker included a small number of sealed vats, but Quafe has demanded that those be accessed solely by corporate representatives, and not by crew nor capsuleer.",
   "volume": 265000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5250.0,
   "mass": 11250000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

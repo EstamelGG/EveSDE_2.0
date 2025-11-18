@@ -3,7 +3,7 @@
   "name": "Absolution",
   "description": "Command ships are engineered specifically to wreak havoc on a battlefield of many. Sporting advanced command module interfaces, these vessels are more than capable of turning the tide in large engagements. Command ships represent the ultimate in Command Burst efficiency; the boosts they give their comrades in combat make them indispensable assets to any well-rounded fleet.",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 375.0,
   "mass": 12300000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

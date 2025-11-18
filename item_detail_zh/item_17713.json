@@ -3,7 +3,7 @@
   "name": "刺客级舰队型",
   "description": "越来越多的呼声要求对刺客级进行改造，使其成为一艘符合军事化标准的舰队作战舰船。共和舰队批准了改造方案，于是一种速度稍慢，但更加坚固、火力更加强劲的战舰由此诞生了。因为服役时间不长，刺客级舰队型还没有参与过任何大型的战斗，但它的设计师以及舰队指挥层都对它的潜力满怀信心。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 10810000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

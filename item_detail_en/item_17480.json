@@ -3,7 +3,7 @@
   "name": "Procurer",
   "description": "The mining barge was designed by <a href=showinfo:30//500014>ORE</a> to facilitate advancing the mining profession to a whole new level. Each barge was created to excel at a specific function, the Procurer's being durability and self-defense.\n\nMining barges are equipped with electronic subsystems specifically designed to accommodate Strip Mining and Ice Harvesting modules.",
   "volume": 150000.0,
-  "repackaged_volume": 3750.0,
+  "repackaged_volume": null,
   "capacity": 350.0,
   "mass": 20000000.0,
   "category_name": "Ship",
@@ -598,6 +598,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -687,6 +694,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

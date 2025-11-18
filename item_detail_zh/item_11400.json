@@ -3,7 +3,7 @@
   "name": "美洲虎级",
   "description": "美洲虎级是一种快速的多功能导弹平台，拥有强大的护盾系统和可观的生存能力。它的发展轨迹类似于更便宜的分裂级护卫舰，而分裂级已经是米玛塔尔舰队中的可靠力量。美洲虎级最初作为一个游击战平台由图克尔混合企业研发，但其在引擎效率上的进步使其足以在速度上与猎狼级突击护卫舰相媲美。图克尔曾考虑为美洲虎级加装速度更快的推进系统，但最终选择将设计卖给了核心局面公司。核心局面公司急于在市场上打开局面，对美洲虎级的职能进行了改造，从长于速度转变为精于护盾。",
   "volume": 27289.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 130.0,
   "mass": 1229400.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

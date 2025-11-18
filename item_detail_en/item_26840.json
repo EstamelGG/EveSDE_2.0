@@ -3,7 +3,7 @@
   "name": "Raven State Issue",
   "description": "This State Issued version of the powerhouse Caldari Battleship - The Raven - was designed in a joint venture by the eight Caldari supercorporations. It was created expressly to honor those whose valor in combat, and adherence to the Caldari code of battle, has surpassed that of their comrades in arms. Of course, should the ship be lost, the immense dishonour to the pilot demands that he take his own life, but seeing as how this wouldn't affect him in the slightest, tradition holds that the highest-ranked of the surviving crew members take his place.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 665.0,
   "mass": 99300000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

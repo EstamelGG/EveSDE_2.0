@@ -3,7 +3,7 @@
   "name": "Atron",
   "description": "The Atron is a hard nugget with an advanced power conduit system, but little space for cargo. Although it is a good harvester when it comes to mining, its main ability is as a combat vessel.",
   "volume": 22500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 145.0,
   "mass": 1050000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

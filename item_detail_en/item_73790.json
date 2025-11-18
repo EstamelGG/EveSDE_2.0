@@ -3,7 +3,7 @@
   "name": "Revelation Navy Issue",
   "description": "Imperial Navy planners regard the Revelation-class dreadnoughts as a mainstay of Amarr military capability, with numerous variants having been developed from the basic class, including several marks of planetary assault dreadnoughts. For fleet actions and sieges of space installations, the Ministry of War required that an upgraded Revelation Navy Issue be equipped with even heavier armor, the most powerful capital energy weapons possible, and an effective capacitor warfare capability. The enhanced naval variant of the storied Revelation-class is a divine beast that amply epitomizes the Amarr way of war.\n\n<i>\"Let not your sword sleep easy in your hand, till the cities of God be built across heaven's band.\"</i> – The Scriptures, Book of Graces 11:29",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2175.0,
   "mass": 1290000000.0,
   "category_name": "Ship",

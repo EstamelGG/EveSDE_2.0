@@ -3,7 +3,7 @@
   "name": "小型货物集装箱",
   "description": "用于星域间货运的大型货柜集装箱，最常用在货舰上。",
   "volume": 1000.0,
-  "repackaged_volume": 10.0,
+  "repackaged_volume": null,
   "capacity": 1000.0,
   "mass": 1000000.0,
   "category_name": "天体",

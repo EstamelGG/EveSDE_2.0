@@ -3,7 +3,7 @@
   "name": "幽灵级",
   "description": "与其它萨沙战舰一样，人们对幽灵级的设计起源知之甚少。它的外形非常奇特，却蕴含了非凡的物理研究成果：线条和棱角共同构成了弹性和完整性都无与伦比的结构外形。幽灵级巡洋舰装配有先进的挂载技术和极高效的能源核心，其传奇性的地位名至实归。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 410.0,
   "mass": 9600000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

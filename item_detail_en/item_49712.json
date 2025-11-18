@@ -3,7 +3,7 @@
   "name": "Rodiva",
   "description": "A cruiser-sized vessel that is oriented towards remote armor repair and seems to be the Collective's equivalent of a support cruiser, the Rodiva is another Triglavian design that has proven adaptable to capsuleer technology, as with previously recovered examples of ship architecture recovered from Abyssal Deadspace.\n\nThe Rodiva's remote repair systems are considerably enhanced by adaptive armor-repair mutaplasmids that are used as nanite feedstock for its remote repair projectors. As the armor-repair mutaplasmid stream is able to adapt itself in real-time to specific target ship conditions far more efficiently than standard armor-repair nanites, the efficiency of armor repairing performed by the nanite stream on a given target increases over time towards a maximal repair output.\n\n<i>By the prayer of Convocation of Triglav Outside the Struggle, Rodiva Subclade of Veles Clade relinquished the adaptation scheme of now-time accepted 72 tactical troika classification into the cladeflow of Triglav. Strategic troika have advancing-time pressure for adaptation into tactical subroles conforming to now-time accepted noema of cladistic proving by Convocation of Triglav Outside the Struggle.</i> – partial translation of data included in recovered design schematics of the Rodiva",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 435.0,
   "mass": 10120000.0,
   "category_name": "Ship",
@@ -553,6 +553,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Vehement",
   "description": "Reacting to the rise of capsuleer capital fleets, the Serpentis Corporation requested that the Angel Cartel’s naval architects design a dreadnought class capital ship. This was done using the Moros hull as the basis for a formidable mobile weapons platform. After receiving the prototype, capital ship engineers from the Cartel’s Guardian Angels division maximized the damage potential of the design. For good measure, the Guardian Angels combined this with advanced Serpentis stasis webification technology.",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2550.0,
   "mass": 1250000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "曲剑级",
   "description": "曲剑级拥有特殊的索敌支援阵列，其设计的主要意图是协助重型战舰跟踪高速移动的目标。作为支援巡洋舰，它的行动相对较灵活，经常在战列舰之间穿行，并在保护自己的同时，协助这些大家伙消灭敌人。",
   "volume": 89000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 12090000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

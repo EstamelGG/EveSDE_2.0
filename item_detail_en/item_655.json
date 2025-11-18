@@ -3,7 +3,7 @@
   "name": "Epithal",
   "description": "Aside from being endowed with the usual carrying capabilities of haulers, the Epithal possesses an extra cargo bay. That bay is equipped with sealed sub-chambers capable of maintaining hospitable environments for practically any kind of organism or entity, from biocells to viral agents, and is meant solely for ferrying planetary commodities. The Epithal was originally designed as a variant of the Iteron, but eventually evolved to perform an entirely separate role.",
   "volume": 250000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 12800000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Heron Navy Issue",
   "description": "The basic Heron hull design has always served the Caldari well as a scout, survey and exploration ship but the Caldari Navy wished to optimize its upgraded Herons with enhanced missile systems and dedicated processing to support combat probing. The trade-off meant stripping out the specialized salvaging systems to make room for the Heron Navy Issue's combat upgrades.\n\nThe security of the State requires that its scouting and exploration capabilities be accompanied by sufficient firepower to seize and hold any new discovery or destroy interlopers at the fringes of Caldari space.",
   "volume": 18900.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1150000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

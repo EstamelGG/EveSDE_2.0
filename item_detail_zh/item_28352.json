@@ -3,7 +3,7 @@
   "name": "长须鲸级",
   "description": "长须鲸级是由外空联合矿业集团(ORE)设计并建造，用于满足日益增长的旗舰工业平台需求，支持并承担大规模的深空采矿作业。\n\n\n\n长须鲸级能够使用旗舰级工业核心来大幅提高工业效能，并增强防御能力。启用工业核心后，长须鲸级能够使用强大的旗舰级压缩装置。\n\n\n\n除此之外，长须鲸级还能装配旗舰级牵引光束，以比普通牵引光束更快的速度将更远距离外的货柜拉近。它还拥有相当大的无人机挂舱、克隆舱和跳跃引擎。这些因素结合起来，长须鲸级可以说是非常理想的深空矿业操作的纽带。\n\n\n\n由于专精工业操作，所以它的舰船维护舱只能容纳工业舰、采矿驳船以及它们的二级科技衍生船型。",
   "volume": 14500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 40000.0,
   "mass": 800000000.0,
   "category_name": "舰船",
@@ -633,13 +633,6 @@
       "unit_name": null
     },
     {
-      "attribute_name": "surveyScannerRangeBonus",
-      "value": 900.0,
-      "categoryID": 7,
-      "display_name": null,
-      "unit_name": "%"
-    },
-    {
       "attribute_name": "cargoScannerRangeBonus",
       "value": 200.0,
       "categoryID": 9,
@@ -787,6 +780,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -904,6 +904,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -944,9 +951,6 @@
       "content": "<b>90%</b> 减少跳跃距离对产生跳跃疲劳的影响"
     },
     {
-      "content": "<b>900%</b> <a href=\"showinfo:444\">测量扫描器</a>距离加成"
-    },
-    {
       "content": "可以操作“采掘者”无人机"
     },
     {
@@ -960,6 +964,9 @@
     },
     {
       "content": "可以装配三个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以连接到<a href=showinfo:90037>移动相位锚标</a>可部署设备，提供<b>100</b>点能量"
     }
   ]
 }

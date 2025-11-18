@@ -22,13 +22,6 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": "类别ID"
-    },
-    {
-      "attribute_name": "reprocessingSkillType",
-      "value": 12189.0,
-      "categoryID": 7,
-      "display_name": "回收再生技能",
-      "unit_name": "类别ID"
     }
   ],
   "traits": []

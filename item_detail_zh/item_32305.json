@@ -3,7 +3,7 @@
   "name": "末日沙场级海军型",
   "description": "这是令人生畏的末日沙场级的加强型，这艘舰船可能是人类所制造的最具杀伤力的战争机器。成为这样一艘舰船的指挥官是艾玛帝国中众多令人向往的最高荣誉之一，而遭受它的舰炮摧残则是回归虚空的最恐怖方式之一。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 875.0,
   "mass": 105200000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

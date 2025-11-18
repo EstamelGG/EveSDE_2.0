@@ -3,7 +3,7 @@
   "name": "Svipul",
   "description": "Released in YC 117 as the result of the first Republic Fleet joint research project to include engineers from all seven Minmatar tribes, the Svipul is a powerful symbol of inter-tribal unity for many Republic citizens.\n\nAlthough the contributions of engineers from the Nefantar and Starkmanir tribes were fairly minor, a large delegation from the Vo-Lakat Thukker caravan and donations from Republic loyalist capsuleers across the cluster were invaluable to the development of this incredibly adaptable warship.",
   "volume": 47000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 430.0,
   "mass": 1400000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

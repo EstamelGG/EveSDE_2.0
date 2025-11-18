@@ -127,6 +127,20 @@
       "categoryID": 51,
       "display_name": "残渣几率",
       "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritChance",
+      "value": 0.01,
+      "categoryID": 51,
+      "display_name": "暴击成功率",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYield",
+      "value": 2.0,
+      "categoryID": 51,
+      "display_name": "成功暴击额外收益",
+      "unit_name": "%"
     }
   ],
   "traits": []

@@ -3,7 +3,7 @@
   "name": "Mimir",
   "description": "A highly experimental prototype created by Minmatar scientists, intended to combine the qualities of their front line heavy assault cruisers. Heavily plated and sporting additional thrusters, this ship is not to be taken lightly.\n\nRarely seen these days, the ship is typically given out only to select pilots as a reward for their excellence in combat.",
   "volume": 96000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 11650000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "德雷卡瓦级",
   "description": "德雷卡瓦级是一艘重型战列舰级飞船，在三神裔舰船体系中扮演冲锋陷阵的角色，是又一艘可适应克隆飞行员科技的三神裔舰船。\n\n\n\n与三神裔其他的前线战斗舰船一样，德雷卡瓦级能够装配重型熵能分解者以及诸如能量中和器和脉冲武器等的一系列辅助武器。这艘船还能使用无人机，并具备远距维修能力。\n\n\n\n<i>雷电裔演化枝的德雷卡瓦分枝放弃了将243个战术三头分类纳入雷电裔演化枝谱系的进化图谱。303回路的15、21和29区现正承受压力。</i> – 德雷卡瓦级设计图谱中复原出的数据的翻译节选",
   "volume": 233000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 650.0,
   "mass": 10700000.0,
   "category_name": "舰船",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

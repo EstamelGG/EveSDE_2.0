@@ -1,7 +1,7 @@
 {
   "type_id": 7001,
-  "name": "Dual Heavy Afocal Pulse Maser I",
-  "description": "This heavy pulse energy weapon uses two separate maser focusing systems to reduce the cool down period between shots. A great weapon for medium to long range encounters. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
+  "name": "Dual Heavy Afocal Pulse Laser I",
+  "description": "This heavy pulse energy weapon uses two separate laser focusing systems to reduce the cool down period between shots. A great weapon for medium to long range encounters. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 20.0,
   "repackaged_volume": null,
   "capacity": 1.0,

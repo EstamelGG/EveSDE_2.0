@@ -3,7 +3,7 @@
   "name": "狞獾级海军型",
   "description": "狞獾级海军型的诞生是为了应付加达里境内日益增加的海盗入侵者，而它们在这一任务中确实表现极为出色。它那经过强化的防御能力以及装备升级潜力，使其在防御国土的任务中发挥着越来越大的作用。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 9600000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

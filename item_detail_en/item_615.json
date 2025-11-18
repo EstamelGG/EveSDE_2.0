@@ -3,7 +3,7 @@
   "name": "Immolator",
   "description": "The Immolator is a small ship, designed by the upper (read: unslaved) echelon of Sansha's Nation to serve as a good entry for those pilots new to the glory of Nation. It excels in picking off smaller targets and hitting them hard with energy beams.",
   "volume": 17400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 115.0,
   "mass": 1148000.0,
   "category_name": "Ship",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

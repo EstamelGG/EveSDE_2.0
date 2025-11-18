@@ -3,7 +3,7 @@
   "name": "Adrestia",
   "description": "The Adrestia is a high-powered blaster platform specially commissioned for the 8th Alliance Tournament. While similar to its sister vessel the Deimos (on which its design was based), this ship nonetheless differs in some very important ways. Utilizing lightweight alloys and a prototype form of ion thruster, the Adrestia is capable of reaching truly mind-boggling speeds for a heavy assault vessel. While this makes it less sturdy than its predecessor, the lack of defensive plating is compensated for by state-of-the-art targeting systems, thoroughly optimized weapon hardpoints and upgraded warp scrambling capability. Don't let the lack of defense fool you; very few vessels out there can stand against the Adrestia toe to toe.",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 11100000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

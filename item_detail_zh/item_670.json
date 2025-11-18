@@ -3,7 +3,7 @@
   "name": "太空舱",
   "description": "神秘莫测的朱庇特内议会拥有极其先进的技术，向一家小型加达里超级集团赠予了某项技术的蓝图和设计，而这项技术将彻底改变人类的命运。经过重重筛选的一小部分人拥有强健的体魄和坚定的意志，能够过渡到后人类时代，他们将掌握这项技术，获得超乎想象的权力和财富，并几近实现永生。",
   "volume": 1000.0,
-  "repackaged_volume": 500.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 32000.0,
   "category_name": "舰船",
@@ -427,6 +427,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

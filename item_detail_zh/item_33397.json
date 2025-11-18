@@ -3,7 +3,7 @@
   "name": "克雷默斯级",
   "description": "克雷默斯级是天使集团在隐形特勤舰船方面的新尝试。千万别被它的舰船级别给骗了，克雷默斯级可是一艘强大的战斗舰船。它拥有先进的隐形装置、辅以之前只在隐形轰炸舰上使用的高级锁定系统及海量的中槽位，使得它可以随心所欲地掌控战斗，所向披靡。在你看到一艘克雷默斯级从黑暗中现身的那一刻，战斗其实就已经结束了。",
   "volume": 28000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 190.0,
   "mass": 930000.0,
   "category_name": "舰船",
@@ -651,6 +651,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

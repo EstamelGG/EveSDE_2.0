@@ -3,7 +3,7 @@
   "name": "单元推进持久型10000MN加力燃烧器",
   "description": "激活后将增加舰船的最大速度。推进舰船的动力和相应的最大速度加成均受使用该装备的舰船重量所限。\n\n注：只能用于旗舰级舰船。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "装备",

@@ -3,7 +3,7 @@
   "name": "多米尼克斯级海军型",
   "description": "多米尼克斯级海军型在历史上名声显赫，它因为在两百年前协同火龙级轨道轰炸舰一起执行对加达里首星的封锁和轰炸任务而闻名。此舰按照克隆舱规范设计生产，并根据传统的战斗需求进行了重新装配，多米尼克斯级海军型今天依然是一艘在中近距离上具有极强杀伤力的战舰。",
   "volume": 454500.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

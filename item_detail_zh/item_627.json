@@ -3,7 +3,7 @@
   "name": "托勒克斯级",
   "description": "托勒克斯级巡洋舰是最近被联邦编入现役的战舰。尽管托勒克斯级体现了典型的现代盖伦特设计理念，适合任何距离的作战，不过它还是最擅长在极短的距离内用疾速炮和成群的战斗无人机将哪怕最为顽强的敌人撕成碎片。",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 465.0,
   "mass": 11280000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -22,13 +22,6 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": "typeID"
-    },
-    {
-      "attribute_name": "reprocessingSkillType",
-      "value": 12189.0,
-      "categoryID": 7,
-      "display_name": "Reprocessing Skill",
-      "unit_name": "typeID"
     }
   ],
   "traits": []

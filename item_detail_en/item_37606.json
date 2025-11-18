@@ -3,7 +3,7 @@
   "name": "Lif",
   "description": "<i>\"I sometimes think it would have been a good thing if all the Brutor on the General Staff had been at Colelie back in '15. That might have made up for the whole farce.\"</i> - remarks attributed to a Sebiestor naval architect on the occasion of Valklear General Khassan Triat's call for new siege capitals to be developed in testimony before the Tribal Council's Inquiry into Capital Ship Doctrines, YC118.02.07\n\nThe Republic Fleet were slow to follow the other naval powers along the new path of capital warfare inspired by capsuleer combat experience in the many wars of the Outer Regions of New Eden. In large part this was due to a flaring up of the old debate between the firepower- and maneuver-oriented generals of the Brutor dominated military circles and the logistics- and fighter-oriented Sebiestor fleet tactician and technologist circles.\n\nAfter much chest-beating, and due in no small part to the intervention of Sanmatar Maleatu Shakor, the arguments of the Sebiestor won out and the Lif-class Force Auxiliary was commissioned over the objections of the Brutor military elite.",
   "volume": 14625000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 3000.0,
   "mass": 1260000000.0,
   "category_name": "Ship",
@@ -648,7 +648,7 @@
     },
     {
       "attribute_name": "specialFuelBayCapacity",
-      "value": 3000.0,
+      "value": 6000.0,
       "categoryID": 40,
       "display_name": "Fuel Bay Capacity",
       "unit_name": "m3"

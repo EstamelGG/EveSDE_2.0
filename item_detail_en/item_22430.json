@@ -3,7 +3,7 @@
   "name": "Sin",
   "description": "Black Ops battleships are designed for infiltration and espionage behind enemy lines. With the use of a jump drive and portal generator, they are capable of making a special type of jump portal usable only by covert ops vessels. This enables them to stealthily plant reconnaissance and espionage forces in enemy territory. For the final word in clandestine maneuvers, look no further.\n\nAs the largest drone developer and manufacturer in space, CreoDron has a vested interest in drone carriers. While sacrificing relatively little in the way of defensive capability, the Sin can chew its way through surprisingly strong opponents - provided, of course, that the pilot uses top-of-the-line CreoDron drones.",
   "volume": 454500.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 800.0,
   "mass": 141700000.0,
   "category_name": "Ship",
@@ -693,6 +693,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

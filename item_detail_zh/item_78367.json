@@ -3,7 +3,7 @@
   "name": "曼巴级",
   "description": "在一贯的政策下，使用加达里舰船设计并加以大刀阔斧的改造后，<i>曼巴级</i>显然是基于<i>渡鸦级</i>驱逐舰独特的船体而建造。古斯塔斯领袖“野兔”克拉克·卡萨加米使用了合众国导弹驱逐舰的基础概念，并嫁接了独具特色的古斯塔斯无人机技术。结果造就了一艘能在发射大量导弹后马上接上一波又一波强大的小型战斗无人机的舰船。",
   "volume": 52000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 1750000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

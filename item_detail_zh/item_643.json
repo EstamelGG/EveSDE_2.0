@@ -3,7 +3,7 @@
   "name": "末日沙场级",
   "description": "强大的末日沙场级战列舰是艾玛帝国的主力军舰。它曾经是战场上不可抗拒的主宰力量，不过现在它的战斗方式更加庄严与精准，一边从远距吸取敌人的能量，一边用海量的无人机撕碎目标。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 750.0,
   "mass": 105200000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Miasmos Amastris Edition",
   "description": "The Miasmos (originally Iteron Mark IV) Amastris Edition is a limited edition cargo hauler awarded to pilots who have displayed extraordinary aptitude in capsuleer training. \n\nIt boasts a more powerful warp engine and a bigger cargo hold capacity than the Miasmos design on which it is based, in addition to state-of-the-art lateral thrusters allowing for improved agility.\n\nAmong recent capsuleer graduates from New Eden's academic institutions, this vessel is considered a distinguished status symbol, although the quiet presence of certain unmarked, sealed containers at the back of the ship's hull tends to unnerve some of the crews.",
   "volume": 265000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5250.0,
   "mass": 11250000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

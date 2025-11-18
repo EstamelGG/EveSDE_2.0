@@ -3,7 +3,7 @@
   "name": "绝念级",
   "description": "当联邦海军当局意识到市场上需要中档价位的夜神级航母时，绝念级便应运而生。出色的防御能力以及特殊改装的铁骑舰载机挂舱，使其在中小规模的战斗中足以独挡一面。绝念级能够生成一个<a href=showinfo:83094>跳跃导管星门</a>，并立即将自身和附近的舰队成员传送到指定的诱导信标。可以通过导管移动的舰船级别包括：护卫舰、驱逐舰、巡洋舰、战列巡洋舰和战列舰。",
   "volume": 13095000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 875.0,
   "mass": 1220000000.0,
   "category_name": "舰船",
@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 3670000.0,
+      "value": 300000.0,
       "categoryID": 6,
       "display_name": "锁定范围上限",
       "unit_name": "m"
@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "maximumRangeCap",
-      "value": 1000000000.0,
+      "value": 750000.0,
       "categoryID": 6,
       "display_name": "锁定范围理论上限值",
       "unit_name": "m"
@@ -508,7 +508,7 @@
     },
     {
       "attribute_name": "shipMaintenanceBayCapacity",
-      "value": 1000000.0,
+      "value": 2000000.0,
       "categoryID": 40,
       "display_name": "舰船维护舱容量",
       "unit_name": "m3"
@@ -697,7 +697,7 @@
     },
     {
       "attribute_name": "fighterCapacity",
-      "value": 70000.0,
+      "value": 75000.0,
       "categoryID": 38,
       "display_name": "铁骑舰载机挂舱容量",
       "unit_name": "m3"
@@ -746,7 +746,7 @@
     },
     {
       "attribute_name": "fighterTubes",
-      "value": 3.0,
+      "value": 4.0,
       "categoryID": 38,
       "display_name": "铁骑舰载机中队发射管",
       "unit_name": null
@@ -760,7 +760,7 @@
     },
     {
       "attribute_name": "fighterSupportSlots",
-      "value": 1.0,
+      "value": 2.0,
       "categoryID": 38,
       "display_name": "后勤铁骑舰载机中队限制",
       "unit_name": null
@@ -890,11 +890,21 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusCarrierG5",
+      "value": 2.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
     {
       "content": "<b>1%</b> <a href=showinfo:20494>装甲指挥</a>和<a href=showinfo:3349>游击战指挥</a>脉冲波强度和持续时间加成"
+    },
+    {
+      "content": "<b>2%</b> 塞壬<a href=showinfo:40573>后勤铁骑舰载机</a>加力燃烧器速度加成"
     },
     {
       "content": "<b>2.5%</b> <a href=showinfo:23069>铁骑舰载机</a>HP加成"
@@ -924,7 +934,7 @@
       "content": "可在更大范围内锁定"
     },
     {
-      "content": "可装配<a href=showinfo:41411>联网感应器阵列</a>"
+      "content": "可装配<a href=showinfo:90475>联网感应器阵列</a>"
     },
     {
       "content": "可释放<a href=showinfo:40572>轻型</a>和<a href=showinfo:40573>后勤</a> <a href=showinfo:23069>铁骑舰载机</a>"

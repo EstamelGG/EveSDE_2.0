@@ -3,7 +3,7 @@
   "name": "Stabber Fleet Issue",
   "description": "Responding to voices stating that the Stabber needed an upgrade to be viable as a fleet vessel of military standards, the Republic Fleet commissioned the creation of the Fleet Issue Stabber; a slower, hardier version of the original that packs quite a bit more firepower. Being as new as it is on the battlefield, the Fleet Issue Stabber hasn't seen many large engagements yet, but its engineers as well as Fleet command are very optimistic about its performance.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 10810000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

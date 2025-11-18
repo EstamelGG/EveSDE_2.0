@@ -3,7 +3,7 @@
   "name": "Ark",
   "description": "At the end of days when they descend\nWatch for the coming of the Ark\nFor within it\nSalvation is carried.\n\n<i>-The Scriptures, Apocalypse Verses 32:6</i>",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 135000.0,
   "mass": 900000000.0,
   "category_name": "Ship",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

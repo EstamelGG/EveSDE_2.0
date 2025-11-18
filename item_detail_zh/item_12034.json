@@ -3,7 +3,7 @@
   "name": "猎犬级",
   "description": "隐形轰炸舰专为发射鱼雷而设计，是下一代隐形飞行器的典型代表。凭借着强大的导弹制导系统，该种舰船能让鱼雷奔得更快更远，专用来偷袭大型船只。",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 255.0,
   "mass": 1455000.0,
   "category_name": "舰船",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Hubris",
   "description": "<i>”You, my friends, are the beating heart of this great Federation’s industrial and military might. Without you, there would be no ships for our navy of liberation and security to wield as the instruments of Gallente freedom and ultimate peace under democratic rule. My friends, I congratulate you on your hard work to date and look forward to that which is to come!“\n – Former President Jacus Roden in speech to Roden Shipyards workers, May YC125</i>\n\nWhile the reach of the Federation Navy is popularly supposed to be based heavily on the use of drones and automation, the true power of the Federation’s military has long rested on one of the most powerful capital ship fleets in existence. Drones and automation are leveraged on this mighty foundation, enabling it to function and project power rapidly and precisely. To this end, the heavy-industrial powerhouse of Roden Shipyards put forward designs for an advanced dreadnought using new lance technology. Alongside an armament of hybrid turrets, the Hubris-class Lancer Dreadnought is equipped to use the new “Disruptive Lance” weaponry, a capability rumored to have been developed with the assistance of Jacus Roden’s peerless industrial espionage organization.",
   "volume": 17550000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 3300.0,
   "mass": 1250000000.0,
   "category_name": "Ship",

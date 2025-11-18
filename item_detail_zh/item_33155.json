@@ -3,7 +3,7 @@
   "name": "先驱者级海军型",
   "description": "尽管先驱者级是一艘强大的战舰，不过近来的报告指出它缺乏灵活性，难以适应变化多端的舰队战术需求。为解决这一问题，帝国的工程师们研发出了它的海军型版本。先驱者级海军型与普通版本相比可谓变化巨大，除了跟踪系统有所增强外，抗击打能力也有提高，并加装了一个中槽，这使得它在面对多种战斗情况时都能从容应对。",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 375.0,
   "mass": 15500000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

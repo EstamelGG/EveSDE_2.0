@@ -3,7 +3,7 @@
   "name": "巨鸟级",
   "description": "巨鸟级被设计为一艘全能型战舰，它的重型武装使其几乎能应付太空里飞行的任何东西。与竞争对手托勒克斯级不同，巨鸟级擅长远程作战，它的磁轨炮能将死亡的气息像雨点一般砸在对手身上。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 12000000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

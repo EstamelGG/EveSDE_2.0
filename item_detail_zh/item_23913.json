@@ -3,7 +3,7 @@
   "name": "夜神级",
   "description": "夜神级的建造是为了向盖伦特社会中一位备受爱戴的人物致以深切的敬意。飞船的设计以洛维诺三世的权杖为原形，这位国王在其和平统治盖伦特的36年间，奠定了科技发展和社会思想解放的基础，在之后的数千年时间里，这种思想延伸到了盖伦特社会的每个角落。夜神级是盖伦特人热爱进步的标志，完美结合了先进的人类工程学概念与最新的前沿科技，它无时不刻地提醒着人们：是什么样的特质能让盖伦特联邦拥有今天的辉煌。",
   "volume": 58200000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1750.0,
   "mass": 1600000000.0,
   "category_name": "舰船",
@@ -864,6 +864,27 @@
       "unit_name": "类别ID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃消耗量",
+      "unit_name": "单位"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃乘客数量",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -876,6 +897,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "属性ID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "导管乘客加成",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -928,6 +963,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以进行<a href=showinfo:83094>导管跳跃</a>"
     },
     {
       "content": "可在更大范围内锁定"

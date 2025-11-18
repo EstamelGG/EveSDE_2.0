@@ -3,7 +3,7 @@
   "name": "塞纳波级",
   "description": "塞纳波级巡洋舰是天使企业联合体最早的飞船设计之一，直到现在，它依然是使用最为广泛的。这种船的起源已不可考，不过据说多数联合体的船只都留有朱庇特人的痕迹，估计这艘船也不会例外。无论这些传言是否有据可循，事实就是：塞纳波级是速度最快，火力最强的巡洋舰之一。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 9047000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

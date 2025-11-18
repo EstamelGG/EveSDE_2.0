@@ -197,6 +197,13 @@
       "categoryID": 7,
       "display_name": "Stabilize Cloak Duration",
       "unit_name": "sec"
+    },
+    {
+      "attribute_name": "canFitShipType12",
+      "value": 89607.0,
+      "categoryID": 1,
+      "display_name": "Can be fitted to",
+      "unit_name": "typeID"
     }
   ],
   "traits": []

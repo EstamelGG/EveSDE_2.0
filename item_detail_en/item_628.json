@@ -3,7 +3,7 @@
   "name": "Arbitrator",
   "description": "The Arbitrator is unusual for Amarr ships in that it's primarily a drone carrier. While it is not the best carrier around, it has superior armor that gives it greater durability than most ships in its class.",
   "volume": 120000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 345.0,
   "mass": 11200000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

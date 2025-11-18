@@ -3,7 +3,7 @@
   "name": "Nemesis",
   "description": "Specifically engineered to fire torpedoes, stealth bombers represent the next generation in covert ops craft. The bombers are designed for sneak attacks on large vessels with powerful missile guidance technology enabling the torpedoes to strike faster and from a longer distance.",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 270.0,
   "mass": 1410000.0,
   "category_name": "Ship",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

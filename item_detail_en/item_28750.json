@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 70.0,
+      "value": 18.0,
       "categoryID": 5,
       "display_name": "Activation Cost",
       "unit_name": "GJ"
@@ -53,14 +53,14 @@
     },
     {
       "attribute_name": "duration",
-      "value": 60000.0,
+      "value": 15000.0,
       "categoryID": 7,
       "display_name": "Activation time / duration",
       "unit_name": "s"
     },
     {
       "attribute_name": "miningAmount",
-      "value": 85.0,
+      "value": 21.0,
       "categoryID": 51,
       "display_name": "Mining amount",
       "unit_name": "m3"
@@ -119,6 +119,20 @@
       "value": 0.0,
       "categoryID": 51,
       "display_name": "Residue Probability",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritChance",
+      "value": 0.01,
+      "categoryID": 51,
+      "display_name": "Critical Success Chance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYield",
+      "value": 2.0,
+      "categoryID": 51,
+      "display_name": "Critical Success Bonus Yield",
       "unit_name": "%"
     }
   ],

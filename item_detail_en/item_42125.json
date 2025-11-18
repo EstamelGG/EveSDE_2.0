@@ -3,7 +3,7 @@
   "name": "Vendetta",
   "description": "<i>“The Federation still thinks it can play games with the future of the human species. Just as it played games with the life’s work of my father.\n\nI will show them how the game is really played. They destroyed a man who would have revolutionized the science and application of neural boosters.\n\nI will destroy them by showing them just how powerful that science can be. There will be no peace and no let up. I swear vendetta, in the name and for the memory of Igil Sarpati.”</i>\n\n- V. Salvador Sarpati, interviewed by Alton Haveri of the Scope",
   "volume": 58200000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1750.0,
   "mass": 1600000000.0,
   "category_name": "Ship",
@@ -892,6 +892,27 @@
       "unit_name": "typeID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Consumption Amount",
+      "unit_name": "units"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Passenger Count",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -904,6 +925,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "attributeID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "Conduit Passenger Bonus",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -921,6 +956,9 @@
     }
   ],
   "traits": [
+    {
+      "content": "<a href=showinfo:83094>Conduit Jump</a> capable"
+    },
     {
       "content": "<b>10%</b> bonus to <a href=showinfo:23069>Fighter</a> damage"
     },

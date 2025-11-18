@@ -3,7 +3,7 @@
   "name": "旗舰级F-S9覆盖式紧凑型护盾扩展装置",
   "description": "增加护盾的最大强度。\n\n注：只能用于旗舰级舰船。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "装备",

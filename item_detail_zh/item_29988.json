@@ -3,7 +3,7 @@
   "name": "海神级",
   "description": "自由就像流水，轻柔，优美。我们被它环绕，身体被它容纳，恐惧被它淹没。我们感受这自由的奥妙，吮吸着它身体的养分。在这流水中，我们获得生命，如我们逝去，当又回到那水中。 \n\n\n\n在那里，在那众星之间的，就是这流水，是自由的化身。那黑暗，无尽的空虚是我们的命运，是我们的道路，是我们的目标。我们不要因它恐惧，也不要试着去驾驭它。而我们应当要拥抱它，信任它，喜爱它。它那千变万化的脸庞，不可名状的存在，正是我们的本质。我们就是那星辰，就是那虚空，就是宇宙中那伟大的流水：古老，永恒，自由。\n\n\n\n    - 简森特·帕门，<i>新伊甸中的盖伦特</i>",
   "volume": 115000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 13300000.0,
   "category_name": "舰船",
@@ -630,6 +630,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

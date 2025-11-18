@@ -3,7 +3,7 @@
   "name": "伐木者级",
   "description": "伐木者级护卫舰虽然廉价，但却是个多面手。它被大规模生产，是米玛塔尔空间内最常见的舰船之一。伐木者级速度极快，武器装备也不错，因此在新手海盗和走私者中很流行。",
   "volume": 17400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 120.0,
   "mass": 1075000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Wolf",
   "description": "Named after a mythical beast renowned for its voraciousness, the Wolf is one of the most potentially destructive frigates currently in existence. While hardier than its brother the Jaguar it has less in the way of shield systems, and the capabilities of its onboard computer leave something to be desired. Nevertheless, the mere sight of a locked and loaded Wolf should be enough to make most pilots turn tail and flee.",
   "volume": 27289.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1178100.0,
   "category_name": "Ship",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

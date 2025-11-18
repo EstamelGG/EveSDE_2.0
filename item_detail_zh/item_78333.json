@@ -3,7 +3,7 @@
   "name": "梅库巴尔级",
   "description": "<i>梅库巴尔级</i>是天使企业联合体对帝国海军不断扩充的驱逐舰舰队的一种回应，它融合了盖伦特和米玛塔尔的经典技术，也许带着一丝古老的气质，但杀伤力更强，结构也更紧凑。这最终成就了一艘强大的炮舰，能够让射弹武器狂风暴雨般倾泻火力，同时能够快速响应企业联合体突袭舰队的部署要求。",
   "volume": 43000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1440000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

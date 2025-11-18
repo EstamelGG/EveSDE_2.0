@@ -3,7 +3,7 @@
   "name": "暴风级舰队型",
   "description": "YC115年，在经过激烈的讨论后，统合部发布声明称暴风级战列巡洋舰的实际能力已远超其目前所处的科技等级，并要求米玛塔尔共和国要么停产暴风级，要么将其归为更高科技等级的舰船类别。尽管十分不情愿，部族议会还是遵从统合部的指示而研发出了一种简化版本的暴风级舰船，并很快发现了现行法律上的一处漏洞，将这种强大的战舰编入现役共和舰队。这就是暴风级舰队型的由来，其实它只不过是重新涂装并支付了更名费用的暴风级而已。",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 425.0,
   "mass": 12800000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

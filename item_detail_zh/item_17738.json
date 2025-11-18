@@ -3,7 +3,7 @@
   "name": "马克瑞级",
   "description": "虽然从实际外观上看不出什么端倪，但人们还是相信“马克瑞”级的设计是基于一份古老的朱庇特设计图，这份设计图是几年前天使企业联合体入侵未知领域时发现的。不管事实究竟如何，这个庞然大物悄然出现在人们的视线中，并很快成为了天使集团最重要的一艘军舰。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 860.0,
   "mass": 94680000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

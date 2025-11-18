@@ -1,6 +1,6 @@
 {
   "type_id": 5177,
-  "name": "Gatling Afocal Maser I",
+  "name": "Gatling Afocal Laser I",
   "description": "Rapid fire multi-barreled energy weapon that delivers a steady stream of damage. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 5.0,
   "repackaged_volume": null,

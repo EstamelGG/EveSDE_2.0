@@ -1,6 +1,6 @@
 {
   "type_id": 6807,
-  "name": "Focused Afocal Pulse Maser I",
+  "name": "Focused Afocal Pulse Laser I",
   "description": "A high-powered, concentrated energy weapon designed for short to medium range engagements. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 10.0,
   "repackaged_volume": null,

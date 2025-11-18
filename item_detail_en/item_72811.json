@@ -3,7 +3,7 @@
   "name": "Cyclone Fleet Issue",
   "description": "Following a hotly contested bidding process, a joint development group of engineers from the Brutor and Sebiestor Tribes were tasked with drafting a response to disturbing intelligence documents obtained in a raid on an Amarr frigate and destroyer systems research facility in the system of Arayar. How does one answer a wide range of yet unknown and emerging threats? Volume of fire. \n\nTo this end, the Cyclone was redesigned with over a decade's worth of technical advancements crowned by a state of the art missile loading system, enabling it to launch an awe inspiring volume of missiles in a very short amount of time.  A simple, yet effective, answer – and one that does not leave those who ask with much time to ponder it.",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 12400000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

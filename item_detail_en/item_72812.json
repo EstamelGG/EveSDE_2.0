@@ -3,7 +3,7 @@
   "name": "Ferox Navy Issue",
   "description": "While the Ferox had long been a key ship in Caldari Navy fleets, new ambush tactics were beginning to expose weaknesses in the standard doctrines. The navy needed a ship capable of withstanding a surprise assault from multiple vessels, with firepower to match. This time, the Caldari weren't designing an elegant hunter that could kill at range – they needed a monster with heavy defenses and claws sharp enough to fend off closing attackers.\n\nWith advanced hybrid tracking systems and highly classified shield energy injection systems, the Ferox Navy Issue is capable of reducing entire squadrons to smoking wreckage single-handedly. This great beast fears not the buzzing of flies.",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 14250000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

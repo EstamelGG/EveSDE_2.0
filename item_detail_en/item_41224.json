@@ -3,7 +3,7 @@
   "name": "TE-2100 Ample Rapid Torpedo Launcher",
   "description": "Launcher for capitals intended to counter smaller combat ships such as battleships, can only be loaded with torpedoes.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 1.725,
   "mass": null,
   "category_name": "Module",

@@ -3,7 +3,7 @@
   "name": "Hulk",
   "description": "The exhumer is the second generation of mining vessels created by <a href=showinfo:30//500014>ORE</a>. Exhumers, like their mining barge cousins, were each created to excel at a specific function, the Hulk's being mining yield and mining laser range. The additional yield comes at a price, as the Hulk has weaker defenses and a smaller ore bay than the other exhumers.\n\nExhumers are equipped with electronic subsystems specifically designed to accommodate Strip Mining and Ice Harvesting modules.",
   "volume": 150000.0,
-  "repackaged_volume": 3750.0,
+  "repackaged_volume": null,
   "capacity": 350.0,
   "mass": 15000000.0,
   "category_name": "Ship",
@@ -591,6 +591,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -750,6 +757,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

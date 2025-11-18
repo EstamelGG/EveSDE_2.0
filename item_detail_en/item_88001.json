@@ -3,7 +3,7 @@
   "name": "Babaroga",
   "description": "A reimagining of the Collective’s Leshak-class battleship, the Babaroga leverages Triglavian hull and ship design principles and combines them with the conventional versatility and endurance of a marauder.\n\nThe Babaroga is capable of mounting Supratidal Entropic Disintegrators and, a first for Triglavian ships, Bastion Modules. Like its predecessor, it can deploy drones and long-range remote repair modules.\n\n<i>Under advancing-time pressure for enduring subrole vessel distribution in now-time ancient enemy adjaza struggle, Babaroga Subclade of Perun Clade relinquished adaptation of now-time Kybernaut scheme for 1728 tactical troika classification vessel modification into the Cladeflow of Triglav.</i>\n– Partial translation of recovered Babaroga design schematics",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 1333.0,
   "mass": 143000000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "Ishtar",
   "description": "While not endowed with as much pure firepower as other ships of its category, the Ishtar is more than able to hold its own by virtue of its tremendous capacity for drones and its unique hard-coded drone-control subroutines. \n\nTouted as \"the Ishkur's big brother,\" the Ishtar design is the furthest CreoDron have ever gone towards creating a completely dedicated drone carrier. At various stages in its development process plans were made to strengthen the vessel in other areas, but ultimately the CreoDron engineers' fascination with pushing the drone carrier envelope overrode all other concerns.",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 560.0,
   "mass": 10600000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

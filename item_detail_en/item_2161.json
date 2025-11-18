@@ -3,7 +3,7 @@
   "name": "Crucifier",
   "description": "The Crucifier was first designed as an explorer/scout, but the current version employs the electronic equipment originally intended for scientific studies for more offensive purposes. The Crucifier's electronic and computer systems take up a large portion of the internal space leaving limited room for cargo or traditional weaponry.",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 265.0,
   "mass": 1064000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

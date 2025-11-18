@@ -3,7 +3,7 @@
   "name": "促进级海军型",
   "description": "虽然一直被诟病过度依赖无人机，联邦海军其实还是在各种规模的战斗中使用过许多火力刚猛的“炮船”的。促进级作为声名远播的反护卫舰平台，终于迎来了海军型升级版本。升级后的促进级拥有了强化的装甲技术和高效的武器系统。在升级了促进级海军型的灵活性和速度的同时，联邦海军还提高了它的远距目标获取能力。",
   "volume": 55000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 1550000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

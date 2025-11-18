@@ -1,7 +1,7 @@
 {
   "type_id": 28407,
-  "name": "Batch Compressed Pristine Jaspet",
-  "description": "Pristine Jaspet is very rare, which is not so surprising when one considers that it is formed when asteroids collide with comets or ice moons. It has 10% better yield than normal Jaspet.\n\nJaspet has two valuable mineral types, making it easy to sell. It has a large portion of <a href=showinfo:36>Mexallon</a> plus some <a href=showinfo:38>Nocxium</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "Batch Compressed Jaspet III-Grade",
+  "description": "III-Grade jaspet, also known as pristine jaspet, is very rare, which is not so surprising when one considers that it is formed when asteroids collide with comets or ice moons. It has 10% better yield than normal Jaspet.\n\nJaspet has two valuable mineral types, making it easy to sell. It has a large portion of <a href=showinfo:36>Mexallon</a> plus some <a href=showinfo:38>Nocxium</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 0.15,
   "repackaged_volume": null,
   "capacity": null,

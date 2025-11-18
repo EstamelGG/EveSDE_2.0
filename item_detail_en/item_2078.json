@@ -3,7 +3,7 @@
   "name": "Zephyr",
   "description": "The Zephyr is a unique starship design, relying almost entirely on solar winds for sublight propulsion. Super-light sails allow it to ride the torrents of photons streaming through space, and its barebones construction gives it a tiny sensor footprint and almost negligible mass.\n\nOriginally conceived by the ascetic Intaki polymath Valsas en Dilat as a demonstration of minimalist starship design, it was never intended as a commercial venture. The recent discovery of the uncharted Sleeper Territories and their myriad wormholes has brought the Zephyr new attention - its mass makes it an ideal exploration vessel.\n\nValsas remains adamant that the Zephyr never sees mass production, but at the close of YC111 he authorized the Intaki Syndicate to distribute a single hull to every registered capsuleer.",
   "volume": 5000.0,
-  "repackaged_volume": 500.0,
+  "repackaged_volume": null,
   "capacity": 10.0,
   "mass": 5000.0,
   "category_name": "Ship",
@@ -483,6 +483,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

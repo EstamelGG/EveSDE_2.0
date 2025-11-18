@@ -3,7 +3,7 @@
   "name": "Brutix Navy Issue",
   "description": "This ship was born out of the experience gained by the Federation after the launch of the Talos-Class Attack Battlecruiser. Sensing that the Brutix hull could be refined further, it was decided to remove all notion of active defense from it to favor improvements to its already significant damage potential. The final outcome of this experiment resulted in the Brutix Navy Issue, a vessel that already shows great potential from the few skirmishes it has been into so far.",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 11800000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

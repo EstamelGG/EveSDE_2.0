@@ -3,7 +3,7 @@
   "name": "Prospect",
   "description": "After the success of the Venture mining frigate, ORE spun their growing frontier exploration, exploitation and technology divisions into new subsidiaries. One of the first projects undertaken by the newly configured ORE conglomerate was the development of a new line of Expedition frigates, designed to meet the needs of the riskiest and most lucrative harvesting operations.\n\nThe Prospect combines improved asteroid mining systems with the Venture frame whose speed and agility made its predecessor famous. It is also the first ORE ship to take advantage of Covert Ops Cloaking Devices, allowing the Prospect to warp while cloaked for movement to and from asteroid fields in even the most hostile territories.",
   "volume": 50000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 150.0,
   "mass": 1400000.0,
   "category_name": "Ship",
@@ -626,6 +626,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -715,6 +722,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

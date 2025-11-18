@@ -1,7 +1,7 @@
 {
   "type_id": 17471,
-  "name": "Dense Veldspar",
-  "description": "In asteroids above average size, the intense pressure can weld normal veldspar into what is known as dense veldspar, increasing the yield by 10%. \n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\nAvailable primarily in high security status star systems.",
+  "name": "Veldspar III-Grade",
+  "description": "In asteroids above average size, the intense pressure can weld normal veldspar into what is known as III-Grade or dense veldspar, increasing the yield by 10%. \n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used <a href=showinfo:34>Tritanium</a> mineral.\n\nAvailable primarily in high security status star systems.",
   "volume": 0.1,
   "repackaged_volume": null,
   "capacity": null,

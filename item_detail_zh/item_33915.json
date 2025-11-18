@@ -155,6 +155,13 @@
       "categoryID": 1,
       "display_name": "可装配至",
       "unit_name": "组别ID"
+    },
+    {
+      "attribute_name": "canFitShipGroup06",
+      "value": 4902.0,
+      "categoryID": 1,
+      "display_name": "可装配至",
+      "unit_name": "组别ID"
     }
   ],
   "traits": []

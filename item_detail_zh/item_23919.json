@@ -3,7 +3,7 @@
   "name": "万古级",
   "description": "万古级航母的历史和帝国开拓史一样悠长。当整个城市的人举家迁徙，从古老的家园移民到新生的土地上，开始崭新生活之时，它们就是支撑领土扩张的中坚力量。万古级是帝国历史上同类舰船中最庞大的，可用来充当移动堡垒，其装备极度强悍。",
   "volume": 62000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1650.0,
   "mass": 1780000000.0,
   "category_name": "舰船",
@@ -864,6 +864,27 @@
       "unit_name": "类别ID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃消耗量",
+      "unit_name": "单位"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃乘客数量",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -876,6 +897,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "属性ID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "导管乘客加成",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -928,6 +963,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以进行<a href=showinfo:83094>导管跳跃</a>"
     },
     {
       "content": "可在更大范围内锁定"

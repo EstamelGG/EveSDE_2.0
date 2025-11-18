@@ -3,7 +3,7 @@
   "name": "Megathron Federate Issue",
   "description": "The Megathron has established itself as one of the most feared and respected battleships around. Since its first appearance almost two decades ago it has seen considerable service in the troublesome regions on the outskirts of the Federation, helping to expand and defend Gallentean influence there.\n\nThe Federate Issue is a unique ship, commissioned by Gallentean president Foiritan as an honorary award given to those individuals whose outstanding achievements benefit the entire Federation.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 675.0,
   "mass": 105200000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

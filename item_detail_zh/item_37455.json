@@ -3,7 +3,7 @@
   "name": "狮鹫级海军型",
   "description": "狮鹫级海军型代表了加达里海军在近距离战术体系中的新尝试。它综合了强大的混合武器系统以及专为无人机优化的ECM系统，往往以其出人意料的攻击战术让敌人措手不及。",
   "volume": 19400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 260.0,
   "mass": 1056000.0,
   "category_name": "舰船",
@@ -589,6 +589,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

@@ -3,7 +3,7 @@
   "name": "Helios",
   "description": "Designed for commando and espionage operation, its main strength is the ability to travel unseen through enemy territory and to avoid unfavorable encounters.\n\nThe Helios is CreoDron's answer to the Ishukone Buzzard. After the fall of Crielere, the once-cordial relations between the Gallente Federation and the Caldari state deteriorated rapidly and, for a while, it seemed as if war might be brewing. It was seen by certain high-ranking officers within the Gallente navy as being of vital importance to be able to match the Caldari's cloaking technology in an effort to maintain the balance of power.",
   "volume": 23000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 175.0,
   "mass": 1271000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

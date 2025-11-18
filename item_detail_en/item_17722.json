@@ -3,7 +3,7 @@
   "name": "Vigilant",
   "description": "The Vigilant was the first Gallente design the Guardian Angels would steal and make their own, but it wouldn't be the last. Building on the Thorax's natural strengths, it is a deadly vessel both by itself and in fleet tandem. A group of these sluggers is a sight to fear.",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 9830000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

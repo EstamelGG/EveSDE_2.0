@@ -3,7 +3,7 @@
   "name": "毒蛇级",
   "description": "毒蛇级是古斯塔斯舰船中体型较小的一种。它的设计源自于一种古老的加达里舰船原型——古斯塔斯海盗总是乐于从他们痛恨的敌人那里窃取资料——不过它的内部设计还是做了很大的改动。除了继承了加达里擅长的导弹打击能力之外，古斯塔斯海盗还为这艘船加入了盖伦特的无人机技术。",
   "volume": 15000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 125.0,
   "mass": 1163000.0,
   "category_name": "舰船",
@@ -560,6 +560,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

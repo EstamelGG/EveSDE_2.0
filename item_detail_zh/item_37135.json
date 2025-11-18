@@ -3,7 +3,7 @@
   "name": "永恒者级",
   "description": "在推出了大获成功的冲锋者级采矿护卫舰之后，外空联合矿业集团将旗下的深空勘探、探索和技术部门改编为一个个独立的子公司。新成立的外空联合矿业企业集团的第一个项目是开发一种新的探索护卫舰，专门从事最危险，但也是回报最丰厚的采集业务。\n\n\n\n永恒者级作为外空联合矿业“霜线”品牌的系列产品而推出，不仅有前作冲锋者级和勘探级的良好声誉做保障，改良过的冰矿开采系统更是为其增色不少。它独特的子系统和装配方式，加上新式的压缩冰矿开采激光器，使得永恒者级能以护卫舰大小的船体来开采冰矿。此外，设计者还保留了诸多勘探护卫舰所为人熟知的擅长隐秘行动的设计元素。",
   "volume": 50000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 200.0,
   "mass": 1600000.0,
   "category_name": "舰船",
@@ -633,6 +633,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -722,6 +729,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

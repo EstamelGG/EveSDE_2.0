@@ -3,7 +3,7 @@
   "name": "四联800mm频射加农炮 I",
   "description": "专业化高角度炮台装配三门四管武器，被设计用来应对非旗舰级别舰船的威胁。\n\n\n\n注：只能装配在旗舰级舰船上。\n\n\n\n必须装填以下类型的弹药：碳铅弹、硬钼弹、电磁脉冲弹、聚变弹、核芯弹、定相等离子弹、质子弹和钛合金萨博弹。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 10.0,
   "mass": 75.0,
   "category_name": "装备",

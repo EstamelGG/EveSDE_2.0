@@ -3,7 +3,7 @@
   "name": "Buzzard",
   "description": "Designed for commando and espionage operation, its main strength is the ability to travel unseen through enemy territory and to avoid unfavorable encounters.\n\nThe Buzzard was developed according to the exacting specifications of Admiral Okaseilen Fukashi, head of the Caldari Navy Recon Division, and was the first production level ship specifically built to take full advantage of the cloaking breakthroughs achieved by Project Mirage at Crielere.",
   "volume": 19400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 190.0,
   "mass": 1270000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

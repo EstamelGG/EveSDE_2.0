@@ -3,7 +3,7 @@
   "name": "挑战级",
   "description": "作为多功能的米玛塔尔战舰，挑战级既能成为毁灭性的战斗力量，也能为大队的护卫舰提供支持。虽然它已经不能与新型的海军巡洋舰相提并论，但是挑战级仍然是执行各种任务时的可靠选择，尤其是在远程作战方面。",
   "volume": 85000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 315.0,
   "mass": 11550000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

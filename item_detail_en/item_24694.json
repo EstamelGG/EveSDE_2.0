@@ -3,7 +3,7 @@
   "name": "Maelstrom",
   "description": "With the Maelstrom, versatility is the name of the game. Its defensive capabilities make it ideally suited for small raid groups or solo work, while its hard hitting turret hardpoints present opportunities for untold carnage on the fleet battlefield.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 790.0,
   "mass": 103600000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

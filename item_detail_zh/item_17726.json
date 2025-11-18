@@ -3,7 +3,7 @@
   "name": "灾难级海军型",
   "description": "帝国核心的军火制造商长期以来就以他们能够通过其专业的制造技术将海军型灾难级战列舰的附甲和结构加强到这样一种坚不可摧的程度而为荣。它的护盾系统同样也是最前沿的先进技术的表现，可以同加达里最好的舰船媲美。其不可一世的名号让它成为帝国海军精英联队的旗舰。但不是所有人都有幸能够在战场上见到一艘，而那些实际看到的却很少能够活着回来讲述它的传奇。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 790.0,
   "mass": 97100000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

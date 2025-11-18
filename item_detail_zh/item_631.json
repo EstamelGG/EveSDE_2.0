@@ -3,7 +3,7 @@
   "name": "镰刀级",
   "description": "YC114年，每个主要帝国势力都已经深陷战争泥潭，他们深深意识到了对现有舰只增加后勤功能的重要性，否则唯一的结果便是弹尽力竭。护卫舰和巡洋舰级别的舰船都是做后勤舰船的理想选择，而米玛塔尔共和国在经过全面评估之后，决定对镰刀级巡洋舰进行重新设计，赋予它新的使命。镰刀级巡洋舰依然是服役时间最长的米玛塔尔舰。它们久经沙场，是米玛塔尔传奇故事中不可或缺的一部分。重新设计之后，其之前用来提升采矿量的固件被完全抛弃，取而代之的是两套完全独立的护盾传输与后勤无人机系统。",
   "volume": 89000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 11110000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

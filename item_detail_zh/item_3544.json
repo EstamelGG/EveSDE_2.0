@@ -3,7 +3,7 @@
   "name": "统合部旗舰级远程护盾回充增量器",
   "description": "将护盾的能量传输到目标舰船上，帮助其进行防御。\n\n注：只能装配在旗舰级舰船上。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "装备",

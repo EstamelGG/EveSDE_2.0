@@ -3,7 +3,7 @@
   "name": "Nidhoggur",
   "description": "Essentially a pared-down version of its big brother the Hel, the Nidhoggur nonetheless displays the same austerity of vision evident in its sibling. Quite purposefully created for nothing less than all-out warfare, and quite comfortable with that fact, the Nidhoggur will no doubt find itself a mainstay on many a battlefield.\n\nThe Nidhoggur is capable of generating a <a href=showinfo:83094>Jump Conduit Portal</a> which allows it to instantaneously transport itself and nearby fleet members to a target cynosural beacon. Ship classes that can be moved via conduit: Frigates, Destroyers, Cruisers, Battlecruisers, and Battleships.",
   "volume": 11250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 860.0,
   "mass": 1230000000.0,
   "category_name": "Ship",
@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 3760000.0,
+      "value": 305000.0,
       "categoryID": 6,
       "display_name": "Maximum Targeting Range",
       "unit_name": "m"
@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "maximumRangeCap",
-      "value": 1000000000.0,
+      "value": 750000.0,
       "categoryID": 6,
       "display_name": "Theoretical Maximum Targeting Range",
       "unit_name": "m"
@@ -508,7 +508,7 @@
     },
     {
       "attribute_name": "shipMaintenanceBayCapacity",
-      "value": 1000000.0,
+      "value": 2000000.0,
       "categoryID": 40,
       "display_name": "Ship Maintenance Bay Capacity",
       "unit_name": "m3"
@@ -697,7 +697,7 @@
     },
     {
       "attribute_name": "fighterCapacity",
-      "value": 65000.0,
+      "value": 70000.0,
       "categoryID": 38,
       "display_name": "Fighter Hangar Capacity",
       "unit_name": "m3"
@@ -746,7 +746,7 @@
     },
     {
       "attribute_name": "fighterTubes",
-      "value": 3.0,
+      "value": 4.0,
       "categoryID": 38,
       "display_name": "Fighter Squadron Launch Tubes",
       "unit_name": null
@@ -760,7 +760,7 @@
     },
     {
       "attribute_name": "fighterSupportSlots",
-      "value": 1.0,
+      "value": 2.0,
       "categoryID": 38,
       "display_name": "Support Fighter Squadron Limit",
       "unit_name": null
@@ -890,6 +890,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusCarrierM5",
+      "value": 2.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -898,6 +905,9 @@
     },
     {
       "content": "<b>1%</b> bonus to <a href=showinfo:3350>Shield Command</a> and <a href=showinfo:3349>Skirmish Command</a> burst strength and duration"
+    },
+    {
+      "content": "<b>2%</b> bonus to Dromi <a href=showinfo:40573>Support Fighter</a> stasis webification strength"
     },
     {
       "content": "<b>2.5%</b> bonus to <a href=showinfo:23069>Fighter</a> velocity"
@@ -915,10 +925,10 @@
       "content": "<b>5x</b> penalty to <a href=showinfo:34593>Entosis Link</a> duration"
     },
     {
-      "content": "Can fit <a href=showinfo:41411>Networked Sensor Array</a>"
+      "content": "Can fit <a href=showinfo:83465>Capital Micro Jump Drive</a> and <a href=showinfo:83485>Capital Micro Jump Field Generator</a>"
     },
     {
-      "content": "Can fit <a href=showinfo:83465>Capital Micro Jump Drive</a> and <a href=showinfo:83485>Capital Micro Jump Field Generator</a>"
+      "content": "Can fit <a href=showinfo:90475>Integrated Sensor Array</a>"
     },
     {
       "content": "Can launch <a href=showinfo:40572>Light</a> and <a href=showinfo:40573>Support</a> <a href=showinfo:23069>Fighters</a>"

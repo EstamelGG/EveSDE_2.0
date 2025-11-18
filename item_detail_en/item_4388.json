@@ -3,7 +3,7 @@
   "name": "Miasmos Quafe Ultramarine Edition",
   "description": "The Miasmos (originally Iteron Mark IV) Quafe Ultramarine Edition was commissioned by the Quafe Corporation as a vessel for highly focused distribution of Quafe to a demanding clientele in the New Eden cluster.\n\nTo this end, the ship has been made more agile, given a faster warp engine and fitted with an upgraded cargohold that can carry vast amounts of Quafe. In addition, its controls have been simplified so that new pilots can more easily meet the strict delivery conditions of prospective buyers. A number of sealed vats were added after the ship was rebranded as the Miasmos, but Quafe has demanded that those be accessed solely by corporate representatives, and not by crew nor capsuleer.\n\nWhile the Quafe Corporation has firmly denied making any alterations to its lucrative formula, and insists that the Miasmos Quafe Ultramarine Edition does not have special dispensation to carry a supercaffeinated version of the famous drink, it is notable that this model has been fitted with extra security mechanisms to prevent any and all crew from sampling its cargo. \n\nWhile there are persistent rumors of storage crew personnel tasting the cargo and subsequently staying awake for days on end, grinding their teeth and yelling at each other, these have never been conclusively proven, although the Quafe Corporation does reportedly undertake all medical costs for any crewmember serving more than 72 consecutive hours onboard the Miasmos Quafe Ultramarine Edition.",
   "volume": 265000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5250.0,
   "mass": 11250000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

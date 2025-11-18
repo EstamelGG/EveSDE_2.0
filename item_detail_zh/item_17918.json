@@ -3,7 +3,7 @@
   "name": "响尾蛇级",
   "description": "秉持着海盗一贯的恶劣习性，“野兔”克拉克·卡萨加米无耻地窃取了“毒蝎”级战列舰的设计思路，并融入了自己的风格。其结果就是：可怕的“响尾蛇”级诞生了，这是任何古斯塔斯大规模战斗中的旗舰型号。当然还有另外一种完全相反的说法：人们之所以对“毒蝎”的起源三缄其口，可能就是因为其设计从头到尾都是由卡萨加米完成的。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 815.0,
   "mass": 99300000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

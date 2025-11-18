@@ -3,7 +3,7 @@
   "name": "Rapier",
   "description": "Force recon ships are the cruiser-class equivalent of covert ops frigates. While not as resilient as combat recon ships, they are nonetheless able to do their job as reconnaissance vessels very effectively, due in no small part to their ability to interface with covert ops cloaking devices and set up cynosural fields for incoming capital ships.",
   "volume": 85000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 315.0,
   "mass": 11040000.0,
   "category_name": "Ship",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

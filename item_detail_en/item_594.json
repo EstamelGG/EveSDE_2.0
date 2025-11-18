@@ -3,7 +3,7 @@
   "name": "Incursus",
   "description": "The Incursus may be found both spearheading and bulwarking Gallente military operations. Its speed makes it excellent for skirmishing duties, while its resilience helps it outlast its opponents on the battlefield. Incursus-class ships move together in groups and can quickly and effectively gang up on ships many times their size and overwhelm them. In recent years the Incursus has increasingly found its way into the hands of pirates, who love its aggressive appearance.",
   "volume": 29500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1028000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

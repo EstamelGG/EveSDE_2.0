@@ -3,7 +3,7 @@
   "name": "Cormorant Navy Issue",
   "description": "With the Cormorant well-established as a long-range anti-frigate platform, the Caldari Navy issued upgrade requirements that specified further enhancements to its ability to hit at range together with considerable improvements to defensive shield systems. Overhauling and expanding the energy systems and core processing systems to support these changes called for many changes to the base Cormorant's design. A joint tender from the megacorporations of the Ocean Faction proposing a total rebuild of the internal workings of the ship won the day. The resulting Caldari Navy variant of this proven railgun platform is ideally set up for sustained long-range engagements.",
   "volume": 52000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 425.0,
   "mass": 1700000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

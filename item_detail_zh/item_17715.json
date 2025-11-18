@@ -3,7 +3,7 @@
   "name": "毒蜥级",
   "description": "凭借以前在加达里海军学习的知识，古斯塔斯的首领“野兔”克拉克·卡萨加米打算给加达里的伤口上撒上一把盐——他窃取了合众国的飞船设计图并加以改造，并用这些改良过的飞船去攻击他以前的主人。这艘巨鸟级巡洋舰的邪恶同胞，毒蜥级巡洋舰，就是最好的例子。",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 440.0,
   "mass": 9600000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

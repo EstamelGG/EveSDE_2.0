@@ -3,7 +3,7 @@
   "name": "鱼鹰级海军型",
   "description": "众所周知，加达里的舰船从来没有能在速度上体现出任何优势。针对这个问题，加达里海军工程师们设计出了鱼鹰级海军型战舰。它是加达里舰队中速度最快的巡洋舰，同时还具备了相当强大的导弹打击能力。它的出现使加达里海军和爱国分子在局部冲突中会有更大的胜算。",
   "volume": 107000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 460.0,
   "mass": 11780000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

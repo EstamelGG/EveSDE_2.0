@@ -3,7 +3,7 @@
   "name": "麒麟级",
   "description": "麒麟级后勤护卫舰是莱戴集团那令人尊敬的研发部门的最新研究成果。借助于其从皇冠蜥级巡洋舰获得的关于远程护盾回充增量器技术的丰富经验。莱戴集团用矮脚鸡级船体创造出了一个小型快速但非常强大的护盾回充增量平台。在麒麟级的开发过程中，天主凝聚会也做出了卓越的贡献。莱戴集团一直喜欢从平衡的角度来搭配他们的船载系统，因此他们拥有一系列多用途的舰船，却少有针对特定战术的产品。对于麒麟级来说，其制造目的是在推进尖端防御优化系统开发的同时，提供强大且高机动性的支援能力。",
   "volume": 20000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 270.0,
   "mass": 1480000.0,
   "category_name": "舰船",
@@ -617,6 +617,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

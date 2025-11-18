@@ -284,28 +284,28 @@
     },
     {
       "attribute_name": "fighterAbilityECMStrengthGravimetric",
-      "value": 1.6,
+      "value": 2.4,
       "categoryID": 34,
       "display_name": "引力ECM干扰器强度（每架铁骑舰载机）",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthLadar",
-      "value": 1.6,
+      "value": 2.4,
       "categoryID": 34,
       "display_name": "光雷达ECM干扰器强度（每架铁骑舰载机）",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthMagnetometric",
-      "value": 1.6,
+      "value": 2.4,
       "categoryID": 34,
       "display_name": "磁力ECM干扰器强度（每架铁骑舰载机）",
       "unit_name": null
     },
     {
       "attribute_name": "fighterAbilityECMStrengthRadar",
-      "value": 1.6,
+      "value": 2.4,
       "categoryID": 34,
       "display_name": "雷达ECM干扰器强度（每架铁骑舰载机）",
       "unit_name": null

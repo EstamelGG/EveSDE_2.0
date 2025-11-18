@@ -3,7 +3,7 @@
   "name": "传道者级",
   "description": "传道者级是一艘重型突击巡洋舰，经过特别设计，专门作为第九届联盟锦标赛的奖品。传道者级拥有极大增强过的能量扰乱系统，与它的小兄弟恶意级类似。传道者级最初的设计构想是为那些独来独往的飞行员打造一艘战斗舰船，不过它那海量的电容以及顶级的装甲板使得它在小型舰队中同样可以发挥重要作用。华丽的外表加上致命的武器，该船是外形与内功兼备的典范。",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 11890000.0,
   "category_name": "舰船",
@@ -596,6 +596,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

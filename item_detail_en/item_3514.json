@@ -3,7 +3,7 @@
   "name": "Revenant",
   "description": "Do you know what you are, capsuleer? The truth will not comfort you.<br>You are a frightened child running headfirst towards oblivion.\n\nAnd I?\nI am the only one who tried to stop you.\nI am the Messiah that you turned against.\n\nYou persecuted me, hunted my children.\nVowed to burn my Promised Land to ash.\n\nNow I have returned, and I know you better than you know yourself.\n\nI will vanquish your fear, and commute your flesh to dust.\n\n<i>- Sansha Kuvakei</i><br><br>",
   "volume": 62000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1740.0,
   "mass": 1600000000.0,
   "category_name": "Ship",
@@ -899,6 +899,27 @@
       "unit_name": "typeID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Consumption Amount",
+      "unit_name": "units"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Passenger Count",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -911,6 +932,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "attributeID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "Conduit Passenger Bonus",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -928,6 +963,9 @@
     }
   ],
   "traits": [
+    {
+      "content": "<a href=showinfo:83094>Conduit Jump</a> capable"
+    },
     {
       "content": "<b>20%</b> bonus to <a href=showinfo:3450>Afterburner</a> velocity bonus"
     },

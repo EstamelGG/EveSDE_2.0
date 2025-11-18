@@ -3,7 +3,7 @@
   "name": "统合部旗舰级装甲维修器",
   "description": "该装备使用纳米级装配器来修复对舰船装甲造成的损伤。\n\n注：只能装配在旗舰级舰船上。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 500.0,
   "category_name": "装备",

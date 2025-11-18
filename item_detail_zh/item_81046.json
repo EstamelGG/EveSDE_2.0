@@ -3,7 +3,7 @@
   "name": "洪水级",
   "description": "由于出现开发偷运舰的需求，昇威改良了狂风级设计，采用了新型高级轻质材料并增添了隐形功能。尽管基础设施舱变小，且失去部分导弹火力，但洪水级在跃迁进出时机动性得到极大提升，使其成为文明空间边界满足所有基础设施需求的理想选择。",
   "volume": 200000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 4000.0,
   "mass": 10800000.0,
   "category_name": "舰船",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

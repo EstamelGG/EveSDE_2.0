@@ -3,7 +3,7 @@
   "name": "Gold Magnate",
   "description": "This ship is a masterly designed frigate as well as an exquisite piece of art. The Magnate class has been the pet project of a small, elite group of royal ship engineers for over a decade. When the Gold Magnate was offered as a prize in the Amarr Championships in YC105, the long years of expensive research were paid off with the deployment of this beautiful ship.\nThe first Gold Magnate was awarded to <url=showinfo:1373//170181132>Ecliptical</url> to honor his success as Doriam Kor-Azor's champion in YC105. That famous vessel was eventually sold to <url=showinfo:1373//144870255>Tyrrax Thorrk</url> and met its demise at the hands of <url=showinfo:1373//144604580>Lord Zap</url>, <url=showinfo:1373//145355201>DrStrangelove</url>, <url=showinfo:1373//149050919>Motaka</url> and <url=showinfo:1373//152755230>Omniwar</url>, four of the legendary pirates of the m0o corporation.\n\nThe news that four more Gold Magnates were being produced for the new Amarr Succession Championship taking place in YC117 and YC118 has recently brought this storied ship back into the spotlight, and has electrified the hopes and dreams of wealthy collectors and elite capsuleers across the cluster.",
   "volume": 22100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 300.0,
   "mass": 1500000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

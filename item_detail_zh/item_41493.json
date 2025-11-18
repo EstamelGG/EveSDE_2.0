@@ -3,7 +3,7 @@
   "name": "旗舰级电容注电器 II",
   "description": "给电容器快速地注入能量。\n\n\n\n注：只能装配在旗舰级舰船上。",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": 640.0,
   "mass": null,
   "category_name": "装备",

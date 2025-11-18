@@ -3,7 +3,7 @@
   "name": "'Jormungandr' Explosive Reaper",
   "description": "While the Minmatar Republic took a relaxed attitude to the initial Drifter incursions, particularly as these entities appeared focused on the Republic’s Amarr foes, the Minmatar military were extremely interested in developments in capital ship technology and weapons. Through one means or another the necessary acquisitions of data and exemplar technologies were made and the Minmatar developed an explosive energy variation of the ‘Reaper’ directed beam technology that the Amarr had first developed.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

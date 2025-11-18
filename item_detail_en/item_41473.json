@@ -3,7 +3,7 @@
   "name": "Dread Guristas Capital Remote Shield Booster",
   "description": "Transfers shield power over to the target ship, aiding in its defense.\n\nNote: May only be fitted to capital class ships.",
   "volume": 4000.0,
-  "repackaged_volume": 1000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "Module",

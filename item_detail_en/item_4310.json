@@ -3,7 +3,7 @@
   "name": "Tornado",
   "description": "In YC 113 <a href=showinfo:2//1000054>Republic Security Services</a> learned the <a href=showinfo:30//500003>Amarr Empire</a> was building a new battlecruiser capable of supporting battleship-class weapons. Determined to not lose their technological edge to their adversaries, <a href=showinfo:2//1000051>Republic Fleet</a> commissioned <a href=showinfo:2//1000057>Boundless Creation</a> to construct a gunboat to match.<br><br>What they designed was the Tornado. Developed in record time and total secrecy, the Tornado is a testament to Minmatar engineering. Modeled loosely off of flying-wing designs of ancient planetary bombers, the Tornado supports multiple large projectile turrets, dealing massive damage while maintaining a small signature radius.",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 535.0,
   "mass": 15228000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

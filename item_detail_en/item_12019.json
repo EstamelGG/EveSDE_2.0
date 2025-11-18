@@ -3,7 +3,7 @@
   "name": "Sacrilege",
   "description": "Khanid's engineers have spent months perfecting the Sacrilege's on-board missile launcher optimization systems, making it a very effective assault missile platform. In addition, its supremely advanced capacitor systems make it one of the most dangerous ships in its class. \n\nIn an effort to maintain the fragile peace with the old empire through force of deterrence, Khanid Innovation have taken the Maller blueprint and morphed it into a monster. State-of-the-art armor alloys, along with missile systems developed from the most advanced Caldari designs, mean the Sacrilege may be well on its way to becoming the Royal Khanid Navy's flagship cruiser.",
   "volume": 118000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 615.0,
   "mass": 11750000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

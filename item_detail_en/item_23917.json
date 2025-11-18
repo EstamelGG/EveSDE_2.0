@@ -3,7 +3,7 @@
   "name": "Wyvern",
   "description": "The Wyvern is based on documents detailing the design of the ancient Raata empire's seafaring flagship, the Oryioni-Haru. According to historical sources the ship was traditionally taken on parade runs between the continent of Tikiona and the Muriyuke archipelago, seat of the Emperor, and represented the pride and joy of what would one day become the Caldari State. Today's starfaring version gives no ground to its legendary predecessor; with its varied applications in the vast arena of deep space, the Wyvern is likely to stand as a symbol of Caldari greatness for untold years to come.",
   "volume": 53000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1740.0,
   "mass": 1700000000.0,
   "category_name": "Ship",
@@ -864,6 +864,27 @@
       "unit_name": "typeID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Consumption Amount",
+      "unit_name": "units"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "Conduit Jump Passenger Count",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -876,6 +897,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "attributeID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "Conduit Passenger Bonus",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -893,6 +928,9 @@
     }
   ],
   "traits": [
+    {
+      "content": "<a href=showinfo:83094>Conduit Jump</a> capable"
+    },
     {
       "content": "<b>2%</b> bonus to <a href=showinfo:3350>Shield Command</a> and <a href=showinfo:20495>Information Command</a> burst strength and duration"
     },

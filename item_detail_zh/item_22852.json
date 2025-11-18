@@ -3,7 +3,7 @@
   "name": "冥府级",
   "description": "冥府级的设计灵感来源于旧世界玛塔尔当地的一种凶猛尖牙鲨鱼，其凶残好战的特性给所有人留下了深刻的印象。冥府级的研发工程是最高机密，除了很少的几个人外，没人知道它的制造进度和实际能力。因此当这样一艘母舰出现在世人面前时，不亚于扇了那些曾认为玛塔利无法设计出此类星舰的人一记响亮的耳光。\n\n\n\n无论其设计来源为何，有一件事是肯定的：从朴实的生活方式到严格的自然美学，这个凶猛巨物的设计只为了一个目的，也只有一个目的。\n\n\n\n“想象一下一群致命的胡蜂从恶魔之口涌出向你扑来。再想象它们的尾部都装着自动加农炮。”\n\n<i>——某位冥府级设计者</i>",
   "volume": 51000000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 1720.0,
   "mass": 1650000000.0,
   "category_name": "舰船",
@@ -871,6 +871,27 @@
       "unit_name": "类别ID"
     },
     {
+      "attribute_name": "enablePerformConduitJump",
+      "value": 1.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "conduitJumpDriveConsumptionAmount",
+      "value": 3000.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃消耗量",
+      "unit_name": "单位"
+    },
+    {
+      "attribute_name": "conduitJumpPassengerCount",
+      "value": 5.0,
+      "categoryID": 7,
+      "display_name": "导管跳跃乘客数量",
+      "unit_name": null
+    },
+    {
       "attribute_name": "jumpDriveTargetBeaconTypelistID",
       "value": 341.0,
       "categoryID": 0,
@@ -883,6 +904,20 @@
       "categoryID": 0,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "jumpConduitPassengerRequiredAttributeID",
+      "value": 5682.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "属性ID"
+    },
+    {
+      "attribute_name": "conduitPassengerBonusPercent",
+      "value": 100.0,
+      "categoryID": 17,
+      "display_name": "导管乘客加成",
+      "unit_name": "%"
     },
     {
       "attribute_name": "isCarrierJumpConduitPassenger",
@@ -935,6 +970,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以进行<a href=showinfo:83094>导管跳跃</a>"
     },
     {
       "content": "可在更大范围内锁定"

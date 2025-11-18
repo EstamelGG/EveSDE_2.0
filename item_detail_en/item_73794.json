@@ -3,7 +3,7 @@
   "name": "Thrasher Fleet Issue",
   "description": "The Republic Fleet's requirements for an upgraded Thrasher focused on the doctrinal strengths of the Minmatar: speed and unleashing a hailstorm of projectile fire upon any foe in range. To that end, the designers of the Thrasher Fleet Issue paid great attention to the engine systems and reducing the downsides of using high-performance microwarpdrive propulsion modules. The improvements to weapons systems significantly increased projectile rate of fire and the range of effective firing solutions. Increased firepower at range came at the cost of reduced tracking systems and dedicated defensive module support, but additional base shield and armor were crammed into the design by the canny Minmatar designers.",
   "volume": 43000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 1600000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

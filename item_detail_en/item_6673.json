@@ -1,6 +1,6 @@
 {
   "type_id": 6673,
-  "name": "Small Focused Afocal Pulse Maser I",
+  "name": "Small Focused Afocal Pulse Laser I",
   "description": "A high-powered pulse energy weapon. Good for short to medium range encounters. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 5.0,
   "repackaged_volume": null,

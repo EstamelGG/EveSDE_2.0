@@ -3,7 +3,7 @@
   "name": "幼龙级海军型",
   "description": "加达里的幼龙级战列巡洋舰可谓取得了巨大的成功，鉴于此，加达里海军签署了大量的订单来生产这艘舰船的改良版本。结果，幼龙级海军型得以问世，虽然外形没有什么变化，但在战场上的作用却截然不同。它灵活机动，远距导弹打击能力强劲，对小型目标优势明显，伤害类型多样，是小规模战斗的极佳选择。",
   "volume": 252000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 13500000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

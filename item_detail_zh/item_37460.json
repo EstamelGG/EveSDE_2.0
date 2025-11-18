@@ -3,7 +3,7 @@
   "name": "手术刀级",
   "description": "图克尔部族的商队使用临时配备的维修护卫舰已经有很多年了，已经掌握了将远程护盾回充增量器装在更快更轻型的船体上的方法。以手术刀级后勤护卫舰的诞生为基础，图克尔混合企业得以将这种经验用于打造一个能够跟得上任意种类的护卫舰和驱逐舰舰队的维修平台。图克尔混合企业的工程师在爆发级船体的基础之上提高了护盾抗性和灵活性，并加装了强大的远程护盾回充增量器。相信不久之后这艘船就会频繁出现在宇宙各地的战场之上。",
   "volume": 17100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 260.0,
   "mass": 1420000.0,
   "category_name": "舰船",
@@ -617,6 +617,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

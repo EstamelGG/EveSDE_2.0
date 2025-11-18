@@ -3,7 +3,7 @@
   "name": "Rhea",
   "description": "It wasn't long after the Thukkers began deploying their jump capable freighters that other corporations saw the inherent tactical value of such ships. After extended negotiations, Ishukone finally closed a deal exchanging undisclosed technical data for the core innovations underpinning the original Thukker Tribes design allowing them to rapidly bring to the market the largest jump capable freighter of them all, the Rhea, a true behemoth of the stars.",
   "volume": 16250000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 144000.0,
   "mass": 960000000.0,
   "category_name": "Ship",
@@ -679,6 +679,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

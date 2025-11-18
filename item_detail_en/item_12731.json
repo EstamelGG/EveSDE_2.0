@@ -3,7 +3,7 @@
   "name": "Bustard",
   "description": "Deep space transports are designed with the depths of lawless space in mind. Possessing defensive capabilities far in excess of standard industrial ships, they provide great protection for whatever cargo is being transported in their massive holds. They are, however, some of the slowest ships to be found floating through space.",
   "volume": 390000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 5000.0,
   "mass": 20000000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

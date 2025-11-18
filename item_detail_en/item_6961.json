@@ -1,6 +1,6 @@
 {
   "type_id": 6961,
-  "name": "Heavy Afocal Maser I",
+  "name": "Heavy Afocal Laser I",
   "description": "A high-powered heavy energy weapon designed for medium range engagements. Delivers powerful damage. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 10.0,
   "repackaged_volume": null,

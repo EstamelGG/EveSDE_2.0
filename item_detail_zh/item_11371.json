@@ -3,7 +3,7 @@
   "name": "猎狼级",
   "description": "猎狼级以神话中著名的贪婪野兽命名，是现存最具破坏力的护卫舰之一。尽管它比兄弟美洲虎级更坚固，可是它的护盾系统稍差，而且舰载计算机的性能也有待改进。尽管如此，一艘全副武装、荷枪实弹的猎狼级还是能让许多飞行员望而生畏、不战而逃。",
   "volume": 27289.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1178100.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

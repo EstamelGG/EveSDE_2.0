@@ -3,7 +3,7 @@
   "name": "布鲁提克斯级海军型",
   "description": "联邦在研发塔洛斯级攻击型战列巡洋舰的过程中积累了许多宝贵经验，并将其应用到了这艘船上。它是对布鲁提克斯级的改良，移除了所有的主动防御特性，进一步提升了它本已十分出色的攻击能力。这就是布鲁提克斯级海军型，尽管目前它只参与了几次小型战斗，但已经展现出了巨大的潜力。",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 11800000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

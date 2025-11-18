@@ -3,7 +3,7 @@
   "name": "魔女级",
   "description": "魔女级是有史以来驰骋在帝国区小行星带里最可怕的护卫舰之一。理由也很有说服力：它已经多次击败尺寸是其两三倍的舰船了。无论你是否相信这理由，魔女级还是会让你不寒而栗。",
   "volume": 28600.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 965000.0,
   "category_name": "舰船",
@@ -609,6 +609,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

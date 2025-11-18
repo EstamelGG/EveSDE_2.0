@@ -3,7 +3,7 @@
   "name": "Abaddon",
   "description": "The Abaddon class ship is a celestial tool of destruction. It is designed to enter combat from the outset, targeting enemies at range and firing salvo after salvo at them, and to remain intact on the battlefield until every heretic in sight has been torn to shreds.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 740.0,
   "mass": 103200000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

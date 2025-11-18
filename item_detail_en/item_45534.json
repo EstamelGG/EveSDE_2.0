@@ -3,7 +3,7 @@
   "name": "Monitor",
   "description": "The Monitor was initially developed by the CONCORD Directive Intelligence Agency as an observation ship that could survive extremely hostile areas of space for observation and data collection missions against pirate, capsuleer, and emergent threats. To serve in this role the Monitor was developed with defensive technology inspired by the venerable \"Polaris\" line of frigates. After initial field testing demonstrated the incredible durability of this new vessel, CONCORD Aerospace realized that a civilian version would potentially prove valuable to capsuleer fleet commanders and the Inner Circle approved the distribution of blueprint copies directly to worthy capsuleers through the \"loyalty point\" program.\n\nFlag Cruisers like the Monitor are specialized in survivability and observation at the expense of virtually all other functions. Powerful shield generators and thick armor plating combine with the smallest signature radius of any cruiser to create one of the most durable ships ever seen in New Eden. The Monitor also enjoys impressive sensor capabilities and digital systems hardened against hostile electronic warfare. In exchange for these benefits the Monitor gives up virtually all offensive capabilities and utility. The Monitor is only able to use propulsion modules, low-power target painters, and probe launchers. This ship is the ultimate specialist, useful for fleet commanders who serve as a stable presence on a chaotic battlefield.",
   "volume": 100000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 16000000.0,
   "category_name": "Ship",

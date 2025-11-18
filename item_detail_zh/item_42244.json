@@ -1,9 +1,9 @@
 {
   "type_id": 42244,
   "name": "海豚级",
-  "description": "在YC116年末阿诺基斯开始出现新的低质量虫洞连接之后，联合矿业委派给其位于外空联合开发的工程师们一项任务，令其打造一艘能够穿越这些虫洞去探索未开垦的财富的开采先锋舰船。打造这样一艘保留了逆戟鲸级和长须鲸级某些设计优势的小型舰船是一项巨大的挑战，但结果是一艘能供克隆飞行员在宇宙中任何地方进行开采作业的飞船诞生了。\n\n\n\n海豚级能够使用中型工业核心来大幅提高工业效能，并增强防御能力。启用工业核心后，海豚级能够使用中型气云和小行星矿石压缩装置。\n\n\n\n海豚级是一艘小型、轻便且造价低的开采先锋平台，是在危险地区进行开采作业的完美选择。它能用开采先锋脉冲波、远程护盾回充增量器和测量扫描器来为友军提供支援。海豚级还拥有强大的采矿无人机加成，能在任何情况下的开采作业中分一杯羹。",
+  "description": "在YC116年末阿诺基斯开始出现新的低质量虫洞连接之后，联合矿业委派给其位于外空联合开发的工程师们一项任务，令其打造一艘能够穿越这些虫洞去探索未开垦的财富的开采先锋舰船。打造这样一艘保留了逆戟鲸级和长须鲸级某些设计优势的小型舰船是一项巨大的挑战，但结果是一艘能供克隆飞行员在宇宙中任何地方进行开采作业的飞船诞生了。海豚级能够使用中型工业核心来大幅提高工业效能，并增强防御能力。启用工业核心后，海豚级能够使用中型气云和小行星矿石压缩装置。海豚级是一艘小型、轻便且造价低的开采先锋平台，是在危险地区进行开采作业的完美选择。它能用开采先锋脉冲波和远程护盾回充增量器来为友军提供支援。海豚级还拥有强大的采矿无人机加成，能在任何情况下的开采作业中分一杯羹。",
   "volume": 400000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 500.0,
   "mass": 4500000.0,
   "category_name": "舰船",
@@ -584,13 +584,6 @@
       "unit_name": "%"
     },
     {
-      "attribute_name": "roleBonusSurveyScannerRange",
-      "value": 300.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": "%"
-    },
-    {
       "attribute_name": "rigSize",
       "value": 2.0,
       "categoryID": 7,
@@ -645,6 +638,13 @@
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",
@@ -757,6 +757,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -768,9 +775,6 @@
     },
     {
       "content": "<b>2%</b> <a href=showinfo:22536>开采先锋脉冲波</a>的效果强度和持续时间加成"
-    },
-    {
-      "content": "<b>300%</b> <a href=showinfo:444>测量扫描器</a>距离加成"
     },
     {
       "content": "<b>400%</b> <a href=showinfo:3422>远程护盾回充增量器</a>最佳射程加成"
@@ -798,6 +802,9 @@
     },
     {
       "content": "可以装配两个<a href=showinfo:3348>指挥脉冲波</a>装备"
+    },
+    {
+      "content": "可以连接到<a href=showinfo:90037>移动相位锚标</a>可部署设备，提供<b>35</b>点能量"
     }
   ]
 }

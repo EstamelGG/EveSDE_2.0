@@ -1,7 +1,7 @@
 {
   "type_id": 1224,
   "name": "干焦岩",
-  "description": "干焦岩是一种常见矿石，在所有星域中都能找到。它含有一定量的<a href=showinfo:35>类晶体胶矿</a> <a href=showinfo:36>类银超金属</a>。\n\n\n\n可在全宇宙以及虫洞中找到。",
+  "description": "干焦岩是一种常见矿石，在所有星域中都能找到。它含有一定量的<a href=showinfo:35>类晶体胶矿</a> <a href=showinfo:36>类银超金属</a>。可在全宇宙以及虫洞中找到。",
   "volume": 0.3,
   "repackaged_volume": null,
   "capacity": null,

@@ -31,6 +31,13 @@
       "unit_name": "typeID"
     },
     {
+      "attribute_name": "asteroidRadiusUnitSize",
+      "value": 600.0,
+      "categoryID": 31,
+      "display_name": "Asteroid unit radius",
+      "unit_name": "m"
+    },
+    {
       "attribute_name": "stasisWebifierResistance",
       "value": 0.0,
       "categoryID": 36,

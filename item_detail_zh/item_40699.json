@@ -3,7 +3,7 @@
   "name": "武器扰断脉冲波投射器",
   "description": "发射以指定位置为中心的区域爆炸效果。这种脉冲波降低受影响舰船炮台的射程和跟踪速度。\n\n\n\n注：只有超级航母可以装配这类装备。且一艘超级航母只能装配一件这类装备。",
   "volume": 8000.0,
-  "repackaged_volume": 2000.0,
+  "repackaged_volume": null,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "装备",

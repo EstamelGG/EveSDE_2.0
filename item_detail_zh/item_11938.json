@@ -3,7 +3,7 @@
   "name": "末日沙场级帝国型",
   "description": "“末日沙场”级帝国型是艾玛最常用的军舰的升级版，由帝国内技术最娴熟的星舰工程师和建筑师设计并建造。它的重型装备和强大的正面装甲经过特别设计，使其能够像一股不可抗拒的钢铁洪流一般冲进任何战场，以皇帝的名义闪电般地做出裁决。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 600.0,
   "mass": 97100000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

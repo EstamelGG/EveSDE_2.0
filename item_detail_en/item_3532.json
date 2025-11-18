@@ -3,7 +3,7 @@
   "name": "Echelon",
   "description": "A limited run of these ships was released to capsuleers at the end of YC 112, as a platform to utilize an influx of <url=showinfo:3581>Purloined Sansha Data Analyzers</url> that CONCORD had acquired. CONCORD's hope was that capsuleers could find a way to use the hardware against Sansha forces as they began mounting organized incursions into territories across the cluster.<br><br>The specialized nature of the hardware in Sansha Data Analyzer technology makes it incompatible with standard data buses, but this ship's unique hull design has an adaptive synchronization suite that allows it to interface with a wide range of non-standard hardware. CONCORD has remained silent on the origin of this design, but a number of amateur analysts maintain that ships of very similar configuration, carrying SCC and DED transponders, have been observed covertly on multiple prior occasions.",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 135.0,
   "mass": 1124000.0,
   "category_name": "Ship",
@@ -546,6 +546,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

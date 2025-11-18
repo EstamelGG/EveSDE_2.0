@@ -3,7 +3,7 @@
   "name": "Burst",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. In the Minmatar Republic, this led to the redesign and redeployment of the Burst.\n\nThe Burst had been a small and fast cargo vessel. This all changed after the redesign, when the Burst found its small-time mining capabilities curtailed in lieu of logistics systems that moved its focus to shield support for friendly vessels.",
   "volume": 17100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 260.0,
   "mass": 1420000.0,
   "category_name": "Ship",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

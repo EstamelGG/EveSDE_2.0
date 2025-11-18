@@ -3,7 +3,7 @@
   "name": "Golem",
   "description": "Geared toward versatility and prolonged deployment in hostile environments, Marauders represent the cutting edge in today’s warship technology. While being thick-skinned, hard-hitting monsters on their own, they are also able to use Bastion technology. Similar in effect to capital reconfiguration technology, when activated the Bastion module provides huge bonuses to firepower and the ability to withstand enormous amounts of punishment, at the cost of being stationary.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 1225.0,
   "mass": 157000000.0,
   "category_name": "Ship",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

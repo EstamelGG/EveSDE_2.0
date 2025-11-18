@@ -3,7 +3,7 @@
   "name": "守夜者级舰队型",
   "description": "守夜者级舰队型是共和舰队富有创造性的研发实验室的最新产品。这艘船在设计时考虑了诸多来自克隆飞行员的需求，其理念是能够满足在幽暗之域和破碎星域等帝国防御薄弱的星座中的攻击行动要求。凭借远距停滞缠绕光束和出众的飞行速度，守夜者级舰队型能够捉住最灵巧的猎物并将其拖到自己那致命的火箭发射器的攻击范围之中。",
   "volume": 17400.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1080000.0,
   "category_name": "舰船",
@@ -596,6 +596,13 @@
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
     },
     {
       "attribute_name": "weaponDisruptionResistance",

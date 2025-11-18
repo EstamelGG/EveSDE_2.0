@@ -3,7 +3,7 @@
   "name": "飓风级",
   "description": "共和舰队一直希望能配备一种新型战舰，既能成为护卫舰舰队的中坚力量，又比其它战列舰更具机动能力。它拥有7个高能量槽和强劲的推进器，被认为是战场上最理想的选择。",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 12400000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

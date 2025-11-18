@@ -262,6 +262,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "canFitShipGroup11",
+      "value": 4902.0,
+      "categoryID": 1,
+      "display_name": "Can be fitted to",
+      "unit_name": "groupID"
+    },
+    {
       "attribute_name": "buffDuration",
       "value": 60000.0,
       "categoryID": 37,
@@ -274,6 +281,13 @@
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "commandBurstDbuffEffectStrengthFAKE",
+      "value": 25.0,
+      "categoryID": 7,
+      "display_name": "Command Burst Effect Strength Bonus",
+      "unit_name": "%"
     }
   ],
   "traits": []

@@ -1,7 +1,7 @@
 {
   "type_id": 6759,
-  "name": "Quad Afocal Light Maser I",
-  "description": "Uses four light maser focusing systems. Low powered, but makes up for it with a fast firing rate. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
+  "name": "Quad Afocal Light Laser I",
+  "description": "Uses four light laser focusing systems. Low powered, but makes up for it with a fast firing rate. \n\nRequires frequency crystal ammo types: Gamma, Infrared, Microwave, Multifrequency, Radio, Standard, Ultraviolet, Xray.",
   "volume": 10.0,
   "repackaged_volume": null,
   "capacity": 1.0,

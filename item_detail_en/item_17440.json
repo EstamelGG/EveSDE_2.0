@@ -1,7 +1,7 @@
 {
   "type_id": 17440,
-  "name": "Vitric Hedbergite",
-  "description": "When asteroids containing hedbergite pass close to suns or other sources of intense heat can cause the hedbergite to glassify. The result is called vitric hedbergite and has 5% better yield than normal hedbergite. \n\nHedbergite is sought after for its high concentration of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:38>Nocxium</a>.\n\nAvailable primarily in low security status star systems.",
+  "name": "Hedbergite II-Grade",
+  "description": "When asteroids containing hedbergite pass close to suns or other sources of intense heat can cause the hedbergite to glassify. The result is called II-Grade or vitric hedbergite and has 5% better yield than normal hedbergite. \n\nHedbergite is sought after for its high concentration of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:38>Nocxium</a>.\n\nAvailable primarily in low security status star systems.",
   "volume": 3.0,
   "repackaged_volume": null,
   "capacity": null,
@@ -36,6 +36,13 @@
       "categoryID": 31,
       "display_name": "Asteroid radius size multiplier",
       "unit_name": null
+    },
+    {
+      "attribute_name": "asteroidRadiusUnitSize",
+      "value": 600.0,
+      "categoryID": 31,
+      "display_name": "Asteroid unit radius",
+      "unit_name": "m"
     },
     {
       "attribute_name": "stasisWebifierResistance",

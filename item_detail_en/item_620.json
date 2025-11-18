@@ -3,7 +3,7 @@
   "name": "Osprey",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. Both Frigate and Cruiser-class ships were put under the microscope, and in the Caldari State the outcome of the re-evaluation process led, among other developments, to a redesign and redeployment of the Osprey.\n\nThe Osprey originally offered excellent versatility and power for what was considered a comparably low price. After its redesign, its inbuilt mining technology - now a little creaky and long in the tooth - was gutted from the Osprey and replaced in its entirety with tech of a different type, capable of high energy and shield transfers.",
   "volume": 107000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 485.0,
   "mass": 11100000.0,
   "category_name": "Ship",
@@ -595,6 +595,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

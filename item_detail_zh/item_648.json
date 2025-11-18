@@ -3,7 +3,7 @@
   "name": "獾级",
   "description": "獾级运载舰是加达里的主力轻型货运舰，特别适用于路途遥远而艰辛的贸易路线。它巨大的船体和灵活的防御性能使它非常适合此类任务，不过加达里人很少驾驶它单独往来。",
   "volume": 250000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 3900.0,
   "mass": 10650000.0,
   "category_name": "舰船",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

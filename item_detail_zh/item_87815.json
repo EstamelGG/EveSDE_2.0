@@ -8,6 +8,14 @@
   "mass": 1000.0,
   "category_name": "基础设施升级件",
   "group_name": "主权中心星系影响生成器升级件",
-  "attributes": [],
+  "attributes": [
+    {
+      "attribute_name": "distributionID01",
+      "value": 4107.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    }
+  ],
   "traits": []
 }

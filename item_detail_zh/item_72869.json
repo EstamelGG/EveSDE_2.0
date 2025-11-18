@@ -3,7 +3,7 @@
   "name": "弥洱米顿级海军型",
   "description": "得益于重组工程的成功，度沃勒实验室研发出了一种新型能量传输方式，极大提高了远程停滞缠绕无人机捕获舰船的能力。接下来，负责研发的军团在竞标中胜出，将这种新技术应用于盖伦特海军舰船上。这种技术本身比较笨重庞杂，无法用于小型盖伦特海军舰船上，于是弥洱米顿级就成了理想的测试对象。 \n\n\n\n这种停滞缠绕无人机技术与弥洱米顿级的结合颇为成功，无人机可以捕获远距离的目标，让弥洱米顿级的强大火力可以从容地倾泻到目标头上。",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 560.0,
   "mass": 12700000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

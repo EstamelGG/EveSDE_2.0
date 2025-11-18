@@ -3,7 +3,7 @@
   "name": "Nestor",
   "description": "This was one of the first vessels the Sisters of EVE made available to capsuleers. It had been under development by the Sanctuary corporation, whose interest in exploration includes not only search & rescue operations but also a constant inquiry into the nature of the EVE Gate. Thanks to the Sisters' efforts and the Sanctuary's particular expertise, the Nestor is an agile, tenacious ship that aptly adheres to the mantra of both rescuers and explorers: Stay safe, stay hidden, and use every tool at your disposal. \n\nIt is particularly adept at venturing into dangerous territories, not merely in recovering whatever may be of interest but also in being able to safely bring it back. Its engines have alternate power sources that come into play should any of its cargo - for which it has plenty of room - cause serious interference with internal systems. Its weaponry runs best on renewable sources, an ideal for a ship that doesn't know how long it'll be in deep space. Its carapace is extremely well armored for a ship this agile, and covered in sensors capable of letting its crew track a myriad of different organic signatures. The crew itself is safely protected from any number of transmittable ailments from rescues and other unexpected passengers, thanks to special quarantine bays that are conveniently located near jettisonable openings. \n\nThe Sanctuary corporation poured uncountable resources into making the cloaking technology developed for the Stratios fit the Nestor, but were eventually forced to concede that it was impossible. The effort was not without benefit though, as part of their work focused on reducing the Nestor's mass enough that it could make its way into unexplored territories that might've been hazardous to bulkier vessels. This paid off by affording the Nestor unmatched access to wormhole space, and meant that the embedded miniature rescue vessel on the ship's hull could be relegated to a decommissioned role. With covert function off the table, the Sanctuary turned their eyes on logistics and now the Nestor serves as one of the best support platforms in New Eden.",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 875.0,
   "mass": 20000000.0,
   "category_name": "Ship",
@@ -637,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

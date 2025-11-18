@@ -3,7 +3,7 @@
   "name": "Typhoon",
   "description": "Much praised by its proponents and much maligned by its detractors, the Typhoon-class battleship has always been one of the most hotly debated spacefaring vessels around. Its distinguishing aspect - and the source of most of the controversy - is its sheer versatility, variously seen as either a lack of design focus or a deliberate freedom for pilot modification.",
   "volume": 414000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 780.0,
   "mass": 100600000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

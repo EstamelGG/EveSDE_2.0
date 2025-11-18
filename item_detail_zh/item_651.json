@@ -3,7 +3,7 @@
   "name": "囤积者级",
   "description": "除了具有运载舰的常规运载能力之外，囤积者级还有一个额外的货柜舱。这个货舱无静电，防爆能力强，所以专门用来运载各种弹药，包括炮弹、导弹、电容注电装料、纳米体粘合剂和立体炸弹。",
   "volume": 400000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 500.0,
   "mass": 10625000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

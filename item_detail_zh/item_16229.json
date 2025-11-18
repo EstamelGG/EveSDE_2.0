@@ -3,7 +3,7 @@
   "name": "布鲁提克斯级",
   "description": "作为盖伦特星际飞船设计中涌现出的最凶猛战舰之一，布鲁提克斯级是个不折不扣的巨兽。当这个强大的怪物出现的时候，整个战场都会为之瞩目。",
   "volume": 270000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 475.0,
   "mass": 11800000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

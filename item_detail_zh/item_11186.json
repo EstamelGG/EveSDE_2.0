@@ -3,7 +3,7 @@
   "name": "咒灭级",
   "description": "截击舰利用高级合金和电子设备来减小其有效信号半径。同时，它还拥有出众的机动性和速度，因此很难被武器锁定和追踪，尤其是大口径炮台。",
   "volume": 28100.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 98.0,
   "mass": 1140000.0,
   "category_name": "舰船",
@@ -623,6 +623,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

@@ -3,7 +3,7 @@
   "name": "救世级",
   "description": "黑隐特勤战列舰的作用是渗透进敌人后方实施侦查活动。通过使用跳跃引擎以及跳跃通道发生器，它们能够生成一条只允许隐形特勤舰只通过的跳跃通道。这使得它们能够隐秘地在敌后进行侦查和间谍任务。你要是想找执行秘密任务的行家，那就非它莫属了。",
   "volume": 470000.0,
-  "repackaged_volume": 50000.0,
+  "repackaged_volume": null,
   "capacity": 800.0,
   "mass": 150300000.0,
   "category_name": "舰船",
@@ -693,6 +693,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

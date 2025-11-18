@@ -3,7 +3,7 @@
   "name": "埃比斯级",
   "description": "除了具有运载舰的常规运载能力之外，埃比斯级还有一个额外的货柜舱。这个货舱由一个个封闭的小货舱组成，能够保持环境恒定，所以适合运输各种生物体，如生物细胞和病毒等，用来运载各种行星货物也是上上之选。埃比斯级本来是伊特龙级的一个衍生品，但后来不断进化成为了一个完全独立的个体。",
   "volume": 250000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 550.0,
   "mass": 12800000.0,
   "category_name": "舰船",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

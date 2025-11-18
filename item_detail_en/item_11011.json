@@ -3,7 +3,7 @@
   "name": "Guardian-Vexor",
   "description": "The Vexor is a strong combat ship that is also geared to operate in a variety of other roles. The Vexor is especially useful for surveying in potentially hostile sectors as it can stay on duty for a very long time before having to return to base. Furthermore, it is well capable of defending itself against even concentrated attacks.",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 480.0,
   "mass": 10910000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

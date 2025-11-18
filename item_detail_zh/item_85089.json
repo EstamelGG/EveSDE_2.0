@@ -130,14 +130,14 @@
     },
     {
       "attribute_name": "dotDuration",
-      "value": 50000.0,
+      "value": 40000.0,
       "categoryID": 7,
       "display_name": "伤害效果持续时间",
       "unit_name": "s"
     },
     {
       "attribute_name": "dotMaxDamagePerTick",
-      "value": 800.0,
+      "value": 600.0,
       "categoryID": 7,
       "display_name": "每秒最大伤害",
       "unit_name": "HP"

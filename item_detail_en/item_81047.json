@@ -3,7 +3,7 @@
   "name": "Torrent",
   "description": "Building on the strengths of their Squall design, Upwell have developed their own Deep Space Transport. Replacing many of the Squall's components with advanced durable and heavy weight variants. While some mobility was lost from the bulkier components, in exchange the Torrent boasts significantly bolstered defenses, an expanded infrastructure hold and a fleet hanger. The Advanced components used are also vastly more resistant to spikes in energy, allowing the design to also expand the existing Deep Space Transport overloading benefits to energy neutralizers and energy vampire modules.",
   "volume": 350000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 3000.0,
   "mass": 19800000.0,
   "category_name": "Ship",
@@ -609,6 +609,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

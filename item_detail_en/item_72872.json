@@ -3,7 +3,7 @@
   "name": "Prophecy Navy Issue",
   "description": "The latest iteration of an ancient and venerable warship design, the Prophecy Navy Issue is a return to the tried and true Amarr doctrine of super-heavy armor and powerful energy weapons. Capitalizing on the success of the Prophecy as a sturdy mainline doctrine, onboard drone control systems have also been streamlined, creating additional space to allow for more advanced crystal focusing technology.\n\nTo the Amarr there is little more beautiful than to witness the moment purifying fire streams through the heavens to smite the heretic and the unbeliever.",
   "volume": 234000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 400.0,
   "mass": 15300000.0,
   "category_name": "Ship",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

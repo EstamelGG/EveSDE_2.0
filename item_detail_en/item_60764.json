@@ -3,7 +3,7 @@
   "name": "Laelaps",
   "description": "<i>\"'The pinning force is an essential element of the war of maneuver but must be carefully assembled from quick yet resilient troops. Scouts cannot pin an army but companies of mounted infantry may achieve the task. Above all, measure the enemy strength before attempting to fix them in place.'\n\n\"Good old Doule dos Rouvenor. Don't get fixated, no pun intended, on the details of his kind of warfare. I've seen scouts pin down battleships, but that's not the point. Use the right force mix, and have them use the right tools to pin down an enemy force of such and such strength. That's the lesson here. But yeah, don't try and scramble a Nyx with a Garmur. That'll end badly.\"</i>\n\n– Muryia Mordu, quoting the War Commentaries of dos Rouvenor",
   "volume": 101000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 420.0,
   "mass": 10298000.0,
   "category_name": "Ship",
@@ -637,6 +637,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

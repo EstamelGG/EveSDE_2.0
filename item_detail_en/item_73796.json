@@ -3,7 +3,7 @@
   "name": "Catalyst Navy Issue",
   "description": "Despite its reputation for over-reliance on drones, the Federation Navy makes use of a number of powerful \"gunboat\" designs at every scale of combat and the Catalyst's well-earned reputation as a potent anti-frigate platform led to a Navy Issue upgrade program. The Navy's updated Catalyst has been enhanced with improved armor technology and highly-efficient weapon systems. To accompany the improved agility and speed of this tough gun platform, the Gallente oriented their new Navy Issue variant towards increased target acquisition at range.",
   "volume": 55000.0,
-  "repackaged_volume": 5000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 1550000.0,
   "category_name": "Ship",
@@ -567,6 +567,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

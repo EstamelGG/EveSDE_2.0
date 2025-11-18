@@ -3,7 +3,7 @@
   "name": "Cybele",
   "description": "Following reports that the Federation government had commissioned a limited run of a novel heavy assault cruiser based on the <i>Adrestia</i> from Duvolle Labs as prizes for the Independent Gaming Commission's Alliance Tournament XIX in YC125, the CreoDron board leveled a freedom of information claim which quickly returned a surprising volume of documents. While the majority have been fully redacted, what little can be gleaned dates the design of the <i>Cybele</i> to a YC120 contract authorized by the FIO for a series of joint operations with Crux Special Tasks Group and the Ostrakon Agency classified under \"Project Trieste\".\n\nThe Cybele was developed by a provisional team under Duvolle's Advanced Manifold Theory Unit co-led by Rias Luisauir, prodigious R&D agent and engineer, and Progressive Plasma's Dr. Jinneth Duvolle, original co-founder of Duvolle Labs. Afforded a near-bottomless budget to design a platform suitable for locales where reinforcement would be impossible and return imperative, the two leads took full advantage of this unique opportunity to bring their most revolutionary and cost-prohibitive theories into reality as part of the designs.\n\nA reverse-ballast function devised by Luisauir, based on the micro jump drive's ultraweak force-compensated mass phase-tuning principle, negates armor plate mass gain by scaling microscale depleted vacuum volumes with the ship's mass in-flight, while a plasma cooling system designed by Dr. Jinneth boosts the operational threshold of hybrid turrets and armor repairers. Combined with an all-around upgrade to the Adrestia's core capabilities and electronics and the incorporation of heavy assault cruiser subsystems, the Cybele is a priceless force to be reckoned with.",
   "volume": 112000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 11100000.0,
   "category_name": "Ship",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

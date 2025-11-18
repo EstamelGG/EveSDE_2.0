@@ -3,7 +3,7 @@
   "name": "Hurricane Fleet Issue",
   "description": "In YC 115, after much heated discussion, CONCORD issued a decree stating the Hurricane-Class Battlecruiser was far too effective to stay under its current technological label, and demanded the Minmatar Republic to either cease production or sort it as a more technologically advanced craft. The Tribal Council grudgingly complied by releasing a simplified version of the Hurricane, then quickly exploited a loophole in the legislation and began using the original overpowered hull as part of its active fleet force. And that is how, after a new paint coat and renaming fees that the Hurricane Fleet Issue came to be.",
   "volume": 216000.0,
-  "repackaged_volume": 15000.0,
+  "repackaged_volume": null,
   "capacity": 425.0,
   "mass": 12800000.0,
   "category_name": "Ship",
@@ -581,6 +581,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

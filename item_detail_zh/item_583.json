@@ -3,7 +3,7 @@
   "name": "秃鹫级",
   "description": "秃鹫级快捷灵巧。其货柜容量有限，因此不适合用作贸易或采矿船。它最适合在游击战中承担突击舰的角色。",
   "volume": 18000.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 130.0,
   "mass": 1100000.0,
   "category_name": "舰船",
@@ -574,6 +574,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

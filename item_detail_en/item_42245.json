@@ -3,7 +3,7 @@
   "name": "Rabisu",
   "description": "<i>\"Use a cloak of deception whenever it suits the purpose of power. The corrupted faith holds deceit to be among the greatest of sins. In this, as in so much, they are false to themselves and to the system of this world. The truth of power is all that we need. Use that truth alone and care not for pious prattle of those who are weaker in spirit and purpose. If you must hide for the greater work, hide. If you must lie for the greater work, lie. If you must deny me and our truth for the greater work, deny me.\"</i>\n\n– Omir Sarikusa, Meditations on a Crimson Chalice",
   "volume": 115000.0,
-  "repackaged_volume": 10000.0,
+  "repackaged_volume": null,
   "capacity": 470.0,
   "mass": 13000000.0,
   "category_name": "Ship",
@@ -651,6 +651,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "Capacitor Warfare Resistance",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "Sensor Warfare Resistance",
       "unit_name": "%"
     },
     {

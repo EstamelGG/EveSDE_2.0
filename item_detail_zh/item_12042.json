@@ -3,7 +3,7 @@
   "name": "伊什库尔级",
   "description": "伊什库尔级作为护卫舰级别的无人机母舰，比大多数其他盖伦特炮舰装备的火力要少，如果是由技能娴熟的飞行员驾驶着满载无人机的伊什库尔级，那绝对不容小觑。作为太空中最大的无人机开发商和制造商，西顿工业在无人机航母方面有着先天优势。尽管伊什库尔级牺牲了一点防御能力，但它依然能在超强对手中杀出一条血路——当然，要使用西顿工业的顶级无人机。",
   "volume": 29500.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 165.0,
   "mass": 1094400.0,
   "category_name": "舰船",
@@ -616,6 +616,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

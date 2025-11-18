@@ -3,7 +3,7 @@
   "name": "Zirnitra",
   "description": "A huge, capital-scale vessel that appears to be the Triglavian equivalent of the dreadnought classification of warships. The Zirnitra's basic design has been successfully adapted for use with capsule technology, based on lessons learned from retrofitting the numerous Triglavian ship designs recovered from Abyssal Deadspace.\n\nThe Zirnitra is able to wield the truly titanic Ultratidal Entropic Disintegrator alongside an array of support modules typically favored in Triglavian designs. These include energy neutralizers, pulse weapons and a long-range remote repair capability.\n\n<i>Zirnitra Subclade of Veles Clade reclaimed adaptation schema for 2,187 tactical troika classification vessel in response to profound now-time pressure of prayer from Detached Executive Troika for Sublimation of Poshlost Flow. Zirnitra Subclade offers revised adaptation schema for 2,187 tactical troika classification vessel into the cladeflow without proving for advancing-time dispersal to strategic troika by affirmation and imperative of the Convocation of Triglav Outside the Struggle.</i> – partial translation of data included in recovered design schematics of the Zirnitra",
   "volume": 18500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 2400.0,
   "mass": 1100000000.0,
   "category_name": "Ship",

@@ -1,21 +1,14 @@
 {
   "type_id": 6569,
-  "name": "ML-3视野型测量扫描器",
-  "description": "扫描小行星，冰矿以及气云的矿物构成。",
+  "name": "ML-3紧凑型采矿调查芯片组",
+  "description": "用于采矿舰船集成采矿勘测仪的升级芯片组，可提供更详尽的小行星信息，提高获得最佳采矿产物的几率。提高采矿激光器和冰矿采集器的暴击几率和暴击后的额外收益。降低采矿激光器、冰矿采集器和气云收集器产生残渣的几率。通过添加已扫描小行星中剩余矿石量的相关信息，增强当前采矿舰船上的集成采矿勘测仪。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "装备",
-  "group_name": "测量扫描器",
+  "group_name": "采矿调查芯片组",
   "attributes": [
-    {
-      "attribute_name": "capacitorNeed",
-      "value": 5.0,
-      "categoryID": 5,
-      "display_name": "启用耗电量",
-      "unit_name": "GJ"
-    },
     {
       "attribute_name": "hp",
       "value": 40.0,
@@ -32,17 +25,10 @@
     },
     {
       "attribute_name": "cpu",
-      "value": 4.0,
+      "value": 6.0,
       "categoryID": 1,
       "display_name": "CPU使用量",
       "unit_name": "tf"
-    },
-    {
-      "attribute_name": "duration",
-      "value": 4500.0,
-      "categoryID": 7,
-      "display_name": "作用时间/单次运转时间",
-      "unit_name": "s"
     },
     {
       "attribute_name": "requiredSkill1",
@@ -50,13 +36,6 @@
       "categoryID": 8,
       "display_name": "主技能需求",
       "unit_name": "类别ID"
-    },
-    {
-      "attribute_name": "surveyScanRange",
-      "value": 20000.0,
-      "categoryID": 7,
-      "display_name": "测量扫描范围",
-      "unit_name": "m"
     },
     {
       "attribute_name": "requiredSkill1Level",
@@ -80,11 +59,46 @@
       "unit_name": "等级"
     },
     {
-      "attribute_name": "disallowRepeatingActivation",
+      "attribute_name": "maxGroupOnline",
       "value": 1.0,
-      "categoryID": 7,
-      "display_name": "无法自动重复",
-      "unit_name": "1=True 0=False"
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "maxGroupFitted",
+      "value": 1.0,
+      "categoryID": 9,
+      "display_name": "该武器组所允许的最大装备数量",
+      "unit_name": null
+    },
+    {
+      "attribute_name": "miningScannerUpgrade",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "miningCritChanceBonus",
+      "value": 16.0,
+      "categoryID": 51,
+      "display_name": "采矿暴击成功率加成",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningCritBonusYieldBonus",
+      "value": 16.0,
+      "categoryID": 51,
+      "display_name": "采矿成功暴击额外收益",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "miningWasteProbabilityBonus",
+      "value": -16.0,
+      "categoryID": 51,
+      "display_name": "产生残渣几率降低",
+      "unit_name": "%"
     }
   ],
   "traits": []

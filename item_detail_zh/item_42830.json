@@ -1,7 +1,7 @@
 {
   "type_id": 42830,
   "name": "采矿激光器优化弹药",
-  "description": "这种紧凑的纳米机器人集群可以装载到<a href=showinfo:42528>开采先锋脉冲波</a>装备中，并散布到友方舰船全身，极大地提高其采矿装备的运转速度，从而提高产量。这个效果还能降低采矿激光器的电容需求，以补偿加快的运转周期。",
+  "description": "这种紧凑的纳米机器人集群可以装载到<a href=showinfo:42528>开采先锋脉冲波</a>装备中，并实装到所有友方舰船上，极大地提高其采矿装备的运转速度，从而提高产量。这个效果还能降低采矿激光器的电容需求，以补偿加快的运转周期。所有采矿工长突发事件还会为受影响船舶上的任何集成采矿测量员启用升级功能。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
@@ -53,7 +53,7 @@
     },
     {
       "attribute_name": "warfareBuff2ID",
-      "value": 0.0,
+      "value": 2474.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -81,7 +81,7 @@
     },
     {
       "attribute_name": "warfareBuff2Multiplier",
-      "value": 0.0,
+      "value": 2.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null

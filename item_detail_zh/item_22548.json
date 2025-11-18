@@ -3,7 +3,7 @@
   "name": "麦基诺级",
   "description": "该采掘舰船是<a href=showinfo:30//500014>外空联合矿业</a>集团制造的第二代采矿船。采掘舰船，像它的兄弟采矿驳船一样，都被设计成各具突出能力的舰船。麦基诺级的强项便在于它的仓储容量。超大的矿石舱使得麦基诺级能够长时间进行采矿作业而不像其他采掘舰船一样需要后勤支持。\n\n\n\n采掘舰船装备有专为配合露天开采及冰矿采集装备而设计的电子子系统。",
   "volume": 150000.0,
-  "repackaged_volume": 3750.0,
+  "repackaged_volume": null,
   "capacity": 450.0,
   "mass": 17500000.0,
   "category_name": "舰船",
@@ -591,6 +591,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "weaponDisruptionResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -722,6 +729,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "integratedMiningScanner",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [

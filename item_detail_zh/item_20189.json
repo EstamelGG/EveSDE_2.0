@@ -3,7 +3,7 @@
   "name": "芬利厄级",
   "description": "作为第三个进入货舰制造领域的国家，共和国在设计最初阶段就决定注重所有舰船系统的平衡性。与共和国以往的风格一样，他们创造了一种相对较轻的飞船——当然，“较轻”这个词在这个大家伙身上可能不那么适用。",
   "volume": 15500000.0,
-  "repackaged_volume": 1300000.0,
+  "repackaged_volume": null,
   "capacity": 435000.0,
   "mass": 820000000.0,
   "category_name": "舰船",
@@ -602,6 +602,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

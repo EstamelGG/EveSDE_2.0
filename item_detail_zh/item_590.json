@@ -3,7 +3,7 @@
   "name": "检察官级",
   "description": "YC114年，各大帝国势力都已经深陷战争泥潭。他们深刻意识到在这种星际持久战中对现有舰船增加后勤功能的重要​性，否则军力将消耗殆尽。艾玛帝国决定对检察官级护卫舰进行重新设计，赋予它新的使命。\n\n近年来，艾玛皇家海军多次根据其他帝国的特殊战术来定制自己的舰船设计，检察官级护卫舰就是其中一个例子。重新设计后，它成为了一艘专门的支援护卫舰，它那曾名噪一时的导弹打击能力被远程装甲维修能力所取代。",
   "volume": 28700.0,
-  "repackaged_volume": 2500.0,
+  "repackaged_volume": null,
   "capacity": 250.0,
   "mass": 1630000.0,
   "category_name": "舰船",
@@ -588,6 +588,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {

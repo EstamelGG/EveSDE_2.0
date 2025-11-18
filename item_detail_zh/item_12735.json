@@ -3,7 +3,7 @@
   "name": "徘徊者级",
   "description": "偷运舰是速度最快的工业舰。这类运载舰使用坚固的轻质建筑材料，牺牲了一些货舱空间，从而可达到超过巡洋舰的速度，并能够承受重型火力的攻击 - 这些因素使其成为运载贵重货物穿梭于危险区域的理想选择。",
   "volume": 180000.0,
-  "repackaged_volume": 20000.0,
+  "repackaged_volume": null,
   "capacity": 3500.0,
   "mass": 11200000.0,
   "category_name": "舰船",
@@ -609,6 +609,13 @@
       "value": 1.0,
       "categoryID": 36,
       "display_name": "电容战抗性",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "sensorDampenerResistance",
+      "value": 1.0,
+      "categoryID": 36,
+      "display_name": "感应战抗性",
       "unit_name": "%"
     },
     {
