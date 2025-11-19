@@ -3,7 +3,7 @@
   "name": "Caldari Navy Hookbill",
   "description": "Long struggling with a reputation for being the ugly duckling of the Caldari ship repertoire, the Hookbill recently got a new lease on life, being upgraded from a routine patrol vessel into a fleet-standard frigate. With the advancements brought on by the upgrade, the time is nigh for this little slugger to prove itself on battlefields throughout Caldari space and beyond.",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 140.0,
   "mass": 1081000.0,
   "category_name": "Ship",

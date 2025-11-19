@@ -3,7 +3,7 @@
   "name": "Magnate Navy Issue",
   "description": "The Magnate's history as a pet project of imperial engineers affected by the fashions and foibles of Amarr nobles has been brought under control by a rejuvenated Ministry of War and an Imperial Navy with very definite opinions as to the requirements for a naval scout and exploration frigate.\n\nTo that end, dedicated processing capacity for scan probe launchers has been included together with improved energy weapon systems. The Imperial Navy has no interest in salvaging until it has swept the enemy from space and has happily sacrificed specialized salvaging systems.",
   "volume": 22100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 1072000.0,
   "category_name": "Ship",

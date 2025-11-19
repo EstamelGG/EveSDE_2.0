@@ -3,7 +3,7 @@
   "name": "帝国海军切割机级",
   "description": "切割机级是艾玛海军的骄傲和自豪，是与玛塔利起义军打持久战时最大的法宝之一。它的装备选择余地很大，装甲厚重，有大功率的电容。老练的“切割机”级战舰飞行员能够轻而易举地击败大多数护卫舰。",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 130.0,
   "mass": 1003000.0,
   "category_name": "舰船",

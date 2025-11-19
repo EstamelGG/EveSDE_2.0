@@ -3,7 +3,7 @@
   "name": "Raven Navy Issue",
   "description": "The Navy Issue Raven represents the best the Caldari have to offer on the battlefield: an all-out assault vessel with tremendous electronic warfare capabilities. Commissioned by Caldari Navy Special Operations Command in YC 104 in response to a campaign of coordinated Gurista attacks which threatened to decimate the populations of several planets in the Obe system, this hefty warship has since proven its worth many times over.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 800.0,
   "mass": 97300000.0,
   "category_name": "Ship",

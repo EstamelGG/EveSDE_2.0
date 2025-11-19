@@ -3,7 +3,7 @@
   "name": "Cobra",
   "description": "Following an announcement that CONCORD itself had donated ships as prizes for the Independent Gaming Commission’s Alliance Tournament XX in YC126, a bid executed through a series of shell corporations saw principal sponsorship for the milestone 20th anniversary event shift to the Guristas. Securing a massive stream of profit and publicity for his organization through New Eden’s foremost capsuleer tournament, Korako ‘The Rabbit' Kosakami added further insult to injury by vandalizing the exterior of CONCORD’s donations and retooling them into extravagant prizes of his own design.\n\nTo keep his most potent modifications out of lawful hands, the Rabbit enlisted the aid of turncoat Caldari Navy Commander Esri Hakuzosu to crack and reverse the parameters of the Enforcer’s security status function-gating subsystem, mocking CONCORD by turning their own notoriously stringent pilot verification protocols against them. Joined with a host of other preposterously costly upgrades and alterations, the Cobra presents a lethal pinnacle of Guristas ship engineering.",
   "volume": 100000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 300.0,
   "mass": 12500000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Typhoon",
   "description": "Much praised by its proponents and much maligned by its detractors, the Typhoon-class battleship has always been one of the most hotly debated spacefaring vessels around. Its distinguishing aspect - and the source of most of the controversy - is its sheer versatility, variously seen as either a lack of design focus or a deliberate freedom for pilot modification.",
   "volume": 414000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 780.0,
   "mass": 100600000.0,
   "category_name": "Ship",

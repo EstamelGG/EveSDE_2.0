@@ -3,7 +3,7 @@
   "name": "Nyx",
   "description": "The Nyx is a gigantic homage to a figure much loved in Gallente society. The ship's design is based on the scepter of Doule dos Rouvenor III, the king who, during his peaceful 36-year reign, was credited with laying the foundation for the technologically and socially progressive ideologies which have pervaded Gallente thought in the millennia since. Indeed, the Nyx itself is emblematic of the Gallenteans' love for progress; packed to the ergonomic brim with the latest in cutting-edge advancements, it is a proud reminder of the things that make the Federation what it is.",
   "volume": 58200000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 1750.0,
   "mass": 1600000000.0,
   "category_name": "Ship",

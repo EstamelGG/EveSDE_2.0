@@ -3,7 +3,7 @@
   "name": "Gnosis",
   "description": "The SoCT's Gnosis-class battlecruiser is typically used as an exploration, research or training vessel and is well equipped for such activities. It is even better prepared, however, to guard such tasks from interruption and sabotage.\n\nAlthough The Society generally frowns upon violent behavior, extreme (and often, extremely violent) methods are taken to protect its own vessels and the secrets they may carry.\n\nThis mission of acquiring, deepening and sharing knowledge is key to the philosophy of the SoCT, and one well-served by the capable and fearsome Gnosis.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 900.0,
   "mass": 10000000.0,
   "category_name": "Ship",

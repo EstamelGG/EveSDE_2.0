@@ -3,7 +3,7 @@
   "name": "Tempest Fleet Issue",
   "description": "The Fleet Tempest originally came into being as a variant licensed by the Fleet to Core Complexion Inc., who intended to improve on the existing design with their now-famous emphasis on strong defensive capability. The designer, one Enoksur Steidentet, performed so well in this task that the Fleet promptly bought all rights to the design back from him for undisclosed billions, catapulting his small production and design corp into the major leagues.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 815.0,
   "mass": 103300000.0,
   "category_name": "Ship",

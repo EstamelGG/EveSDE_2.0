@@ -3,7 +3,7 @@
   "name": "Violator",
   "description": "The Violator is one of the smallest of the Serpentis vessels. Its design was unceremoniously stolen from the Gallente, though its inner workings have been adapted to fit the piratical lifestyle of the Serpentis: In addition to its excellent hybrid damage, it is capable of webbing its opponents and holding them down for a further beating.",
   "volume": 24500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1148000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "魔符级",
   "description": "魔符级是维鲜集团在老式奴隶运输船的基础上加以改造而成的新船。",
   "volume": 230000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 2100.0,
   "mass": 11000000.0,
   "category_name": "舰船",

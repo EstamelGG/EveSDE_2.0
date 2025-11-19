@@ -3,7 +3,7 @@
   "name": "Maulus",
   "description": "The Maulus is a high-tech vessel, specialized for electronic warfare. It is particularly valued in fleet warfare due to its optimization for sensor dampening technology.",
   "volume": 23000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 275.0,
   "mass": 1063000.0,
   "category_name": "Ship",

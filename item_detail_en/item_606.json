@@ -3,7 +3,7 @@
   "name": "Velator",
   "description": "The Velator class corvette is one of the older vessel types in the Gallente fleet. It was first deployed on the market as a fast passenger craft but the extra passenger quarters were later modified into weapon hardpoints as the newer models came to be used for small-scale security and military duties. The Velator is still a very solid mining and trading vessel.",
   "volume": 24500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1148000.0,
   "category_name": "Ship",

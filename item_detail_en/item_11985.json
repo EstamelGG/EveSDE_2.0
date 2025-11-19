@@ -3,7 +3,7 @@
   "name": "Basilisk",
   "description": "Following in the time-honored Caldari spaceship design tradition, the Basilisk sports top-of-the-line on-board computer systems specially designed to facilitate shield transporting arrays, while sacrificing some of the structural strength commonly found in vessels of its class.\n\nLai Dai have always favored a balanced approach to their mix of on-board systems, leading to a line-up of versatile ships but providing very little in terms of tactical specialization. With the Basilisk, their aim was to continue pushing forward the development of cutting-edge defense optimization systems while providing powerful support capability.",
   "volume": 107000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 485.0,
   "mass": 13130000.0,
   "category_name": "Ship",

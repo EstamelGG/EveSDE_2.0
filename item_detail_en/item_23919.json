@@ -3,7 +3,7 @@
   "name": "Aeon",
   "description": "Ships like the Aeon have been with the Empire for a long time. They have remained a mainstay of Amarr expansion as, hopeful for a new beginning beyond the blasted horizon, whole cities of settlers sojourn from their time-worn homesteads to try their luck on infant worlds. The Aeon represents the largest ship of its kind in the history of the Empire, capable of functioning as a mobile citadel in addition to fielding powerful wings of fighter bombers.",
   "volume": 62000000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 1650.0,
   "mass": 1780000000.0,
   "category_name": "Ship",

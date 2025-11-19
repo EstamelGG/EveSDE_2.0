@@ -3,7 +3,7 @@
   "name": "亥伯龙神级",
   "description": "由于认识到发展疾速炮平台对完善高端军械库的必要性，联邦海军引进顶级人才，研发了亥伯龙神级。其结果就是：产生了黑暗天幕中最致命、最全面的炮舰之一。",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 100200000.0,
   "category_name": "舰船",

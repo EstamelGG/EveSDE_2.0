@@ -3,7 +3,7 @@
   "name": "复仇级",
   "description": "复仇级突击护卫舰代表了卡尼迪王国结合艾玛和加达里科技的最新成果，这两种技术铸造了新型且令人激动的船型。这个冷血杀手配有加达里飞船的发射器槽位和艾玛飞船的装甲系统，是你近身搏杀的理想选择。",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 210.0,
   "mass": 1046700.0,
   "category_name": "舰船",

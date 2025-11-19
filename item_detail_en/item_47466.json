@@ -3,7 +3,7 @@
   "name": "Praxis",
   "description": "<i>\"Action follows form. Form follows thought. We have thought deeply on the shape of the future. The forms have been established and now is the time to act.\"</i> – Elder Mentor Matshi Raish, Geminate Chapter, Society of Conscious Thought, YC120.05.06.\n\nThe Praxis-class battleship is a new SoCT design that uses principles derived from Jove shipbuilding techniques recently made available to the Society's naval architects. The Praxis was designed and constructed to combat the emergent threats to New Eden, as they continue to increase in YC120 and beyond.\n\nIn the 15th year since the dawn of the Capsuleer Era, the Society made the Praxis available to all independent capsuleers.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 1200.0,
   "mass": 87000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Tiamat",
   "description": "Based on the Triglavian <i>Vedmak</i>-class cruiser, the <b>Tiamat</b> is an experimental vessel from the Society of Conscious Thought that melds elements of Society technology and design philosophy, with the underlying hull and unique Triglavian systems. In particular, support for covert ops cloaking and scan probe technology was added to the ship's already formidable array of capabilities.\n\nIn mid YC120, the SoCT provided limited numbers of blueprints for the experimental Tiamat design as part of their sponsorship of the capsuleer Alliance Tournament XVI.",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 533.0,
   "mass": 9530000.0,
   "category_name": "Ship",

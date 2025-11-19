@@ -3,7 +3,7 @@
   "name": "Vindicator",
   "description": "Basing their design on the Federation Navy's much-vaunted Megathron, the Guardian Angels' engineers set out to create a battleship that would instill fear in anyone fool enough to square off against the Cartel or its Serpentis protectorate. Based on the reputation this ship has engendered, they seem to have succeeded admirably.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 850.0,
   "mass": 105200000.0,
   "category_name": "Ship",

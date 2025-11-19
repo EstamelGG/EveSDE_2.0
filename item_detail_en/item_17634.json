@@ -3,7 +3,7 @@
   "name": "Caracal Navy Issue",
   "description": "Created specifically in order to counter the ever-increasing numbers of pirate invaders in Caldari territories, the Navy Issue Caracal has performed admirably in its task. Sporting added defensive capability as well as increased fitting potential, it is seeing ever greater use in defense of the homeland.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 9600000.0,
   "category_name": "Ship",

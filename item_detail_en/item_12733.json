@@ -3,7 +3,7 @@
   "name": "Prorator",
   "description": "Blockade runner transports are the fastest type of industrial available. Utilizing sturdy but lightweight construction materials and sacrificing some cargo space, these haulers are able to reach speeds greater than those of a cruiser while withstanding heavy fire - factors that make them ideal for zipping through dangerous territories with valuable cargo.",
   "volume": 200000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 2900.0,
   "mass": 10750000.0,
   "category_name": "Ship",

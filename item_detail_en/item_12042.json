@@ -3,7 +3,7 @@
   "name": "Ishkur",
   "description": "Specialized as a frigate-class drone carrier, the Ishkur carries less in the way of firepower than most other Gallente gunboats. With a fully stocked complement of drones and a skilled pilot, however, no one should make the mistake of thinking this vessel easy prey.\n\nAs the largest drone developer and manufacturer in space, CreoDron has a vested interest in drone carriers. While sacrificing relatively little in the way of defensive capability, the Ishkur can chew its way through surprisingly strong opponents - provided, of course, that the pilot uses top-of-the-line CreoDron drones.",
   "volume": 29500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 165.0,
   "mass": 1094400.0,
   "category_name": "Ship",

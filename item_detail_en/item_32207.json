@@ -3,7 +3,7 @@
   "name": "Freki",
   "description": "Developed along with the first wave of Minmatar assault frigates but later abandoned due to cost, the Freki is known for its extremely well designed warp core that enables it to arrive first on the scene to snare and eliminate its target.\n\nIt is rarely seen on the battlefield, as only a limited number have ever gone into production. It is usually given to pilots as a reward for their excellence in combat.",
   "volume": 27289.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 165.0,
   "mass": 1309000.0,
   "category_name": "Ship",

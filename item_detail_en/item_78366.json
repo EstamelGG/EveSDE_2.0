@@ -3,7 +3,7 @@
   "name": "Alligator",
   "description": "Overhauling the base <i>Drake</i>-class battlecruiser hull to make it their own, the Guristas Pirates have substantially expanded the drone capacity of the new <i>Alligator</i>-class design, and slightly improved missile systems and the propulsion drives. Despite their efforts to improve the handling of the ship, this notoriously sluggish hull's agility took a backseat to the need to pack in new drone stowage and advanced combat drone management systems. \n\nWith the ability to field a full rack of launchers, a flight of upgraded medium combat drones, and formidable defensive shields, the Alligator meets the Guristas need for an assault ship capable of taking on empire patrols and supporting raids against more targets across New Eden.",
   "volume": 252000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 450.0,
   "mass": 13500000.0,
   "category_name": "Ship",

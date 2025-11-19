@@ -3,7 +3,7 @@
   "name": "Skybreaker",
   "description": "The <i>Skybreaker</i>-class frigate was commissioned from Upwell by the New Eden Common Defense Initiative while the organization was still a counter-Triglavian strategy group headed by Provost Marshal Kasiha Valkanir. When EDENCOM was officially announced as the new central command for the defense of New Eden in YC122, the research and development of a line of ships capable of bearing radical new weaponry was widely rumored following Triglavian raids on Upwell development facilities.\n\nThe Upwell Consortium had been working on adapting Arcing Vorton Projector weaponry to a ship-based form since the success of the technology as an anti-fleet weapon on Keepstar Citadels. The first Triglavian invasions in mid-YC121 spurred that effort on even before EDENCOM underwrote the project, providing access to scientists and engineers from the secret weapons programs of the four core empires, and even the SoCT.\n\nThe <i>Skybreaker</i>-class is intended to operate in groups as an escort and counter-attack frigate. With strong shielding and high-output Arcing Vorton Projectors, this swift little ship is a disruptive counter-force in any engagement.",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 158.0,
   "mass": 967090.0,
   "category_name": "Ship",

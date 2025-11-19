@@ -3,7 +3,7 @@
   "name": "'Cold Wind' Kinetic Reaper",
   "description": "Through weapons technology agreements long maintained in the mutual interests of the Caldari State and Amarr Empire, the ‘Reaper’ device created by the Amarr’s weapons scientists was soon passed on to the Caldari, for a suitable quid pro quo, and the State modified the specific energy output so as to produce their own favored kinetic effect at the impact point. In an allusion to Caldari mythology, the weapon was designated ‘Cold Wind’ for the powerful animistic spirit that was said to cut down trees and soldiers alike when it blew at its fiercest.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

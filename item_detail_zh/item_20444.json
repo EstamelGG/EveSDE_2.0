@@ -3,7 +3,7 @@
   "name": "双联千兆级脉冲激光器 I",
   "description": "现今最大型的武器之一，这种大型激光炮专为针对固定装置和其它大型目标的长期围攻而特别设计。注：只能装配在旗舰级舰船上。使用的频率晶体弹药类型：伽玛、红外线、微波、多频、射频、标准、紫外线和X射线。",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 1.0,
   "mass": 40000.0,
   "category_name": "装备",

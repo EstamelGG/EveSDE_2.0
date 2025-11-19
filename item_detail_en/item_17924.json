@@ -3,7 +3,7 @@
   "name": "Succubus",
   "description": "The Succubus is one of the most feared frigates ever to harrow the spacelanes and asteroid belts of civilized space, and with good reason: tales abound of its superiority over ships twice or three times its size. Whether you believe this to be fact or rumor, the Succubus will still strike fear in your heart.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 965000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Cenotaph",
   "description": "An amalgamation of Minmatar engineering, Caldari electronics, and cutting edge bioinformatic technology, the Cenotaph is perfectly engineered for surprise strikes, deep behind enemy lines.\n\nThe Deathless Custodians devised the Cenotaph specifically to house their Breacher Pod weaponry while supporting the Covert Ops technology capabilities required for their clandestine operations.",
   "volume": 216000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 425.0,
   "mass": 13000000.0,
   "category_name": "Ship",

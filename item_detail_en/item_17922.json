@@ -3,7 +3,7 @@
   "name": "Ashimmu",
   "description": "In those of the Empire's regions where naughty children are frightened into submission with tales of the Blood Raiders and their gallery of horrors, the terrible spear of the Ashimmu is known by all as a bringer of things worse than death. This is one of the few things that small children and capsule pilots generally agree upon.",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 430.0,
   "mass": 11010000.0,
   "category_name": "Ship",

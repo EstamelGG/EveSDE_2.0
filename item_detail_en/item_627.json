@@ -3,7 +3,7 @@
   "name": "Thorax",
   "description": "The Thorax-class cruiser is the latest combat ship commissioned by the Federation. While the Thorax is a very effective ship at any range, typical of modern Gallente design philosophy it is most effective when working at extreme close range where its blasters and hordes of combat drones tear through even the toughest of enemies.",
   "volume": 112000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 465.0,
   "mass": 11280000.0,
   "category_name": "Ship",

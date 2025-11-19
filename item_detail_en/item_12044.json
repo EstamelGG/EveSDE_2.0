@@ -3,7 +3,7 @@
   "name": "Enyo",
   "description": "The single-fanged Enyo sports good firepower capability, a missile hardpoint and some extremely strong armor plating, making it one of the best support frigates out there. Ideal for use as point ships to draw enemy fire from more vulnerable friendlies.",
   "volume": 29500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 165.0,
   "mass": 1053900.0,
   "category_name": "Ship",

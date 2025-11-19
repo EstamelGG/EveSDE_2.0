@@ -3,7 +3,7 @@
   "name": "Redeemer",
   "description": "Black Ops battleships are designed for infiltration and espionage behind enemy lines. With the use of a jump drive and portal generator, they are capable of making a special type of jump portal usable only by covert ops vessels. This enables them to stealthily plant reconnaissance and espionage forces in enemy territory. For the final word in clandestine maneuvers, look no further.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 800.0,
   "mass": 150300000.0,
   "category_name": "Ship",

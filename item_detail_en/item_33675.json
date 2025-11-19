@@ -3,7 +3,7 @@
   "name": "Chameleon",
   "description": "“Some capsuleers claim that ECM is 'dishonorable' and 'unfair'.\nJam those ones first, and kill them last.”\n- <i>Jirai 'Fatal' Laitanen, Pithum Nullifier Training Manual c. YC104</i>",
   "volume": 96000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 350.0,
   "mass": 12000000.0,
   "category_name": "Ship",

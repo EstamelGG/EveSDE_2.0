@@ -3,7 +3,7 @@
   "name": "Sentinel",
   "description": "Electronic attack ships are mobile, resilient electronic warfare platforms. Although well suited to a variety of situations, they really come into their own in skirmish and fleet encounters, particularly against larger ships. For anyone wanting to decentralize their fleet's electronic countermeasure capabilities and make them immeasurably harder to counter, few things will serve better than a squadron or two of these little vessels.",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 165.0,
   "mass": 1223200.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "苍鹭级",
   "description": "苍鹭级拥有优秀的计算机和电子系统，使其能够在电子战中发挥有力的作用。但由于它的防御和武器系统相对较弱，所以通常被用于执行侦查和搜索任务。",
   "volume": 18900.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 1150000.0,
   "category_name": "舰船",

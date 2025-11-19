@@ -3,7 +3,7 @@
   "name": "Mastodon",
   "description": "Deep space transports are designed with the depths of lawless space in mind. Possessing defensive capabilities far in excess of standard industrial ships, they provide great protection for whatever cargo is being transported in their massive holds. They are, however, some of the slowest ships to be found floating through space.",
   "volume": 385000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 4500.0,
   "mass": 19200000.0,
   "category_name": "Ship",

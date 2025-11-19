@@ -3,7 +3,7 @@
   "name": "Virtuoso",
   "description": "As competition from upstart narcotics gangs across New Eden have become more and more of a concern for Serpentis Corporation leadership, the decision was made to commission a new frigate design for elite Guardian Angel strike teams. These teams would need to be able to travel across the entire cluster undetected and be ready to crush whatever resistance the local drug lords might muster.\n\nThe resulting ship combines all the strengths of a Nemesis-class Stealth Bomber and the classic Daredevil attack frigate. Rumors of the incredible capabilities of these ships have started to spread through New Eden's criminal underworld, bringing with them a clear promise. If you encroach on the business of the Serpentis Corporation, the last thing you see will be a Virtuoso decloaking.",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 300.0,
   "mass": 1410000.0,
   "category_name": "Ship",

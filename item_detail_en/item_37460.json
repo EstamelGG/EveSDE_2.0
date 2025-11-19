@@ -3,7 +3,7 @@
   "name": "Scalpel",
   "description": "Thukker Tribe caravans have made use of jury-rigged repair frigates for years, mastering the art of optimizing remote shield booster systems for a fast and light frame. With the Scalpel Logistics Frigate, Thukker Mix has built upon the foundation of this experience to release an incredibly fast repair platform that can keep up with all kinds of mobile frigate and destroyer fleets. Upgrading the common Burst hull with increased shield resistances, more powerful remote shield boosters and improved agility, the engineers at Thukker Mix have developed a ship that is sure to become a common sight in New Eden's conflict zones.",
   "volume": 17100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 260.0,
   "mass": 1420000.0,
   "category_name": "Ship",

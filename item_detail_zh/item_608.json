@@ -3,7 +3,7 @@
   "name": "阿特龙级",
   "description": "阿特龙级小而强悍，它的能量传输系统很先进，但货舱空间非常有限。尽管阿特龙级可以很好地胜任采矿工作，但它主要还是被用作战舰。",
   "volume": 22500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 145.0,
   "mass": 1050000.0,
   "category_name": "舰船",

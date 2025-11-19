@@ -3,7 +3,7 @@
   "name": "Capsule",
   "description": "The elusive and radically advanced Jovian Directorate gifted a small Caldari megacorporation with the blueprint and designs for a piece of technology that was to radically change the fate of the human race.\n\nFor a small, select, and chosen group of individuals, those with the physical and mental durability to survive the transition into posthumanism, this technology would provide the gateway to power and riches beyond their wildest dreams and with it, near immortality.",
   "volume": 1000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 500.0,
   "capacity": null,
   "mass": 32000.0,
   "category_name": "Ship",

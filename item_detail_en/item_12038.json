@@ -3,7 +3,7 @@
   "name": "Purifier",
   "description": "Specifically engineered to fire torpedoes, stealth bombers represent the next generation in covert ops craft. The bombers are designed for sneak attacks on large vessels with powerful missile guidance technology enabling the torpedoes to strike faster and from a longer distance.",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 260.0,
   "mass": 1495000.0,
   "category_name": "Ship",

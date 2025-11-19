@@ -3,7 +3,7 @@
   "name": "Garmur",
   "description": "In YC 116, Mordu’s Legion intelligence reported to command that the Guristas pirates were developing new and advanced strike craft capabilities using unknown technologies. In response to these reports, Mordu’s Legion accelerated a program of ship development that was itself a response to trends in capsuleer tactics and warfare. The crash development and manufacturing effort resulted in a new family of fast strike ships integrated with one another to provide tactical flexibility and firepower across ship class lines.\n\nThe Garmur takes up the small craft spot in the Legion’s new strike formations and represents a fast-moving attack frigate with superior missile delivery capabilities.",
   "volume": 27289.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 130.0,
   "mass": 987000.0,
   "category_name": "Ship",

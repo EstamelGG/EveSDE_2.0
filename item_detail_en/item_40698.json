@@ -3,7 +3,7 @@
   "name": "Target Illumination Burst Projector",
   "description": "Emits an area-of-effect burst, centered on the designated location. The burst projects an electronic \"tag\" on affected ships thus making them easier to target and hit. \n\nNote: Only Supercarriers can fit modules of this type. Only one module of this type can be fit per Supercarrier.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "Module",

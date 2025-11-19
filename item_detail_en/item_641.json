@@ -3,7 +3,7 @@
   "name": "Megathron",
   "description": "The Megathron has established itself as one of the most feared and respected battleships around. Since its first appearance almost two decades ago it has seen considerable service in the troublesome regions on the outskirts of the Federation, helping to expand and defend Gallentean influence there.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 98400000.0,
   "category_name": "Ship",

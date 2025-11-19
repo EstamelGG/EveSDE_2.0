@@ -3,7 +3,7 @@
   "name": "Celestis",
   "description": "The Celestis cruiser is a versatile ship which can be employed in a myriad of roles, making it handy for small corporations with a limited number of ships. True to Gallente style the Celestis is especially deadly in close quarters combat due to its advanced targeting systems.",
   "volume": 116000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 320.0,
   "mass": 12070000.0,
   "category_name": "Ship",

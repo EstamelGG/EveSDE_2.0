@@ -3,7 +3,7 @@
   "name": "Imicus",
   "description": "The Imicus is a slow but hard-shelled frigate, ideal for any type of scouting activity. Used by merchant, miner and combat groups, the Imicus is usually relied upon as the operation's eyes and ears when traversing low security sectors.",
   "volume": 21500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 997000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Maulus Navy Issue",
   "description": "The Maulus Navy Issue is the result of the Federation Navy's decision to pivot towards increased support for their Capsuleer allies in the contested low-security constellations across Black Rise and Placid. Borrowing innovative concepts from local pirate bands, Gallente engineers developed a ship capable of extremely powerful warp scrambling alongside respectable combat abilities.",
   "volume": 23000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 275.0,
   "mass": 1063000.0,
   "category_name": "Ship",

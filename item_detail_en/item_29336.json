@@ -3,7 +3,7 @@
   "name": "Scythe Fleet Issue",
   "description": "The Scythe Fleet Issue is a throwback to earlier days of Minmatar ship design, when the scarcity of resources meant that a single ship needed to be able to do almost everything. While often dubbed a \"mini-Typhoon\" for this reason, this versatile gunboat nonetheless has nowhere near the defensive capabilities of its larger ancestor. What it does bring to the table, however, is unparalleled agility and unpredictability. A squadron of these ships can be an immense thorn in the side of even the most able and well-equipped fleet commander.",
   "volume": 89000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 440.0,
   "mass": 10910000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Worm",
   "description": "Korako 'The Rabbit' Kosakami, Gurista leader, has a particular love for stealing the Caldari's ship designs, souping them up, and turning them on their creators. With the Worm, he has taken the Merlin design so familiar to Caldari pilots and turned it into a defensive powerhouse capable of firing its volleys at terrifying speeds.",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 130.0,
   "mass": 981000.0,
   "category_name": "Ship",

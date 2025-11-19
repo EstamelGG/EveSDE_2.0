@@ -3,7 +3,7 @@
   "name": "惩罚者级",
   "description": "许多人认为惩罚者级是目前艾玛最好的护卫舰。从它配备的重型武器就可以看出，惩罚者级主要用于与大型军舰配合作战的大规模军事行动，不过它也完全能够胜任独立行动。",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1190000.0,
   "category_name": "舰船",

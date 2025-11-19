@@ -3,7 +3,7 @@
   "name": "Hematos",
   "description": "The Hematos is one of the smallest Blood Raider vessels in existence, though that doesn't make its appearance any less terrifying to the hapless innocents it may encounter. Like a spider, it is built to trap and drain any victim careless enough to wander into its clutches.\n\nThe Hematos is often employed by novice ship captains and staffed with crew that may not quite have mastered the art of bloodletting, which goes some way to explain its saturation of onboard cleaning systems.",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 115.0,
   "mass": 1148000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Fenrir",
   "description": "Third in line to jump on the freighter bandwagon, the Republic decided early in the design process to focus on a balance between all ship systems. True to form, their creation is comparatively lightweight - though lightweight is certainly not a term easily applicable to this giant.",
   "volume": 15500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 435000.0,
   "mass": 820000000.0,
   "category_name": "Ship",

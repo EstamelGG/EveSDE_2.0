@@ -3,7 +3,7 @@
   "name": "变色龙级",
   "description": "“许多飞行员声称使用ECM是‘不光彩’和‘不公平’的行为。\n对待这种人，要让他们成为ECM的第一目标，然后让他们眼睁睁地看着自己在最后一个被干掉。”\n- <i>“致命的”吉拉伊·赖塔恩，皮特姆湮灭者培训手册。YC104年</i>",
   "volume": 96000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 350.0,
   "mass": 12000000.0,
   "category_name": "舰船",

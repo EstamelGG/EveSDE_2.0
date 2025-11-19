@@ -3,7 +3,7 @@
   "name": "Large Standard Container",
   "description": "A standard cargo container, used for common freight.",
   "volume": 650.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 65.0,
   "capacity": 780.0,
   "mass": 1000000.0,
   "category_name": "Celestial",

@@ -3,7 +3,7 @@
   "name": "Porpoise",
   "description": "When new lower-mass wormhole connections began appearing across Anoikis in late YC116, ORE tasked the engineers at its advanced Outer Ring Development labs with creating a mining foreman vessel capable of passing through these gateways and exploiting the unspoiled riches available within. Creating such a compact ship while preserving much of the utility of the larger Orca and Rorqual designs proved a significant challenge, but the end result was a ship that had great potential for capsuleer mining operations in all areas of space.\n\nThe Porpoise can use a medium industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Porpoise also having this capability, although limited to using medium gas and asteroid ore compressors.\n\nThe Porpoise is a smaller, more mobile and more affordable mining foreman platform that is perfect for supporting mining operations in dangerous space. It is capable of providing support to its allies through mining foreman bursts and remote shield boosters. The Porpoise also enjoys strong bonuses to mining drones, allowing it to pull in its own share of the ore in any mining operation.",
   "volume": 400000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 500.0,
   "mass": 4500000.0,
   "category_name": "Ship",

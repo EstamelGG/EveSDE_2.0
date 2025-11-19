@@ -3,7 +3,7 @@
   "name": "Retriever",
   "description": "The mining barge was designed by <a href=showinfo:30//500014>ORE</a> to facilitate advancing the mining profession to a new level. Each barge was created to excel at a specific function, the Retriever's being storage. A massive ore hold allows the Retriever to operate for extended periods without requiring as much support as other barges.\n\nMining barges are equipped with electronic subsystems specifically designed to accommodate Strip Mining and Ice Harvesting modules.",
   "volume": 150000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 3750.0,
   "capacity": 450.0,
   "mass": 17500000.0,
   "category_name": "Ship",

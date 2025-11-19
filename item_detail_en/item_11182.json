@@ -3,7 +3,7 @@
   "name": "Cheetah",
   "description": "Designed for commando and espionage operation, its main strength is the ability to travel unseen through enemy territory and to avoid unfavorable encounters.\n\nIt is unclear how Thukker Mix could master the intricacies of cloaking technology so quickly after the fall of Crielere. According to Professor Oggand Viftuin, head of R&D, the tribe managed to recruit some senior Caldari scientist that used to work on the Mirage Project at Crielere. Ishukone has denied this, claiming that the Thukkers acquired the technology from prototypes stolen by the Guristas.",
   "volume": 17400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 200.0,
   "mass": 1430000.0,
   "category_name": "Ship",

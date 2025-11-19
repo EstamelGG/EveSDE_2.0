@@ -3,7 +3,7 @@
   "name": "Cynabal",
   "description": "The Cynabal was one of the earliest designs put forth by the Angel Cartel, and to this day it remains their most-used. The ship's origins are unknown, but as with most Cartel ships persistent rumors of Jovian influence continue to linger. Whether these tales have basis in reality or not, the facts are on the table: The Cynabal is one of the fastest, most powerful cruisers to be found anywhere.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 400.0,
   "mass": 9047000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Exequror Navy Issue",
   "description": "The Exequror Navy Issue was commissioned by Federation Navy High Command in response to the proliferation of close-range blaster vessels on the modern stellar battlefield. While it doesn't boast the speed of some of its class counterparts, this up-close-and-personal gunboat nonetheless possesses some of the more advanced hybrid plasma-coil compression subsystems available, making it a lethal adversary in any upfront engagement.",
   "volume": 112000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 465.0,
   "mass": 11280000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "'极光之仪'热能末日武器",
   "description": "得益于逆向工程的冬眠者科技和聚焦磁力力场，这个武器可以射出能摧毁一艘旗舰的反物质集束。\n\n\n\n注：这个武器只能对旗舰级或更大的舰船使用。使用后，你会在三十秒内无法移动、并在五分钟内无法停靠、驻留、隐形或使用跳跃引擎。",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "装备",

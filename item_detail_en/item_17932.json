@@ -3,7 +3,7 @@
   "name": "Dramiel",
   "description": "The Dramiel is the most long-standing and often-used ship design in the Angel Cartel's vast repertoire of vessels. A frigate workhorse if ever there was one, this sharp-tusked, dangerous beauty can sting unimaginably hard if one is not prepared for its assault.",
   "volume": 27289.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 130.0,
   "mass": 950000.0,
   "category_name": "Ship",

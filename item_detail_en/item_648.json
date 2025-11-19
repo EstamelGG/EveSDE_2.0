@@ -3,7 +3,7 @@
   "name": "Badger",
   "description": "The Badger-class hauler is the main light cargo-carrier for the Caldari State, particularly for long, arduous trade runs. Its large size and flexible defenses make it perfectly equipped for those tasks, although the Caldari seldom let it roam alone.",
   "volume": 250000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 3900.0,
   "mass": 10650000.0,
   "category_name": "Ship",

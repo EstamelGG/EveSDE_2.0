@@ -3,7 +3,7 @@
   "name": "Erebus",
   "description": "From the formless void's gaping maw, there springs an entity. Not an entity such as any you can conceive of, nor I; an entity more primordial than the elements themselves, yet constantly coming into existence even as it is destroyed. It is the Child of Chaos, the Pathway to the Next.\n\nThe darkness shall swallow the land, and in its wake there will follow a storm, as the appetite of nothing expands over the world.\n\nFrom the formless void's gaping maw, there springs an entity.\n\n<i>-Dr. Damella Macaper,\nThe Seven Events of the Apocalypse</i>",
   "volume": 145500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000000.0,
   "capacity": 16250.0,
   "mass": 2100000000.0,
   "category_name": "Ship",

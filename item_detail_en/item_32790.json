@@ -3,7 +3,7 @@
   "name": "Etana",
   "description": "The Etana came into existence as one of numerous secret projects under Tibus Heth's rule. As part of those revolutionary and paranoid times in the Caldari State, political emphasis on technological research was split between a need for inexpensive improvements in warfare and a need for advances in espionage and the arts of secrecy. \n\nOne of the outcomes of that research was an improvement on the Osprey, whose versatility and low manufacturing cost made it a natural candidate for improvements. The resulting vessel maintained the shield defenses known among similar ships of its type, while adding an array of remarkable black ops capabilities. In fact, it is reputed that initial prototypes were employed to spy on interstellar activities near the recaptured Caldari Prime, as part of Tibus Heth's continually growing espionage initiative.",
   "volume": 107000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 485.0,
   "mass": 13130000.0,
   "category_name": "Ship",

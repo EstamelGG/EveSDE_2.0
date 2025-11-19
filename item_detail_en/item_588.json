@@ -3,7 +3,7 @@
   "name": "Reaper",
   "description": "The Reaper-class corvette is one of the smallest of the Minmatar vessels, just barely reaching rookie ship status instead of a manned fighter. The Reaper is very cheap and is used en masse in daring hit-and-run operations by Minmatars either side of the law.",
   "volume": 15800.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 120.0,
   "mass": 1157000.0,
   "category_name": "Ship",

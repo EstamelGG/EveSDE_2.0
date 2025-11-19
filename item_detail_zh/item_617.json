@@ -3,7 +3,7 @@
   "name": "回声级",
   "description": "回声级是天使集团设计的一艘小型飞船，它在战斗中并不起眼，却能对敌人造成相当大的威胁。它的设计理念是以迅雷不及掩耳之势进行猛烈的炮火攻击，然后在敌方大型舰船有所行动之前逃之夭夭。",
   "volume": 17660.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 120.0,
   "mass": 1157000.0,
   "category_name": "舰船",

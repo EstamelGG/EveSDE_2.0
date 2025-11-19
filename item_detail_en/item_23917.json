@@ -3,7 +3,7 @@
   "name": "Wyvern",
   "description": "The Wyvern is based on documents detailing the design of the ancient Raata empire's seafaring flagship, the Oryioni-Haru. According to historical sources the ship was traditionally taken on parade runs between the continent of Tikiona and the Muriyuke archipelago, seat of the Emperor, and represented the pride and joy of what would one day become the Caldari State. Today's starfaring version gives no ground to its legendary predecessor; with its varied applications in the vast arena of deep space, the Wyvern is likely to stand as a symbol of Caldari greatness for untold years to come.",
   "volume": 53000000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 1740.0,
   "mass": 1700000000.0,
   "category_name": "Ship",

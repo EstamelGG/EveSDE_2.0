@@ -3,7 +3,7 @@
   "name": "地狱天使级",
   "description": "地狱天使级飞船是专于破坏的星际工具。它的设计宗旨是这样：从战斗一开始就进入战场，锁定射程内的敌人，不断用火力对它们扫射，直到视线内所有的异教徒都被扫成碎片，最后它仍完好无损地屹立于战场。",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 740.0,
   "mass": 103200000.0,
   "category_name": "舰船",

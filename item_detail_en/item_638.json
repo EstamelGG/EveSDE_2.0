@@ -3,7 +3,7 @@
   "name": "Raven",
   "description": "The Raven is the powerhouse of the Caldari Navy. With its myriad launcher slots and powerful shields, few ships can rival it in strength or majesty.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 830.0,
   "mass": 99300000.0,
   "category_name": "Ship",

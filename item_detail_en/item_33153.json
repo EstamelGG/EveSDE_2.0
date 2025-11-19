@@ -3,7 +3,7 @@
   "name": "Drake Navy Issue",
   "description": "After the resounding success tied to the launch of the Drake-class Battlecruiser, the Caldari Navy signed up a massive order to acquire a specific version for its own arsenals. The outcome, the Drake Navy Issue, while sharing a similar look with its step-father, serves a completely different purpose on the battlefield. Being more mobile, able to project missiles more effectively at range, against smaller targets and on a wider selection of damage types, this ship is ideal to support small scale conflicts and raids.",
   "volume": 252000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 450.0,
   "mass": 13500000.0,
   "category_name": "Ship",

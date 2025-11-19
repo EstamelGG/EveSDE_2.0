@@ -3,7 +3,7 @@
   "name": "阿什姆级",
   "description": "在帝国的某些地方，顽皮的孩子们一听到血袭者的惊悚传说就会吓得停止哭泣。众所周知，阿什姆级巡洋舰上骇人的阿什姆之矛会带来比死亡更为恐怖的灾难。小孩子和飞行员之间的共识不多，但这是其中之一。",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 430.0,
   "mass": 11010000.0,
   "category_name": "舰船",

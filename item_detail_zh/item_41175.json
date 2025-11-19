@@ -3,7 +3,7 @@
   "name": "劲弩紧凑型超大型巡航导弹发射器",
   "description": "这个发射器的体积巨大得如同一艘小型巡洋舰，是专门为持久的围攻战以及对付固定建筑设施这样的大型目标所设计的。\n\n注：只能装配在旗舰级舰船上。",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 4.5,
   "mass": null,
   "category_name": "装备",

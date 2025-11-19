@@ -3,7 +3,7 @@
   "name": "Deluge",
   "description": "Seeing the need to develop a Blockade Runner, Upwell modified their Squall design with new advanced lightweight materials and cloaking capabilities. While the infrastructure hold is smaller, and some of the missile firepower was lost, the Deluge has vastly improved mobility both in and out of warp, making it the ideal choice for all infrastructure needs on the fringes of civilized space.",
   "volume": 200000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 4000.0,
   "mass": 10800000.0,
   "category_name": "Ship",

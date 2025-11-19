@@ -3,7 +3,7 @@
   "name": "Slasher",
   "description": "The Slasher is cheap, but versatile. It's been manufactured en masse, making it one of the most common vessels in Minmatar space. The Slasher is extremely fast, with decent armaments, and is popular amongst budding pirates and smugglers.",
   "volume": 17400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 120.0,
   "mass": 1075000.0,
   "category_name": "Ship",

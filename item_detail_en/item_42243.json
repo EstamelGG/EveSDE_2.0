@@ -3,7 +3,7 @@
   "name": "Chemosh",
   "description": "The Blood Raider Covenant has found itself needing to match the capabilities of the Amarr Navy and capsuleer alliances in the face of repeated clashes with both foes. Omir Sarikusa has commanded his fanatical followers to adapt to increased prevalence of capital ships in naval warfare by developing their own, marked by the usual perversion of Amarr ship designs to the battle doctrines of the Blood Raider fleets. The Chemosh class dreadnought is such a ship, sporting the Blood Raiders' signature Energy Nosferatu technology.",
   "volume": 18500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 2400.0,
   "mass": 1290000000.0,
   "category_name": "Ship",

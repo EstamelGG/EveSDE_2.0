@@ -3,7 +3,7 @@
   "name": "Deimos",
   "description": "Sharing more tactical elements with smaller vessels than with its size-class counterparts, the Deimos represents the final word in up-close-and-personal cruiser combat. Venture too close to this one, and swift death is your only guarantee. \n\nRumor has it Duvolle was contracted by parties unknown to create the ultimate close-range blaster cruiser. In this their engineers and designers haven't failed; but the identity of the company's client remains to be discovered.",
   "volume": 112000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 415.0,
   "mass": 11460000.0,
   "category_name": "Ship",

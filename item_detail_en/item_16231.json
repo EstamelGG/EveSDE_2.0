@@ -3,7 +3,7 @@
   "name": "Cyclone",
   "description": "The Cyclone was created in order to meet the increasing demand for a vessel capable of providing muscle for frigate detachments while remaining more mobile than a battleship. To this end, the Cyclone's seven high-power slots and powerful thrusters have proved ideal.",
   "volume": 216000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 450.0,
   "mass": 12400000.0,
   "category_name": "Ship",

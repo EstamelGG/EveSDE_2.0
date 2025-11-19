@@ -3,7 +3,7 @@
   "name": "Condor",
   "description": "The Condor is fast and agile. It has limited cargo space so it's not very suitable for trading or mining. It is best used as an assault vessel in a hit-and-run type of operations.",
   "volume": 18000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 130.0,
   "mass": 1100000.0,
   "category_name": "Ship",

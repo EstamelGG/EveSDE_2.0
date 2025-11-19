@@ -3,7 +3,7 @@
   "name": "Myrmidon",
   "description": "Worried that their hot-shot pilots would burn brightly in their eagerness to engage the enemy, the Federation Navy created a ship that encourages caution over foolhardiness. A hardier version of its counterpart, the Myrmidon is a ship designed to persist in battle. Its numerous medium and high slots allow it to slowly bulldoze its way through the opposition, while its massive drone space ensures that no enemy is left unscathed.",
   "volume": 270000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 400.0,
   "mass": 12700000.0,
   "category_name": "Ship",

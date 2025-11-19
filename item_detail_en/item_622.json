@@ -3,7 +3,7 @@
   "name": "Stabber",
   "description": "The Stabber is the mainstay of the Minmatar fleet. It is light and extremely fast, yet surprisingly powerful, with a wide variety of weapons.",
   "volume": 80000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 420.0,
   "mass": 11400000.0,
   "category_name": "Ship",

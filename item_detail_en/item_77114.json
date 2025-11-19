@@ -3,7 +3,7 @@
   "name": "Metamorphosis",
   "description": "The SoCT’s Metamorphosis-class exploration frigate shares the same basic hull profile as the stripped down Apotheosis-class shuttle. The Metamorphosis is a far more capable vessel, fully able to operate as scouting and surveying vessel in the depths of unknown space. While the vessel has some combat capability for defensive purposes in potentially dangerous territory, it is more suited to its intended exploration, hacking, and archaeological surveying purpose.\n\nIn typical SoCT fashion, the Metamorphosis has a balanced module fitting layout and is capable of using a wide variety of weapons and equipment for its class. While by no means as potent as the Gnosis- and Praxis-class vessels, this handy little frigate is a remarkable transformation of the hull it is based on into an agile and swift option for explorers.",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 200.0,
   "mass": 1000000.0,
   "category_name": "Ship",

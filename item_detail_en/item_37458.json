@@ -3,7 +3,7 @@
   "name": "Kirin",
   "description": "The Kirin-class Logistics Frigate represents the latest development from Lai Dai's venerable research division. Making use of their deep experience in remote shield booster technology obtained from the larger Basilisk cruiser, Lai Dai managed to create an extremely powerful shield boosting platform on a small and mobile Bantam hull. The Kirin development has also benefited from an extensive knowledge sharing agreement with the Carthum Conglomerate.\n\nLai Dai have always favored a balanced approach to their mix of on-board systems, leading to a line-up of versatile ships but providing very little in terms of tactical specialization. With the Kirin, their aim was to continue pushing forward the development of cutting-edge defense optimization systems while providing powerful and mobile support capability.",
   "volume": 20000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 270.0,
   "mass": 1480000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "恩尤级",
   "description": "长了一只角的恩尤级拥有良好的火力、一个导弹挂点和极其强大的装甲附甲，这也让它成为了最佳支援护卫舰之一。非常适合用作尖兵船，引开敌方原本针对脆弱友军的火力。",
   "volume": 29500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 165.0,
   "mass": 1053900.0,
   "category_name": "舰船",

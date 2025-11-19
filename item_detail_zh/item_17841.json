@@ -3,7 +3,7 @@
   "name": "联邦海军彗星级",
   "description": "彗星级的设计理念来自于莱登船业军团的工程师和研究员阿内若•莱瑞芙。最初设计为标准的警用巡逻舰，但优秀的操作性和攻击能力使它晋级为海军级别，在小规模冲突中被广泛使用。",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 145.0,
   "mass": 970000.0,
   "category_name": "舰船",

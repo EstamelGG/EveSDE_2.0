@@ -3,7 +3,7 @@
   "name": "Imp",
   "description": "The Imp is an advanced Sansha's Nation Interceptor intended for use by forward parties of True Power's feared harvester squadrons. Able to penetrate even the most intense blockades, hunt down stragglers or simply hold ships while waiting for the main harvester force to arrive, the Imp is yet another case of Sansha's Nation technology improving on existing advanced hardware. Like most Sansha's Nation equipment, the few captured examples of the Imp have proven to be readily adaptable for capsuleer use.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 150.0,
   "mass": 900000.0,
   "category_name": "Ship",

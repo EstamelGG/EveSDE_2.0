@@ -3,7 +3,7 @@
   "name": "Tempest",
   "description": "The Tempest is one of the Republic Fleet's key vessels; a versatile gunship proficient at long-range bombardment and capable of dishing out specialized types of damage with great effectiveness. A well-rounded squadron of Tempests has been proven time and time again to be an invaluable wild card in a fleet battle, one which opponents should ignore at their own peril.",
   "volume": 450000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 780.0,
   "mass": 99500000.0,
   "category_name": "Ship",

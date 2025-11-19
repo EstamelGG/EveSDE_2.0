@@ -3,7 +3,7 @@
   "name": "Vexor",
   "description": "The Vexor is a strong combat ship that is also geared to operate in a variety of other roles. The Vexor is especially useful for surveying in potentially hostile sectors as it can stay on duty for a very long time before having to return to base. Furthermore, it is well capable of defending itself against even concentrated attacks.",
   "volume": 115000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 480.0,
   "mass": 11100000.0,
   "category_name": "Ship",

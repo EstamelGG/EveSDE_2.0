@@ -3,7 +3,7 @@
   "name": "Malice",
   "description": "The Malice is an assault frigate design exclusively commissioned as a reward in the ninth Alliance Tournament. Sporting custom metal alloys in its plated carapace, it is one of the most expensive ships ever produced in its class. Far from being a mere ornament, though, the Malice features quality armament systems, strong defensive plating and a massive capacitor, and its vastly augmented facility for energy destabilization makes it a formidable adversary in any engagement.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 210.0,
   "mass": 1271000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "台风级舰队型",
   "description": "它可能是新伊甸中最为多用的舰船，台风级舰队型的设计在适应性方面可谓是相当的强悍。夸张的加强配置，速度和武器挂点都超过其普通型号。台风级舰队型被认为是应对各种小型对抗时，不可或缺的万能牌。",
   "volume": 414000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 750.0,
   "mass": 102600000.0,
   "category_name": "舰船",

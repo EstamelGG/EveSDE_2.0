@@ -3,7 +3,7 @@
   "name": "Nomad",
   "description": "There is continuing speculation as to how exactly the Thukkers manage to move their vast caravans throughout space relatively undetected, but their expertise with jump drive technology became glaringly apparent when they created the Nomad. Now seeing widespread service with roving Thukker outrider detachments, the Nomad is rapidly becoming an essential part of Thukker life away from the great caravans.",
   "volume": 15500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 132000.0,
   "mass": 820000000.0,
   "category_name": "Ship",

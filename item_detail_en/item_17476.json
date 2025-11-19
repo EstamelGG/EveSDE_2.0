@@ -3,7 +3,7 @@
   "name": "Covetor",
   "description": "The mining barge was designed by <a href=showinfo:30//500014>ORE</a> to facilitate advancing the mining profession to a new level. Each barge was created to excel at a specific function, the Covetor's being mining yield and mining laser range. This additional yield comes at a price, as the Covetor has weaker defenses and a smaller ore bay than the other mining barges.\n\nMining barges are equipped with electronic subsystems specifically designed to accommodate Strip Mining and Ice Harvesting modules.",
   "volume": 150000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 3750.0,
   "capacity": 350.0,
   "mass": 15000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Noctis",
   "description": "The Noctis marks Outer Ring Excavations' entry into the lucrative bulk salvaging market with capabilities far beyond standard haulers. Building on their successes integrating Marauder-class tractor technology into the Orca command platform, and innovations in automated salvaging technology, they designed a compact, affordable wreck recovery solution.<br><br>A refined version of the successful limited-run Primae design made the perfect hull to house this new equipment, as its salvaging heritage and advanced sensor suites complement and enhance the new technologies. The increased sensor footprint of the new vessel is more than compensated for by its incredible efficiency at retrieving and reclaiming wreckage.<br><br>The Noctis can fit up to five Salvage Drones, further enhancing its salvaging capabilities.",
   "volume": 270000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 1460.0,
   "mass": 14640000.0,
   "category_name": "Ship",

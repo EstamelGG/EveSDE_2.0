@@ -3,7 +3,7 @@
   "name": "Drekavac",
   "description": "A heavy, intermediate warship that appears to be the Collective's equivalent of a combat battlecruiser, the Drekavac is another Triglavian design that has proven adaptable to capsuleer technology, as with previously recovered examples of ship architecture recovered from Abyssal Deadspace.\n\nAs with other frontline combat vessels of the Collective, the Drekavac is capable of mounting Heavy Entropic Disintegrators and an array of support weapons such as energy neutralizers and pulse weapons. The ship also makes use of drones and has a long-range remote repair capability.\n\n<i>Drekavac Subclade of Perun Clade relinquished the adaptation schema of reverse-time accepted 243 tactical troika classification cladeship into the proving grounds of Perun Clade on the assent-conjunction of prayer from Gromovi and Samovda Subclades. Evocation of playful communion across repeated-time by tactical troika in sub-15, sub-21 and sub-27 exclaves of repeated conduit loop construct-303 is under now-time pressure.</i> – partial translation of data included recovered design schematics of the Drekavac",
   "volume": 233000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 650.0,
   "mass": 10700000.0,
   "category_name": "Ship",

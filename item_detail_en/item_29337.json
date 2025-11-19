@@ -3,7 +3,7 @@
   "name": "Augoror Navy Issue",
   "description": "The Navy-issued version of the Augoror cruiser is an extremely resilient piece of hardware able to provide very good support in fleet battles, but it is also a relatively nimble cruiser ideally suited for escort duties as well as smaller skirmishes. Created to fill a void within the ranks of the traditionally slow and lumbering Amarrian fleet, this vessel has fit in perfectly.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 480.0,
   "mass": 10650000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Daredevil",
   "description": "Little hard data is to be had on the Daredevil's exact origin, but it is believed that Guardian Angel engineers created it to serve as a defensive complement to the Cartel's Dramiel frigate. In both flair and utility it closely resembles its counterpart, but it eschews offensive capabilities in favor of greater defensive potential and stronger armor plating. A tough nut to crack.",
   "volume": 26500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 140.0,
   "mass": 823000.0,
   "category_name": "Ship",

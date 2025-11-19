@@ -3,7 +3,7 @@
   "name": "裂谷级",
   "description": "裂谷级是一种非常强大的战斗护卫舰，可以轻松和当今最出色的护卫舰一较高下。它诞生于米玛塔尔起义期间，其后经历了许多次重大设计调整。裂谷级护卫舰具有多种多样的攻击能力，因此是战场上难以琢磨而又致命的对手。",
   "volume": 27289.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 140.0,
   "mass": 1067000.0,
   "category_name": "舰船",

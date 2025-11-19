@@ -3,7 +3,7 @@
   "name": "Hel",
   "description": "Inspired by a vicious scissor-toothed shark indigenous to old-world Matar, the Hel is widely viewed as a sign of a Republic out for blood. Since the beginning of its development it has remained a project cloaked in secrecy, with precious few people aware of its progress and its capabilities, and its formal unveiling has come as a defiant slap in the face to many who formerly believed the Matari incapable of working at this scale of starship design.\n\nWhatever comprises the soil of its roots, though, one thing is clear: from no-frills living quarters to grim, unadorned aesthetic, this ferocious behemoth has been designed for one purpose and one purpose only.\n\n”Imagine a swarm of deadly hornets pouring from the devil's mouth. Now imagine they have autocannons.”\n<i>-Unknown Hel designer</i>",
   "volume": 51000000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 1720.0,
   "mass": 1650000000.0,
   "category_name": "Ship",

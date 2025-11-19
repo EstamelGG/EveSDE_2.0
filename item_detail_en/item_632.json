@@ -3,7 +3,7 @@
   "name": "Blackbird",
   "description": "The Blackbird is a small high-tech cruiser newly employed by the Caldari Navy. Commonly seen in fleet battles or acting as wingman, it is not intended for head-on slugfests, but rather delicate tactical situations.",
   "volume": 96000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 305.0,
   "mass": 13190000.0,
   "category_name": "Ship",

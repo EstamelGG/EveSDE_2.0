@@ -3,7 +3,7 @@
   "name": "奥普克斯级豪华游轮",
   "description": "奥普克斯级豪华游轮通常用于娱乐业，供富有的盖伦特公民进行享乐巡游。这些奥普克斯级豪华游轮在盖伦特空间外非常少见，但在联邦内部却极受欢迎。",
   "volume": 115000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 1750.0,
   "mass": 13075000.0,
   "category_name": "舰船",

@@ -3,7 +3,7 @@
   "name": "Bestower",
   "description": "The Bestower has for decades been used by the Empire as a slave transport, shipping human labor between cultivated planets in Imperial space. As a proof to how reliable this class has been through the years, the Emperor has used an upgraded version of this very same class as transports for the Imperial Treasury. The Bestower has very thick armor and large cargo space.",
   "volume": 260000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 4800.0,
   "mass": 13500000.0,
   "category_name": "Ship",

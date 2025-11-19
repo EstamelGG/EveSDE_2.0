@@ -3,7 +3,7 @@
   "name": "Minokawa",
   "description": "<i>\"The Amarr have decided that there's something to learn from the capsuleers when it comes to capital ships. I can't say as I disagree. I've been trying to tell the Navy this for years.\"</i> - remarks by Ishukone CEO Mens Reppola on the occasion of the Amarr-Caldari Capital Warfare Summit, YC118.01.15\n\nA well established and close co-operation between Amarr and Caldari capital warfare tacticians and naval architects all but guaranteed that the Amarr would share their conclusions on the need to alter capital warfare doctrines and accommodate such changes with updated designs and new ship concepts.\n\nThe infusion of Amarr thinking on the subject of capital ship warfare served to break a long-standing impasse between doctrinal factions in the Caldari Navy's strategic command. The wisdom of learning from the example of the most experienced capital warfare pilots in New Eden was accepted and the Minokawa-class Force Auxiliary was the eventual result.",
   "volume": 15500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 2600.0,
   "mass": 1300000000.0,
   "category_name": "Ship",

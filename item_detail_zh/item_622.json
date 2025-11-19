@@ -3,7 +3,7 @@
   "name": "刺客级",
   "description": "刺客级巡洋舰是米玛塔尔舰队的中流砥柱。它重量轻、速度极快，而且火力出人意料地强，可以使用许多不同种类的武器。",
   "volume": 80000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 420.0,
   "mass": 11400000.0,
   "category_name": "舰船",

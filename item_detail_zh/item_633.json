@@ -3,7 +3,7 @@
   "name": "星空级",
   "description": "星空级巡洋舰用途广泛，可以扮演多种角色，非常适合飞船数量有限的小型军团使用。星空级的设计具有典型的盖伦特特征，它先进的锁定系统使它在近战中具有致命的威力。",
   "volume": 116000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 320.0,
   "mass": 12070000.0,
   "category_name": "舰船",

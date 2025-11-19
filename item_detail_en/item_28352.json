@@ -3,7 +3,7 @@
   "name": "Rorqual",
   "description": "The Rorqual was conceived and designed by Outer Ring Excavations in response to a growing need for capital industry platforms with the ability to support and sustain large-scale mining operations in uninhabited areas of space.\n\nThe Rorqual is notably capable of using a capital industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Rorqual able to use the powerful and logistically impressive capital compressors.\n\nAdditionally, the Rorqual is able to fit a capital tractor beam unit, capable of pulling in cargo containers from far greater distances and at far greater speeds than smaller beams can. It also possesses a sizeable drone bay, jump drive capability and the capacity to fit a clone vat bay. This combination of elements makes the Rorqual the ideal nexus to build deep space mining operations around.\n\nDue to its specialization towards industrial operations, its ship maintenance bay is able to accommodate only industrial ships, mining barges and their tech 2 variants.",
   "volume": 14500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 40000.0,
   "mass": 800000000.0,
   "category_name": "Ship",

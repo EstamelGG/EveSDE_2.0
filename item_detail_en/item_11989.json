@@ -3,7 +3,7 @@
   "name": "Oneiros",
   "description": "Designed specifically as an armor augmenter, the Oneiros provides added defensive muscle to fighters on the front lines. Additionally, its own formidable defenses make it a tough nut to crack. Breaking through a formation supported by an Oneiros is no mean feat.\n\nDeciding that added defensive capabilities would serve to strengthen the overall effectiveness of Gallente ships, who traditionally have favored pure firepower over other aspects, Roden Shipyards came up with the Oneiros. Intrigued, Gallente Navy officials are reportedly considering incorporating this powerful defender into their fleet formations.",
   "volume": 113000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 600.0,
   "mass": 13160000.0,
   "category_name": "Ship",

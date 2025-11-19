@@ -3,7 +3,7 @@
   "name": "献祭者级",
   "description": "献祭者级是萨沙的上等阶层（没有被奴役的人）设计的一艘小型飞船，对那些新近加入萨沙的飞行员来讲，这是一艘不错的入门舰船。它尤其擅长寻找小型目标，然后用激光炮狠狠地打击对方。",
   "volume": 17400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 115.0,
   "mass": 1148000.0,
   "category_name": "舰船",

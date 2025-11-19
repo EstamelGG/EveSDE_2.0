@@ -3,7 +3,7 @@
   "name": "Venture Consortium Issue",
   "description": "Towards the end of YC127, as the Pioneer Consortium Issue was being developed in secret, Upwell began investigating the possibility of backporting its improvements onto the Venture.\n\nThe improved shield defences, drone bay, and enhanced salvage drone functionality pushed the ship beyond the simple capabilities of the basic variants and created a versatile powerhouse. More maneuverable than the Pioneer Consortium Issue and without the same advanced material or skill requirements of the Prospect, the Venture Consortium Issue was perfect for Upwell’s expanded mining projects.",
   "volume": 29500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 150.0,
   "mass": 1200000.0,
   "category_name": "Ship",

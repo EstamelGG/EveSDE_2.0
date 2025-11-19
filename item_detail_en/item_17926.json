@@ -3,7 +3,7 @@
   "name": "Cruor",
   "description": "Mottled, dark red, and shaped like a leech, the Cruor presents a fitting metaphor for the Blood Raiders' philosophy. Designed almost solely to engage in their disturbingly effective tactic of energy draining and stasis webbing, this ship is a cornerstone in any effective Blood Raider fleet - and could play an intriguing role in more standard ones.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1003000.0,
   "category_name": "Ship",

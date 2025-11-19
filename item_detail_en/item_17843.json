@@ -3,7 +3,7 @@
   "name": "Vexor Navy Issue",
   "description": "The Navy Issue edition of the Vexor cruiser has been recently retooled by Federation Navy engineers to increase its armor repair and hybrid weapon capabilities. The result is a monster of a combat cruiser that is capable of trading blows with any enemies of freedom across the New Eden cluster.",
   "volume": 112000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 460.0,
   "mass": 9700000.0,
   "category_name": "Ship",

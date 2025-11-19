@@ -3,7 +3,7 @@
   "name": "Leviathan",
   "description": "Citizens of the State, rejoice!<br>\nToday, a great milestone has been achieved by our glorious leaders. A stepping stone in the grand story of our empire has been traversed. Our individual fears may be quietened; the safety of our great nation has been secured.<br>\nToday, unyielding, we have walked the way of the warrior. In our hands have our fates been molded. On the Leviathan's back will our civilization be carried home and the taint of the Enemy purged from our souls.<br>\nRejoice, citizens! Victory is at hand.<br>\n<i>-Caldari State Information Bureau Pamphlet, YC 12</i>",
   "volume": 132500000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000000.0,
   "capacity": 13750.0,
   "mass": 2300000000.0,
   "category_name": "Ship",

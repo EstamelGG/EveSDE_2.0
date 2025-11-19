@@ -3,7 +3,7 @@
   "name": "毛鲁斯级",
   "description": "毛鲁斯级是一种高科技战舰，专门用于电子战。由于针对感应抑阻技术进行过最优化处理，因此它在舰队战中的价值尤为突出。",
   "volume": 23000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 275.0,
   "mass": 1063000.0,
   "category_name": "舰船",

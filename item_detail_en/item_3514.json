@@ -3,7 +3,7 @@
   "name": "Revenant",
   "description": "Do you know what you are, capsuleer? The truth will not comfort you.<br>You are a frightened child running headfirst towards oblivion.\n\nAnd I?\nI am the only one who tried to stop you.\nI am the Messiah that you turned against.\n\nYou persecuted me, hunted my children.\nVowed to burn my Promised Land to ash.\n\nNow I have returned, and I know you better than you know yourself.\n\nI will vanquish your fear, and commute your flesh to dust.\n\n<i>- Sansha Kuvakei</i><br><br>",
   "volume": 62000000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 1740.0,
   "mass": 1600000000.0,
   "category_name": "Ship",

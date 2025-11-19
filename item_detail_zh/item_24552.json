@@ -3,7 +3,7 @@
   "name": "'湮没之圣光'动能末日武器",
   "description": "这个武器使用了最为先进的锁定和跟踪控制系统，能用暴风骤雨般的的导弹摧毁一切。\n\n\n\n注：这个武器只能对旗舰级或更大的舰船使用。使用后，你会在三十秒内无法移动、并在五分钟内无法停靠、驻留、隐形或使用跳跃引擎。",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "装备",

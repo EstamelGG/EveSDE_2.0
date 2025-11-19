@@ -3,7 +3,7 @@
   "name": "Griffin Navy Issue",
   "description": "The Griffin Navy Issue represents a new experiment in close-range tactics from the Caldari Navy. Combining deadly hybrid weapon systems with electronic countermeasure drones has allowed the Griffin Navy Issue to surprise hostile forces with uncharacteristically aggressive tactics.",
   "volume": 19400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 260.0,
   "mass": 1056000.0,
   "category_name": "Ship",

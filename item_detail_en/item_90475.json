@@ -3,7 +3,7 @@
   "name": "Integrated Sensor Array",
   "description": "An electronic interface that augments and enhances a carrier's sensors and defenses by redirecting power from the warp drive.\n\nThis results in an increase in both the range and resolution of the ship's targeting. The sensor strength of the ship, as well as its fighter squadrons, is also significantly improved. The ship's enhanced sensor suite also monitors threats, greatly improving shield boosters and armor repairer capacitor efficiency and cycle duration.\n\nThe power draw of a Integrated Sensor Array is so great that it prevents the primary warp drive from activating, as well as preventing docking, tethering, and cloaking while the module is active.\n\nNotes: \nOnly one Integrated Sensor Array can be fitted to a carrier-class ship.\nThe shield booster and armor repairer bonuses are only applied to capital-sized modules.\nThis module can only be fitted to carrier-class ships.",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": null,
   "mass": 1000.0,
   "category_name": "Module",

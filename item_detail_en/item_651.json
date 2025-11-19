@@ -3,7 +3,7 @@
   "name": "Hoarder",
   "description": "Aside from being endowed with the usual carrying capabilities of haulers, the Hoarder possesses an extra cargo bay. That bay is a static-free, blast-proof chamber, and as such is meant to be dedicated solely to ferrying consumable charges of all kinds, including ammunition, missiles, capacitor charges, nanite paste and bombs.",
   "volume": 400000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 500.0,
   "mass": 10625000.0,
   "category_name": "Ship",

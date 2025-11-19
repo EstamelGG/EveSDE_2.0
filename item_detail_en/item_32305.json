@@ -3,7 +3,7 @@
   "name": "Armageddon Navy Issue",
   "description": "An improved version of the feared Armageddon-class battleship, this vessel is probably one of the deadliest war machines ever built by the hand of man. Commanding one is among the greatest honors one can attain in the Amarr Empire, and suffering the fury of its turret batteries is surely the fastest way to reunite with the void.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 875.0,
   "mass": 105200000.0,
   "category_name": "Ship",

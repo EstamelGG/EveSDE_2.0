@@ -3,7 +3,7 @@
   "name": "Ample Gallium Quad 800mm Repeating Cannon",
   "description": "Three specialized high angle turrets fitted with quad-barreled weapons are designed for engaging sub-capital threats.\n\nNote: May only be fitted to capital class ships.\n\nMust be loaded with any of the following projectile ammo types: Carbonized Lead, Depleted Uranium, EMP, Fusion, Nuclear, Phased Plasma, Proton, or Titanium Sabot.",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 11.5,
   "mass": 75.0,
   "category_name": "Module",

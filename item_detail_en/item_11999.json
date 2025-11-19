@@ -3,7 +3,7 @@
   "name": "Vagabond",
   "description": "The fastest cruiser invented to date, this vessel is ideal for hit-and-run ops where both speed and firepower are required. Its on-board power core may not be strong enough to handle some of the larger weapons out there, but when it comes to guerilla work, the Vagabond can't be beat. \n\nImproving on the original Stabber design, Thukker Mix created the Vagabond as a cruiser-sized skirmish vessel equally suited to defending mobile installations and executing lightning strikes at their enemies. Honoring their tradition of building the fastest vessels to ply the space lanes, they count the Vagabond as one of their crowning achievements.",
   "volume": 80000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 460.0,
   "mass": 11590000.0,
   "category_name": "Ship",

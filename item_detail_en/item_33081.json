@@ -3,7 +3,7 @@
   "name": "Taipan",
   "description": "The Taipan is one of the smaller types of Gurista vessels. While the design is based on a pre-existing Caldari ship type - the Guristas delight in stealing anything they can from their hated enemies - its internal workings have been heavily modified. Not content to rely on the Caldari's focus on missile combat, the Guristas have added the drone power of the Gallente.",
   "volume": 15000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 125.0,
   "mass": 1163000.0,
   "category_name": "Ship",

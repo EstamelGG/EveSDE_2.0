@@ -3,7 +3,7 @@
   "name": "Apocalypse",
   "description": "In days past, only those in high favor with the Emperor could hope to earn the reward of commanding one of the majestic and powerful Apocalypse class battleships. In latter years, even though now in full market circulation, these golden, metallic monstrosities are still feared and respected as enduring symbols of Amarrian might.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "Ship",

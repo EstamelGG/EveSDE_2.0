@@ -3,7 +3,7 @@
   "name": "Primae",
   "description": "The Primae is a repurposed ORE hauler design intended to ease the task of extracting resources from planetbound environments. Initially devised as a deep space salvage and hauling vessel for large-scale ore retrieval from destroyed ORE fleets in pirate-occupied areas, its previous incarnation was made all but obsolete by the arrival of capsuleers on the interstellar scene. Realizing that the ship could, with a few minor modifications, be made into an efficient resource harvesting aid, ORE wasted no time in revamping the design.<br><br>A low signature radius (a holdover from its earlier manifestation) adds a layer of defense to the Primae's already decent plating. In addition, the ship's two large bays have been re-engineered to hold equipment for planetside resource extraction and processed materials, making it an especially useful complement to any planetside harvesting endeavor.",
   "volume": 270000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 100.0,
   "mass": 15000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Retribution",
   "description": "The Retribution is an homage to the glory days of the Empire, informed by classical Amarrian design philosophy: if it's strong, sturdy and packs a punch, it's ready for action. What this powerhouse lacks in speed and maneuverability it more than makes up for with its wide range of firepower possibilities and superb defensive ability.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1053900.0,
   "category_name": "Ship",

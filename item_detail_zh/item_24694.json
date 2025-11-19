@@ -3,7 +3,7 @@
   "name": "死亡漩涡级",
   "description": "对死亡漩涡级来说，玩的就是多功能性。它的防御能力使它非常适合小队突袭或单独作战，而坚如磐石的炮台安装座为它提供了在战场上杀敌无数的机会。",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 790.0,
   "mass": 103600000.0,
   "category_name": "舰船",

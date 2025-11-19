@@ -3,7 +3,7 @@
   "name": "Capital Flex Armor Hardener II",
   "description": "Flex Armor Hardeners contain advanced nanite membranes capable of being reprogrammed mid-flight using swappable scripts. When unscripted this module provides resistances to all four damage types, and when loaded with a script it provides greatly enhanced resistance to one specific damage type.\n\nNote: Only one of this module type can be fitted at a time. May only be fitted to capital ships.\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 1.0,
   "mass": 1.0,
   "category_name": "Module",

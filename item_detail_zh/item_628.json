@@ -3,7 +3,7 @@
   "name": "主宰级",
   "description": "主宰级是艾玛舰船中的另类，它主要作为承载无人机的运载母舰。虽然它不是目前最出色的运载母舰，但优秀的装甲却使它比同等级的大多数舰船更加坚固。",
   "volume": 120000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 345.0,
   "mass": 11200000.0,
   "category_name": "舰船",

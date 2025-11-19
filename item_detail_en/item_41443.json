@@ -3,7 +3,7 @@
   "name": "'Guillotine' Thermal Reaper",
   "description": "Gallente Federation intelligence agencies were not slow in responding to the massive efforts of the Amarr Empire to develop capital ships and weapons fit to meet the threat of the Drifters, and any other emergent threats that might use similar weapons and battle doctrines. Consequently, the Federation Navy soon acquired the basic principles of the ‘Reaper’ beam technology and developed their own thermal energy variation. This weapon was designated ‘Guillotine’ in reference to the bladed execution weapon once used by the Gallente Federation’s homeworld precursor, the Garoun Empire.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

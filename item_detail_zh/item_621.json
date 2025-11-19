@@ -3,7 +3,7 @@
   "name": "狞獾级",
   "description": "狞獾级精于导弹技术，拥有强大的战斗力。它的护盾防御非常优秀，然而装甲却相当脆弱。当它的导弹储备充足时，消灭任何敌人都只是小菜一碟。",
   "volume": 92000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 11910000.0,
   "category_name": "舰船",

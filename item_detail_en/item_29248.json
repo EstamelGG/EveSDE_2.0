@@ -3,7 +3,7 @@
   "name": "Magnate",
   "description": "This Magnate-class frigate is one of the most decoratively designed ship classes in the Amarr Empire, considered to be a pet project for a small, elite group of royal ship engineers for over a decade. The frigate's design has gone through several stages over the past decade, and new models of the Magnate appear every few years. The most recent versions of this ship – the Silver Magnate and the Gold Magnate – debuted as rewards in the Amarr Championships in YC105, though the original Magnate design is still a popular choice among Amarr pilots.",
   "volume": 22100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 1072000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Miasmos",
   "description": "Aside from being endowed with the usual carrying capabilities of haulers, the Miasmos possesses an extra cargo bay. That bay is equipped with sealed, temperature-controlled vats, and is meant solely for ferrying all types of interstellar ore: ice, gasses and asteroids. The Miasmos was originally designed as a variant of the Iteron, but eventually evolved to perform an entirely separate role.",
   "volume": 265000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 550.0,
   "mass": 12975000.0,
   "category_name": "Ship",

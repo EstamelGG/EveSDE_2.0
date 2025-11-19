@@ -3,7 +3,7 @@
   "name": "Raptor",
   "description": "Interceptors utilize a combination of advanced alloys and electronics to reduce their effective signature radius. This, along with superior maneuverability and speed, makes them very hard to target and track, particularly for high caliber turrets.",
   "volume": 18000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 92.0,
   "mass": 1050000.0,
   "category_name": "Ship",

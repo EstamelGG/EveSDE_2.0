@@ -3,7 +3,7 @@
   "name": "Punisher",
   "description": "The Punisher is considered by many to be one of the best Amarr frigates in existence. As evidenced by its heavy armaments, the Punisher is mainly intended for large-scale military operations, acting in coordination with larger military vessels. With its damage output, however, it is also perfectly capable of punching its way right through unwary opponents.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 135.0,
   "mass": 1190000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Bhaalgorn",
   "description": "Named after a child-devouring demon of Amarrian legend, the Bhaalgorn is the pride and joy of the Blood Raider cabal. Though it is known to be based on an Armageddon blueprint, the design's origin remains shrouded in mystery. Those of a superstitious persuasion whisper in the dark of eldritch ceremonies and arcane rituals, but for most people, the practical aspect of the matter will more than suffice: you see one of these blood-red horrors looming on the horizon, it's time to make yourself scarce.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Apostle",
   "description": "<i>\"Her Imperial Majesty's life will stand eternal as an example for all who live truly and rightly within the embrace of Holy Amarr. The martyrdom of Empress Jamyl I was inflicted with base treachery but its lasting effect will be the inspiration of a thousand generations down the ages.\"</i> - excerpt from the Funeral Oration on the Passing of Empress Jamyl I by High Chaplain Kalefa Sufrin an-Kador, YC117.09.20\n\nFollowing the assassination by a Drifter strikeforce of Empress Jamyl I while she was aboard an Avatar-class Titan in late August YC117, there was a period of soul-searching and close scrutiny of capital ship doctrines by the Imperial Navy's staff officers. It was soon realized that lack of experience in capital ship warfare had left fleet doctrines lagging behind the tactics of capsuleers fighting in the Outer Regions.\n\nFrom this realization was born the concept of the Force Auxiliary capital ship, a vessel dedicated to ensuring the survival of more combat- and command-oriented capital ships such as Carriers and Titans. The Apostle-class Force Auxiliary was commissioned in memory of Empress Jamyl I and is richly decorated in token of this dedication.",
   "volume": 18135000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 2175.0,
   "mass": 1310000000.0,
   "category_name": "Ship",

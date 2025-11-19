@@ -3,7 +3,7 @@
   "name": "Moros",
   "description": "Of all the dreadnoughts currently in existence, the imposing Moros possesses a tremendous capacity to fend off gargantuan hostiles while still posing a valid threat to any and all larger-scale threats on the battlefield. By virtue of its protean array of point defense capabilities, and its terrifying ability to unleash rapid and thoroughly devastating amounts of destruction on the battlefield, the Moros is single-handedly capable of turning the tide in a fleet battle.",
   "volume": 17550000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 2550.0,
   "mass": 1250000000.0,
   "category_name": "Ship",

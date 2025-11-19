@@ -3,7 +3,7 @@
   "name": "Cerberus",
   "description": "No cruiser currently in existence can match the superiority of the Cerberus's onboard missile system. With a well-trained pilot jacked in, this fanged horror is capable of unleashing a hail of missiles to send even the most seasoned armor tankers running for cover. \n\nMoving away from their traditionally balanced all-round designs, Lai Dai have created a very specialized - and dangerous - missile boat in the Cerberus. Many have speculated that due to recent friction between Caldari megacorporations, LD may be looking to beef up their own police force with these missile-spewing monstrosities.",
   "volume": 92000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 650.0,
   "mass": 12720000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "灾难级",
   "description": "在过去的年代里，只有深受皇帝宠爱的人才有希望获赏成为威严、强大的灾难级战列舰的指挥官。后来，这些辉煌的金色巨舰在市场上全面流通，不过它们依然被视为艾玛力量的永恒象征而令人敬畏。",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "舰船",

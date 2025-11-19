@@ -3,7 +3,7 @@
   "name": "Squall",
   "description": "The <i>Squall</i>-class hauler was first commissioned from ORE by Upwell to aid in their nullsec colonization efforts. Building on ORE's recent advances in compression technology and their experience with large specialized cargoholds, the Squall has been outfitted with a Infrastructure Hold capable of storing many items produced by Upwell, such as structures, service modules, sovereignty infrastructure, planetary infrastructure, and deployables. Additionally, the hold also contains several sealed subchambers, allowing it to safely transport and maintain suitable environments for almost any kind of Reagent, Organism or Entity.\n\nWith Upwell shipping lanes facing new increasing threats from the emergence of The Deathless Circle and rising pirate activity in YC125, Mordu's Legion was brought onboard as a co-designer, outfitting the Squall with an array of missile defenses. Despite being a Hauler, the Squall is capable of deterring most small pirate raiding and scouting fleets without an escort.",
   "volume": 250000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 3000.0,
   "mass": 12800000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Breacher",
   "description": "The Breacher's structure is little more than a fragile scrapheap, but the ship's missile launcher hardpoints and superior sensors have placed it among the most valued Minmatar frigates when it comes to long range combat.",
   "volume": 20000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 175.0,
   "mass": 1087000.0,
   "category_name": "Ship",

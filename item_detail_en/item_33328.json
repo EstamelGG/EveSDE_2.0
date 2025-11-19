@@ -3,7 +3,7 @@
   "name": "Capsule - Genolution 'Auroral' 197-variant",
   "description": "This hydrostatic capsule is a unique variant on the standard model. Its golden sheen is nominally decorative material, whose role and purpose are highly classified and which dissipates entirely upon reprocessing. It is known that the capsule's regular building materials are intermixed with traces of another matter, the exact nature of which remains unknown to everyone outside Genolution's research facilities, even the capsuleers themselves. \n\nTheories on the subject include Fullerene Intercalated Graphite polymer for better function of internal parts without the added heat of internal friction; a meld of Fullerite-C320 and Fullerite-C540 for an extra-strength shell that can better withstand the rigors of continued operation under stress (albeit not, sadly, withstand a few direct hits from another vessel's weapon), or just a thin coating of some newly invented sheen compound.\n\nThe capsule's primary function remains to keep the capsuleer alive - even to the point of sending their consciousness to a nearby cloning vat, in the event of imminent obliteration - and allowing for the operation of the massive interstellar vessels in which the capsule is usually encased. This variant can only be operated by those capsuleers wearing the <a href=showinfo:33329>Genolution 'Auroral' AU-79</a> implant, and will be automatically replaced upon destruction.",
   "volume": 1000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 500.0,
   "capacity": null,
   "mass": 32000.0,
   "category_name": "Ship",

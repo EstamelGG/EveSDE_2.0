@@ -3,7 +3,7 @@
   "name": "猛犸级",
   "description": "猛犸级是米玛塔尔共和国轻型货运舰队中最大的运载舰。盖伦特联邦参与了猛犸级的设计过程，这使它体积巨大、威力强劲，同时又机动灵活、技术先进。非常值得选购。",
   "volume": 255000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 5500.0,
   "mass": 11500000.0,
   "category_name": "舰船",

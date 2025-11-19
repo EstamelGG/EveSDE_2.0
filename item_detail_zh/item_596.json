@@ -3,7 +3,7 @@
   "name": "帝国号",
   "description": "帝国号轻型护卫舰已经被艾玛帝国大规模生产了数十年。它是艾玛境内最常见的飞船，既可用作基本的贸易船，也可以作为小规模的劳工运输船。",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 115.0,
   "mass": 1148000.0,
   "category_name": "舰船",

@@ -3,7 +3,7 @@
   "name": "Rokh",
   "description": "Having long suffered the lack of an adequate hybrid platform, the Caldari State's capsule pilots found themselves rejoicing as the Rokh's design specs were released. A fleet vessel if ever there was one, this far-reaching and durable beast is expected to see a great deal of service on battlefields near and far.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 820.0,
   "mass": 105300000.0,
   "category_name": "Ship",

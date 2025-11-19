@@ -3,7 +3,7 @@
   "name": "Odysseus",
   "description": "Following the occupation of Drifter Wormhole Systems in YC127, the Sisters of EVE were thrust into the center of interstellar diplomacy. Their new role as interlocuters between the occupiers granted them greater access to those factions than ever before.\n\nFar away from these events, studying in a secluded Sisters of EVE cloister at the cluster’s edge, a young student named Sister Hana Casmira heard this news and was inspired to pick up her stylus. Her design spread like wildfire through the organization, eventually coming to the attention of Reverend Mother Santimona Sarpati.\n\nWhat Casmira envisioned was the ultimate exploration vessel. Unbound by the conventional limits of space travel, with unprecedented technical capabilities, and the ability to indefinitely support a nomadic life for any researchers bold enough to dream of one. She named it after a belief held by some Sisters that all of humanity are lost travellers who will one day find their way back to heaven, beyond the EVE Gate.",
   "volume": 400000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 750.0,
   "mass": 15000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "启示级",
   "description": "就飞船设计而言，启示级堪称艾玛学院模式的典范：它拥有厚重的装甲和强悍的激光武器。启示级先进的散热技术使得它的激光射速比没有该技术的飞船更快。",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 400.0,
   "mass": 13000000.0,
   "category_name": "舰船",

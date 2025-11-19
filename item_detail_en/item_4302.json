@@ -3,7 +3,7 @@
   "name": "Oracle",
   "description": "In YC 113 Empress Jamyl Sarum I challenged <a href=showinfo:30//500003>Amarr</a> ship manufacturers to build a new battlecruiser that would break the stalemate of the Empyrean War. Deviating from the doctrine of brute-force and heavy armor, the engineers at <a href=showinfo:2//1000066>Viziam</a> took inspiration from <a href=showinfo:30//500001>Caldari</a> history.\n<br>During the Gallente-Caldari War, the Caldari developed light, maneuverable ships to counter the slow ships of the <a href=showinfo:30//500004>Gallente Federation</a>. This philosophy, along with a cutting-edge powertrain and ultra-light alloy armor plating, led to the Oracle.\n<br>The Empire immediately ordered the ship into production. The Empress personally congratulated Viziam Chief Researcher <a href=showinfo:1383//3014474>Parud Vakirokiki</a>, calling the ship \"a work of Divine Grace for the Empire, and retribution to our enemies.\"",
   "volume": 234000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 500.0,
   "mass": 14760000.0,
   "category_name": "Ship",

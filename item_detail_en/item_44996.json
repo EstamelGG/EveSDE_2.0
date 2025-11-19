@@ -3,7 +3,7 @@
   "name": "Marshal",
   "description": "The venerable Marshal series of battleships have made up the backbone of CONCORD's fleets for a century, in various marks and iterations of a design originally built around the subframe and keel of the Amarr Empire's Apocalypse-class battleship. The appearance of a response force led by Marshal-class battleships invariably ends in the destruction of criminals and terrorists daring to try their luck in high-security space.\n\nOver the course of the Drifter Crisis, the Directive Enforcement Department assessed that the aged design, improved only incrementally over the decades, could no longer meet the challenges facing CONCORD. The Marshal was therefore included in CONCORD Aerospace's \"Force Majeure Program\" to develop enhanced and totally overhauled versions of its core inventory of police action and combat vessels. \n\nWhile CONCORD Aerospace successfully upgraded the Marshal and other DED vessels with hyper-advanced technology, the program became a severe drain on CONCORD's resources. Consequently, the Inner Circle authorized a limited release of the Marshal, stripped of CONCORD's advanced rapid-deployment and electronic warfare suites, to the capsuleer market via authorized dealers.",
   "volume": 450000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 800.0,
   "mass": 150000000.0,
   "category_name": "Ship",

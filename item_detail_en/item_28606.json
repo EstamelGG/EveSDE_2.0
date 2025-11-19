@@ -3,7 +3,7 @@
   "name": "Orca",
   "description": "The Orca was developed as a joint venture between Outer Ring Excavations and Deep Core Mining Inc as a vessel to help meet the demands of New Eden's industry and provide a flexible platform from which mining operations can be more easily managed.\n\nThe Orca is also capable of using a large industrial core to substantially increase its industrial capabilities, while empowering its defenses during deployment in a static configuration. A key element of the industrial capacity unlocked by activating an industrial core is the ability to use compressor modules, with the Orca having the flexibility to use a number of specialized large compressors.\n\nThe Orca uses much of the technology developed by ORE for the Rorqual and integrated with the latest advancements from Deep Core Mining research division has developed a vessel which offers a diverse role to all sizes of operations and needs.",
   "volume": 10250000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 500000.0,
   "capacity": 30000.0,
   "mass": 150000000.0,
   "category_name": "Ship",

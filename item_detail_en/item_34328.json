@@ -3,7 +3,7 @@
   "name": "Bowhead",
   "description": "As part of its ongoing program of developing new products for the capsuleer market, ORE has created the Bowhead freighter as a specialized ship transporter. Experience with the ship-handling technology used in the Orca and Rorqual vessels enabled the Outer Ring Development division to build a ship dedicated to moving multiple assembled hulls at once.\n\nOuter Ring Excavations are aggressively marketing the Bowhead as a flexible transport platform for organizing fleet logistics across New Eden, available from authorized ORE outlets.",
   "volume": 17550000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 4000.0,
   "mass": 400000000.0,
   "category_name": "Ship",

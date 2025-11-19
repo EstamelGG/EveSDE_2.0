@@ -3,7 +3,7 @@
   "name": "Moa",
   "description": "The Moa was designed as an all-out combat ship, and its heavy armament allows the Moa to tackle almost anything that floats in space. In contrast to its nemesis the Thorax, the Moa is most effective at long range where its railguns can rain death upon foes.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 12000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Echo",
   "description": "The Echo is a small vessel, designed by the Angel Cartel to be easily missed in the heat of battle, while posing a viable threat in combat. As such, it is intended to rush in with guns blazing and subsequently escape without being eaten up by larger ships.",
   "volume": 17660.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 120.0,
   "mass": 1157000.0,
   "category_name": "Ship",

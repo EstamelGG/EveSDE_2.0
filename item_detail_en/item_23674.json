@@ -3,7 +3,7 @@
   "name": "'Gjallarhorn' Explosive Doomsday",
   "description": "Righteous fury given form, this weapon system rains a firestorm of unmatched raw destruction upon its target.\n\nNotes: This weapon can only fire on ships that are capital-sized or larger. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

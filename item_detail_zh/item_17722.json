@@ -3,7 +3,7 @@
   "name": "警惕级",
   "description": "警惕级巡洋舰是守护天使窃取的第一张盖伦特设计图，但绝不会是最后一张。借助托勒克斯级本身的长处，无论是一对一的战斗还是配合其他飞船群战，它都能起到致命的作用。一支警惕级巡洋舰队可以令敌人闻风丧胆。",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 9830000.0,
   "category_name": "舰船",

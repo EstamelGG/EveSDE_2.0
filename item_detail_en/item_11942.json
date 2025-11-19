@@ -3,7 +3,7 @@
   "name": "Silver Magnate",
   "description": "This decoratively designed ship is a luxury in its own class. The Magnate frigate has been the pet project of a small, elite group of royal ship engineers for a decade. Over the long years of expensive research, the design process has gone through several stages, and each stage has set a new standard in frigate design. The Silver Magnate, offered as a reward in the Amarr Championships in YC105 and YC118, is one of the most impressive iterations in this line of masterworks.",
   "volume": 22100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 250.0,
   "mass": 1500000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Tristan",
   "description": "Often nicknamed The Fat Man this nimble little frigate is mainly used by the Federation in escort duties or on short-range patrols. The Tristan has been very popular throughout Gallente space for years because of its versatility. It is rather expensive, but buyers will definitely get their money's worth, as the Tristan is one of the more powerful frigates available on the market.",
   "volume": 26500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 140.0,
   "mass": 1044000.0,
   "category_name": "Ship",

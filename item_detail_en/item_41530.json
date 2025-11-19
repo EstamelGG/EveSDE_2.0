@@ -3,7 +3,7 @@
   "name": "Dread Guristas Capital Flex Shield Hardener",
   "description": "Flex Shield Hardeners use powerful but bulky resonance coils to project a constructive interference pattern across a ship's shields. These patterns can increase shield resistances against all damage types, or to provide increased protection against one specific damage type with the aid of swappable scripts.\n\nNote: Only one of this module type can be fitted at a time. May only be fitted to capital ships.\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.",
   "volume": 3000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 1.0,
   "mass": 10000.0,
   "category_name": "Module",

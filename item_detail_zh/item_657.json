@@ -3,7 +3,7 @@
   "name": "伊特龙级MKV",
   "description": "这个笨重的大家伙是伊特龙家族的最后一名成员。它是唯一一艘还保留着伊特龙级名号的舰船，家族里的其它船只都有了各自专门的用途和名称。MKV代表着运输舰船的终极能力：运输数目巨大的货物来往于星海之间。",
   "volume": 275000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 5800.0,
   "mass": 13500000.0,
   "category_name": "舰船",

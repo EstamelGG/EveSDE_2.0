@@ -3,7 +3,7 @@
   "name": "Typhoon Fleet Issue",
   "description": "Possibly the most versatile vessel in New Eden, the Typhoon Fleet Issue is a true wonder in design adaptability. Boasting improved fittings, speed and weapon hardpoints over its standard counterpart, this ship is widely known as an invaluable wild card in any small-scale engagement.",
   "volume": 414000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 750.0,
   "mass": 102600000.0,
   "category_name": "Ship",

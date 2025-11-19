@@ -3,7 +3,7 @@
   "name": "乌鸦级",
   "description": "乌鸦级战列舰是加达里海军的力量源泉。它有着数不清的发射器槽位和强大的护盾，很少有舰船能在实力或气势上与之匹敌。",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 830.0,
   "mass": 99300000.0,
   "category_name": "舰船",

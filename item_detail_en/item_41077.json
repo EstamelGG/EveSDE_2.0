@@ -3,7 +3,7 @@
   "name": "Anode Scoped Triple Neutron Blaster Cannon",
   "description": "Three specialized high angle turrets fitted with neutron blaster cannons are designed for engaging sub-capital threats.\nNote: May only be fitted to capital class ships.\n\nRequires hybrid charge types: Antimatter, Iridium, Iron, Lead, Plutonium, Thorium, Tungsten, Uranium.",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 10.0,
   "mass": 40000.0,
   "category_name": "Module",

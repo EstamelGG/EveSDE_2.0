@@ -3,7 +3,7 @@
   "name": "Obelisk",
   "description": "The Obelisk was designed by the Federation in response to the Caldari State's Charon freighter. Possessing similar characteristics but placing a greater emphasis on resilience, this massive juggernaut represents the latest, and arguably finest, step in Gallente transport technology.",
   "volume": 17550000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 440000.0,
   "mass": 940000000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Heron",
   "description": "The Heron has good computer and electronic systems, giving it the option of participating in electronic warfare. But it has relatively poor defenses and limited weaponry, so it's more commonly used for scouting and exploration.",
   "volume": 18900.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 1150000.0,
   "category_name": "Ship",

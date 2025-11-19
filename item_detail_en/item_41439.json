@@ -3,7 +3,7 @@
   "name": "'Iron Pike' Kinetic Lance",
   "description": "The Caldari Navy’s weapons scientists were slightly puzzled that their Amarr allies had not created a simplified, focused version of the ‘Reaper’ before the Federation but attributed this to the legendarily methodical and cautious approach of imperial scientists. There was some truth to this, as the Amarr had simply not yet managed to hold the beam reliably on a single target point. The State managed to independently solve the problem of holding a focused beam of the pseudo-stable energy and the modifications necessary to create the ‘Iron Pike’ Kinetic Lance were soon made.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

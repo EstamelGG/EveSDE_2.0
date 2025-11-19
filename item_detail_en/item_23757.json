@@ -3,7 +3,7 @@
   "name": "Archon",
   "description": "The Archon was commissioned by the Imperial Navy to act as a personnel and fighter carrier. The order to create the ship came as part of a unilateral initiative issued by Navy Command in the wake of Emperor Kor-Azor's assassination. Sporting the latest in fighter command interfacing technology and possessing characteristically strong defenses, the Archon is a powerful aid in any engagement.\n\nThe Archon is capable of generating a <a href=showinfo:83094>Jump Conduit Portal</a> which allows it to instantaneously transport itself and nearby fleet members to a target cynosural beacon. Ship classes that can be moved via conduit: Frigates, Destroyers, Cruisers, Battlecruisers, and Battleships.",
   "volume": 13950000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 825.0,
   "mass": 1260000000.0,
   "category_name": "Ship",

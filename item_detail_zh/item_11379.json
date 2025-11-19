@@ -3,7 +3,7 @@
   "name": "战鹰级",
   "description": "战鹰级突击护卫舰沿袭了自古以来的加达里舰船模式，依靠强大的护盾系统在战斗中求得生存，并且将炮台和发射器混合搭配，从而使自身成为全面的战斗舰船。",
   "volume": 16500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 300.0,
   "mass": 1095300.0,
   "category_name": "舰船",

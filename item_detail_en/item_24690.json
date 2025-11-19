@@ -3,7 +3,7 @@
   "name": "Hyperion",
   "description": "Recognizing the necessity for a blaster platform to round out their high-end arsenal, the Federation Navy brought in top-level talent to work on the Hyperion. The result: one of the most lethal and versatile gunboats ever to take to the dark skies.",
   "volume": 470000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 100200000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Huge Freight Container",
   "description": "A massive cargo container, used for inter-regional freight; most commonly used in freighter cargo bays.",
   "volume": 50000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 500.0,
   "capacity": 50000.0,
   "mass": 1000000.0,
   "category_name": "Celestial",

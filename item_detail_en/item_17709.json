@@ -3,7 +3,7 @@
   "name": "Omen Navy Issue",
   "description": "The Omen Navy Issue was originally conceived as a multipurpose search and rescue vessel with strong combat capabilities. In response to the increasing need for ships capable of countering frigate swarms, its designers additionally included a drone bay intended to give the ship a greater range of options when faced with mixed enemy squadrons. The end result is a somewhat more flexible offering than Amarr design philosophy generally dictates, but don't be fooled: this crusher still packs all the punch one would expect from a ship of the golden fleet.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 400.0,
   "mass": 10850000.0,
   "category_name": "Ship",

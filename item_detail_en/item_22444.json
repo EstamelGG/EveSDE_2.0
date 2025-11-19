@@ -3,7 +3,7 @@
   "name": "Sleipnir",
   "description": "Command ships are engineered specifically to wreak havoc on a battlefield of many. Sporting advanced command module interfaces, these vessels are more than capable of turning the tide in large engagements. Command ships represent the ultimate in Command Burst efficiency; the boosts they give their comrades in combat make them indispensable assets to any well-rounded fleet.",
   "volume": 216000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 475.0,
   "mass": 12800000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Chimera",
   "description": "The Chimera's design is based upon the Kairiola, a vessel holding tremendous historical significance for the Caldari. Initially a water freighter, the Kairiola was refitted in the days of the Gallente-Caldari war to act as a fighter carrier during the orbital bombardment of Caldari Prime. \n\nIt was most famously flown by the legendary Admiral Yakia Tovil-Toba directly into Gallente Prime's atmosphere, where it fragmented and struck several key locations on the planet. This event, where the good Admiral gave his life, marked the culmination of a week's concentrated campaign of distraction which enabled the Caldari to evacuate their people from their besieged home planet. Where the Chimera roams, the Caldari remember.\n\nThe Chimera is capable of generating a <a href=showinfo:83094>Jump Conduit Portal</a> which allows it to instantaneously transport itself and nearby fleet members to a target cynosural beacon. Ship classes that can be moved via conduit: Frigates, Destroyers, Cruisers, Battlecruisers, and Battleships.",
   "volume": 11925000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 870.0,
   "mass": 1240000000.0,
   "category_name": "Ship",

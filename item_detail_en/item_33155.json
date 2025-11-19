@@ -3,7 +3,7 @@
   "name": "Harbinger Navy Issue",
   "description": "While the Harbinger is a formidable vessel on its own, recent reports have raised its lack of flexibility as a noteworthy concern in the ever-shifting fleet tactic doctrines. Working hard to correct this problem, Imperial engineers came up with the improved Navy Issue variant. Boasting upgraded tracking systems, enhanced resilience and an advanced medium slot configuration layout, the Harbinger Navy Issue is a radical change over its predecessor, capable of astounding performance in a much wider spectrum of engagements.",
   "volume": 234000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 375.0,
   "mass": 15500000.0,
   "category_name": "Ship",

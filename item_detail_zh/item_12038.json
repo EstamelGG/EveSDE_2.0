@@ -3,7 +3,7 @@
   "name": "净化级",
   "description": "隐形轰炸舰专为发射鱼雷而设计，是下一代隐形飞行器的典型代表。凭借着强大的导弹制导系统，该种舰船能让鱼雷奔得更快更远，专用来偷袭大型船只。",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 260.0,
   "mass": 1495000.0,
   "category_name": "舰船",

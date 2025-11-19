@@ -3,7 +3,7 @@
   "name": "Drake",
   "description": "Of the meticulous craftsmanship the Caldari are renowned for, the Drake was born. It was found beneath such a ship to rely on anything other than the time-honored combat tradition of missile fire, while the inclusion of sufficient CPU capabilities for decent electronic warfare goes without saying.",
   "volume": 252000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 450.0,
   "mass": 13500000.0,
   "category_name": "Ship",

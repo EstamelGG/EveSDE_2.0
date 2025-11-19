@@ -3,7 +3,7 @@
   "name": "Caracal",
   "description": "The Caracal is a powerful vessel that specializes in missile deployment. It has excellent shield defenses, but poor armor plating. Its missile arsenal, when fully stocked, is capable of making mincemeat of almost anyone.",
   "volume": 92000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 11910000.0,
   "category_name": "Ship",

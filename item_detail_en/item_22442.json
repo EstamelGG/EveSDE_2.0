@@ -3,7 +3,7 @@
   "name": "Eos",
   "description": "Command ships are engineered specifically to wreak havoc on a battlefield of many. Sporting advanced command module interfaces, these vessels are more than capable of turning the tide in large engagements. Command ships represent the ultimate in Command Burst efficiency; the boosts they give their comrades in combat make them indispensable assets to any well-rounded fleet.\n\nAs the largest drone developer and manufacturer in space, CreoDron has a vested interest in drone carriers. While sacrificing relatively little in the way of defensive capability, the Eos can chew its way through surprisingly strong opponents - provided, of course, that the pilot uses top-of-the-line CreoDron drones.",
   "volume": 270000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 400.0,
   "mass": 12500000.0,
   "category_name": "Ship",

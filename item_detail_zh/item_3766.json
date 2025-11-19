@@ -3,7 +3,7 @@
   "name": "守夜者级",
   "description": "守夜者级是艘与众不同的米玛塔尔飞船，既可用作远程侦察机，又可用作电子战平台。它快速、敏捷，可以在使用干扰器等电子设备扰乱敌方的同时使自身与敌人保持一定距离以避开其火力。",
   "volume": 17400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 250.0,
   "mass": 1080000.0,
   "category_name": "舰船",

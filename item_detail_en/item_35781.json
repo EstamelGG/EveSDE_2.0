@@ -3,7 +3,7 @@
   "name": "Fiend",
   "description": "The Fiend was originally designed by Sansha's Nation as a Heavy Interdiction Cruiser for use by elite harvester squadrons as a means to capture and board ships typically requiring large crew complements. The advanced interdiction technology the vessel is equipped with allows it to generate warp disruption fields without impairing its flight characteristics. This allows these formidable ships to easily chase down and hold even the fastest vessels in the larger size brackets. As with other Sansha's Nation equipment, the handful of captured Fiends in commercial hands have proven to be adaptable for capsuleer use.",
   "volume": 101000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 450.0,
   "mass": 9000000.0,
   "category_name": "Ship",

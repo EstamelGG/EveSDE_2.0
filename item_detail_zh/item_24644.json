@@ -3,7 +3,7 @@
   "name": "旗舰级牵引光束 I",
   "description": "通过操纵重力场，这个装备能将货柜集装箱拖近飞船。 \n\n\n\n注意：该装备只能装配在工业旗舰长须鲸级上。",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": 0.8,
   "mass": 50.0,
   "category_name": "装备",

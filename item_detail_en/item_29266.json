@@ -3,7 +3,7 @@
   "name": "Apotheosis",
   "description": "\"For you, children, on your fifth birthday. May your next five years be as full of promise and hope, and may you one day walk with us as equals among the stars.\"\n<br><br><i>Idmei Sver, Society of Conscious Thought, on the fifth anniversary of the Capsuleer Era.</i>",
   "volume": 17400.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 500.0,
   "capacity": 10.0,
   "mass": 1600000.0,
   "category_name": "Ship",

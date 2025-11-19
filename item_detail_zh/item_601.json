@@ -3,7 +3,7 @@
   "name": "伊毕斯号",
   "description": "加达里伊毕斯号轻型护卫舰体型虽小，但坚固结实，非常适合货物运输或小规模采矿。它的可靠性使它成为新手船长的理想选择。",
   "volume": 15000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 125.0,
   "mass": 1163000.0,
   "category_name": "舰船",

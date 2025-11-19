@@ -3,7 +3,7 @@
   "name": "Karura",
   "description": "<i>”The Ocean Winds drive us to extend the reach of the Caldari State by all means available, by any means necessary. To serve the Caldari people and State is the first duty of our corporate community, and we shall see it done by the Winds and Way of the Caldari!”\n – Mens Reppola, CEO Ishukone Corporation, speech to Combine TNR executives, January YC125</i>\n\nDespite the setback of a Guristas spy ring stealing Caldari capital ship development secrets in YC124, a program for an advanced dreadnought proceeded under a secret contract awarded to the <i>Tiuunakama Nenkanavu Rymasaikkan</i>, the “Ocean Winds Corporate Community” linking the Hyasyoda, Ishukone, and Wiyrkomi megacorporations. Hyasyoda and Wiyrkomi pooled their expertise in energy and weapons systems to complete the “Disruptive Lance” project on schedule. Pivoting from its involvement in the long-stalled “Project Dictator”, Ishukone applied itself to developing the Karura-class Lancer Dreadnought. Able to deploy the new lance weaponry, the Karura uses hybrid weapons as its secondary armament.",
   "volume": 16250000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1300000.0,
   "capacity": 3500.0,
   "mass": 1270000000.0,
   "category_name": "Ship",

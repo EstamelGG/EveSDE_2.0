@@ -3,7 +3,7 @@
   "name": "Molok",
   "description": "<i>\"Molok, libeled as 'The Deceiver' by the false faith, was truer than any so-called 'True Amarr' follower of the corrupted throne squatters could ever be. He it was that understood the true nature of the universe. There is only one truth: power is all; naked, merciless force wielded by those with the will to grapple with it. We drink the blood of the powerful and the pure because to survive and advance we must feed on their energy and make it our own. This is the lesson of Molok. His failure is of no moment, his glimpse of the Great Truth is all that matters.\"</i>\n\n- Omir Sarikusa, Meditations on a Crimson Chalice",
   "volume": 155000000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000000.0,
   "capacity": 12400.0,
   "mass": 2400000000.0,
   "category_name": "Ship",

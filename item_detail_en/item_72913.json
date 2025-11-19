@@ -3,7 +3,7 @@
   "name": "Imicus Navy Issue",
   "description": "The Imicus has had a long history as a semi-industrial platform used first as a convenient startup mining platform, and then as an explorer and salvager by enterprising Gallente pilots. The Federation Navy issued a requirement for a scouting and exploration vessel with enough combat capability to respond aggressively to any immediate threats. As something inevitably had to give in the quest for enhanced scouting and combat capabilities, the Federation Navy made no bones about specifying a requirement that removed special salvaging efficiency systems from the Imicus Navy Issue.\n\nCreoDron and Roden Shipyards put in a successful joint upgrade bid that promised significantly upgraded drone capabilities coupled with special processing systems to support a probe launcher alongside the new drone systems. The Imicus Navy Issue has handsomely delivered on that promise with its ability to pinpoint likely targets and fall upon them with its impressive array of weapons.",
   "volume": 21500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 997000.0,
   "category_name": "Ship",

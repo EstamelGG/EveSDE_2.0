@@ -3,7 +3,7 @@
   "name": "'Geiravor' Explosive Lance",
   "description": "The Republic Security Services were so concerned by reports of major advances in directed and focused capital energy weapons development in the other empires that they recommended a covert acquisition program to Sanmatar Maleatu Shakor. In contrast to this aggressive approach, the Sanmatar tasked the Republic Justice Department to use its considerable contacts with the Gallente Federation to overcome the hesitancy created by past tensions and border encounters between the two empires. As a result of this open policy, President Jacus Roden directed the Federation Navy to share its ‘Lance’ technology with the Republic Fleet and the ‘Geiravor’ Explosive Lance variant was quickly developed.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

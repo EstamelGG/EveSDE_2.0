@@ -3,7 +3,7 @@
   "name": "Domination Capital Cap Battery",
   "description": "Increases capacitor storage. Provides defense against Energy Leech and Energy Neutralizer effects.\n\nNote: May only be fitted to capital class ships.",
   "volume": 4000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 1000.0,
   "capacity": null,
   "mass": null,
   "category_name": "Module",

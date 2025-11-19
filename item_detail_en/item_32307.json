@@ -3,7 +3,7 @@
   "name": "Dominix Navy Issue",
   "description": "The Dominix Navy Issue's past is prominently interwoven with history, as it is known to have directly participated in the blockade and bombardment of Caldari Prime along with the Dracofeu orbital-class bomber two centuries ago. Engineered for capsule compliance, and refitted to serve more traditional combat roles, the Dominix Navy Issue today remains an extremely effective vessel and an invaluable asset in close- to mid-range battle situations.",
   "volume": 454500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 845.0,
   "mass": 97100000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Huge Secure Container",
   "description": "This Huge container is fitted with a password-protected security lock.\n\nNote: The container must be anchored to enable password functionality. Anchoring containers is only possible in solar systems with a security status of 0.7 or lower.",
   "volume": 1500.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 150.0,
   "capacity": 1950.0,
   "mass": 3000000.0,
   "category_name": "Celestial",

@@ -3,7 +3,7 @@
   "name": "Skiff",
   "description": "The exhumer is the second generation of mining vessels created by <a href=showinfo:30//500014>ORE</a>. Exhumers, like their mining barge cousins, were each created to excel at a specific function, the Skiff's being durability and self-defense. Advanced shielding and drone control systems make the Skiff the toughest mining ship in the cluster.\n\nExhumers are equipped with electronic subsystems specifically designed to accommodate Strip Mining and Ice Harvesting modules.",
   "volume": 150000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 3750.0,
   "capacity": 350.0,
   "mass": 20000000.0,
   "category_name": "Ship",

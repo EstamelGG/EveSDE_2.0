@@ -3,7 +3,7 @@
   "name": "Guardian",
   "description": "The Guardian is the first vessel to feature Carthum Conglomerate's brand new capacitor flow maximization system, allowing for greater amounts of energy to be stored in the capacitor as well as providing increased facilities for transporting that energy to other ships.\n\nWhile featuring Carthum's trademark armor and hull strength, the Guardian, being a support ship, has limited room for armaments. Its intended main function is to serve as an all-round support vessel, providing the raw energy for fleet compatriots to do what they need to do in order to achieve victory.",
   "volume": 115000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 465.0,
   "mass": 11980000.0,
   "category_name": "Ship",

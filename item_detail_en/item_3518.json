@@ -3,7 +3,7 @@
   "name": "Vangel",
   "description": "The Vangel is a heavy assault cruiser design exclusively commissioned as a reward in the ninth Alliance Tournament. Like its smaller sibling the Malice, it possesses greatly enhanced energy destabilization systems. Though it was primarily conceived as a combat vessel for the solitary pilot, the Vangel‘s great stores of capacitor power and top-of-the-line armor plating make it no less effective in small fleets. A sleek, deadly triumph of both form and function.",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 550.0,
   "mass": 11890000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "Sigil",
   "description": "The Sigil is a recent ship from Viziam based on an old slave transport design.",
   "volume": 230000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 2100.0,
   "mass": 11000000.0,
   "category_name": "Ship",

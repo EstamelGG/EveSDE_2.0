@@ -3,7 +3,7 @@
   "name": "Wreathe",
   "description": "The Wreathe is an old hauler of the Minmatar Republic and one of the oldest ship designs still in use. The design of the Wreathe is very plain, which is the main reason for its longevity, but it also makes the ship incapable of handling anything but the most mundane tasks.",
   "volume": 225000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 20000.0,
   "capacity": 2900.0,
   "mass": 10000000.0,
   "category_name": "Ship",

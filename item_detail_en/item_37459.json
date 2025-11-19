@@ -3,7 +3,7 @@
   "name": "Thalia",
   "description": "The Thalia-class Logistics Frigate was developed by Roden Shipyards as a more mobile counterpart to their wildly successful Oneiros Logistics Cruiser. Able to keep pace with frigate and destroyer wings, the Thalia boasts excellent armor support capabilities in a compact and reasonably-priced form factor. In late YC117, news that the Federation Navy had placed a massive order for Thalia-class frigates brought Roden Shipyards stock to a seven year high.",
   "volume": 10000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 280.0,
   "mass": 1450000.0,
   "category_name": "Ship",

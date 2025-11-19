@@ -3,7 +3,7 @@
   "name": "Vengeance",
   "description": "The Vengeance represents the latest in the Kingdom's ongoing mission to wed Amarr and Caldari tech, molding the two into new and exciting forms. Sporting a Caldari ship's launcher hardpoints as well as an Amarr ship's armor systems, this relentless slugger is perfect for when you need to get up close and personal.",
   "volume": 28600.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 210.0,
   "mass": 1046700.0,
   "category_name": "Ship",

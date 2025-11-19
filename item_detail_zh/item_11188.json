@@ -3,7 +3,7 @@
   "name": "咒逐级",
   "description": "为突击队和间谍活动而设计，主要特点在于能穿越敌人领空而不暴露行踪，避免了遭遇危险。",
   "volume": 28100.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 190.0,
   "mass": 1147000.0,
   "category_name": "舰船",

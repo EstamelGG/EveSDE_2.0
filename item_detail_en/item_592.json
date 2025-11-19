@@ -3,7 +3,7 @@
   "name": "Navitas",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. In the Gallente Federation, this led to the redesign and redeployment of the Navitas.\n\nThe Navitas had been a solid mining vessel that had seen wide use by independent excavators, along with being one of the best ships available for budding traders and even for much-maligned scavengers. After its redesign, its long-range scanners and sturdy outer shell gave way entirely for remote repairing capabilities, moving the Navitas away from the calming buzz of mining lasers and into the roar of battle.",
   "volume": 10000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 280.0,
   "mass": 1450000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "'Divine Harvest' Electromagnetic Reaper",
   "description": "The Amarr Empire’s crash program of capital ship development included an intense effort to reverse-engineer recovered Drifter technology. While falling short of a full understanding of the weapons used by the inscrutable Drifters, the research did bear fruit in a new form of directed energy beam that weapons scientists began calling the ‘Reaper’. The Imperial Navy designated the device ‘Divine Harvest’ but the tag stuck to this weapon type when, inevitably, other empires acquired the basic concept and developed their own variations.\n\nNote: Activating this module triggers a massive capacitor disruption wave that impacts ships in the immediate vicinity of the Titan, friend or foe. After firing, you will be immobile for thirty seconds and unable to dock, tether, cloak, or activate your jump drive for five minutes.",
   "volume": 8000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2000.0,
   "capacity": null,
   "mass": 100.0,
   "category_name": "Module",

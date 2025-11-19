@@ -3,7 +3,7 @@
   "name": "Augoror",
   "description": "In YC114 each major empire faction, having been embroiled in a harrowing, extensive, long-term war, recognized the growing need for support and logistics functionality in their vessels during the kind of protracted interstellar warfare that might otherwise prove exhausting for its participants. Both Frigate and Cruiser-class ships were put under the microscope, and in the Amarr Empire the outcome of the re-evaluation process led, among other developments, to a redesign and redeployment of the Augoror.\n\nThe Augoror-class cruiser is one of the old warhorses of the Amarr Empire, having seen action in both the Jovian War and the Minmatar Rebellion. Like most Amarr vessels, the Augoror depended first and foremost on its resilience and heavy armor to escape unscathed from unfriendly encounters. After its overhaul, it had some of the armor stripped off to make room for equipment allowing it to focus on the armor of other vessels, along with energy transfers.",
   "volume": 115000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 465.0,
   "mass": 12870000.0,
   "category_name": "Ship",

@@ -3,7 +3,7 @@
   "name": "毒蝎级",
   "description": "第一艘毒蝎级战列舰的出航只不过是几年前的事情，目前已经造出的一些都被认为是原型机。有关它性能的信息非常少，但已知情报显示，毒蝎级最大限度地装配了几乎无人能敌的高科技装备。",
   "volume": 468000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 50000.0,
   "capacity": 690.0,
   "mass": 103600000.0,
   "category_name": "舰船",

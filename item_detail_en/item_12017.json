@@ -3,7 +3,7 @@
   "name": "Devoter",
   "description": "Effectively combining the trapping power of interdictors with the defensive capabilities of heavy assault cruisers, the heavy interdiction cruiser is an invaluable addition to any skirmish force, offensive or defensive. Heavy interdiction cruisers are the only ships able to use the warp disruption field generator, a module that creates a warp disruption field that moves with the origin ship wherever it goes.",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 375.0,
   "mass": 16200000.0,
   "category_name": "Ship",

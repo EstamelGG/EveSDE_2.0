@@ -3,7 +3,7 @@
   "name": "Heron Navy Issue",
   "description": "The basic Heron hull design has always served the Caldari well as a scout, survey and exploration ship but the Caldari Navy wished to optimize its upgraded Herons with enhanced missile systems and dedicated processing to support combat probing. The trade-off meant stripping out the specialized salvaging systems to make room for the Heron Navy Issue's combat upgrades.\n\nThe security of the State requires that its scouting and exploration capabilities be accompanied by sufficient firepower to seize and hold any new discovery or destroy interlopers at the fringes of Caldari space.",
   "volume": 18900.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 2500.0,
   "capacity": 400.0,
   "mass": 1150000.0,
   "category_name": "Ship",

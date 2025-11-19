@@ -3,7 +3,7 @@
   "name": "暴君级",
   "description": "暴君级是艾玛皇家海军行动的常用飞船，很可能也是星系中最强悍的巡洋舰。它主要用于军事任务，不过在私人用途领域，它有时也被用作重要货运任务的护航舰。",
   "volume": 118000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 480.0,
   "mass": 13150000.0,
   "category_name": "舰船",

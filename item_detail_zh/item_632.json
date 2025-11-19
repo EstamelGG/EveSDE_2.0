@@ -3,7 +3,7 @@
   "name": "黑鸟级",
   "description": "黑鸟级是加达里海军新近启用的一种小型高科技巡洋舰。它更擅长对战术局面精巧的操控而非正面搏杀，因此经常出现在团队战中，或是扮演僚机的角色。",
   "volume": 96000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 305.0,
   "mass": 13190000.0,
   "category_name": "舰船",

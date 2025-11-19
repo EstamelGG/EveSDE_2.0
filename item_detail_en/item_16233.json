@@ -3,7 +3,7 @@
   "name": "Prophecy",
   "description": "The Prophecy is built on an ancient Amarrian warship design dating back to the earliest days of starship combat. Originally intended as a full-fledged battleship, it was determined after mixed fleet engagements with early prototypes that the Prophecy would be more effective as a slightly smaller, more mobile form of artillery support.",
   "volume": 234000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 15000.0,
   "capacity": 400.0,
   "mass": 15300000.0,
   "category_name": "Ship",

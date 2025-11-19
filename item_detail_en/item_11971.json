@@ -3,7 +3,7 @@
   "name": "Lachesis",
   "description": "Built to represent the last word in electronic warfare, combat recon ships have onboard facilities designed to maximize the effectiveness of electronic countermeasure modules of all kinds. Filling a role next to their class counterpart, the heavy assault cruiser, combat recon ships are the state of the art when it comes to anti-support support. They are also devastating adversaries in smaller skirmishes, possessing strong defensive capabilities in addition to their electronic superiority.",
   "volume": 116000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 320.0,
   "mass": 12070000.0,
   "category_name": "Ship",
