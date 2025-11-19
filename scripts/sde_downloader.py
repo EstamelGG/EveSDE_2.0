@@ -6,22 +6,17 @@ SDE下载器模块
 """
 
 import json
-import requests
-import urllib3
 import zipfile
 import shutil
 from pathlib import Path
-
-# 禁用SSL警告
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+from utils.http_client import get
 
 def get_latest_build_info(config):
     """获取最新的SDE构建信息"""
     try:
         sde_update_url = config["urls"]["sde_update"]
         print(f"[+] 获取最新SDE构建信息: {sde_update_url}")
-        response = requests.get(sde_update_url, timeout=30, verify=False)
-        response.raise_for_status()
+        response = get(sde_update_url, timeout=30, verify=False)
         
         build_info = response.json()
         build_number = build_info.get("buildNumber")
@@ -33,7 +28,7 @@ def get_latest_build_info(config):
         
         return build_number, release_date
     
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[x] 获取构建信息失败: {e}")
         return None, None
     except json.JSONDecodeError as e:
@@ -80,8 +75,7 @@ def download_sde(config, build_number):
     try:
         print(f"[+] 开始下载SDE: {download_url}")
         
-        response = requests.get(download_url, stream=True, timeout=60, verify=False)
-        response.raise_for_status()
+        response = get(download_url, stream=True, timeout=60, verify=False)
         
         with open(zip_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
@@ -91,7 +85,7 @@ def download_sde(config, build_number):
         print(f"[+] SDE下载完成: {zip_path}")
         return True, zip_path
         
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"[x] SDE下载失败: {e}")
         if zip_path.exists():
             zip_path.unlink()  # 删除不完整的文件

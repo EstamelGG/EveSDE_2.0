@@ -15,8 +15,10 @@ import pickle as cPickle  # Python 3: pickle (was cPickle in Python 2)
 import array
 import collections
 import re
-import requests
 from contextlib import contextmanager
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from utils.http_client import get
 
 # ============================================================================
 # 基础结构体定义
@@ -793,8 +795,7 @@ def _get_build_info():
     try:
         print("[+] 获取EVE客户端构建信息...")
         url = "https://binaries.eveonline.com/eveclient_TQ.json"
-        response = requests.get(url, timeout=30, verify=False)
-        response.raise_for_status()
+        response = get(url, timeout=30, verify=False)
         build_info = response.json()
         print("[+] 当前构建版本: %s" % build_info.get('build'))
         return build_info
@@ -818,8 +819,7 @@ def _get_resfile_index_content():
         
         # 下载 installer 文件
         installer_url = "https://binaries.eveonline.com/eveonline_%s.txt" % build_number
-        response = requests.get(installer_url, timeout=30, verify=False)
-        response.raise_for_status()
+        response = get(installer_url, timeout=30, verify=False)
         installer_content = response.text
         
         # 解析installer文件找到resfileindex
@@ -838,8 +838,7 @@ def _get_resfile_index_content():
         
         # 下载resfileindex文件内容
         resfile_url = "https://binaries.eveonline.com/%s" % resfileindex_path
-        response = requests.get(resfile_url, timeout=60, verify=False)
-        response.raise_for_status()
+        response = get(resfile_url, timeout=60, verify=False)
         resfile_content = response.text
         
         print("[+] resfileindex获取完成")
@@ -888,8 +887,7 @@ def _download_static_file(file_path):
         download_url = "https://resources.eveonline.com/%s" % file_path
         print("[+] 开始下载: %s" % download_url)
         
-        response = requests.get(download_url, timeout=60, verify=False)
-        response.raise_for_status()
+        response = get(download_url, timeout=60, verify=False)
         file_data = response.content
         
         print("[+] 下载完成，大小: %s" % sizeof_fmt(len(file_data)))

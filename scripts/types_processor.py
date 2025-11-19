@@ -15,8 +15,8 @@ import shutil
 import os
 import hashlib
 import time
-import requests
 from pathlib import Path
+from utils.http_client import get
 from typing import Dict, Any, Optional, List, Tuple
 import scripts.icon_finder as icon_finder
 
@@ -122,14 +122,13 @@ class TypesProcessor:
         
         try:
             print(f"[+] 正在从网络获取repackagedvolumes数据: {url}")
-            response = requests.get(url, timeout=30, verify=False)
-            response.raise_for_status()
+            response = get(url, timeout=30, verify=False)
             
             repackaged_volumes = response.json()
             print(f"[+] 成功获取 {len(repackaged_volumes)} 个重新打包体积记录")
             return repackaged_volumes
             
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"[!] 网络请求失败: {e}")
             return {}
         except json.JSONDecodeError as e:

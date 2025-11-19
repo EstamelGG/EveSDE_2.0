@@ -6,10 +6,10 @@
 """
 
 import json
-import requests
 import zipfile
 import shutil
 from pathlib import Path
+from utils.http_client import get
 
 
 def get_current_build_number(config):
@@ -107,8 +107,7 @@ def download_icons_zip(config):
     if need_download:
         try:
             print(f"[+] 开始下载图标包: {icons_zip_url}")
-            response = requests.get(icons_zip_url, stream=True, timeout=60)
-            response.raise_for_status()
+            response = get(icons_zip_url, stream=True, timeout=60)
             
             with open(icons_zip_path, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):
@@ -121,7 +120,7 @@ def download_icons_zip(config):
             if current_build:
                 save_icons_build_info(icons_zip_dir, current_build)
             
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"[x] 图标包下载失败: {e}")
             if icons_zip_path.exists():
                 icons_zip_path.unlink()

@@ -9,11 +9,11 @@
 import json
 import os
 import platform
-import requests
 import tempfile
 import shutil
 import hashlib
 from pathlib import Path
+from utils.http_client import create_session
 from typing import Dict, Optional, Tuple
 import scripts.jsonl_loader as jsonl_loader
 
@@ -35,8 +35,7 @@ class IconFinder:
         self.cache_file = self.project_root / "icon_cache.json"
         
         # 在线服务器配置
-        self.session = requests.Session()
-        self.session.verify = False  # 禁用SSL验证
+        self.session = create_session(verify=False)  # 禁用SSL验证
         self.build_info = None
         
         # 平台相关路径（保留作为备用）
@@ -102,7 +101,6 @@ class IconFinder:
         try:
             print("[+] 获取EVE客户端构建信息...")
             response = self.session.get("https://binaries.eveonline.com/eveclient_TQ.json")
-            response.raise_for_status()
             self.build_info = response.json()
             print(f"[+] 当前构建版本: {self.build_info.get('build')}")
             return self.build_info
@@ -124,7 +122,6 @@ class IconFinder:
             print("[+] 从在线服务器获取resfileindex...")
             installer_url = f"https://binaries.eveonline.com/eveonline_{build_number}.txt"
             response = self.session.get(installer_url)
-            response.raise_for_status()
             
             # 解析installer文件找到resfileindex
             resfileindex_path = None
@@ -144,7 +141,6 @@ class IconFinder:
             # 下载resfileindex文件内容
             resfile_url = f"https://binaries.eveonline.com/{resfileindex_path}"
             response = self.session.get(resfile_url)
-            response.raise_for_status()
             
             print("[+] resfileindex获取完成")
             return response.text
@@ -311,7 +307,6 @@ class IconFinder:
             print(f"[+] 获取图标: {download_url}")
             
             response = self.session.get(download_url)
-            response.raise_for_status()
             
             print(f"[+] 图标获取完成: {resource_path}")
             return response.content

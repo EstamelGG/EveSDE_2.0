@@ -12,9 +12,9 @@
 """
 
 import json
-import requests
 import sqlite3
 from pathlib import Path
+from utils.http_client import get
 from typing import Dict, List, Tuple, Optional, Any
 
 
@@ -36,8 +36,7 @@ class FacilityRigEffectsProcessor:
         """下载并解析JSON文件"""
         print(f"[+] 正在下载: {url}")
         try:
-            response = requests.get(url, timeout=30, verify=False)
-            response.raise_for_status()
+            response = get(url, timeout=30, verify=False)
             return response.json()
         except Exception as e:
             print(f"[x] 下载失败: {e}")

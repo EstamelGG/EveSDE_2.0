@@ -9,8 +9,8 @@ import json
 import sqlite3
 import time
 import re
-import requests
 from pathlib import Path
+from utils.http_client import get
 from typing import List, Dict, Any, Set
 from scripts.jsonl_loader import load_jsonl
 
@@ -59,8 +59,7 @@ class UniverseProcessor:
         if not local_file.exists():
             try:
                 print(f"[+] 从网络获取Jove星系列表: {jo_url}")
-                response = requests.get(jo_url, timeout=30, verify=False)
-                response.raise_for_status()
+                response = get(jo_url, timeout=30, verify=False)
                 
                 # 保存到缓存目录
                 with open(local_file, 'w', encoding='utf-8') as f:

@@ -8,12 +8,12 @@ Release比较处理器
 import json
 import os
 import zipfile
-import requests
 import subprocess
 import difflib
 import tempfile
 import shutil
 from pathlib import Path
+from utils.http_client import get
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple, Union
 
@@ -71,8 +71,7 @@ class ReleaseCompareProcessor:
             
             # 直接访问/releases API，获取所有releases
             repo_url = f"https://api.github.com/repos/{github_repo}/releases"
-            response = requests.get(repo_url, headers=headers, timeout=30)
-            response.raise_for_status()
+            response = get(repo_url, headers=headers, timeout=30)
             
             all_releases = response.json()
             if not isinstance(all_releases, list):
@@ -91,8 +90,8 @@ class ReleaseCompareProcessor:
             valid_releases.sort(key=lambda x: x.get('id', 0), reverse=True)
             return valid_releases[0]
             
-        except requests.exceptions.HTTPError as e:
-            if e.response.status_code == 404:
+        except Exception as e:
+            if hasattr(e, 'response') and hasattr(e.response, 'status_code') and e.response.status_code == 404:
                 pass  # 未找到任何Release
             return None
         except Exception as e:
@@ -115,8 +114,7 @@ class ReleaseCompareProcessor:
                         'User-Agent': 'EVE-SDE-Processor'
                     }
                     
-                    response = requests.get(download_url, headers=headers, timeout=300)
-                    response.raise_for_status()
+                    response = get(download_url, headers=headers, timeout=300)
                     
                     file_path = self.temp_dir / asset_name
                     with open(file_path, 'wb') as f:

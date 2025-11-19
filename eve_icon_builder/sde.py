@@ -3,8 +3,11 @@ SDE (Static Data Export) 数据获取和解析模块
 """
 
 import json
-import requests
+import sys
+import os
 from pathlib import Path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from utils.http_client import get
 from typing import Dict, Optional, Tuple
 from zipfile import ZipFile
 import io
@@ -22,8 +25,7 @@ class TypeInfo:
 
 def get_sde_version() -> int:
     """获取最新的SDE版本号"""
-    response = requests.get("https://developers.eveonline.com/static-data/tranquility/latest.jsonl")
-    response.raise_for_status()
+    response = get("https://developers.eveonline.com/static-data/tranquility/latest.jsonl")
     
     for line in response.text.strip().split('\n'):
         data = json.loads(line)
@@ -35,9 +37,8 @@ def get_sde_version() -> int:
 
 def download_sde(dest_path: Path):
     """下载SDE数据包"""
-    response = requests.get("https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip", 
+    response = get("https://developers.eveonline.com/static-data/eve-online-static-data-latest-jsonl.zip", 
                           stream=True)
-    response.raise_for_status()
     
     with open(dest_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):

@@ -11,9 +11,9 @@
 import json
 import sqlite3
 import os
-import requests
 import time
 from pathlib import Path
+from utils.http_client import create_session
 from typing import Dict, Any, List
 
 
@@ -26,9 +26,8 @@ class AgentLocalizationProcessor:
         self.project_root = Path(__file__).parent.parent
         self.db_output_path = self.project_root / config["paths"]["db_output"]
         self.languages = config.get("languages", ["en"])
-        self.session = requests.Session()
-        self.session.verify = False  # 禁用SSL验证
-        self.session.headers.update({
+        self.session = create_session(verify=False)  # 禁用SSL验证
+        self.session.session.headers.update({
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         })
@@ -72,7 +71,6 @@ class AgentLocalizationProcessor:
                     json=batch_ids,
                     timeout=30
                 )
-                response.raise_for_status()
                 
                 batch_results = response.json()
                 for item in batch_results:

@@ -10,10 +10,9 @@ import sys
 import os
 import shutil
 import argparse
-import requests
-import urllib3
 from pathlib import Path
 from datetime import datetime
+from utils.http_client import get, head, create_session
 
 # 设置无缓冲输出，确保在GitHub Actions中日志能实时显示
 os.environ['PYTHONUNBUFFERED'] = '1'
@@ -81,8 +80,7 @@ def get_latest_sde_info():
         print("[+] 获取最新SDE版本信息...")
         release_source_url = "https://developers.eveonline.com/static-data/tranquility/latest.jsonl"
         print(f"[+] URL: {release_source_url}")
-        response = requests.get(release_source_url, timeout=10)
-        response.raise_for_status()
+        response = get(release_source_url, timeout=10)
         
         # 解析JSONL格式的数据
         data = json.loads(response.text.strip())
@@ -137,9 +135,6 @@ def check_network_connectivity():
     """检查网络连接和关键URL的可访问性"""
     print("[+] 开始网络连接检查...")
     
-    # 禁用SSL警告（用于处理自签名证书）
-    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-    
     # 要检查的URL列表
     test_urls = [
         "https://images.evetech.net/corporations/500001/logo",
@@ -152,10 +147,8 @@ def check_network_connectivity():
     
     failed_urls = []
     
-    # 配置会话以处理SSL问题
-    session = requests.Session()
-    session.verify = False  # 禁用SSL验证以避免证书问题
-    session.timeout = 10    # 设置超时时间
+    # 创建会话以处理SSL问题
+    session = create_session(default_timeout=10, verify=False)
     
     for url in test_urls:
         try:
@@ -170,18 +163,11 @@ def check_network_connectivity():
                 print(f"[-] URL不可访问: {url} (状态码: {response.status_code})")
                 failed_urls.append(url)
                 
-        except requests.exceptions.SSLError as e:
-            print(f"[x] SSL证书错误: {url}")
-            failed_urls.append(url)
-        except requests.exceptions.Timeout as e:
-            print(f"[x] 请求超时: {url}")
-            failed_urls.append(url)
-        except requests.exceptions.ConnectionError as e:
-            print(f"[x] 连接错误: {url}")
-            failed_urls.append(url)
         except Exception as e:
-            print(f"[x] 未知错误: {url}")
+            print(f"[x] 请求失败: {url} - {str(e)}")
             failed_urls.append(url)
+    
+    session.close()
     
     # 检查结果
     if failed_urls:

@@ -8,8 +8,8 @@
 
 import json
 import os
-import requests
 from pathlib import Path
+from utils.http_client import get
 from typing import Dict, Any, List, Optional
 
 class AccountingTypesLocalizer:
@@ -202,15 +202,14 @@ class AccountingTypesLocalizer:
         print(f"[+] 下载URL: {self.accounting_types_url}")
         
         try:
-            response = requests.get(self.accounting_types_url, timeout=30, verify=False)
-            response.raise_for_status()
+            response = get(self.accounting_types_url, timeout=30, verify=False)
             
             accounting_types = response.json()
             print(f"[+] 成功下载会计条目类型数据，共 {len(accounting_types)} 个条目")
             
             return accounting_types
             
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"[x] 下载会计条目类型数据失败: {e}")
             return {}
         except json.JSONDecodeError as e:

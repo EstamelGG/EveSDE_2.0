@@ -5,8 +5,10 @@
 
 import os
 import hashlib
-import requests
+import sys
 from pathlib import Path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from utils.http_client import create_session
 from typing import Dict, Optional, Iterator
 from urllib.parse import urljoin
 
@@ -57,12 +59,11 @@ class CacheDownloader(SharedCache):
         if (self.cache_dir / "updater.exe").exists() or (self.cache_dir / "tq").exists():
             raise CacheError("不能将游戏安装目录作为缓存目录")
         
-        self.session = requests.Session()
-        self.session.headers.update({'User-Agent': user_agent})
+        self.session = create_session()
+        self.session.session.headers.update({'User-Agent': user_agent})
         
         # 获取客户端版本
         response = self.session.get("https://binaries.eveonline.com/eveclient_TQ.json")
-        response.raise_for_status()
         client_data = response.json()
         
         if client_data.get('protected'):
@@ -108,7 +109,6 @@ class CacheDownloader(SharedCache):
             return None
         
         response = self.session.get(url)
-        response.raise_for_status()
         data = response.content
         
         file_path.parent.mkdir(parents=True, exist_ok=True)

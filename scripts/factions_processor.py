@@ -8,9 +8,9 @@
 import json
 import sqlite3
 import time
-import requests
 import os
 from pathlib import Path
+from utils.http_client import get
 from typing import Dict, Any, List
 import scripts.jsonl_loader as jsonl_loader
 
@@ -77,29 +77,18 @@ class FactionsProcessor:
         icon_url = f"https://images.evetech.net/corporations/{faction_id}/logo"
         icon_path = self.custom_icons_path / f"faction_{faction_id}.png"
         
-        # 重试5次，每次超时10秒
-        max_retries = 5
-        timeout = 10
-        
-        for attempt in range(max_retries):
-            try:
-                response = requests.get(icon_url, timeout=timeout, verify=False)
-                response.raise_for_status()
-                
-                # 保存图标
-                with open(icon_path, 'wb') as f:
-                    f.write(response.content)
-                
-                print(f"[+] 成功下载图标: {icon_url} -> faction_{faction_id}")
-                return True
-                
-            except (requests.exceptions.RequestException, IOError) as e:
-                if attempt < max_retries - 1:
-                    wait_time = 1.0 * (attempt + 1)  # 逐渐增加等待时间
-                    print(f"[-] 下载 faction_{faction_id} 失败，{wait_time}秒后重试 ({attempt+1}/{max_retries}): {str(e)}")
-                    time.sleep(wait_time)
-                else:
-                    print(f"[x] 下载 faction_{faction_id} 失败，已达到最大重试次数: {str(e)}")
+        try:
+            response = get(icon_url, timeout=10, verify=False)
+            
+            # 保存图标
+            with open(icon_path, 'wb') as f:
+                f.write(response.content)
+            
+            print(f"[+] 成功下载图标: {icon_url} -> faction_{faction_id}")
+            return True
+            
+        except Exception as e:
+            print(f"[x] 下载 faction_{faction_id} 失败: {str(e)}")
         
         # 如果所有重试都失败，使用默认图标
         try:
@@ -113,28 +102,18 @@ class FactionsProcessor:
     
     def _download_default_icon(self, default_icon_path: Path):
         """下载默认图标"""
-        max_retries = 5
-        timeout = 10
-        
-        for attempt in range(max_retries):
-            try:
-                response = requests.get("https://images.evetech.net/corporations/1/logo", timeout=timeout, verify=False)
-                response.raise_for_status()
-                
-                with open(default_icon_path, 'wb') as f:
-                    f.write(response.content)
-                
-                print("[+] 下载默认图标成功")
-                return True
-                
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    wait_time = 1.0 * (attempt + 1)
-                    print(f"[-] 下载默认图标失败，{wait_time}秒后重试 ({attempt+1}/{max_retries}): {str(e)}")
-                    time.sleep(wait_time)
-                else:
-                    print(f"[x] 下载默认图标失败，已达到最大重试次数: {str(e)}")
-                    return False
+        try:
+            response = get("https://images.evetech.net/corporations/1/logo", timeout=10, verify=False)
+            
+            with open(default_icon_path, 'wb') as f:
+                f.write(response.content)
+            
+            print("[+] 下载默认图标成功")
+            return True
+            
+        except Exception as e:
+            print(f"[x] 下载默认图标失败: {str(e)}")
+            return False
     
     def create_factions_table(self, cursor: sqlite3.Cursor):
         """创建派系表"""

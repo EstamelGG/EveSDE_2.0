@@ -10,9 +10,9 @@
 """
 
 import json
-import requests
 import sqlite3
 from pathlib import Path
+from utils.http_client import get
 from typing import Dict, List, Any, Optional
 
 
@@ -32,13 +32,12 @@ class CompressableTypesProcessor:
         print(f"[+] 正在从 {self.data_url} 获取可压缩物品数据...")
         
         try:
-            response = requests.get(self.data_url, timeout=30, verify=False)
-            response.raise_for_status()
+            response = get(self.data_url, timeout=30, verify=False)
             compressible_data = response.json()
             print(f"[+] 成功获取了 {len(compressible_data)} 条压缩对照数据")
             return compressible_data
             
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"[x] 网络请求失败: {e}")
             raise
         except json.JSONDecodeError as e:
