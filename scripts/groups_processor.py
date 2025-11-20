@@ -102,16 +102,19 @@ class GroupsProcessor:
             if not name_dict:
                 continue
             
-            # 获取所有语言的名称
+            # 获取英语名称作为回退值
+            en_name = name_dict.get('en', '')
+            
+            # 获取所有语言的名称，如果不存在则回退到英语
             names = {
-                'de': name_dict.get('de', ''),
-                'en': name_dict.get('en', ''),
-                'es': name_dict.get('es', ''),
-                'fr': name_dict.get('fr', ''),
-                'ja': name_dict.get('ja', ''),
-                'ko': name_dict.get('ko', ''),
-                'ru': name_dict.get('ru', ''),
-                'zh': name_dict.get('zh', '')
+                'de': name_dict.get('de', en_name),
+                'en': en_name,
+                'es': name_dict.get('es', en_name),
+                'fr': name_dict.get('fr', en_name),
+                'ja': name_dict.get('ja', en_name),
+                'ko': name_dict.get('ko', en_name),
+                'ru': name_dict.get('ru', en_name),
+                'zh': name_dict.get('zh', en_name)
             }
             
             # 为特定group_id添加后缀（来自old版本的逻辑）
@@ -133,8 +136,8 @@ class GroupsProcessor:
                     if names[key]:  # 只有当名称不为空时才添加后缀
                         names[key] = names[key] + suffix
             
-            # 获取当前语言的名称作为主要name
-            name = names[lang]
+            # 获取当前语言的名称作为主要name，如果不存在则回退到英语
+            name = names.get(lang, en_name)
             
             # 获取其他字段
             categoryID = group_data.get('categoryID', 0)
