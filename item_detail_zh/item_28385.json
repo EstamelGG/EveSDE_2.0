@@ -1,7 +1,7 @@
 {
   "type_id": 28385,
-  "name": "聚合高密度艾克诺岩（2级）",
-  "description": "除了最有经验的采矿者外，没有人能看出艾克诺岩和红色艾克诺岩之间巨大的分子差异，后者得名于它血红色的矿脉。而找到这种璞玉的矿工则会获得提炼产出比普通艾克诺岩高5%的甜头。艾克诺岩是已知世界中最稀有、最令人向往的矿石之一。一大块这种矿石足以让任何人瞬间从乞丐变成富翁。它含有大量<a href=showinfo:40>超噬矿</a>，以及一些<a href=showinfo:36>类银超金属</a>和<a href=showinfo:35>类晶体胶矿</a>。<i>这种材料使用了比较老旧的压缩方式，对原材料进行一次性批量压缩。最新的压缩技术则更为灵活，可以按单位体积进行压缩。</i>",
+  "name": "Batch Compressed Arkonor II-Grade",
+  "description": "While fairly invisible to all but the most experienced miners, there are significant molecular differences between arkonor and crimson arkonor, colloquially referred to as such because of the blood-red veins running through it. Miners who search for this diamond in the rough will be rewarded with mineral yields 5% higher than standard arkonor.\n\nArkonor is one of the rarest and most sought-after ores in the known universe. A sizable nugget of this can sweep anyone from rags to riches in no time. It has high amount of <a href=showinfo:40>Megacyte</a>, and also contains some <a href=showinfo:36>Mexallon</a> and <a href=showinfo:35>Pyerite</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 8.8,
   "repackaged_volume": null,
   "capacity": null,

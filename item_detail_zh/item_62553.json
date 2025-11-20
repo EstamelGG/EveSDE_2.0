@@ -1,7 +1,7 @@
 {
   "type_id": 62553,
-  "name": "高密度片麻岩（2级）",
-  "description": "片麻岩是想要大展拳脚的采矿人所要努力获得的第一种主要类别的矿石。然后，这些采集者会机灵地转而去开采片麻岩更贵重的变种——彩色片麻岩，因为它的矿物产出高5%。片麻岩是一种很受欢迎的矿石，因为它富含三种广泛使用的矿物，所以提升了它的利用价值。它富含<a href=showinfo:36>类银超金属</a>，还含有<a href=showinfo:35>类晶体胶矿</a>和<a href=showinfo:37>同位聚合体</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Gneiss II-Grade",
+  "description": "Gneiss is often the first major league ore that up and coming miners graduate to. Finding the more II-Grade variation of Gneiss, known as iridescent gneiss, is a major coup for these miners due to its 5% greater mineral yield.\n\nGneiss is a popular ore type because it holds significant volumes of three heavily used minerals, increasing its utility value. It has quite a bit of <a href=showinfo:36>Mexallon</a> as well as some <a href=showinfo:35>Pyerite</a> and <a href=showinfo:37>Isogen</a>.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.05,
   "repackaged_volume": null,
   "capacity": null,

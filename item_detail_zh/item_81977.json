@@ -1,7 +1,7 @@
 {
   "type_id": 81977,
-  "name": "格里米尔（3级）",
-  "description": "在透明晶体中存在黑色斑点的<a href=showinfo:81975>格里米尔</a>被称为墨黑格里米尔，其产量比格里米尔高出10%。墨黑格里米尔通常会分布在零安全区域内的小行星异常空间中。",
+  "name": "Griemeer III-Grade",
+  "description": "III-Grade <a href=showinfo:81975>griemeer</a> with spots of darkness in its clear crystals is called inky griemeer and boasts a 10% extra yield.\n \nAsteroid anomalies in null security space is where inky griemeer is generally found.",
   "volume": 0.8,
   "repackaged_volume": null,
   "capacity": null,

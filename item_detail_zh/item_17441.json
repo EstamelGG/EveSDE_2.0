@@ -1,7 +1,7 @@
 {
   "type_id": 17441,
-  "name": "同位原矿（3级）",
-  "description": "在诸如超新星那种超高温情况下形成的小行星中，通常含有一种浓度更高的同位原矿——光面同位原矿，它比普通的同位原矿多出10%的矿物含量。由于含有大量<a href=showinfo:35>类晶体胶矿</a>和<a href=showinfo:38>超新星诺克石</a>，同位原矿很抢手。大多数情况下，你可以在低安全等级星系找到它。",
+  "name": "Hedbergite III-Grade",
+  "description": "Asteroids containing this shiny ore were formed in intense heat, such as might result from a supernova. The result, known III-Grade or glazed hedbergite, is a more concentrated form of hedbergite that has 10% higher yield.\n\nHedbergite is sought after for its high concentration of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:38>Nocxium</a>.\n\nAvailable primarily in low security status star systems.",
   "volume": 3.0,
   "repackaged_volume": null,
   "capacity": null,

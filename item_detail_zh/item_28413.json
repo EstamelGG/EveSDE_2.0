@@ -1,7 +1,7 @@
 {
   "type_id": 28413,
-  "name": "聚合高密度基腹断岩",
-  "description": "基腹断岩是一种密度很大的矿石，必须用专业的深层核心采矿技术来开采。它含有大量的特殊矿物——<a href=showinfo:11399>莫尔石</a>。<i>这种材料使用了比较老旧的压缩方式，对原材料进行一次性批量压缩。最新的压缩技术则更为灵活，可以按单位体积进行压缩。</i>",
+  "name": "Batch Compressed Mercoxit",
+  "description": "Mercoxit is a very dense ore that must be mined using specialized deep core mining techniques. It contains massive amounts of the extraordinary <a href=showinfo:11399>Morphite</a> mineral.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
   "volume": 0.1,
   "repackaged_volume": null,
   "capacity": null,

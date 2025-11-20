@@ -1,7 +1,7 @@
 {
   "type_id": 28437,
-  "name": "高密度加里多斯冰矿",
-  "description": "加里多斯冰矿相当稀有，而且非常珍贵，是锶包合物的重要来源——锶包合物是宇宙中最稀有的冰类固体之一。此外，加里多斯冰矿还含有高度浓缩的重水和液态臭氧。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Gelidus",
+  "description": "Fairly rare and very valuable, Gelidus-type ice formations are a large-scale source of strontium clathrates, one of the rarest ice solids found in the universe, in addition to which they contain unusually large concentrations of heavy water and liquid ozone.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 100.0,
   "repackaged_volume": null,
   "capacity": null,

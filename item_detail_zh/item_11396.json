@@ -1,7 +1,7 @@
 {
   "type_id": 11396,
-  "name": "基腹断岩",
-  "description": "基腹断岩是一种密度很大的矿石，必须用专业的深层核心采矿技术来开采。它含有大量的特殊矿物——<a href=showinfo:11399>莫尔石</a>。主要存在于零安全等级星系。",
+  "name": "Mercoxit",
+  "description": "Mercoxit is a very dense ore that must be mined using specialized deep core mining techniques. It contains massive amounts of the extraordinary <a href=showinfo:11399>Morphite</a> mineral.\n\nAvailable primarily in null security status star systems.",
   "volume": 40.0,
   "repackaged_volume": null,
   "capacity": null,

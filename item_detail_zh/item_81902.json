@@ -1,7 +1,7 @@
 {
   "type_id": 81902,
-  "name": "克里石（3级）",
-  "description": "3级<a href=showinfo:81900>克里石</a>的矿物含量高出10%，因其具有粘土般的延展性而被大众熟知。黏土克里石通常会分布在零安全区域内的小行星异常空间中。",
+  "name": "Kylixium III-Grade",
+  "description": "With 10% more mineral content, III-Grade <a href=showinfo:81900>kylixium</a> is colloquially recognized for its argil-like malleability.\n \nArgil kylixium may be found in null security space asteroid anomalies.",
   "volume": 1.2,
   "repackaged_volume": null,
   "capacity": null,

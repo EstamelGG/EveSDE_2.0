@@ -1,7 +1,7 @@
 {
   "type_id": 82207,
-  "name": "尤加石（3级）",
-  "description": "阴云<a href=showinfo:82205>尤加石</a>（又称3级尤加石）的矿体中虽然有闪亮的光斑，但却没有稀有形态所具备的风暴属性。精炼后的矿物产量将提高10%。阴云尤加石通常会分布在零安全区域内的小行星异常空间中。",
+  "name": "Ueganite III-Grade",
+  "description": "Overcast <a href=showinfo:82205>ueganite</a>, the III-Grade variant of ueganite, has sparkling flecks throughout its composition, but lacks the stormy properties of its rarer variant. It produces an additional 10% mineral yield when refined.\n \nOvercast ueganite may be found in asteroid anomalies within null security space.",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

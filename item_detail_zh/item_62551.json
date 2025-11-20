@@ -1,7 +1,7 @@
 {
   "type_id": 62551,
-  "name": "高密度同位原矿（4级）",
-  "description": "这种及其稀有和珍贵的同位原矿变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。经过进一步检测后确认这种矿石提炼后的矿物产出比普通的同位原矿高15%。由于含有大量<a href=showinfo:35>类晶体胶矿</a>和<a href=showinfo:38>超新星诺克石</a>，同位原矿很抢手。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Hedbergite IV-Grade",
+  "description": "This extremely rare and valuable variant of hedbergite ore was recently discovered by ORE engineers during early field tests of new moon mining technology. Subsequent testing has confirmed that this ore produces 15% more minerals than standard hedbergite when reprocessed.\n\nHedbergite is sought after for its high concentration of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:38>Nocxium</a>.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.03,
   "repackaged_volume": null,
   "capacity": null,

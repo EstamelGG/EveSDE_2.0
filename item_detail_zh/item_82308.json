@@ -1,7 +1,7 @@
 {
   "type_id": 82308,
-  "name": "高密度尤加石",
-  "description": "得益于天文地质勘探技术的提升，尤加石才得以在YC126年被发现。这种矿石主要由<a href=showinfo:40>超噬矿</a>组成，并含有微量的<a href=showinfo:34>三钛合金</a>。部分矿工认为，当一个星系在长时间内频繁发生金属极限风暴，尤加石便会形成。但在天体地质学家看来，这不过是一种推测和迷信。他们之所以会产生这种假设，只是因为尤加石的一些特性很容易让人联想到这类风暴。尤加石通常会分布在零安全区域内的小行星异常空间中。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Ueganite",
+  "description": "Ueganite is an ore discovered in YC126 due to improvements in astrogeological surveying technology. It is primarily composed of <a href=showinfo:40>megacyte</a>, with trace amounts of <a href=showinfo:34>tritanium</a>. Some miners have posited that ueganite forms when multiple metaliminal storms occur in a single system for an extended period of time, but astrogeologists have dismissed the hypothesis as mere conjecture and superstition based on valuable ueganite having diverse properties reminiscent of these storms.\n \nUeganite may be found in asteroid anomalies within null security space.\n \nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.05,
   "repackaged_volume": null,
   "capacity": null,

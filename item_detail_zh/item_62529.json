@@ -1,7 +1,7 @@
 {
   "type_id": 62529,
-  "name": "高密度斜长岩（2级）",
-  "description": "蓝色斜长岩是普通斜长岩的变种，矿物产出高5%。30年前，盖伦特民歌歌手加洛得·德蒂尔的忧郁散文体民歌《矿工布鲁斯》把蓝色斜长岩弄得声名狼藉。斜长岩并不是最值钱的矿石，但它含有大量的<a href=showinfo:34>三钛合金</a>，因此总是有稳定的需求。它也含有一定量的<a href=showinfo:36>类银超金属</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Plagioclase II-Grade",
+  "description": "II-Grade or azure plagioclase is an uncommon variant of plagioclase that enjoys a 5% improved mineral yield. It was made infamous in the melancholic song prose Miner Blues by the Gallentean folk singer Jaroud Dertier three decades ago.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.0035,
   "repackaged_volume": null,
   "capacity": null,

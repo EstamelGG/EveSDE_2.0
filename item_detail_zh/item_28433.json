@@ -1,7 +1,7 @@
 {
   "type_id": 28433,
-  "name": "高密度蓝冰矿",
-  "description": "星际里的冰通常都是由气体分子不断附着于硅酸盐尘粒而形成。蓝冰因其特有的化学构成和形成环境，比其他冰矿含有更多的氧同位素。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Blue Ice",
+  "description": "Interstellar ices are formed by accretion of gas molecules onto silicate dust particles. Due to its unique chemical composition and the circumstances under which it forms, blue ice contains more oxygen isotopes than any other ice asteroid.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 100.0,
   "repackaged_volume": null,
   "capacity": null,

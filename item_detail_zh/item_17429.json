@@ -1,7 +1,7 @@
 {
   "type_id": 17429,
-  "name": "双多特石（3级）",
-  "description": "单晶双多特斜岩是双多特石的一类变种，晶体结构稍有不同。它很抢手，因为它的精炼产量较标准的双多特石高10%。双多特石是一种非常珍贵的矿石，含有大量的<a href=showinfo:39>晶状石英核岩</a>和<a href=showinfo:35>类晶体胶矿</a>。它还含有数量可观的<a href=showinfo:36>类银超金属</a>。大多数情况下，你可以在零安全等级星系和虫洞中找到它。",
+  "name": "Bistot III-Grade",
+  "description": "III-Grade bistot, also known as monoclinic bistot, is a variant of bistot with a slightly different crystal structure. It is highly sought-after, as it gives a 10% higher yield than its straightforward counterpart.\n\nBistot is a very valuable ore as it holds large portions of <a href=showinfo:39>Zydrine</a> and <a href=showinfo:35>Pyerite</a>. It also contains a decent amount of <a href=showinfo:36>Mexallon</a>.\n\nAvailable primarily in null security status and wormhole systems.",
   "volume": 16.0,
   "repackaged_volume": null,
   "capacity": null,

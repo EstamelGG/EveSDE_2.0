@@ -1,7 +1,7 @@
 {
   "type_id": 62532,
-  "name": "高密度奥贝尔石",
-  "description": "奥贝尔石虽然是一种普通的矿石，但对采矿新手来说，它仍然是一个不错的矿种，因为它含有大量的<a href=showinfo:37>同位聚合体</a>，以及一些<a href=showinfo:35>类晶体胶矿</a>。新手只要进行几趟开采奥贝尔石的旅程，他的资历就会显著提升。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Omber",
+  "description": "Omber is a common ore that is still an excellent ore for novice miners as it has a sizeable portion of <a href=showinfo:37>Isogen</a>, as well as some <a href=showinfo:35>Pyerite</a>. A few trips of mining this and a novice is quick to rise in status.\n\nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.006,
   "repackaged_volume": null,
   "capacity": null,

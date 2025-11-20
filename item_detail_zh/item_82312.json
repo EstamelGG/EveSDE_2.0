@@ -1,7 +1,7 @@
 {
   "type_id": 82312,
-  "name": "高密度赫佐利姆",
-  "description": "YC126年发现的赫佐利姆是一种脆性矿石，稍有不慎就会割伤矿工。这种矿石越是坚硬和锋利，产量就越高。赫佐利姆精炼后可得到大量<a href=showinfo:39>晶状石英核岩</a>，以及少量的<a href=showinfo:34>三钛合金</a>和<a href=showinfo:37>同位聚合体</a>。赫佐利姆矿床通常会分布在零安全区域内的小行星异常空间中。这种矿物被压缩过，比它的原始形态紧密得多。",
+  "name": "Compressed Hezorime",
+  "description": "Hezorime, discovered in YC126, is a brittle ore that is sure to cut the unwary miner. The harder and sharper the ore, the better the yield. Hezorime refines into mostly <a href=showinfo:39>zydrine</a>, with small amounts of <a href=showinfo:34>tritanium</a> and <a href=showinfo:37>isogen</a>.\n \nHezorime deposits may be found in null security space asteroid anomalies.\n \nThis material is compressed and a much more compact form of the original material.",
   "volume": 0.05,
   "repackaged_volume": null,
   "capacity": null,

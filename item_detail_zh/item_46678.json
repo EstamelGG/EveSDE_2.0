@@ -1,7 +1,7 @@
 {
   "type_id": 46678,
-  "name": "艾克诺岩（4级）",
-  "description": "这种及其稀有和珍贵的艾克诺岩变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。它的提炼产出比普通艾克诺岩高15%。艾克诺岩是已知世界中最稀有、最令人向往的矿石之一。一大块这种矿石足以让任何人瞬间从乞丐变成富翁。它含有大量<a href=showinfo:40>超噬矿</a>，以及一些<a href=showinfo:36>类银超金属</a>和<a href=showinfo:35>类晶体胶矿</a>。",
+  "name": "Arkonor IV-Grade",
+  "description": "This extremely rare and valuable variant of arkonor ore was recently discovered by ORE engineers during early field tests of new moon mining technology. This moon ore produces 15% more minerals than standard arkonor when reprocessed.\n\nArkonor is one of the rarest and most sought-after ores in the known universe. A sizable nugget of this can sweep anyone from rags to riches in no time. It has high amount of <a href=showinfo:40>Megacyte</a>, and also contains some <a href=showinfo:36>Mexallon</a> and <a href=showinfo:35>Pyerite</a>.",
   "volume": 16.0,
   "repackaged_volume": null,
   "capacity": null,

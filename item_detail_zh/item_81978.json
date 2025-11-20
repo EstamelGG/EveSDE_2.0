@@ -1,7 +1,7 @@
 {
   "type_id": 81978,
-  "name": "格里米尔（4级）",
-  "description": "混浊格里米尔是最优质的<a href=showinfo:81975>格里米尔</a>，其晶体完全不透光。如果有幸开采出这种矿石，精炼后的产量将额外提升15%。混浊格里米尔通常会分布在零安全区域内的小行星异常空间中。",
+  "name": "Griemeer IV-Grade",
+  "description": "IV-Grade <a href=showinfo:81975>griemeer</a>, also called opaque griemeer, is the kind that lets no light through its crystals. Those lucky enough to find some will be rewarded with an additional 15% yield during refinement.\n\nAsteroid anomalies in null security space is where opaque griemeer is generally found.",
   "volume": 0.8,
   "repackaged_volume": null,
   "capacity": null,
