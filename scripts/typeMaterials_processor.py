@@ -86,6 +86,22 @@ class TypeMaterialsProcessor:
         ''')
         print("[+] 创建typeMaterials表")
     
+    def create_type_randomized_materials_table(self, cursor: sqlite3.Cursor):
+        """
+        创建typeRandomizedMaterials表
+        用于存储随机材料产出数据
+        """
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS typeRandomizedMaterials (
+            type_id INTEGER NOT NULL,
+            materialTypeID INTEGER NOT NULL,
+            quantityMin INTEGER,
+            quantityMax INTEGER,
+            PRIMARY KEY (type_id, materialTypeID)
+        )
+        ''')
+        print("[+] 创建typeRandomizedMaterials表")
+    
     def get_type_info(self, cursor: sqlite3.Cursor, type_id: int, type_info_cache: Dict[int, Dict[str, Any]]) -> Dict[str, Any]:
         """
         从缓存或数据库获取物品的所有相关信息
@@ -117,15 +133,18 @@ class TypeMaterialsProcessor:
         完全按照old版本的逻辑
         """
         self.create_type_materials_table(cursor)
+        self.create_type_randomized_materials_table(cursor)
         
         # 清空现有数据
         cursor.execute('DELETE FROM typeMaterials')
+        cursor.execute('DELETE FROM typeRandomizedMaterials')
         
         # 创建物品信息缓存字典
         type_info_cache = {}
         
         # 用于存储批量插入的数据
         batch_data = []
+        batch_randomized_data = []
         batch_size = 1000  # 每批处理的记录数
         
         # 处理每个物品的材料数据
@@ -157,6 +176,28 @@ class TypeMaterialsProcessor:
                             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                         ''', batch_data)
                         batch_data = []  # 清空批处理列表
+            
+            # 处理randomizedMaterials数据
+            if 'randomizedMaterials' in type_data and isinstance(type_data['randomizedMaterials'], list):
+                for randomized_material in type_data['randomizedMaterials']:
+                    material_type_id = randomized_material.get('materialTypeID')
+                    quantity_min = randomized_material.get('quantityMin')
+                    quantity_max = randomized_material.get('quantityMax')
+                    
+                    if material_type_id is not None:
+                        # 添加到批量数据
+                        batch_randomized_data.append((
+                            type_id, material_type_id, quantity_min, quantity_max
+                        ))
+                        
+                        # 当达到批处理大小时执行插入
+                        if len(batch_randomized_data) >= batch_size:
+                            cursor.executemany('''
+                                INSERT OR REPLACE INTO typeRandomizedMaterials 
+                                (type_id, materialTypeID, quantityMin, quantityMax) 
+                                VALUES (?, ?, ?, ?)
+                            ''', batch_randomized_data)
+                            batch_randomized_data = []  # 清空批处理列表
         
         # 处理剩余的数据
         if batch_data:
@@ -167,7 +208,20 @@ class TypeMaterialsProcessor:
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', batch_data)
         
+        # 处理剩余的randomizedMaterials数据
+        if batch_randomized_data:
+            cursor.executemany('''
+                INSERT OR REPLACE INTO typeRandomizedMaterials 
+                (type_id, materialTypeID, quantityMin, quantityMax) 
+                VALUES (?, ?, ?, ?)
+            ''', batch_randomized_data)
+        
+        # 统计randomizedMaterials数量
+        cursor.execute('SELECT COUNT(*) FROM typeRandomizedMaterials')
+        randomized_count = cursor.fetchone()[0]
+        
         print(f"[+] 已处理 {len(type_materials_data)} 个物品的材料数据，语言: {lang}")
+        print(f"[+] 已处理 {randomized_count} 条随机材料数据，语言: {lang}")
     
     def process_type_materials_for_language(self, language: str) -> bool:
         """
