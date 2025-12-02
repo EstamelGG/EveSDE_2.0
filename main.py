@@ -138,7 +138,6 @@ def check_network_connectivity():
     # 要检查的URL列表
     test_urls = [
         "https://images.evetech.net/corporations/500001/logo",
-        "https://sde.hoboleaks.space/tq/compressibletypes.json", 
         "https://binaries.eveonline.com/eveclient_TQ.json",
         "https://evemaps.dotlan.net/svg/New_Eden.svg",
         "https://jambeeno.com/jo.txt",

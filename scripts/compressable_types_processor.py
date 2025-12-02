@@ -2,18 +2,17 @@
 # -*- coding: utf-8 -*-
 """
 可压缩物品类型数据处理器模块
-用于从网络获取物品压缩对照表数据并存储到数据库
+用于从SDE的jsonl文件中读取物品压缩对照表数据并存储到数据库
 
 对应old版本: old/main.py中的fetch_compressable函数
-功能: 从外部URL下载可压缩物品数据，创建compressible_types表
-数据源: https://sde.hoboleaks.space/tq/compressibletypes.json
+功能: 从SDE的compressibleTypes.jsonl文件读取可压缩物品数据，创建compressible_types表
+数据源: SDE的compressibleTypes.jsonl文件
 """
 
-import json
 import sqlite3
 from pathlib import Path
-from utils.http_client import get
 from typing import Dict, List, Any, Optional
+import scripts.jsonl_loader as jsonl_loader
 
 
 class CompressableTypesProcessor:
@@ -23,29 +22,37 @@ class CompressableTypesProcessor:
         """初始化可压缩物品类型处理器"""
         self.config = config
         self.project_root = Path(__file__).parent.parent
+        self.sde_jsonl_path = self.project_root / config["paths"]["sde_jsonl"]
         self.db_output_path = self.project_root / config["paths"]["db_output"]
         self.languages = config.get("languages", ["en"])
-        self.data_url = "https://sde.hoboleaks.space/tq/compressibletypes.json"
     
-    def download_compressable_data(self) -> Dict[str, str]:
-        """从网络获取可压缩物品数据"""
-        print(f"[+] 正在从 {self.data_url} 获取可压缩物品数据...")
+    def read_compressible_types_jsonl(self) -> Dict[int, int]:
+        """
+        读取compressibleTypes JSONL文件
+        返回格式: {origin_id: compressed_id}
+        """
+        jsonl_file = self.sde_jsonl_path / "compressibleTypes.jsonl"
         
-        try:
-            response = get(self.data_url, timeout=30, verify=False)
-            compressible_data = response.json()
-            print(f"[+] 成功获取了 {len(compressible_data)} 条压缩对照数据")
-            return compressible_data
-            
-        except Exception as e:
-            print(f"[x] 网络请求失败: {e}")
-            raise
-        except json.JSONDecodeError as e:
-            print(f"[x] JSON解析失败: {e}")
-            raise
-        except Exception as e:
-            print(f"[x] 获取数据时发生未知错误: {e}")
-            raise
+        # 使用统一的jsonl_loader加载数据
+        compressible_list = jsonl_loader.load_jsonl(str(jsonl_file))
+        
+        if not compressible_list:
+            print(f"[x] 未能读取到compressibleTypes数据")
+            return {}
+        
+        compressible_data = {}
+        for item in compressible_list:
+            try:
+                # _key 是原始物品ID，compressedTypeID 是压缩后的物品ID
+                origin_id = item['_key']
+                compressed_id = item['compressedTypeID']
+                compressible_data[origin_id] = compressed_id
+            except KeyError as e:
+                print(f"[!] 记录缺少必要字段: {e}, 数据: {item}")
+                continue
+        
+        print(f"[+] 成功处理 {len(compressible_data)} 条压缩对照数据")
+        return compressible_data
     
     def create_compressible_types_table(self, cursor: sqlite3.Cursor):
         """创建compressible_types表"""
@@ -58,7 +65,7 @@ class CompressableTypesProcessor:
         ''')
         print("[+] 创建compressible_types表")
     
-    def process_compressable_data_to_db(self, compressible_data: Dict[str, str], cursor: sqlite3.Cursor, lang: str):
+    def process_compressable_data_to_db(self, compressible_data: Dict[int, int], cursor: sqlite3.Cursor, lang: str):
         """处理可压缩物品数据并写入数据库"""
         try:
             # 创建表
@@ -72,7 +79,7 @@ class CompressableTypesProcessor:
             for origin_id, compressed_id in compressible_data.items():
                 cursor.execute(
                     'INSERT INTO compressible_types (origin, compressed) VALUES (?, ?)',
-                    (int(origin_id), int(compressed_id))
+                    (origin_id, compressed_id)
                 )
                 insert_count += 1
             
@@ -82,7 +89,7 @@ class CompressableTypesProcessor:
             print(f"[x] 处理过程中出错: {str(e)}")
             raise
     
-    def process_compressable_data_for_language(self, compressible_data: Dict[str, str], language: str) -> bool:
+    def process_compressable_data_for_language(self, compressible_data: Dict[int, int], language: str) -> bool:
         """为指定语言处理可压缩物品数据"""
         print(f"[+] 开始处理可压缩物品数据，语言: {language}")
         
@@ -117,8 +124,12 @@ class CompressableTypesProcessor:
         """为所有语言处理可压缩物品数据"""
         print("[+] 开始处理可压缩物品数据")
         
-        # 下载数据
-        compressible_data = self.download_compressable_data()
+        # 从SDE jsonl文件读取数据
+        compressible_data = self.read_compressible_types_jsonl()
+        
+        if not compressible_data:
+            print("[x] 未能读取到可压缩物品数据，处理终止")
+            return False
         
         success_count = 0
         for language in self.languages:
