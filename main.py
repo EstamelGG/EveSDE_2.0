@@ -86,7 +86,7 @@ def get_latest_sde_info():
         data = json.loads(response.text.strip())
         
         return {
-            'build_number': data.get('build_number'),
+            'build_number': data.get('build_number', data.get('buildNumber')),
             'release_date': data.get('releaseDate'),
             'key': data.get('_key')
         }
@@ -105,7 +105,7 @@ def check_existing_version():
     try:
         with open(latest_log_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        return data.get('build_number')
+        return data.get('build_number', data.get('buildNumber'))
     except Exception as e:
         print(f"[x] 读取现有版本信息失败: {e}")
         return None

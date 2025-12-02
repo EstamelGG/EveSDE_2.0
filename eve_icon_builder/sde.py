@@ -25,12 +25,12 @@ class TypeInfo:
 
 def get_sde_version() -> int:
     """获取最新的SDE版本号"""
-    response = get("https://developers.eveonline.com/static-data/tranquility/latest.jsonl")
+    response = get("https://binaries.eveonline.com/eveclient_TQ.json")
     
     for line in response.text.strip().split('\n'):
         data = json.loads(line)
         if data.get('_key') == 'sde':
-            return data['build_number']
+            return data.get('build_number', data.get('buildNumber'))
     
     raise ValueError("未找到SDE版本信息")
 
@@ -50,7 +50,7 @@ def parse_version(content: str) -> int:
     for line in content.strip().split('\n'):
         data = json.loads(line)
         if data.get('_key') == 'sde':
-            return data['build_number']
+            return data.get('build_number', data.get('buildNumber'))
     raise ValueError("未找到SDE版本信息")
 
 
