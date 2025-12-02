@@ -19,7 +19,7 @@ def get_latest_build_info(config):
         response = get(sde_update_url, timeout=30, verify=False)
         
         build_info = response.json()
-        build_number = build_info.get("build_number")
+        build_number = build_info.get("buildNumber")
         release_date = build_info.get("releaseDate")
         
         print(f"[+] 最新构建信息:")
