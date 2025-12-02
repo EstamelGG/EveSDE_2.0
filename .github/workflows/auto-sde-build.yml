@@ -44,9 +44,9 @@ jobs:
         echo "[+] 获取最新SDE版本信息..."
         
         # 获取最新SDE信息
-        SDE_INFO=$(curl -s "https://binaries.eveonline.com/eveclient_TQ.json" | jq -r '.')
+        SDE_INFO=$(curl -s "https://developers.eveonline.com/static-data/tranquility/latest.jsonl" | jq -r '.')
         
-        BUILD_NUMBER=$(echo "$SDE_INFO" | jq -r '.build_number')
+        BUILD_NUMBER=$(jq -r '.buildNumber // .build_number' <<< "$SDE_INFO")
         RELEASE_DATE=$(echo "$SDE_INFO" | jq -r '.releaseDate')
         BUILD_KEY=$(echo "$SDE_INFO" | jq -r '._key')
         
