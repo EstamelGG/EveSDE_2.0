@@ -74,22 +74,59 @@ def parse_arguments():
                        help='强制重新构建，忽略版本检查')
     return parser.parse_args()
 
-def get_latest_sde_info():
-    """获取最新的SDE版本信息"""
+def get_latest_sde_info(config):
+    """获取最新的SDE版本信息，从两个URL分别获取并比较版本号"""
     try:
         print("[+] 获取最新SDE版本信息...")
-        release_source_url = "https://developers.eveonline.com/static-data/tranquility/latest.jsonl"
-        print(f"[+] URL: {release_source_url}")
-        response = get(release_source_url, timeout=10)
         
-        # 解析JSONL格式的数据
-        data = json.loads(response.text.strip())
+        # 从配置中获取URL
+        sde_binary_url = config["urls"]["sde_binary"]
+        sde_update_url = config["urls"]["sde_update"]
+        
+        print(f"[+] 从 sde_binary 获取版本信息: {sde_binary_url}")
+        binary_response = get(sde_binary_url, timeout=10)
+        binary_data = json.loads(binary_response.text.strip())
+        binary_build_number = binary_data.get('build_number', binary_data.get('buildNumber', 0))
+        
+        if not binary_build_number:
+            print(f"[x] sde_binary 响应中未找到 build_number")
+            return None
+        
+        print(f"[+] sde_binary build_number: {binary_build_number}")
+        
+        print(f"[+] 从 sde_update 获取版本信息: {sde_update_url}")
+        update_response = get(sde_update_url, timeout=10)
+        update_data = json.loads(update_response.text.strip())
+        update_build_number = update_data.get('buildNumber', update_data.get('build_number', 0))
+        
+        if not update_build_number:
+            print(f"[x] sde_update 响应中未找到 buildNumber")
+            return None
+        
+        print(f"[+] sde_update buildNumber: {update_build_number}")
+        
+        # 确保版本号为字符串类型以便比较
+        binary_build_str = str(binary_build_number)
+        update_build_str = str(update_build_number)
+        
+        # 比较两个版本号
+        if binary_build_str != update_build_str:
+            print(f"[x] 版本号不一致！")
+            print(f"[x] sde_binary build_number: {binary_build_number}")
+            print(f"[x] sde_update buildNumber: {update_build_number}")
+            print(f"[x] 数据尚未同步完成，程序退出")
+            return None
+        
+        print(f"[+] 版本号一致: {binary_build_number}")
         
         return {
-            'build_number': data.get('build_number', data.get('buildNumber')),
-            'release_date': data.get('releaseDate'),
-            'key': data.get('_key')
+            'build_number': binary_build_number,
+            'release_date': update_data.get('releaseDate'),
+            'key': update_data.get('_key')
         }
+    except KeyError as e:
+        print(f"[x] 配置文件中缺少必要的URL配置: {e}")
+        return None
     except Exception as e:
         print(f"[x] 获取SDE版本信息失败: {e}")
         return None
@@ -316,14 +353,23 @@ def main():
     
     print("[+] EVE SDE 处理器启动")
     
+    # 加载配置（需要在版本检查之前加载，因为版本检查需要配置中的URL）
+    config = load_config()
+    if not config:
+        print("[x] 无法加载配置文件，程序退出")
+        sys.exit(1)
+    
+    print("[+] 配置加载完成")
+    print(f"[+] 支持语言: {', '.join(config.get('languages', ['en']))}")
+    
     # 版本检查（第一步）
     print("\n[+] 第一步: SDE版本检查")
     print("=" * 30)
     
     # 获取最新SDE版本信息
-    latest_sde_info = get_latest_sde_info()
+    latest_sde_info = get_latest_sde_info(config)
     if not latest_sde_info:
-        print("[x] 无法获取最新SDE版本信息，程序退出")
+        print("[x] 无法获取最新SDE版本信息或版本号不一致，程序退出")
         sys.exit(1)
     
     current_build_number = latest_sde_info['build_number']
@@ -361,14 +407,6 @@ def main():
     if not check_network_connectivity():
         print("[x] 网络连接检查失败，程序退出")
         sys.exit(1)
-    
-    # 加载配置
-    config = load_config()
-    if not config:
-        return
-    
-    print("[+] 配置加载完成")
-    print(f"[+] 支持语言: {', '.join(config.get('languages', ['en']))}")
     
     # 重构输出目录（第三步）
     print("\n[+] 第三步: 重构输出目录")

@@ -10,6 +10,7 @@
     "sde_jsonl": "./sde_jsonl"
   },
   "urls": {
+    "sde_binary": "https://binaries.eveonline.com/eveclient_TQ.json",
     "sde_update": "https://developers.eveonline.com/static-data/tranquility/latest.jsonl",
     "sde_download_template": "https://developers.eveonline.com/static-data/tranquility/eve-online-static-data-{build_number}-jsonl.zip"
   },
