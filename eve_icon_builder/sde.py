@@ -30,7 +30,7 @@ def get_sde_version() -> int:
     for line in response.text.strip().split('\n'):
         data = json.loads(line)
         if data.get('_key') == 'sde':
-            return data['buildNumber']
+            return data['build_number']
     
     raise ValueError("未找到SDE版本信息")
 
@@ -50,7 +50,7 @@ def parse_version(content: str) -> int:
     for line in content.strip().split('\n'):
         data = json.loads(line)
         if data.get('_key') == 'sde':
-            return data['buildNumber']
+            return data['build_number']
     raise ValueError("未找到SDE版本信息")
 
 

@@ -22,7 +22,7 @@ def get_current_build_number(config):
         try:
             with open(build_info_path, 'r', encoding='utf-8') as f:
                 build_info = json.load(f)
-                return build_info.get("buildNumber")
+                return build_info.get("build_number")
         except:
             pass
     return None
@@ -36,7 +36,7 @@ def get_cached_build_number(icons_zip_dir):
         try:
             with open(build_cache_path, 'r', encoding='utf-8') as f:
                 cache_info = json.load(f)
-                return cache_info.get("buildNumber")
+                return cache_info.get("build_number")
         except:
             pass
     return None
@@ -48,7 +48,7 @@ def save_icons_build_info(icons_zip_dir, build_number):
     
     try:
         with open(build_cache_path, 'w', encoding='utf-8') as f:
-            json.dump({"buildNumber": build_number}, f)
+            json.dump({"build_number": build_number}, f)
         print(f"[+] 已保存图标包构建信息: {build_number}")
     except Exception as e:
         print(f"[!] 保存构建信息失败: {e}")

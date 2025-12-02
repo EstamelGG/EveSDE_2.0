@@ -86,7 +86,7 @@ def get_latest_sde_info():
         data = json.loads(response.text.strip())
         
         return {
-            'build_number': data.get('buildNumber'),
+            'build_number': data.get('build_number'),
             'release_date': data.get('releaseDate'),
             'key': data.get('_key')
         }
