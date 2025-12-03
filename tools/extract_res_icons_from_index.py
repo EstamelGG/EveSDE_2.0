@@ -276,23 +276,39 @@ def extract_icons_from_index(resfiles_dir: Path, output_dir: Path, keyword: Opti
         
         image_files += 1
         
-        # 生成输出文件名（使用资源路径，去掉res:前缀）
+        # 从资源路径中提取文件名
         if resource_path.startswith('res:'):
-            safe_name = resource_path[4:]  # 去掉 "res:" 前缀
+            path_part = resource_path[4:]  # 去掉 "res:" 前缀
         else:
-            safe_name = resource_path
+            path_part = resource_path
         
-        # 将路径分隔符替换为下划线，并添加.png后缀
-        safe_name = safe_name.replace('/', '_').replace('\\', '_')
-        output_filename = f"{safe_name}.png"
+        # 提取文件名（最后一个路径分隔符后的部分）
+        filename = os.path.basename(path_part.replace('\\', '/'))
+        
+        # 处理后缀：如果有扩展名则替换为.png，否则添加.png
+        if '.' in filename:
+            # 有扩展名：armor.png -> armor.png（替换扩展名）
+            name_without_ext = filename.rsplit('.', 1)[0]
+            base_filename = f"{name_without_ext}.png"
+        else:
+            # 没有扩展名：armor -> armor.png（添加扩展名）
+            base_filename = f"{filename}.png"
+        
+        # 处理重名：如果文件已存在，在文件名后加数字
+        output_filename = base_filename
         output_path = output_dir / output_filename
+        counter = 1
         
-        # 如果文件已存在，跳过
-        if output_path.exists():
-            skipped_files += 1
-            if image_files % 100 == 0:
-                print(f"[+] 已处理 {image_files} 个图片文件...")
-            continue
+        while output_path.exists():
+            # 在文件名后添加数字
+            name_without_ext = base_filename.rsplit('.', 1)[0]
+            ext = base_filename.rsplit('.', 1)[1] if '.' in base_filename else ''
+            if ext:
+                output_filename = f"{name_without_ext}_{counter}.{ext}"
+            else:
+                output_filename = f"{name_without_ext}_{counter}"
+            output_path = output_dir / output_filename
+            counter += 1
         
         try:
             # 复制文件并添加.png后缀
