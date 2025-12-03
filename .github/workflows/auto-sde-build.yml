@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       build_patch:
-        description: '构建补丁包（即使已存在相同buildNumber的release也重新构建）'
+        description: '构建补丁包（即使已存在相同build_number的release也重新构建）'
         required: false
         default: false
         type: boolean
@@ -46,7 +46,7 @@ jobs:
         # 获取最新SDE信息
         SDE_INFO=$(curl -s "https://developers.eveonline.com/static-data/tranquility/latest.jsonl" | jq -r '.')
         
-        BUILD_NUMBER=$(echo "$SDE_INFO" | jq -r '.buildNumber')
+        BUILD_NUMBER=$(jq -r '.buildNumber // .build_number' <<< "$SDE_INFO")
         RELEASE_DATE=$(echo "$SDE_INFO" | jq -r '.releaseDate')
         BUILD_KEY=$(echo "$SDE_INFO" | jq -r '._key')
         
@@ -80,7 +80,7 @@ jobs:
         
         echo "debug-mode=false" >> $GITHUB_OUTPUT
         
-        # 首先检查原始buildNumber的release是否已存在
+        # 首先检查原始build_number的release是否已存在
         TAG_NAME="sde-build-${BUILD_NUMBER}"
         echo "[+] 检查Release是否已存在: ${TAG_NAME}"
         
@@ -122,7 +122,7 @@ jobs:
               exit 1
             fi
           else
-            echo "[+] 原始版本不存在，直接使用原始buildNumber"
+            echo "[+] 原始版本不存在，直接使用原始build_number"
             FINAL_BUILD_NUMBER="${BUILD_NUMBER}"
             PATCH_VERSION=0
             NEW_BUILD="true"
