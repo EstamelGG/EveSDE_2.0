@@ -69,7 +69,7 @@ class CacheDownloader(SharedCache):
         if client_data.get('protected'):
             raise CacheError("游戏服务器处于保护状态")
         
-        self._client_version = client_data['build_number']
+        self._client_version = client_data.get('build_number', client_data.get('buildNumber', 0))
         self.app_index: Dict[str, IndexEntry] = {}
         self.res_index: Dict[str, IndexEntry] = {}
         
