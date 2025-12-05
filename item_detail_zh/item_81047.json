@@ -706,13 +706,13 @@
       "content": "<b>4%</b> bonus to all shield resistances"
     },
     {
-      "content": "<b>5%</b> bonus to fleet hangar capacity"
-    },
-    {
-      "content": "<b>90%</b> reduction to effective distance traveled for jump fatigue"
+      "content": "<b>5%</b> 舰队机库容量加成"
     },
     {
       "content": "<b>90%</b> 减少对<a href=showinfo:3324>重型导弹</a>、<a href=showinfo:25719>重型攻击导弹</a>和<a href=showinfo:3321>快速轻型导弹发射器</a>的CPU和能量栅格的装配要求"
+    },
+    {
+      "content": "<b>90%</b> 减少跳跃疲劳对有效距离的影响"
     },
     {
       "content": "可以绕过一般舰船限制，直接连接到<a href=showinfo:81933>轨道天钩试剂储藏库</a>"

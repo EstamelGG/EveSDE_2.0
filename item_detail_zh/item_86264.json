@@ -1,7 +1,7 @@
 {
   "type_id": 86264,
-  "name": "分裂者逃生舱高速射击",
-  "description": "备战分裂者级逃生舱的专业技能。每升一级，分裂者级逃生舱发射器循环时间减少10%。",
+  "name": "突破者级逃生舱高速射击",
+  "description": "备战突破者级逃生舱的专业技能。每升一级，突破者级逃生舱发射器循环时间减少10%。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
