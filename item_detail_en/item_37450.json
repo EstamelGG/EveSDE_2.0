@@ -94,6 +94,13 @@
       "unit_name": "groupID"
     },
     {
+      "attribute_name": "canFitShipType1",
+      "value": 91174.0,
+      "categoryID": 1,
+      "display_name": "Can only be fitted to",
+      "unit_name": "typeID"
+    },
+    {
       "attribute_name": "typeColorScheme",
       "value": 11346.0,
       "categoryID": 7,
