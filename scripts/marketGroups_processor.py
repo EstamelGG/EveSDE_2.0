@@ -110,7 +110,6 @@ class MarketGroupsProcessor:
         CREATE TABLE IF NOT EXISTS marketGroups (
             group_id INTEGER NOT NULL PRIMARY KEY,
             name TEXT,
-            description TEXT,
             icon_name TEXT,
             parentgroup_id INTEGER,
             show BOOLEAN DEFAULT 1
@@ -407,11 +406,7 @@ class MarketGroupsProcessor:
                 name = group_data.get('name', {}).get('en', '')
             if str(group_id) in CUSTOM_GROUP_EXPAND.keys():
                 name += CUSTOM_GROUP_EXPAND[str(group_id)]
-                
-            description = group_data.get('description', {}).get(lang, '')
-            if not description:  # 如果当前语言的description为空，尝试获取英语的description
-                description = group_data.get('description', {}).get('en', '')
-            
+
             # 获取图标ID并查找对应的图标文件名
             icon_id = group_data.get('iconID')
             icon_name = self.get_icon_name(cursor, group_id, icon_id)
@@ -420,13 +415,13 @@ class MarketGroupsProcessor:
             parentgroup_id = group_data.get('parentGroupID')
             
             # 收集插入数据
-            insert_data.append((group_id, name, description, icon_name, parentgroup_id))
+            insert_data.append((group_id, name, icon_name, parentgroup_id))
         
         # 批量插入数据
         cursor.executemany('''
             INSERT OR REPLACE INTO marketGroups 
-            (group_id, name, description, icon_name, parentgroup_id)
-            VALUES (?, ?, ?, ?, ?)
+            (group_id, name, icon_name, parentgroup_id)
+            VALUES (?, ?, ?, ?)
         ''', insert_data)
         
         # 构建缓存数据
