@@ -1,7 +1,7 @@
 {
   "type_id": 91410,
-  "name": "Suspicious “mining permit”",
-  "description": "A well-used, slightly dog-eared single-page permit allowing its bearer to safely mine in the location it has been issued in. The wording of the document appears to state phrases like “officially certified” and “meets safety standards” multiple times, yet it offers no friend-or-foe recognition or electronic tagging for approval, suggesting that whoever issued this permit intended for it to be only verifiable once recovered from the owner’s ship wreckage.",
+  "name": "可疑的“采矿许可证”",
+  "description": "一张使用痕迹明显、略有卷角的单页许可证，允许持证人在签发地点安全采矿。该文件的措辞似乎多次使用了“官方认证”和“符合安全标准”等字眼，但却没有提供敌友识别或电子标签认证，这表明签发者意图让此许可证仅在从持有者的舰船残骸中回收后才能被核实。",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

@@ -1,7 +1,7 @@
 {
   "type_id": 91409,
-  "name": "Looping Audio log",
-  "description": "An audio log that displays the logo of some sort of reptile. Upon playing it, it seems to repeat the same word over and over:\n\nLizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard",
+  "name": "循环音频日志",
+  "description": "一段音频日志，上面显示了某种爬行动物的标志。播放时，它似乎在不断重复同一个词：蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴 蜥蜴",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

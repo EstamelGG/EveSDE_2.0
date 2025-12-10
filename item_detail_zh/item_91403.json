@@ -1,7 +1,7 @@
 {
   "type_id": 91403,
-  "name": "CSM 20 Electee Archive Script",
-  "description": "A secure holographic datapad, used to access the CONCORD public information database.\n\n//archive_yulai8_ict -search\n\n>SEARCH INITIATED\n\n>SEARCH SEQUENCE... COMPLETE\n\n//archive_csm -search\n\n>ARCHIVE SEARCH... COMPLETE\n\n>LOADING... COMPLETE\n\nCouncil of Stellar Management 20 electees:\n\nZintage Enaka\nhyprviper1\nMachiavelian\nThe Oz\nItaer\nAngry Mustache\nyoungpuke2\nAriel Rin\nArrowspeed Bounty\nKshal Aideron\nMick Fightmaster\nVal Auroris",
+  "name": "第二十届CSM当选人档案脚本",
+  "description": "确保信息安全的全息数据盘，用于访问统合部的公共信息数据库。//archive_yulai8_ict -search >SEARCH INITIATED >SEARCH SEQUENCE...COMPLETE //archive_csm -search >ARCHIVE SEARCH...COMPLETE >LOADING...第二十届CSM当选人完整名单：Zintage Enaka hyprviper1 Machiavelian The Oz Itaer Angry Mustache youngpuke2 Ariel Rin Arrowspeed Bounty Kshal Aideron Mick Fightmaster Val Auroris",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,
