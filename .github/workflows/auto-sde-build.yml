@@ -170,6 +170,47 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
+    - name: 生成 whats_new 报告
+      id: generate-whats-new
+      run: |
+        export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        python -u scripts/generate_whats_new.py
+        
+        # 检查 whats_new 文件是否生成
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        
+        # 获取上一个版本的 build_number
+        OLD_BUILD_NUMBER="unknown"
+        LATEST_RELEASE=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" 2>/dev/null)
+        if [ -n "$LATEST_RELEASE" ] && [ "$LATEST_RELEASE" != "null" ]; then
+          PREV_TAG=$(echo "$LATEST_RELEASE" | jq -r '.tag_name // empty' 2>/dev/null)
+          if [ -n "$PREV_TAG" ] && [[ "$PREV_TAG" == sde-build-* ]]; then
+            OLD_BUILD_NUMBER=$(echo "$PREV_TAG" | sed 's/sde-build-//')
+          fi
+        fi
+        
+        # 查找 whats_new 文件（格式：whats_new_{old_build_number}_{new_build_number}.md）
+        WHATS_NEW_PATTERN="whats_new_*_${FINAL_BUILD_NUMBER}.md"
+        WHATS_NEW_FILE=""
+        
+        if [ -d "whats_new" ]; then
+          WHATS_NEW_FILE=$(find whats_new -name "$WHATS_NEW_PATTERN" | head -1)
+          if [ -n "$WHATS_NEW_FILE" ] && [ -f "$WHATS_NEW_FILE" ]; then
+            echo "[+] whats_new 文件已生成: $WHATS_NEW_FILE"
+            echo "whats-new-exists=true" >> $GITHUB_OUTPUT
+            echo "whats-new-name=${WHATS_NEW_FILE}" >> $GITHUB_OUTPUT
+            echo "whats-new-basename=$(basename "$WHATS_NEW_FILE")" >> $GITHUB_OUTPUT
+          else
+            echo "[x] 错误: whats_new 文件未找到（模式: $WHATS_NEW_PATTERN）"
+            echo "whats-new-exists=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+        else
+          echo "[x] 错误: whats_new 目录不存在"
+          echo "whats-new-exists=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+    
     - name: 执行SDE构建
       id: build-sde
       run: |
@@ -226,10 +267,14 @@ jobs:
           item_detail_en/
           item_detail_zh/
           release_compare_${{ needs.get-build-info.outputs.final-build-number }}.md
+          whats_new/
         retention-days: 30
     
     outputs:
       item-detail-extracted: ${{ steps.build-sde.outputs.item-detail-extracted }}
+      whats-new-exists: ${{ steps.generate-whats-new.outputs.whats-new-exists }}
+      whats-new-name: ${{ steps.generate-whats-new.outputs.whats-new-name }}
+      whats-new-basename: ${{ steps.generate-whats-new.outputs.whats-new-basename }}
 
   create-release:
     name: 创建Release
@@ -584,6 +629,41 @@ jobs:
         echo "value=${TIMESTAMP}" >> $GITHUB_OUTPUT
         echo "[+] 生成时间戳: ${TIMESTAMP}"
     
+    - name: 检查 whats_new 文件
+      id: check-whats-new
+      run: |
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        
+        # 获取上一个版本的 build_number
+        OLD_BUILD_NUMBER="unknown"
+        LATEST_RELEASE=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" 2>/dev/null)
+        if [ -n "$LATEST_RELEASE" ] && [ "$LATEST_RELEASE" != "null" ]; then
+          PREV_TAG=$(echo "$LATEST_RELEASE" | jq -r '.tag_name // empty' 2>/dev/null)
+          if [ -n "$PREV_TAG" ] && [[ "$PREV_TAG" == sde-build-* ]]; then
+            OLD_BUILD_NUMBER=$(echo "$PREV_TAG" | sed 's/sde-build-//')
+          fi
+        fi
+        
+        # 查找 whats_new 文件（格式：whats_new_{old_build_number}_{new_build_number}.md）
+        WHATS_NEW_PATTERN="whats_new_*_${FINAL_BUILD_NUMBER}.md"
+        WHATS_NEW_FILE=""
+        
+        if [ -d "whats_new" ]; then
+          WHATS_NEW_FILE=$(find whats_new -name "$WHATS_NEW_PATTERN" | head -1)
+          if [ -n "$WHATS_NEW_FILE" ] && [ -f "$WHATS_NEW_FILE" ]; then
+            echo "[+] whats_new 文件已找到: $WHATS_NEW_FILE"
+            echo "whats-new-exists=true" >> $GITHUB_OUTPUT
+            echo "whats-new-name=${WHATS_NEW_FILE}" >> $GITHUB_OUTPUT
+            echo "whats-new-basename=$(basename "$WHATS_NEW_FILE")" >> $GITHUB_OUTPUT
+          else
+            echo "[!] whats_new 文件未找到（模式: $WHATS_NEW_PATTERN）"
+            echo "whats-new-exists=false" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "[!] whats_new 目录不存在"
+          echo "whats-new-exists=false" >> $GITHUB_OUTPUT
+        fi
+    
     - name: 创建Release说明
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
@@ -623,26 +703,43 @@ jobs:
         echo "" >> "$RELEASE_NOTES_FILE"
         echo "[查看比较报告](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/history/release_compare_${FINAL_BUILD_NUMBER}_${TIMESTAMP}.md)" >> "$RELEASE_NOTES_FILE"
         echo "" >> "$RELEASE_NOTES_FILE"
+        
+        # 添加 whats_new 报告链接
+        WHATS_NEW_BASENAME="${{ steps.check-whats-new.outputs.whats-new-basename }}"
+        if [ -n "$WHATS_NEW_BASENAME" ]; then
+          echo "## 物品变更详情" >> "$RELEASE_NOTES_FILE"
+          echo "" >> "$RELEASE_NOTES_FILE"
+          echo "详细的物品变更报告已保存到仓库：" >> "$RELEASE_NOTES_FILE"
+          echo "" >> "$RELEASE_NOTES_FILE"
+          echo "[查看物品变更报告](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/whats_new/${WHATS_NEW_BASENAME})" >> "$RELEASE_NOTES_FILE"
+          echo "" >> "$RELEASE_NOTES_FILE"
+        fi
+        
         echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
         echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
         echo "- **sde.zip**: SDE数据压缩包" >> "$RELEASE_NOTES_FILE"
         echo "- **metadata.json**: 版本元数据文件（包含icon_version、哈希等信息）" >> "$RELEASE_NOTES_FILE"
+        if [ -n "$WHATS_NEW_BASENAME" ]; then
+          echo "- **${WHATS_NEW_BASENAME}**: 物品变更详细报告（新增物品、属性变更、蓝图变更）" >> "$RELEASE_NOTES_FILE"
+        fi
         
         echo "[+] Release说明已生成: $RELEASE_NOTES_FILE"
     
     - name: 创建Release
+      if: steps.check-whats-new.outputs.whats-new-exists == 'true' || needs.build-sde.outputs.whats-new-exists == 'true'
       uses: softprops/action-gh-release@v2
       with:
         files: |
           icons.zip
           sde.zip
           metadata.json
+          ${{ steps.check-whats-new.outputs.whats-new-name }}
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
         name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}
         body_path: release_notes_${{ needs.get-build-info.outputs.final-build-number }}.md
         draft: false
         prerelease: false
-        fail_on_unmatched_files: false
+        fail_on_unmatched_files: true
         generate_release_notes: false
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
@@ -672,7 +769,7 @@ jobs:
         fi
     
     - name: 检出代码用于提交历史记录和物品详情
-      if: (steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true') && needs.get-build-info.outputs.debug-mode != 'true'
+      if: (steps.save-compare-file.outputs.exists == 'true' || steps.build-sde.outputs.item-detail-extracted == 'true' || needs.build-sde.outputs.whats-new-exists == 'true') && needs.get-build-info.outputs.debug-mode != 'true'
       uses: actions/checkout@v4
       with:
         ref: main
@@ -680,11 +777,12 @@ jobs:
         token: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
     
     - name: 提交比对记录和物品详情到仓库
-      if: steps.save-compare-file.outputs.exists == 'true' && needs.get-build-info.outputs.debug-mode != 'true'
+      if: (steps.save-compare-file.outputs.exists == 'true' || needs.build-sde.outputs.whats-new-exists == 'true') && needs.get-build-info.outputs.debug-mode != 'true'
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         NEW_COMPARE_FILE="${{ steps.save-compare-file.outputs.new-filename }}"
         COMPARE_FILE_PATH="${{ steps.save-compare-file.outputs.path }}"
+        WHATS_NEW_FILE="${{ needs.build-sde.outputs.whats-new-name }}"
         
         echo "[+] 准备将比对记录和物品详情推送到仓库..."
         
@@ -706,6 +804,43 @@ jobs:
           
           # 添加文件到git
           git add "history/$NEW_COMPARE_FILE"
+        fi
+        
+        # 提交 whats_new 报告
+        if [ "${{ needs.build-sde.outputs.whats-new-exists }}" = "true" ] && [ -n "$WHATS_NEW_FILE" ]; then
+          echo "[+] 处理 whats_new 报告: $WHATS_NEW_FILE"
+          
+          # 获取文件名
+          WHATS_NEW_BASENAME=$(basename "$WHATS_NEW_FILE")
+          WHATS_NEW_SOURCE="../$WHATS_NEW_FILE"
+          
+          echo "[+] whats_new 源文件路径: $WHATS_NEW_SOURCE"
+          echo "[+] whats_new 目标文件名: $WHATS_NEW_BASENAME"
+          
+          # 检查源文件是否存在
+          if [ ! -f "$WHATS_NEW_SOURCE" ]; then
+            echo "[!] 警告: whats_new 源文件不存在: $WHATS_NEW_SOURCE"
+            echo "[+] 尝试从 whats_new 目录查找文件..."
+            # 尝试从 whats_new 目录直接查找
+            WHATS_NEW_SOURCE="../whats_new/$WHATS_NEW_BASENAME"
+            if [ ! -f "$WHATS_NEW_SOURCE" ]; then
+              echo "[x] 错误: whats_new 文件未找到: $WHATS_NEW_SOURCE"
+              exit 1
+            fi
+          fi
+          
+          # 创建whats_new目录（如果不存在）
+          mkdir -p whats_new
+          
+          # 复制 whats_new 报告文件到 whats_new 目录
+          cp "$WHATS_NEW_SOURCE" "whats_new/$WHATS_NEW_BASENAME"
+          
+          echo "[+] whats_new 文件已复制到: whats_new/$WHATS_NEW_BASENAME"
+          
+          # 添加文件到git
+          git add "whats_new/$WHATS_NEW_BASENAME"
+          
+          echo "[+] whats_new 文件已添加到 git"
         fi
         
         # 提交物品详情目录
@@ -752,6 +887,10 @@ jobs:
             COMMIT_MSG="${COMMIT_MSG}\n- Add release compare: history/$NEW_COMPARE_FILE"
           fi
           
+          if [ "${{ needs.build-sde.outputs.whats-new-exists }}" = "true" ] && [ -n "$WHATS_NEW_FILE" ]; then
+            COMMIT_MSG="${COMMIT_MSG}\n- Add whats_new report: whats_new/$(basename "$WHATS_NEW_FILE")"
+          fi
+          
           if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
             COMMIT_MSG="${COMMIT_MSG}\n- Update item detail directories (en/zh)"
           fi
@@ -765,6 +904,9 @@ jobs:
           echo "[+] 数据已推送到仓库"
           if [ "${{ steps.save-compare-file.outputs.exists }}" = "true" ]; then
             echo "[+] 比对记录: history/$NEW_COMPARE_FILE"
+          fi
+          if [ "${{ needs.build-sde.outputs.whats-new-exists }}" = "true" ] && [ -n "$WHATS_NEW_FILE" ]; then
+            echo "[+] whats_new 报告: whats_new/$(basename "$WHATS_NEW_FILE")"
           fi
           if [ "${{ steps.build-sde.outputs.item-detail-extracted }}" = "true" ]; then
             echo "[+] 物品详情目录: item_detail_en/, item_detail_zh/"
