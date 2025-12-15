@@ -1,7 +1,7 @@
 {
   "type_id": 89807,
-  "name": "Anhinga",
-  "description": "The Anhinga is a battlecruiser with unprecedented firepower. Like the legendary ‘snake bird’ it’s named after, the Anhinga allows pilots to strike from the deep, catching their rivals off guard.\n\nThe Mountain faction made shocking allegations against the Hyasyoda corporation following the unveiling of the design, claiming to have proof linking Anhinga designers to Guristas pirates operating within the Caldari state. \n\n“This pirate infestation appears to be spread among several corporations, not just Hyasyoda,” claimed an official statement from the Home Guard.\n\nFollowing a series of high-level meetings behind closed doors, Hyasyoda agreed to withdraw their bid for a Navy contract, although they protested the lack of evidence on behalf of the Mountain faction. To smooth things over, the CEP decided to award a small number of the Anhinga to New Eden’s best pilots as awards for Alliance Tournament XXI.",
+  "name": "蛇鹈号",
+  "description": "蛇鹈号是一艘拥有空前火力的战列巡洋舰。就像它的名字来源传奇“蛇鹈”一样，蛇鹈号可以让飞行员发动隐秘突袭，打对手一个出其不意。在设计图公布后，高山联盟对三岛集团提出了令人震惊的指控，声称有证据表明蛇鹈号设计师与在加达里合众国活动的古斯塔斯海盗有关联。“海盗滋扰问题似乎已经蔓延到包括三岛集团在内的多个集团。”国土警卫队在一份官方声明中声称。经过一系列高层闭门会议后，三岛集团同意撤回其海军合同的投标，尽管他们代表高山联盟抗议缺乏证据。为了平息事态，CEP决定将数艘蛇鹈号授予新伊甸最顶尖的飞行员，作为第二十一届联盟锦标赛的奖品。",
   "volume": 252000.0,
   "repackaged_volume": 15000.0,
   "capacity": 800.0,
@@ -656,58 +656,58 @@
   ],
   "traits": [
     {
-      "content": "<b>1000%</b> increase in missile flight time while <i>Primary Mode</i> is enabled"
+      "content": "<b>1000%</b> 启用<i>主模式</i>后导弹飞行时间增加"
     },
     {
-      "content": "<b>25%</b> bonus to <a href=showinfo:33448>Rapid Heavy Missile Launcher</a>, <a href=showinfo:13320>Cruise Missile Launcher</a> and <a href=showinfo:503>Torpedo Launcher</a> rate of fire while <i>Primary Mode</i> is enabled"
+      "content": "<b>25%</b> 启用<i>三级模式</i>后舰船惯性调整系数加成"
     },
     {
-      "content": "<b>25%</b> bonus to <a href=showinfo:33448>Rapid Heavy Missile Launcher</a>, <a href=showinfo:13320>Cruise Missile Launcher</a> and <a href=showinfo:503>Torpedo Launcher</a> rate of fire while <i>Tertiary Mode</i> is enabled"
+      "content": "<b>25%</b> 启用<i>三级模式</i>后，<a href=showinfo:33448>重型快速导弹发射器</a>、<a href=showinfo:13320>巡航导弹发射器</a>和<a href=showinfo:503>鱼雷发射器</a>射速提高"
     },
     {
-      "content": "<b>25%</b> bonus to ship inertia modifier while <i>Tertiary Mode</i> is enabled"
+      "content": "<b>25%</b> 启用<i>主模式</i>后，<a href=showinfo:33448>重型快速导弹发射器</a>、<a href=showinfo:13320>巡航导弹发射器</a>和<a href=showinfo:503>鱼雷发射器</a>射速提高"
     },
     {
-      "content": "<b>250%</b> bonus to lock range while <i>Primary Mode</i> is enabled"
+      "content": "<b>250%</b> 启用<i>主模式</i>后锁定范围增加"
     },
     {
-      "content": "<b>33.3%</b> decrease in missile velocity while <i>Primary Mode</i> is enabled"
+      "content": "<b>33.3%</b> 启用<i>主模式</i>后导弹速度降低"
     },
     {
-      "content": "<b>5%</b> bonus to <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> explosion radius"
+      "content": "<b>5%</b> <a href=showinfo:3326>巡航导弹</a>和<a href=showinfo:3325>鱼雷</a>爆炸半径加成"
     },
     {
-      "content": "<b>5%</b> bonus to <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> explosion velocity"
+      "content": "<b>5%</b> <a href=showinfo:3326>巡航导弹</a>和<a href=showinfo:3325>鱼雷</a>爆炸速度加成"
     },
     {
-      "content": "<b>50%</b> bonus to <a href=showinfo:3324>Heavy Missile</a>, <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> velocity while <i>Tertiary Mode</i> is enabled"
+      "content": "<b>50%</b> <a href=showinfo:33448>重型快速导弹发射器</a>、<a href=showinfo:13320>巡航导弹发射器</a>和<a href=showinfo:503>鱼雷发射器</a>CPU需求降低"
     },
     {
-      "content": "<b>50%</b> bonus to <a href=showinfo:33448>Rapid Heavy Missile Launcher</a>, <a href=showinfo:13320>Cruise Missile Launcher</a> and <a href=showinfo:503>Torpedo Launcher</a> rate of fire while <i>Secondary Mode</i> is enabled"
+      "content": "<b>50%</b> 启用<i>三级模式</i>后，<a href=showinfo:3324>重型导弹</a>、<a href=showinfo:3326>巡航导弹</a>和<a href=showinfo:3325>鱼雷</a>速度提高"
     },
     {
-      "content": "<b>50%</b> decrease in missile flight time while <i>Secondary Mode</i> is enabled"
+      "content": "<b>50%</b> 启用<i>次级模式</i>后导弹飞行时间减少"
     },
     {
-      "content": "<b>50%</b> reduction in <a href=showinfo:33448>Rapid Heavy Missile Launcher</a>, <a href=showinfo:13320>Cruise Missile Launcher</a> and <a href=showinfo:503>Torpedo Launcher</a> CPU requirement"
+      "content": "<b>50%</b> 启用<i>次级模式</i>后，<a href=showinfo:33448>重型快速导弹发射器</a>、<a href=showinfo:13320>巡航导弹发射器</a>和<a href=showinfo:503>鱼雷发射器</a>射速提高"
     },
     {
-      "content": "<b>90%</b> reduction in <a href=showinfo:33915>Micro Jump Drive</a> reactivation delay while <i>Tertiary Mode</i> is enabled"
+      "content": "<b>90%</b> 启用<i>三级模式</i>后，<a href=showinfo:33915>微型跳跃引擎</a>重启延迟降低"
     },
     {
-      "content": "<b>95%</b> reduction in <a href=showinfo:33448>Rapid Heavy Missile Launcher</a>, <a href=showinfo:13320>Cruise Missile Launcher</a> and <a href=showinfo:503>Torpedo Launcher</a> powergrid requirement"
+      "content": "<b>95%</b> <a href=showinfo:33448>重型快速导弹发射器</a>、<a href=showinfo:13320>巡航导弹发射器</a>和<a href=showinfo:503>鱼雷发射器</a>能量栅格需求降低"
     },
     {
-      "content": "<b><u>Primary Mode</b></u>"
+      "content": "<b><u>三级模式</b></u>"
     },
     {
-      "content": "<b><u>Secondary Mode</b></u>"
+      "content": "<b><u>主模式</b></u>"
     },
     {
-      "content": "<b><u>Tertiary Mode</b></u>"
+      "content": "<b><u>次级模式</b></u>"
     },
     {
-      "content": "<b>Additional bonuses are available while one of three Tactical Modes are active. Modes may be switched no more than once every 10 seconds.</b>"
+      "content": "<b>启用三种战术模式中任意一种会获得额外加成。每10秒钟只能切换一次模式。</b>"
     }
   ]
 }
