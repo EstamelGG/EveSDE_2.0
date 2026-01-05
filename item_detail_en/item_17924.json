@@ -25,7 +25,7 @@
     },
     {
       "attribute_name": "powerOutput",
-      "value": 44.0,
+      "value": 50.0,
       "categoryID": 1,
       "display_name": "Powergrid Output",
       "unit_name": "MW"
@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 32000.0,
+      "value": 40000.0,
       "categoryID": 6,
       "display_name": "Maximum Targeting Range",
       "unit_name": "m"
@@ -360,13 +360,6 @@
       "unit_name": "Level"
     },
     {
-      "attribute_name": "shipBonusAF",
-      "value": 7.5,
-      "categoryID": 9,
-      "display_name": null,
-      "unit_name": null
-    },
-    {
       "attribute_name": "shieldRechargeRate",
       "value": 625000.0,
       "categoryID": 2,
@@ -375,7 +368,7 @@
     },
     {
       "attribute_name": "capacitorCapacity",
-      "value": 450.0,
+      "value": 525.0,
       "categoryID": 5,
       "display_name": "Capacitor Capacity",
       "unit_name": "GJ"
@@ -605,6 +598,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "rookieSETCapBonus",
+      "value": -50.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "energyWarfareResistance",
       "value": 1.0,
       "categoryID": 36,
@@ -646,6 +646,9 @@
     },
     {
       "content": "<b>20%</b> bonus to <a href=showinfo:3450>Afterburner</a> velocity bonus"
+    },
+    {
+      "content": "<b>50%</b> reduction in <a href=showinfo:3303>Small Energy Turret</a> activation cost"
     },
     {
       "content": "<b>7.5%</b> bonus to <a href=showinfo:3303>Small Energy Turret</a> tracking speed"
