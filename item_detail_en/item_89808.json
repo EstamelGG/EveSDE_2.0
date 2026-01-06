@@ -508,14 +508,14 @@
     },
     {
       "attribute_name": "heatAttenuationHi",
-      "value": 0.76,
+      "value": 0.79,
       "categoryID": 52,
       "display_name": "Heat Attenuation",
       "unit_name": null
     },
     {
       "attribute_name": "heatAttenuationMed",
-      "value": 0.71,
+      "value": 0.76,
       "categoryID": 52,
       "display_name": null,
       "unit_name": null
