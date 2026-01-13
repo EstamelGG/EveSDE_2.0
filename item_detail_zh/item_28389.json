@@ -1,7 +1,7 @@
 {
   "type_id": 28389,
-  "name": "Batch Compressed Bistot III-Grade",
-  "description": "III-Grade bistot, also known as monoclinic bistot, is a variant of bistot with a slightly different crystal structure. It is highly sought-after, as it gives a 10% higher yield than its straightforward counterpart.\n\nBistot is a very valuable ore as it holds large portions of <a href=showinfo:39>Zydrine</a> and <a href=showinfo:35>Pyerite</a>. It also contains a decent amount of <a href=showinfo:36>Mexallon</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "聚合高密度双多特石（3级）",
+  "description": "单晶双多特斜岩（又称3级双多特石）是双多特石的一类变种，晶体结构稍有不同。它很抢手，因为它的精炼产量较标准的双多特石高10%。双多特石是一种非常珍贵的矿石，含有大量的<a href=showinfo:39>晶状石英核岩</a>和<a href=showinfo:35>类晶体胶矿</a>。它还含有数量可观的<a href=showinfo:36>类银超金属</a>。<i>这种材料使用了比较老旧的压缩方式，对原材料进行一次性批量压缩。最新的压缩技术则更为灵活，可以按单位体积进行压缩。</i>",
   "volume": 4.4,
   "repackaged_volume": null,
   "capacity": null,

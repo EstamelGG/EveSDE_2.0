@@ -1,7 +1,7 @@
 {
   "type_id": 82301,
-  "name": "Compressed Kylixium II-Grade",
-  "description": "Kaolin or II-Grade kylixium is a rarer form of <a href=showinfo:81900>kylixium</a> that yields a 5% increase in mineral content. It has more claylike properties than its prevalent form.Kaolin kylixium may be found in null security space asteroid anomalies.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度克里石（2级）",
+  "description": "高岭克里石是一种更加稀有的<a href=showinfo:81900>克里石</a>，其矿物含量高出5%。高岭克里石比普通克里石的黏土性质更加明显，通常分布在零安全区域内的小行星异常空间中。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.012,
   "repackaged_volume": null,
   "capacity": null,

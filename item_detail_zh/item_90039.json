@@ -1,13 +1,13 @@
 {
   "type_id": 90039,
-  "name": "移动相锚定蓝图",
+  "name": "移动相位锚标蓝图",
   "description": "",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,
   "category_name": "蓝图",
-  "group_name": "移动相位锚标蓝图",
+  "group_name": "移动相锚蓝图",
   "attributes": [
     {
       "attribute_name": "industryBlueprintRank",

@@ -1,7 +1,7 @@
 {
   "type_id": 17463,
-  "name": "Scordite II-Grade",
-  "description": "Condensed scordite, the II-Grade cousin of normal scordite, has a 5% better yield. The increase may seem insignificant, but matters greatly to new miners where every ISK counts.\n\nScordite is amongst the most common ore types in the central regions of known universe. It has a fair bit of <a href=showinfo:34>Tritanium</a> and <a href=showinfo:35>Pyerite</a>. Good choice for those starting their mining careers.\n\nAvailable primarily in high security status star systems.",
+  "name": "灼烧岩（2级）",
+  "description": "浓缩灼烧岩（又称2级灼烧岩）是普通灼烧岩的近亲，但比后者的矿物含量高5%。虽然这点增量似乎微不足道，但是这对那些ISK紧缺的新采矿者来说，这种差别是不容忽视的。灼烧岩是已知空间的核心星域中最为常见的矿石。它含有数量可观的 <a href=showinfo:34>三钛合金</a>和<a href=showinfo:35>类晶体胶矿</a>。对刚开始采矿生涯的人来说，它是一个不错的选择。主要分布于高安全等级星系。",
   "volume": 0.15,
   "repackaged_volume": null,
   "capacity": null,

@@ -1,7 +1,7 @@
 {
   "type_id": 28440,
-  "name": "Compressed Krystallos",
-  "description": "The universe's richest known source of strontium clathrates, Krystallos ice formations are formed only in areas where a very particular combination of environmental factors are at play. Krystallos compounds also include quite a bit of liquid ozone.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度冰晶矿",
+  "description": "作为宇宙中最富含锶包合物的已知原料，冰晶矿类冰只有在特定的若干环境因素共同作用下才能形成。冰晶矿化合物中还含有不少液态臭氧。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 100.0,
   "repackaged_volume": null,
   "capacity": null,

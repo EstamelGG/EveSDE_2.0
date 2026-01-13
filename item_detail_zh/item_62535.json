@@ -1,7 +1,7 @@
 {
   "type_id": 62535,
-  "name": "Compressed Omber IV-Grade",
-  "description": "This extremely rare and valuable variant of omber ore was recently discovered by ORE engineers during early field tests of new moon mining technology. Subsequent testing has confirmed that this ore produces 15% more minerals than standard omber when reprocessed.\n\nOmber is a common ore that is still an excellent ore for novice miners as it has a sizeable portion of <a href=showinfo:37>Isogen</a>, as well as some <a href=showinfo:35>Pyerite</a>. A few trips of mining this and a novice is quick to rise in status.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度奥贝尔石（4级）",
+  "description": "这种及其稀有和珍贵的奥贝尔石变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。经过进一步检测后确认这种矿石提炼后的矿物产出比普通的奥贝尔石高15%。奥贝尔石虽然是一种普通的矿石，但对采矿新手来说，它仍然是一个不错的矿种，因为它含有大量的<a href=showinfo:37>同位聚合体</a>，以及一些<a href=showinfo:35>类晶体胶矿</a>。新手只要进行几趟开采奥贝尔石的旅程，他的资历就会显著提升。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.006,
   "repackaged_volume": null,
   "capacity": null,

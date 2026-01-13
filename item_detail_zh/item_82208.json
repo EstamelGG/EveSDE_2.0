@@ -1,7 +1,7 @@
 {
   "type_id": 82208,
-  "name": "Ueganite IV-Grade",
-  "description": "The sight of its subsurface lightning mineral veins, which gives IV-Grade or stormy <a href=showinfo:82205>ueganite</a> its name, brings great joy to any miner. Stormy ueganite yields 15% more minerals than its base form when refined.\n \nStormy ueganite may be found in asteroid anomalies within null security space.",
+  "name": "尤加石（4级）",
+  "description": "地下的闪电状矿脉预示着风暴<a href=showinfo:82205>尤加石</a>（又称4级尤加石）的存在，有幸挖到此矿的矿工必定欣喜不已。风暴尤加石的精炼产出比普通尤加石高15%。风暴尤加石通常会分布在零安全区域内的小行星异常空间中。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

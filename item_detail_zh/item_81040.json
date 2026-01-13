@@ -670,25 +670,25 @@
   ],
   "traits": [
     {
-      "content": "<b>10%</b> bonus to missile damage"
+      "content": "<b>10%</b> 导弹伤害加成"
     },
     {
       "content": "<b>10%</b> 舰船基础设施舱容量加成"
     },
     {
-      "content": "<b>20%</b> bonus to <a href=showinfo:3322>Auto-Targeting</a> missile damage"
+      "content": "<b>20%</b> <a href=showinfo:3322>自动锁定导弹</a>伤害加成"
     },
     {
-      "content": "<b>90%</b> reduction in <a href=showinfo:41516>Capital Flex Shield Hardener</a> capacitor activation cost and powergrid requirements"
+      "content": "<b>90%</b> <a href=showinfo:41516>旗舰级弯曲护盾增强器</a>启动消耗减少和能量栅格需求降低"
     },
     {
       "content": "<b>90%</b> 减少跳跃疲劳对有效距离的影响"
     },
     {
-      "content": "Unable to use <a href=showinfo:11579>Cloaking Device</a> modules"
+      "content": "可以绕过一般舰船限制，直接连接到<a href=showinfo:81933>轨道天钩试剂储藏库</a>"
     },
     {
-      "content": "可以绕过一般舰船限制，直接连接到<a href=showinfo:81933>轨道天钩试剂储藏库</a>"
+      "content": "无法使用<a href=showinfo:11579>隐形装置</a> 装备"
     }
   ]
 }

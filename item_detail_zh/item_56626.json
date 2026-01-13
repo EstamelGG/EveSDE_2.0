@@ -1,7 +1,7 @@
 {
   "type_id": 56626,
-  "name": "Talassonite III-Grade",
-  "description": "Light neutron deposition from the chaotic radiations observed near Abyssal Conduits have morphed the mineralogical composition of this Asteroid type, suspected to be formerly of the Scordite family. Reprocessing it will yield significant amounts of Tritanium whilst also yielding smaller amounts of Nocxium and Megacyte.",
+  "name": "塔拉岩（3级）",
+  "description": "深渊导管附近混乱的放射性环境中的轻度中子沉积改变了这种小行星的矿物组成，它之前可能是灼烧岩的一种。对其进行提炼可以产出大量的三钛合金，同时还产出少量的超新星诺克石和超噬矿。",
   "volume": 16.0,
   "repackaged_volume": null,
   "capacity": null,

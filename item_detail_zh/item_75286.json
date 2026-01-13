@@ -1,7 +1,7 @@
 {
   "type_id": 75286,
-  "name": "Compressed Eifyrium IV-Grade",
-  "description": "IV-Grade or augmented eifyrium is a very rare form of eifyrium ore with a relative density of <a href=showinfo:39>Zydrine</a> mineral content 15% greater than the standard form.\n\nEifyrium is a rare ore that contains a useful concentration of the Zydrine mineral in relatively dense deposits. Though found in remote clusters of asteroids, the ore is readily transportable and easily refined into the useful mineral it contains.\n\nA special \"Deep Space Survey\" partnership between Ducia Foundry,  Eifyr and Co., Mordu's Legion, and Ytiri was forged by the four members of the Upwell Consortium in order to carry out prospecting expeditions at the edges of empire space, deep in nullsec, and even beyond to wormhole space. In YC124, these survey missions were able to identify a number of rare ore types, each containing an unusually pure deposit of a standard mineral. Eifyrium was the Zydrine-bearing ore discovered by this group and was named for the Eifyr and Co. contribution to the surveying expeditions.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度艾弗石（4级）",
+  "description": "增强艾弗石（又称4级艾弗石）非常罕见，其<a href=showinfo:39>晶状石英核岩</a>矿物含量的相对密度比标准艾弗石要高15%。艾弗石是一种稀有矿石，其矿床的相对密度较高，蕴藏着丰富的晶状石英核岩矿物。这种矿石虽然诞生于遥远的小行星群，但运输起来并不费力，其中蕴藏的实用矿物也能轻松提炼出来。昇威财团旗下的四家成员公司杜厦铸造、埃菲尔公司、莫德团和耶利集团携手开展“深空调查”特别合作，旨在前往帝国空间边缘、零安地区深处，甚至虫洞空间外部进行勘探远征。YC124年，这些调查行动找到了一些稀有矿石，每种矿石都有一个异常纯净的标准矿物矿床。在勘探远征中，他们发现了蕴藏晶状石英核岩的艾弗石，并以做出突出贡献的埃菲尔公司为其命名。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.16,
   "repackaged_volume": null,
   "capacity": null,

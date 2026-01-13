@@ -1,13 +1,13 @@
 {
   "type_id": 85084,
-  "name": "小型突破者级逃生舱发射器",
-  "description": "突破者级逃生舱发射器配备了一个紧凑型克隆舱，能够在克隆体死亡的时候接收其纳米触发式映射，从而使符合条件的舰船可以用突破者级逃生舱快速将登舰突击队送入敌方舰船。",
+  "name": "小型突破者座舱发射器",
+  "description": "突破者座舱发射器配备了一个紧凑型克隆舱，能够在克隆体死亡的时候接收其纳米触发式映射，从而使符合条件的舰船可以用突破者座舱快速将登舰突击队送入敌方舰船。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": 4.0,
   "mass": null,
   "category_name": "装备",
-  "group_name": "突破者级逃生舱发射器",
+  "group_name": "突破者座舱发射器",
   "attributes": [
     {
       "attribute_name": "hp",

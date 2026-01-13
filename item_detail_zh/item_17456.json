@@ -1,7 +1,7 @@
 {
   "type_id": 17456,
-  "name": "Plagioclase III-Grade",
-  "description": "With rich or III-Grade plagioclase having 10% better yield than the normal one, miners can finally regard plagioclase as a mineral that provides a noteworthy profit.\n\nPlagioclase is not amongst the most valuable ore types around, but it contains a large amount of <a href=showinfo:34>Tritanium</a> and is thus always in constant demand. It also yields some <a href=showinfo:36>Mexallon</a>.\n\nAvailable primarily in high security status star systems.",
+  "name": "斜长岩（3级）",
+  "description": "由于富斜长岩（又称3级斜长岩）比普通的斜长岩的矿物含量高10%，采矿者最终把斜长岩视作一种能产生相当效益的矿石。斜长岩并不是最值钱的矿石，但它含有大量的<a href=showinfo:34>三钛合金</a>，因此总是有稳定的需求。它也含有一定量的<a href=showinfo:36>类银超金属</a>。主要分布于高安全等级星系。",
   "volume": 0.35,
   "repackaged_volume": null,
   "capacity": null,

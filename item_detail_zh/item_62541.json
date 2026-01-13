@@ -1,7 +1,7 @@
 {
   "type_id": 62541,
-  "name": "Compressed Jaspet II-Grade",
-  "description": "II-Grade or pure jaspet is popular amongst corporate miners who are looking for various minerals for manufacturing, rather than mining purely for profit. Pure jaspet contains fewer waste compounds than most asteroids, allows for approximately 5% better mineral yield from the same volume of ore.\n\nJaspet has two valuable mineral types, making it easy to sell. It has a large portion of <a href=showinfo:36>Mexallon</a> plus some <a href=showinfo:38>Nocxium</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度杰斯贝矿（2级）",
+  "description": "纯杰斯贝矿很受那些寻找多种矿物用于生产而非获利的军团采矿者的欢迎。纯杰斯贝矿含有的无用复合物比大多数小行星都要少，这导致它的矿物产出要比普通矿石高大约5%。杰斯贝矿石含有两种贵重矿物，因此销路一直很好。它含有大量的<a href=showinfo:36>类银超金属</a>以及一些<a href=showinfo:38>超新星诺克石</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.02,
   "repackaged_volume": null,
   "capacity": null,

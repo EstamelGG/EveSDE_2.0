@@ -1,7 +1,7 @@
 {
   "type_id": 62565,
-  "name": "Compressed Bistot II-Grade",
-  "description": "Bistot with a triclinic crystal system occurs very rarely under natural conditions, but is highly popular with miners due to its extra-high concentrations of minerals. The yield from triclinic bistot is approximately 5% higher than from equivalent volumes of standard bistot.\n\nBistot is a very valuable ore as it holds large portions of <a href=showinfo:39>Zydrine</a> and <a href=showinfo:35>Pyerite</a>. It also contains a decent amount of <a href=showinfo:36>Mexallon</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度双多特石（2级）",
+  "description": "在自然条件下形成的三晶双多特斜岩非常罕见，但却深受采矿者的喜欢，因为它有相当高的矿物含量。三晶双多特斜岩的提炼产出比普通双多特石高约5%。双多特石是一种非常珍贵的矿石，含有大量的<a href=showinfo:39>晶状石英核岩</a>和<a href=showinfo:35>类晶体胶矿</a>。它还含有数量可观的<a href=showinfo:36>类银超金属</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.16,
   "repackaged_volume": null,
   "capacity": null,

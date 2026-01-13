@@ -1,7 +1,7 @@
 {
   "type_id": 17432,
-  "name": "Crokite II-Grade",
-  "description": "In certain belts, environmental conditions will carve sharp, jagged edges into crokite rocks, resulting in the formation of sharp crokite. The increased density of these formations leads to a 5% greater mineral yield than standard crokite.\n\nCrokite is a very heavy ore that is always in high demand because it has the largest ratio of <a href=showinfo:38>Nocxium</a> and <a href=showinfo:36>Mexallon</a> for any ore in the known universe. Valuable deposits of <a href=showinfo:35>Pyerite</a> can also be found within this rare ore.\n\nAvailable primarily in low security status star systems.",
+  "name": "克洛基石（2级）",
+  "description": "在某些小行星带中，环境因素会在克洛基石上留下锋利、锯齿状的切痕，从而形成斜克洛基石结构。密度的增加使得它比普通的克洛基石的矿物产出高5%。克洛基石是一种非常重的矿石。它是宇宙中<a href=showinfo:38>超新星诺克石</a>和<a href=showinfo:36>类银超金属</a>含量最高的矿石，因此需求量一直居高不下。这种稀有矿石中还含有贵重的<a href=showinfo:35>类晶体胶矿</a>。大多数情况下，你可以在低安全等级星系找到它。",
   "volume": 16.0,
   "repackaged_volume": null,
   "capacity": null,

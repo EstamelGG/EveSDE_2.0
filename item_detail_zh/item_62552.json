@@ -1,7 +1,7 @@
 {
   "type_id": 62552,
-  "name": "Compressed Gneiss",
-  "description": "Gneiss is a popular ore type because it holds significant volumes of three heavily used minerals, increasing its utility value. It has quite a bit of <a href=showinfo:36>Mexallon</a> as well as some <a href=showinfo:35>Pyerite</a> and <a href=showinfo:37>Isogen</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度片麻岩",
+  "description": "片麻岩是一种很受欢迎的矿石，因为它富含三种广泛使用的矿物，所以提升了它的利用价值。它富含<a href=showinfo:36>类银超金属</a>，还含有<a href=showinfo:35>类晶体胶矿</a>和<a href=showinfo:37>同位聚合体</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.05,
   "repackaged_volume": null,
   "capacity": null,

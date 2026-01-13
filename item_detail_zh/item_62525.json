@@ -1,7 +1,7 @@
 {
   "type_id": 62525,
-  "name": "Compressed Pyroxeres II-Grade",
-  "description": "II-Grade pyroxeres, sometimes called solid pyroxeres or the Flame of Dam'Torsad, has a 5% higher yield than its more common cousin. \n\nPyroxeres is a common ore available in all regions of space. It has fair amounts of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:36>Mexallon</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度干焦岩（2级）",
+  "description": "中等品质的辉石，有时被称为固体辉石或达姆托萨德之焰，其产量比更常见的同类高 5%。干焦岩是一种常见矿石，在所有星域中都能找到。它含有一定量的<a href=showinfo:35>类晶体胶矿</a> <a href=showinfo:36>类银超金属</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.003,
   "repackaged_volume": null,
   "capacity": null,

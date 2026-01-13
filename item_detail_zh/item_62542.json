@@ -1,7 +1,7 @@
 {
   "type_id": 62542,
-  "name": "Compressed Jaspet III-Grade",
-  "description": "III-Grade jaspet, also known as pristine jaspet, is very rare, which is not so surprising when one considers that it is formed when asteroids collide with comets or ice moons. It has 10% better yield than normal Jaspet.\n\nJaspet has two valuable mineral types, making it easy to sell. It has a large portion of <a href=showinfo:36>Mexallon</a> plus some <a href=showinfo:38>Nocxium</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度杰斯贝矿（3级）",
+  "description": "朴质杰斯贝矿非常稀有，不过如果考虑到它是小行星受彗星或冰卫星撞击而形成的，那也就不足为奇了。它比普通的杰斯贝的矿物含量高10%。杰斯贝矿石含有两种贵重矿物，因此销路一直很好。它含有大量的<a href=showinfo:36>类银超金属</a>以及一些<a href=showinfo:38>超新星诺克石</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.02,
   "repackaged_volume": null,
   "capacity": null,

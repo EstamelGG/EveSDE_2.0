@@ -1,7 +1,7 @@
 {
   "type_id": 82164,
-  "name": "Hezorime II-Grade",
-  "description": "A minor step up from its more common variant, II-Grade <a href=showinfo:82163>hezorime</a> has a dull finish and produces an additional 5% yield when refined.\n \nDull hezorime deposits may be found in null security space asteroid anomalies.",
+  "name": "赫佐利姆（2级）",
+  "description": "与更为普遍的形态相比，2级<a href=showinfo:82163>赫佐利姆</a>表面暗沉，其精炼后的产量会提高5%。暗沉赫佐利姆矿床通常会分布在零安全区域内的小行星异常空间中。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

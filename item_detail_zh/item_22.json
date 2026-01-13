@@ -1,7 +1,7 @@
 {
   "type_id": 22,
-  "name": "Arkonor",
-  "description": "Arkonor is one of the rarest and most sought-after ores in the known universe. A sizable nugget of this can sweep anyone from rags to riches in no time. It has high amount of <a href=showinfo:40>Megacyte</a>, and also contains some <a href=showinfo:36>Mexallon</a> and <a href=showinfo:35>Pyerite</a>.\n\nAvailable primarily in null security status and wormhole systems.",
+  "name": "艾克诺岩",
+  "description": "艾克诺岩是已知世界中最稀有、最令人向往的矿石之一。一大块这种矿石足以让任何人瞬间从乞丐变成富翁。它含有大量<a href=showinfo:40>超噬矿</a>，以及一些<a href=showinfo:36>类银超金属</a>和<a href=showinfo:35>类晶体胶矿</a>。大多数情况下，你可以在零安全等级星系和虫洞中找到它。",
   "volume": 16.0,
   "repackaged_volume": null,
   "capacity": null,

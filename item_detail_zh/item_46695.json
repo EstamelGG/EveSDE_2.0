@@ -1,7 +1,7 @@
 {
   "type_id": 46695,
-  "name": "Batch Compressed Gneiss IV-Grade",
-  "description": "This extremely rare and valuable variant of gneiss ore was recently discovered by ORE engineers during early field tests of new moon mining technology. Subsequent testing has confirmed that this ore produces 15% more minerals than standard gneiss when reprocessed.\n\nGneiss is a popular ore type because it holds significant volumes of three heavily used minerals, increasing its utility value. It has quite a bit of <a href=showinfo:36>Mexallon</a> as well as some <a href=showinfo:35>Pyerite</a> and <a href=showinfo:37>Isogen</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "聚合高密度片麻岩（4级）",
+  "description": "这种及其稀有和珍贵的片麻岩变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。经过进一步检测后确认这种矿石提炼后的矿物产出比普通的片麻岩高15%。片麻岩是一种很受欢迎的矿石，因为它富含三种广泛使用的矿物，所以提升了它的利用价值。它富含<a href=showinfo:36>类银超金属</a>，还含有<a href=showinfo:35>类晶体胶矿</a>和<a href=showinfo:37>同位聚合体</a>。<i>这种材料使用了比较老旧的压缩方式，对原材料进行一次性批量压缩。最新的压缩技术则更为灵活，可以按单位体积进行压缩。</i>",
   "volume": 1.8,
   "repackaged_volume": null,
   "capacity": null,

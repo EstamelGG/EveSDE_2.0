@@ -1,7 +1,7 @@
 {
   "type_id": 1232,
-  "name": "Dark Ochre",
-  "description": "Considered a worthless ore for years, dark ochre was ignored by most miners until improved reprocessing techniques managed to extract the huge amount of <a href=showinfo:37>Isogen</a> and <a href=showinfo:36>Mexallon</a> inside it. Dark ochre also contains useful amounts of <a href=showinfo:38>Nocxium</a>.\n\nAvailable primarily in low security status star systems.",
+  "name": "黑赭石",
+  "description": "黑赭石曾一度被当作一种无价值的矿石而受到忽略，直到提炼得到技术改进，最终从中提炼出了巨量的<a href=showinfo:37>同位聚合体</a>和<a href=showinfo:36>类银超金属</a>。黑赭石也含有数量不少的<a href=showinfo:38>超新星诺克石</a>。大多数情况下，你可以在低安全等级星系找到它。",
   "volume": 8.0,
   "repackaged_volume": null,
   "capacity": null,

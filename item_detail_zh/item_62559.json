@@ -1,7 +1,7 @@
 {
   "type_id": 62559,
-  "name": "Compressed Dark Ochre IV-Grade",
-  "description": "This extremely rare and valuable variant of dark ochre ore was recently discovered by ORE engineers during early field tests of new moon mining technology. Subsequent testing has confirmed that this ore produces 15% more minerals than standard dark ochre when reprocessed.\n\nConsidered a worthless ore for years, dark ochre was ignored by most miners until improved reprocessing techniques managed to extract the huge amount of <a href=showinfo:37>Isogen</a> and <a href=showinfo:36>Mexallon</a> inside it. Dark ochre also contains useful amounts of <a href=showinfo:38>Nocxium</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度黑赭石（4级）",
+  "description": "这种及其稀有和珍贵的黑赭石变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。经过进一步检测后确认这种矿石提炼后的矿物产出比普通的黑赭石高15%。黑赭石曾一度被当作一种无价值的矿石而受到忽略，直到提炼得到技术改进，最终从中提炼出了巨量的<a href=showinfo:37>同位聚合体</a>和<a href=showinfo:36>类银超金属</a>。黑赭石也含有数量不少的<a href=showinfo:38>超新星诺克石</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.08,
   "repackaged_volume": null,
   "capacity": null,

@@ -1,7 +1,7 @@
 {
   "type_id": 17975,
-  "name": "Blue Ice IV-Grade",
-  "description": "Interstellar ices are formed by accretion of gas molecules onto silicate dust particles. Due to its unique chemical composition and the circumstances under which it forms, blue ice will, under normal circumstances, contain more oxygen isotopes than any other ice asteroid. This particular formation is an old one and therefore contains even more than its less mature siblings.\n\nAvailable in <color='0xFFFF0000'>0.0</color> security status solar systems or lower.",
+  "name": "蓝冰矿（4级）",
+  "description": "星际里的冰通常都是由气体分子不断附着于硅酸盐尘粒而形成。蓝冰因其特有的化学构成和形成环境，在常规条件下，会比其他冰矿含有更多的氧同位素。这个矿石群形成时间很久，因此其同位聚合体含量比其他年轻的矿石群更丰富。可于安全等级为<color='0xFFFF0000'>0.0</color>及以下的星系开采。",
   "volume": 1000.0,
   "repackaged_volume": null,
   "capacity": null,

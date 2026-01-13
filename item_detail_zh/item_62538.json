@@ -1,7 +1,7 @@
 {
   "type_id": 62538,
-  "name": "Compressed Kernite III-Grade",
-  "description": "Known as Rage Stone or fiery kernite to veteran miners after a discovery of a particularly rich vein of it caused a bar brawl of epic proportions in the Intaki Syndicate. It has a 10% higher yield than basic kernite.\n\nKernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度水硼砂（3级）",
+  "description": "老矿工都称它为愤怒石，因为人们曾经发现一条矿物含量异常丰富的矿脉，结果在印塔基联合财团引发了一场大规模的酒吧争斗。它比普通的水硼砂的矿物含量高10%。水硼砂是一种很常见的矿石，可以提炼出相当数量的<a href=showinfo:36>类银超金属</a>和<a href=showinfo:37>同位聚合体</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.012,
   "repackaged_volume": null,
   "capacity": null,

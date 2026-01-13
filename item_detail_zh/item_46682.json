@@ -1,7 +1,7 @@
 {
   "type_id": 46682,
-  "name": "Jaspet IV-Grade",
-  "description": "This extremely rare and valuable variant of jaspet ore was recently discovered by ORE engineers during early field tests of new moon mining technology. Subsequent testing has confirmed that this ore produces 15% more minerals than standard jaspet when reprocessed.\n\nJaspet has two valuable mineral types, making it easy to sell. It has a large portion of <a href=showinfo:36>Mexallon</a> plus some <a href=showinfo:38>Nocxium</a>.",
+  "name": "杰斯贝矿（4级）",
+  "description": "这种及其稀有和珍贵的杰斯贝矿变种是最近由ORE工程师在对新型卫星开采技术进行初期实地实验时发现的。经过进一步检测后确认这种矿石提炼后的矿物产出比普通的杰斯贝矿高15%。杰斯贝矿石含有两种贵重矿物，因此销路一直很好。它含有大量的<a href=showinfo:36>类银超金属</a>以及一些<a href=showinfo:38>超新星诺克石</a>。",
   "volume": 2.0,
   "repackaged_volume": null,
   "capacity": null,

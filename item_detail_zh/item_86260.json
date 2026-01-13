@@ -1,7 +1,7 @@
 {
   "type_id": 86260,
-  "name": "突破者级逃生舱发射器操作",
-  "description": "突破者级逃生舱发射器操作。每升一级，每秒对目标HP造成的最大百分比伤害提高5%。",
+  "name": "突破者座舱发射器操作",
+  "description": "突破者座舱发射器操作。每升一级，每秒对目标HP造成的最大百分比伤害提高5%。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

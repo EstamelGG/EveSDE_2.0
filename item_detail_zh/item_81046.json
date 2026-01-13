@@ -698,19 +698,19 @@
   ],
   "traits": [
     {
-      "content": "<a href=showinfo:11579>Cloak</a> reactivation delay reduced to 5 seconds"
+      "content": "<a href=showinfo:11579>隐形装置</a>重启延时降到5秒"
     },
     {
       "content": "<b>10%</b> 舰船基础设施舱容量加成"
     },
     {
-      "content": "<b>15%</b> bonus to missile damage"
+      "content": "<b>15%</b> 导弹伤害加成"
     },
     {
-      "content": "<b>20%</b> reduction in <a href=showinfo:11579>Cloaking Devices</a> CPU requirement"
+      "content": "<b>20%</b> <a href=showinfo:11579>隐形装置</a>CPU需求降低"
     },
     {
-      "content": "<b>5%</b> bonus to warp speed and warp acceleration"
+      "content": "<b>5%</b> 跃迁速度和跃迁加速加成"
     },
     {
       "content": "<b>75%</b> 跃迁速度和跃迁加速加成"
@@ -722,13 +722,13 @@
       "content": "<b>90%</b> 减少跳跃疲劳对有效距离的影响"
     },
     {
-      "content": "Can fit <a href=showinfo:11578>Covert Ops Cloaking Device</a> and <a href=showinfo:28646>Covert Cynosural Field Generator</a>"
-    },
-    {
-      "content": "Immune to all <a href=showinfo:442>Cargo Scanners</a>"
+      "content": "免疫<a href=\"showinfo:442\">货舱扫描</a>"
     },
     {
       "content": "可以绕过一般舰船限制，直接连接到<a href=showinfo:81933>轨道天钩试剂储藏库</a>"
+    },
+    {
+      "content": "可以装配<a href=showinfo:11578>隐秘行动隐形装置</a>和<a href=showinfo:28646>隐秘诱导力场发生器</a>"
     }
   ]
 }

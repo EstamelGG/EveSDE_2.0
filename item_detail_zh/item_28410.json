@@ -1,7 +1,7 @@
 {
   "type_id": 28410,
-  "name": "Batch Compressed Kernite",
-  "description": "Kernite is a fairly common ore type that yields fair amounts of <a href=showinfo:36>Mexallon</a> and <a href=showinfo:37>Isogen</a>.\n\n<i>This material was compressed using an older process that compressed batches of raw materials into units using a set input quantity. Newer compression technology uses a more flexible one-to-one unit compression system.</i>",
+  "name": "聚合高密度水硼砂",
+  "description": "水硼砂是一种很常见的矿石，可以提炼出相当数量的<a href=showinfo:36>类银超金属</a>和<a href=showinfo:37>同位聚合体</a>。<i>这种材料使用了比较老旧的压缩方式，对原材料进行一次性批量压缩。最新的压缩技术则更为灵活，可以按单位体积进行压缩。</i>",
   "volume": 0.19,
   "repackaged_volume": null,
   "capacity": null,

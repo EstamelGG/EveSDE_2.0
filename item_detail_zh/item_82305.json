@@ -1,7 +1,7 @@
 {
   "type_id": 82305,
-  "name": "Compressed Nocxite II-Grade",
-  "description": "Fragrant or II-Grade <a href=showinfo:82016>nocxite</a> has stronger hints of its intoxicating fumes under typical atmospheric pressure. Additionally, it yields 5% more minerals.\n \nFragrant nocxite may be found in null security asteroid anomalies.\n \nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度诺克希特（2级）",
+  "description": "在标准大气压下，芳香<a href=showinfo:82016>诺克希特</a>会散发出更浓烈的迷醉气味。另外，它的矿物产量也会增加5%。芳香诺克希特通常会分布在零安全区域内的小行星异常空间中。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.04,
   "repackaged_volume": null,
   "capacity": null,

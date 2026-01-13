@@ -1,7 +1,7 @@
 {
   "type_id": 28444,
-  "name": "Compressed White Glaze",
-  "description": "When star fusion processes occur near high concentrations of silicate dust, such as those found in interstellar ice fields, the substance known as White Glaze is formed. White Glaze is extremely high in nitrogen-14 and other stable nitrogen isotopes, and is thus a necessity for the sustained operation of certain kinds of control tower.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度白釉冰",
+  "description": "当恒星聚变的过程发生在诸如星际冰域这种硅酸盐尘埃聚集的区域时，就会形成白釉冰。白釉冰富含氮-14以及其他一些稳定的氮同位素，因而成为某些类型控制塔维持运行的必需品。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 100.0,
   "repackaged_volume": null,
   "capacity": null,

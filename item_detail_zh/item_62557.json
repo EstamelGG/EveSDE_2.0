@@ -1,7 +1,7 @@
 {
   "type_id": 62557,
-  "name": "Compressed Dark Ochre II-Grade",
-  "description": "II-Grade dark ochre, also known as onyx ochre, has a distinctive, shiny black surface that lends itself to ornamental uses. But the 5% higher mineral yield is what miners are really after. Like in all else, good looks are only an added bonus. \n\nConsidered a worthless ore for years, dark ochre was ignored by most miners until improved reprocessing techniques managed to extract the huge amount of <a href=showinfo:37>Isogen</a> and <a href=showinfo:36>Mexallon</a> inside it. Dark ochre also contains useful amounts of <a href=showinfo:38>Nocxium</a>.\n\nThis material is compressed and a much more compact form of the original material.",
+  "name": "高密度黑赭石（2级）",
+  "description": "中等等级的深色赭石，又称玛瑙赭石，具有独特的亮黑色表面，适合用于装饰用途。不过它5%的额外矿物产出才是矿工真正关心的。对任何事物而言，美丽的外表只是锦上添花。黑赭石曾一度被当作一种无价值的矿石而受到忽略，直到提炼得到技术改进，最终从中提炼出了巨量的<a href=showinfo:37>同位聚合体</a>和<a href=showinfo:36>类银超金属</a>。黑赭石也含有数量不少的<a href=showinfo:38>超新星诺克石</a>。这种矿物被压缩过，比它的原始形态紧密得多。",
   "volume": 0.08,
   "repackaged_volume": null,
   "capacity": null,
