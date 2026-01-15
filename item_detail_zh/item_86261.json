@@ -1,6 +1,6 @@
 {
   "type_id": 86261,
-  "name": "突破者座舱克隆体效果",
+  "name": "突破者座舱克隆体效能",
   "description": "突破者座舱克隆体的专业战斗技能。每升一级，每秒最大伤害上限提高5%。",
   "volume": 0.01,
   "repackaged_volume": null,
