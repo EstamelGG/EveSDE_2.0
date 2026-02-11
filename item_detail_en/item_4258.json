@@ -120,6 +120,20 @@
       "categoryID": 7,
       "display_name": "Reload Time",
       "unit_name": "s"
+    },
+    {
+      "attribute_name": "expeditionCommandBurstProbeStrengthBonusCharID",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "expeditionCommandBurstProbeDeviationBonusCharID",
+      "value": 1.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": []

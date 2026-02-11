@@ -57,6 +57,13 @@
       "categoryID": 51,
       "display_name": null,
       "unit_name": null
+    },
+    {
+      "attribute_name": "ignoreMiningCrits",
+      "value": 0.0,
+      "categoryID": 51,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": []
