@@ -4,7 +4,6 @@
 蓝图数据处理器模块
 用于处理blueprints数据并写入数据库
 
-对应old版本: old/blueprints_handler.py
 功能: 处理蓝图数据，创建多个蓝图相关表
 完全按照old版本的逻辑实现，确保数据库结构一致
 """

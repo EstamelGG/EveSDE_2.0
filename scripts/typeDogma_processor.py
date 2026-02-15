@@ -4,7 +4,6 @@
 物品属性详情数据处理器模块
 用于处理typeDogma数据并写入数据库
 
-对应old版本: old/typeDogma_handler.py
 功能: 处理物品属性详情数据，创建typeAttributes、typeEffects和planetResourceHarvest表
 """
 

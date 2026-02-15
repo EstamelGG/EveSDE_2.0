@@ -4,9 +4,7 @@
 dbuff集合数据处理器模块
 用于处理dbuffCollections数据并写入数据库
 
-对应old版本: old/dbuff_collections_handler.py
 功能: 处理dbuff集合数据，创建dbuffCollection表
-完全按照old版本的逻辑实现，确保数据库结构一致
 """
 
 import json

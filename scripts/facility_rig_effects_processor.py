@@ -4,7 +4,6 @@
 设施装配效果数据处理器模块
 用于处理设施装配效果数据并写入数据库
 
-对应old版本: old/facility_rig_effects.py
 功能: 从外部URL下载工业修正源数据和目标过滤器数据，处理设施装配效果
 数据源:
 - https://sde.hoboleaks.space/tq/industrymodifiersources.json

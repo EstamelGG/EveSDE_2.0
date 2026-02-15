@@ -4,9 +4,7 @@
 市场分组数据处理器模块
 用于处理marketGroups数据并写入数据库
 
-对应old版本: old/marketGroups_handler.py
 功能: 处理市场分组数据，创建marketGroups表
-完全按照old版本的逻辑实现，确保数据库结构一致
 """
 
 import json

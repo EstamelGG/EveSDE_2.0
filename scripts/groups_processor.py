@@ -117,7 +117,7 @@ class GroupsProcessor:
                 'zh': name_dict.get('zh', en_name)
             }
             
-            # 为特定group_id添加后缀（来自old版本的逻辑）
+            # 为特定group_id添加后缀
             suffix = ""
             if group_id == 1884:
                 suffix = "(R4)"

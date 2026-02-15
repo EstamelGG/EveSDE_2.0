@@ -4,7 +4,6 @@
 物品属性目录数据处理器模块
 用于处理dogmaAttributeCategories数据并写入数据库
 
-对应old版本: old/dogmaAttributeCategories_handler.py
 功能: 处理物品属性目录数据，创建dogmaAttributeCategories表
 """
 

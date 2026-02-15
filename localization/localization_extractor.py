@@ -3,7 +3,6 @@
 
 """
 EVE SDE 本地化数据提取器
-依照old版本的功能来创建本地化JSON文件
 """
 
 import os
