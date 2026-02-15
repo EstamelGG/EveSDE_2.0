@@ -173,6 +173,7 @@ jobs:
     - name: 生成 whats_new 报告
       id: generate-whats-new
       run: |
+        export BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
         export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         python -u scripts/generate_whats_new.py
         
