@@ -13,6 +13,11 @@ on:
         required: false
         default: false
         type: boolean
+      skip_version_check:
+        description: '跳过版本一致性检查（允许 sde_binary 和 sde_update 版本号不一致时继续构建）'
+        required: false
+        default: false
+        type: boolean
   schedule:
     # 每天固定时间（UTC时间）
     - cron: '20 11 * * *'   # 北京时间 19:20
@@ -173,6 +178,7 @@ jobs:
     - name: 生成 whats_new 报告
       id: generate-whats-new
       run: |
+        export BUILD_NUMBER="${{ needs.get-build-info.outputs.build-number }}"
         export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         python -u scripts/generate_whats_new.py
         
@@ -223,7 +229,12 @@ jobs:
         export FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
         export PATCH_VERSION="${{ needs.get-build-info.outputs.patch-version }}"
         
-        python -u main.py
+        EXTRA_ARGS=""
+        if [ "${{ github.event.inputs.skip_version_check }}" = "true" ]; then
+          EXTRA_ARGS="--skip-version-check"
+        fi
+        
+        python -u main.py $EXTRA_ARGS
         
         # 检查物品详情目录是否生成
         echo "[+] 检查物品详情目录..."

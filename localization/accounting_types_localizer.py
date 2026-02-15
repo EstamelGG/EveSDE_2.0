@@ -19,8 +19,8 @@ class AccountingTypesLocalizer:
         self.extra_dir = self.localization_dir / "extra"
         self.output_dir = self.localization_dir / "output"
         
-        # 语言顺序
-        self.language_order = ["en", "zh"]
+        # 语言顺序（输出文件中包含的语言）
+        self.language_order = ["en", "de", "es", "fr", "ja", "ko", "ru", "zh"]
         
         # 在线数据源URL
         self.accounting_types_url = "https://sde.hoboleaks.space/tq/accountingentrytypes.json"
@@ -444,7 +444,12 @@ class AccountingTypesLocalizer:
             if ref_type in accounting_types_data:
                 # 检查是否已经有entryJournalMessage
                 if "entryJournalMessage" not in accounting_types_data[ref_type]:
-                    accounting_types_data[ref_type]["entryJournalMessage"] = manual_message
+                    # 为缺失的语言补上英文值
+                    en_value = manual_message.get("en", [])
+                    filled_message = {}
+                    for lang in self.language_order:
+                        filled_message[lang] = manual_message.get(lang, en_value)
+                    accounting_types_data[ref_type]["entryJournalMessage"] = filled_message
                     print(f"[+] 为 {ref_type} 添加了手动编码的entryJournalMessage")
                     patched_count += 1
                 else:

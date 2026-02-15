@@ -111,9 +111,9 @@ class NPCShipClassifier:
         for scene in NPC_SHIP_SCENES:
             if group_name.startswith(scene["en"]):
                 if scene["en"].strip() == "FW":
-                    return "Faction Warfare" if lang == "en" else "势力战争"
-                return scene[lang].strip()
-        return "Other" if lang == "en" else "其他"
+                    return "势力战争" if lang == "zh" else "Faction Warfare"
+                return scene.get(lang, scene["en"]).strip()
+        return "其他" if lang == "zh" else "Other"
     
     def get_npc_ship_faction(self, group_name: str, lang: str) -> Optional[str]:
         """
@@ -121,8 +121,8 @@ class NPCShipClassifier:
         """
         for faction in NPC_SHIP_FACTIONS:
             if faction["en"] in group_name:
-                return faction[lang].strip()
-        return "Other" if lang == "en" else "其他"
+                return faction.get(lang, faction["en"]).strip()
+        return "其他" if lang == "zh" else "Other"
     
     def get_faction_icon(self, faction_name: str) -> Optional[str]:
         """
@@ -211,12 +211,12 @@ class NPCShipClassifier:
         
         # 特殊处理 "Super Carrier"
         if name == "Super Carrier":
-            return "Supercarrier" if lang == "en" else "超级航母"
+            return "超级航母" if lang == "zh" else "Supercarrier"
         
         # 使用 NPC_SHIP_TYPES 匹配
         for ship_type in NPC_SHIP_TYPES:
             if name.endswith(ship_type["en"]) or name == ship_type["en"].strip():
-                return ship_type[lang].strip()
+                return ship_type.get(lang, ship_type["en"]).strip()
         
         return None
     
@@ -238,7 +238,7 @@ class NPCShipClassifier:
                 return None
             
             # 获取对应语言的名称
-                lang_column = f"{lang}_name" if lang in ['de', 'en', 'es', 'fr', 'ja', 'ko', 'ru', 'zh'] else 'en_name'
+            lang_column = f"{lang}_name" if lang in ['de', 'en', 'es', 'fr', 'ja', 'ko', 'ru', 'zh'] else 'en_name'
             group_name = group_data.get(lang_column) or group_data.get('en_name')
             
             if group_name:
@@ -272,12 +272,12 @@ class NPCShipClassifier:
         """
         # 首先检查组名是否以Officer结尾
         if group_name.endswith("Officer"):
-            return "Officer" if lang == "en" else "官员"
+            return "官员" if lang == "zh" else "Officer"
         
         # 使用字符串匹配映射
         for ship_type in NPC_SHIP_TYPES:
             if name.endswith(ship_type["en"]) or group_name.endswith(ship_type["en"]):
-                return ship_type[lang].strip()
+                return ship_type.get(lang, ship_type["en"]).strip()
         
         return None
     
@@ -304,7 +304,7 @@ class NPCShipClassifier:
             return result
         
         # 全部失败，返回 Other
-        return "Other" if lang == "en" else "其他"
+        return "其他" if lang == "zh" else "Other"
     
     def load_data_from_db(self, language: str) -> Optional[Dict[str, Any]]:
         """
@@ -500,9 +500,9 @@ class NPCShipClassifier:
         """
         在内存中修正"其他"分类
         """
-        # 确定"其他"的值（根据语言）
-        other_faction = "Other" if language == "en" else "其他"
-        other_type = "Other" if language == "en" else "其他"
+        # 确定"其他"的值（仅中文使用中文，其余语言使用英文）
+        other_faction = "其他" if language == "zh" else "Other"
+        other_type = "其他" if language == "zh" else "Other"
         
         # 构建按图标分组的索引
         icon_index = {}  # {icon_filename: [type_id, ...]}

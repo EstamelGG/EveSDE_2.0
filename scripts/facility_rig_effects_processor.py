@@ -163,8 +163,8 @@ class FacilityRigEffectsProcessor:
     def process_facility_rig_effects_to_db(self, cursor: sqlite3.Cursor, lang: str):
         """处理设施装配效果数据并写入数据库"""
         try:
-            # 只在处理英文数据库时下载数据，避免重复下载
-            if lang == 'en':
+            # 首次处理时下载数据，避免重复下载
+            if self._modifier_data is None:
                 print("[+] 下载工业修正源数据...")
                 modifier_url = "https://sde.hoboleaks.space/tq/industrymodifiersources.json"
                 filter_url = "https://sde.hoboleaks.space/tq/industrytargetfilters.json"
