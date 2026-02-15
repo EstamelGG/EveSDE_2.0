@@ -186,7 +186,7 @@ class CelestialNamesProcessor:
             celestial_roman = self.int_to_roman(celestial_index)
             
             # 根据语言选择"Moon"的翻译
-            moon_text = "Moon" if lang == 'en' else "卫星"
+            moon_text = "卫星" if lang == 'zh' else "Moon"
             
             return f"{system_name} {celestial_roman} - {moon_text} {orbit_index}"
             

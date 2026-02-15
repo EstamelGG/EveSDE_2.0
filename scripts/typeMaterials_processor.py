@@ -4,7 +4,6 @@
 物品材料产出数据处理器模块
 用于处理typeMaterials数据并写入数据库
 
-对应old版本: old/typeMaterials_handler.py
 功能: 处理物品材料产出数据，创建typeMaterials表
 完全按照old版本的逻辑实现，确保数据库结构一致
 """
@@ -68,7 +67,6 @@ class TypeMaterialsProcessor:
     def create_type_materials_table(self, cursor: sqlite3.Cursor):
         """
         创建typeMaterials表
-        完全按照old版本的数据库结构
         """
         cursor.execute('''
         CREATE TABLE IF NOT EXISTS typeMaterials (
