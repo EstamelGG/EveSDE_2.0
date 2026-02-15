@@ -20,7 +20,7 @@ class AccountingTypesLocalizer:
         self.output_dir = self.localization_dir / "output"
         
         # 语言顺序（输出文件中包含的语言）
-        self.language_order = ["de", "en", "es", "fr", "ja", "ko", "ru", "zh"]
+        self.language_order = ["en", "de", "es", "fr", "ja", "ko", "ru", "zh"]
         
         # 在线数据源URL
         self.accounting_types_url = "https://sde.hoboleaks.space/tq/accountingentrytypes.json"
