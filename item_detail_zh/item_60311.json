@@ -102,7 +102,7 @@
     },
     {
       "attribute_name": "crystalVolatilityChance",
-      "value": 0.196,
+      "value": 0.05,
       "categoryID": 7,
       "display_name": "挥发度",
       "unit_name": "%"
