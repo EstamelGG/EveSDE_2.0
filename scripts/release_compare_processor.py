@@ -29,7 +29,8 @@ class ReleaseCompareProcessor:
         self.output_sde_path = self.project_root / "output_sde"
         self.output_icons_path = self.project_root / "output_icons"
         self.tools_path = self.project_root / "tools"
-        self.languages = config.get("languages", ["en", "zh"])
+        # Release比较仅对 en 和 zh 版本执行
+        self.languages = ["en", "zh"]
         
         # 创建比较Markdown文件（输出到项目根目录）
         self.compare_md_path = self.project_root / f"release_compare_{build_number}.md"

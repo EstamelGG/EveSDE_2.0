@@ -72,9 +72,11 @@ def parse_arguments():
                        help='跳过本地化数据解析')
     parser.add_argument('--force-rebuild', action='store_true',
                        help='强制重新构建，忽略版本检查')
+    parser.add_argument('--skip-version-check', action='store_true',
+                       help='跳过版本一致性检查（允许 sde_binary 和 sde_update 版本号不一致）')
     return parser.parse_args()
 
-def get_latest_sde_info(config):
+def get_latest_sde_info(config, skip_version_check=False):
     """获取最新的SDE版本信息，从两个URL分别获取并比较版本号"""
     try:
         print("[+] 获取最新SDE版本信息...")
@@ -111,16 +113,20 @@ def get_latest_sde_info(config):
         
         # 比较两个版本号
         if binary_build_str != update_build_str:
-            print(f"[x] 版本号不一致！")
-            print(f"[x] sde_binary build_number: {binary_build_number}")
-            print(f"[x] sde_update buildNumber: {update_build_number}")
-            print(f"[x] 数据尚未同步完成，程序退出")
-            return None
-        
-        print(f"[+] 版本号一致: {binary_build_number}")
+            print(f"[!] 版本号不一致！")
+            print(f"[!] sde_binary build_number: {binary_build_number}")
+            print(f"[!] sde_update buildNumber: {update_build_number}")
+            if skip_version_check:
+                print(f"[!] 已跳过版本一致性检查，使用 sde_update 版本号: {update_build_number}")
+            else:
+                print(f"[x] 数据尚未同步完成，程序退出")
+                print(f"[!] 如需强制构建，请使用 --skip-version-check 参数")
+                return None
+        else:
+            print(f"[+] 版本号一致: {binary_build_number}")
         
         return {
-            'build_number': binary_build_number,
+            'build_number': update_build_number,
             'release_date': update_data.get('releaseDate'),
             'key': update_data.get('_key')
         }
@@ -367,9 +373,9 @@ def main():
     print("=" * 30)
     
     # 获取最新SDE版本信息
-    latest_sde_info = get_latest_sde_info(config)
+    latest_sde_info = get_latest_sde_info(config, skip_version_check=args.skip_version_check)
     if not latest_sde_info:
-        print("[x] 无法获取最新SDE版本信息或版本号不一致，程序退出")
+        print("[x] 无法获取最新SDE版本信息，程序退出")
         sys.exit(1)
     
     current_build_number = latest_sde_info['build_number']

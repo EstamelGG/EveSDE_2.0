@@ -117,7 +117,7 @@ class StationsProcessor:
                 
                 # 第二部分：卫星部分（如果有轨道索引）
                 if orbit_index > 0:
-                    moon_text = "Moon" if lang == 'en' else "卫星"
+                    moon_text = "卫星" if lang == 'zh' else "Moon"
                     part1 = f"{part1} - {moon_text} {orbit_index}"
                 
                 # 第三部分：军团名称和操作名称

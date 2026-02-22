@@ -67,7 +67,6 @@ class TypeMaterialsProcessor:
     def create_type_materials_table(self, cursor: sqlite3.Cursor):
         """
         创建typeMaterials表
-        完全按照old版本的数据库结构
         """
         cursor.execute('''
         CREATE TABLE IF NOT EXISTS typeMaterials (

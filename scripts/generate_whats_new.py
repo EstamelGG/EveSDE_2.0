@@ -60,14 +60,21 @@ def get_latest_release_info(github_repo: str) -> Optional[Dict[str, Any]]:
 
 
 def extract_build_number_from_tag(tag_name: str) -> Optional[str]:
-    """从 tag_name 中提取 build_number"""
+    """从 tag_name 中提取原始 CCP build_number（去除补丁后缀）
+    例如: "sde-build-3201939.01" -> "3201939", "sde-build-3201939" -> "3201939"
+    """
     if tag_name.startswith('sde-build-'):
-        return tag_name.replace('sde-build-', '')
+        full_version = tag_name.replace('sde-build-', '')
+        return full_version.split('.')[0]
     return None
 
 
 def download_and_extract_jsonl(config: Dict[str, Any], build_number: str, output_dir: Path) -> Optional[Path]:
-    """下载并解压指定版本的 JSONL 压缩包"""
+    """下载并解压指定版本的 JSONL 压缩包
+
+    Args:
+        build_number: 原始 CCP build number（不含补丁后缀）
+    """
     try:
         download_url = config["urls"]["sde_download_template"].format(build_number=build_number)
         zip_filename = f"eve-online-static-data-{build_number}-jsonl.zip"
@@ -113,29 +120,40 @@ def download_and_extract_jsonl(config: Dict[str, Any], build_number: str, output
         return None
 
 
-def get_current_build_number(config: Dict[str, Any]) -> Optional[str]:
-    """获取当前版本的 build_number"""
-    # 优先从环境变量获取（GitHub Actions 会设置）
-    build_number = os.environ.get('FINAL_BUILD_NUMBER') or os.environ.get('BUILD_NUMBER')
-    if build_number:
-        return str(build_number)
+def get_current_build_numbers(config: Dict[str, Any]):
+    """获取当前版本的 build number
+
+    Returns:
+        tuple: (display_version, download_version)
+            - display_version: 用于文件命名的完整版本号（可能含补丁后缀，如 "3201939.01"）
+            - download_version: 用于下载的原始 CCP 版本号（如 "3201939"）
+    """
+    # 优先从环境变量获取（GitHub Actions 会分别设置两个变量）
+    final_build = os.environ.get('FINAL_BUILD_NUMBER')
+    raw_build = os.environ.get('BUILD_NUMBER')
     
-    # 从 build_info.json 读取
-    # 使用全局的 project_root
+    if final_build:
+        download = raw_build or final_build.split('.')[0]
+        return str(final_build), str(download)
+    
+    if raw_build:
+        return str(raw_build), str(raw_build)
+    
+    # 本地运行：从文件中读取（本地不会有补丁版本，两者相同）
     sde_jsonl_path = project_root / config["paths"]["sde_jsonl"]
-    build_info_path = sde_jsonl_path / "build_info.json"
     
+    build_info_path = sde_jsonl_path / "build_info.json"
     if build_info_path.exists():
         try:
             with open(build_info_path, 'r', encoding='utf-8') as f:
                 build_info = json.load(f)
                 build_number = build_info.get('build_number') or build_info.get('buildNumber')
                 if build_number:
-                    return str(build_number)
+                    bn = str(build_number)
+                    return bn, bn
         except Exception as e:
             print(f"[!] 读取 build_info.json 失败: {e}")
     
-    # 从 _sde.jsonl 读取
     sde_info_file = sde_jsonl_path / "_sde.jsonl"
     if sde_info_file.exists():
         try:
@@ -145,11 +163,12 @@ def get_current_build_number(config: Dict[str, Any]) -> Optional[str]:
                         data = json.loads(line)
                         build_number = data.get('buildNumber') or data.get('build_number')
                         if build_number:
-                            return str(build_number)
+                            bn = str(build_number)
+                            return bn, bn
         except Exception as e:
             print(f"[!] 读取 _sde.jsonl 失败: {e}")
     
-    return None
+    return None, None
 
 
 def verify_jsonl_files(jsonl_path: Path) -> bool:
@@ -189,15 +208,15 @@ def main():
         print("[x] 配置文件中缺少 github_repo，退出")
         sys.exit(1)
     
-    # 获取当前版本的 build_number
-    current_build_number = get_current_build_number(config)
-    if not current_build_number:
+    # 获取当前版本号（display_version 用于命名，download_version 用于下载）
+    current_display, current_download = get_current_build_numbers(config)
+    if not current_display:
         print("[x] 无法获取当前版本的 build_number，退出")
         sys.exit(1)
     
-    print(f"[+] 当前版本 build_number: {current_build_number}")
+    print(f"[+] 当前版本: {current_display}" + (f" (下载版本: {current_download})" if current_display != current_download else ""))
     
-    # 获取上一版本的 build_number
+    # 获取上一版本的 build_number（从 tag 中提取原始 CCP 版本号）
     release_info = get_latest_release_info(github_repo)
     if not release_info:
         print("[!] 无法获取最新 Release 信息，可能是首次构建")
@@ -205,14 +224,14 @@ def main():
         sys.exit(0)  # 首次构建不算错误，正常退出
     
     prev_tag = release_info.get('tag_name', '')
-    old_build_number = extract_build_number_from_tag(prev_tag)
+    old_download = extract_build_number_from_tag(prev_tag)
     
-    if not old_build_number:
+    if not old_download:
         print(f"[!] 无法从 tag_name ({prev_tag}) 中提取 build_number")
         print("[!] 跳过 whats_new 报告生成")
         sys.exit(0)
     
-    print(f"[+] 上一版本 build_number: {old_build_number}")
+    print(f"[+] 上一版本: {old_download}")
     print()
     
     # 创建临时目录
@@ -224,7 +243,7 @@ def main():
         current_jsonl_path = project_root / config["paths"]["sde_jsonl"]
         if not verify_jsonl_files(current_jsonl_path):
             print("[+] 当前版本 JSONL 文件不完整，开始下载...")
-            current_jsonl_path = download_and_extract_jsonl(config, current_build_number, temp_dir)
+            current_jsonl_path = download_and_extract_jsonl(config, current_download, temp_dir)
             if not current_jsonl_path:
                 print("[x] 下载当前版本 JSONL 失败")
                 sys.exit(1)
@@ -238,8 +257,8 @@ def main():
         
         # 下载并解压上一版本的 JSONL
         print()
-        print(f"[+] 开始下载上一版本 (build {old_build_number}) 的 JSONL 文件...")
-        old_jsonl_path = download_and_extract_jsonl(config, old_build_number, temp_dir)
+        print(f"[+] 开始下载上一版本 (build {old_download}) 的 JSONL 文件...")
+        old_jsonl_path = download_and_extract_jsonl(config, old_download, temp_dir)
         if not old_jsonl_path:
             print("[x] 下载上一版本 JSONL 失败")
             sys.exit(1)
@@ -249,8 +268,8 @@ def main():
             print("[x] 上一版本 JSONL 文件不完整")
             sys.exit(1)
         
-        # 生成文件名格式：whats_new_{old_build_number}_{new_build_number}.md
-        whats_new_filename = f"whats_new_{old_build_number}_{current_build_number}.md"
+        # 生成文件名：用 display 版本号命名（含补丁后缀），与 workflow 中的模式匹配一致
+        whats_new_filename = f"whats_new_{old_download}_{current_display}.md"
         whats_new_dir = project_root / "whats_new"
         whats_new_dir.mkdir(parents=True, exist_ok=True)
         whats_new_path = whats_new_dir / whats_new_filename
