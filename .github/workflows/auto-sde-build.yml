@@ -611,24 +611,21 @@ jobs:
         echo "[+] 创建完整的metadata.json..."
         
         # 构建各语言数据库的 SHA256 JSON 对象
-        EXTRA_DB_JSON=$(python3 -c "
-import json, sys
-extra = {}
-langs = ['de', 'es', 'fr', 'ja', 'ko', 'ru']
-sha_values = {
-    'de': '${{ steps.verify-packages.outputs.sde-db-de-sha256 }}',
-    'es': '${{ steps.verify-packages.outputs.sde-db-es-sha256 }}',
-    'fr': '${{ steps.verify-packages.outputs.sde-db-fr-sha256 }}',
-    'ja': '${{ steps.verify-packages.outputs.sde-db-ja-sha256 }}',
-    'ko': '${{ steps.verify-packages.outputs.sde-db-ko-sha256 }}',
-    'ru': '${{ steps.verify-packages.outputs.sde-db-ru-sha256 }}'
-}
-for lang in langs:
-    sha = sha_values.get(lang, '')
-    if sha:
-        extra[lang] = {'file': f'sde_db_{lang}.zip', 'sha256': sha}
-print(json.dumps(extra))
-")
+        EXTRA_DB_JSON=$(jq -n \
+          --arg de_sha "${{ steps.verify-packages.outputs.sde-db-de-sha256 }}" \
+          --arg es_sha "${{ steps.verify-packages.outputs.sde-db-es-sha256 }}" \
+          --arg fr_sha "${{ steps.verify-packages.outputs.sde-db-fr-sha256 }}" \
+          --arg ja_sha "${{ steps.verify-packages.outputs.sde-db-ja-sha256 }}" \
+          --arg ko_sha "${{ steps.verify-packages.outputs.sde-db-ko-sha256 }}" \
+          --arg ru_sha "${{ steps.verify-packages.outputs.sde-db-ru-sha256 }}" \
+          '{
+            de: {file: "sde_db_de.zip", sha256: $de_sha},
+            es: {file: "sde_db_es.zip", sha256: $es_sha},
+            fr: {file: "sde_db_fr.zip", sha256: $fr_sha},
+            ja: {file: "sde_db_ja.zip", sha256: $ja_sha},
+            ko: {file: "sde_db_ko.zip", sha256: $ko_sha},
+            ru: {file: "sde_db_ru.zip", sha256: $ru_sha}
+          }')
         
         jq -n \
           --argjson icon_version "$NEW_ICON_VERSION" \
