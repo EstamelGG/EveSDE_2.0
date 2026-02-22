@@ -307,6 +307,7 @@ jobs:
     - name: 创建压缩包
       run: |
         FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        EXTRA_LANGS="de es fr ja ko ru"
         
         # 创建图标压缩包（从output_icons/icons.zip复制）
         if [ -f "output_icons/icons.zip" ]; then
@@ -317,18 +318,39 @@ jobs:
           exit 1
         fi
         
-        # 创建SDE数据压缩包（直接压缩output_sde目录为ZIP格式）
+        # 将非 en/zh 的数据库文件移出，单独打包
+        mkdir -p extra_dbs
+        for lang in $EXTRA_LANGS; do
+          DB_FILE="output_sde/db/item_db_${lang}.sqlite"
+          if [ -f "$DB_FILE" ]; then
+            mv "$DB_FILE" "extra_dbs/"
+            echo "[+] 移出 item_db_${lang}.sqlite"
+          fi
+        done
+        
+        # 创建 sde.zip（仅含 en/zh 数据库 + localization + maps 等）
         cd output_sde
         zip -r "../sde.zip" .
         cd ..
-        
         echo "[+] SDE数据压缩包创建完成: sde.zip"
-        ls -la icons.zip sde.zip
+        
+        # 为每个额外语言创建独立的数据库压缩包
+        for lang in $EXTRA_LANGS; do
+          DB_FILE="extra_dbs/item_db_${lang}.sqlite"
+          if [ -f "$DB_FILE" ]; then
+            zip -j "sde_db_${lang}.zip" "$DB_FILE"
+            echo "[+] 语言数据库压缩包创建完成: sde_db_${lang}.zip"
+          fi
+        done
+        
+        echo "[+] 所有压缩包创建完成:"
+        ls -la icons.zip sde.zip sde_db_*.zip
     
     - name: 验证压缩包
       id: verify-packages
       run: |
         echo "[+] 验证压缩包..."
+        EXTRA_LANGS="de es fr ja ko ru"
         
         # 验证图标压缩包
         if [ ! -f "icons.zip" ]; then
@@ -367,9 +389,20 @@ jobs:
         echo "[+] 图标压缩包SHA256: $ICONS_SHA256"
         echo "[+] SDE数据压缩包SHA256: $SDE_SHA256"
         
-        # 将SHA256值输出到环境变量，供后续步骤使用
         echo "icons-sha256=${ICONS_SHA256}" >> $GITHUB_OUTPUT
         echo "sde-sha256=${SDE_SHA256}" >> $GITHUB_OUTPUT
+        
+        # 计算各语言数据库压缩包的哈希值
+        for lang in $EXTRA_LANGS; do
+          LANG_ZIP="sde_db_${lang}.zip"
+          if [ -f "$LANG_ZIP" ]; then
+            LANG_SHA256=$(sha256sum "$LANG_ZIP" | cut -d' ' -f1)
+            echo "[+] ${LANG_ZIP} SHA256: $LANG_SHA256"
+            echo "sde-db-${lang}-sha256=${LANG_SHA256}" >> $GITHUB_OUTPUT
+          else
+            echo "[!] ${LANG_ZIP} 不存在，跳过"
+          fi
+        done
         
         # 验证压缩包完整性
         if unzip -t "icons.zip" > /dev/null 2>&1; then
@@ -386,16 +419,22 @@ jobs:
           exit 1
         fi
         
-        # 显示压缩包内容概览
-        echo "[+] 图标压缩包内容概览:"
-        unzip -l "icons.zip" | head -10
+        for lang in $EXTRA_LANGS; do
+          LANG_ZIP="sde_db_${lang}.zip"
+          if [ -f "$LANG_ZIP" ]; then
+            if unzip -t "$LANG_ZIP" > /dev/null 2>&1; then
+              echo "[+] ${LANG_ZIP} 完整性验证通过"
+            else
+              echo "[x] ${LANG_ZIP} 损坏或格式错误"
+              exit 1
+            fi
+          fi
+        done
         
+        # 显示压缩包内容概览
         echo "[+] SDE数据压缩包内容概览:"
         unzip -l "sde.zip" | head -10
-        SDE_TOTAL_FILES=$(unzip -l "sde.zip" | tail -1 | awk '{print $2}')
-        echo "[+] SDE数据压缩包包含 $SDE_TOTAL_FILES 个文件"
         
-        # 显示sde.zip的目录结构（tree视图）
         echo "[+] SDE数据压缩包目录结构:"
         echo "sde.zip"
         unzip -l "sde.zip" | grep -E '\.(sqlite|json|log)$' | awk '{print "├── " $4}' | sort | head -20
@@ -570,6 +609,27 @@ jobs:
         
         # 生成完整的metadata.json
         echo "[+] 创建完整的metadata.json..."
+        
+        # 构建各语言数据库的 SHA256 JSON 对象
+        EXTRA_DB_JSON=$(python3 -c "
+import json, sys
+extra = {}
+langs = ['de', 'es', 'fr', 'ja', 'ko', 'ru']
+sha_values = {
+    'de': '${{ steps.verify-packages.outputs.sde-db-de-sha256 }}',
+    'es': '${{ steps.verify-packages.outputs.sde-db-es-sha256 }}',
+    'fr': '${{ steps.verify-packages.outputs.sde-db-fr-sha256 }}',
+    'ja': '${{ steps.verify-packages.outputs.sde-db-ja-sha256 }}',
+    'ko': '${{ steps.verify-packages.outputs.sde-db-ko-sha256 }}',
+    'ru': '${{ steps.verify-packages.outputs.sde-db-ru-sha256 }}'
+}
+for lang in langs:
+    sha = sha_values.get(lang, '')
+    if sha:
+        extra[lang] = {'file': f'sde_db_{lang}.zip', 'sha256': sha}
+print(json.dumps(extra))
+")
+        
         jq -n \
           --argjson icon_version "$NEW_ICON_VERSION" \
           --arg icon_sha256 "$ICONS_SHA256" \
@@ -577,13 +637,15 @@ jobs:
           --argjson build_number "$BUILD_NUMBER" \
           --argjson patch_number "$PATCH_VERSION" \
           --arg release_date "$RELEASE_DATE" \
+          --argjson extra_db "$EXTRA_DB_JSON" \
           '{
             icon_version: $icon_version,
             icon_sha256: $icon_sha256,
             sde_sha256: $sde_sha256,
             build_number: $build_number,
             patch_number: $patch_number,
-            release_date: $release_date
+            release_date: $release_date,
+            extra_db: $extra_db
           }' > metadata.json
         
         # 严格验证metadata.json是否生成
@@ -727,9 +789,10 @@ jobs:
         fi
         
         echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
+        echo "- **sde.zip**: SDE数据压缩包（含 en/zh 数据库 + localization + maps）" >> "$RELEASE_NOTES_FILE"
         echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
-        echo "- **sde.zip**: SDE数据压缩包" >> "$RELEASE_NOTES_FILE"
-        echo "- **metadata.json**: 版本元数据文件（包含icon_version、哈希等信息）" >> "$RELEASE_NOTES_FILE"
+        echo "- **sde_db_de.zip** / **es** / **fr** / **ja** / **ko** / **ru**: 其他语言数据库（独立包）" >> "$RELEASE_NOTES_FILE"
+        echo "- **metadata.json**: 版本元数据文件（包含所有压缩包的哈希信息）" >> "$RELEASE_NOTES_FILE"
         if [ -n "$WHATS_NEW_BASENAME" ]; then
           echo "- **${WHATS_NEW_BASENAME}**: 物品变更详细报告（新增物品、属性变更、蓝图变更）" >> "$RELEASE_NOTES_FILE"
         fi
@@ -741,8 +804,14 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          icons.zip
           sde.zip
+          icons.zip
+          sde_db_de.zip
+          sde_db_es.zip
+          sde_db_fr.zip
+          sde_db_ja.zip
+          sde_db_ko.zip
+          sde_db_ru.zip
           metadata.json
           ${{ steps.check-whats-new.outputs.whats-new-name }}
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
