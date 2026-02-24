@@ -786,6 +786,7 @@ jobs:
         fi
         
         echo "## 下载文件" >> "$RELEASE_NOTES_FILE"
+        echo "- **sde-build-${FINAL_BUILD_NUMBER}-all.tar.gz**: 全量打包（含上述所有文件，一次下载即可）" >> "$RELEASE_NOTES_FILE"
         echo "- **sde.zip**: SDE数据压缩包（含 en/zh 数据库 + localization + maps）" >> "$RELEASE_NOTES_FILE"
         echo "- **icons.zip**: 图标压缩包" >> "$RELEASE_NOTES_FILE"
         echo "- **sde_db_de.zip** / **es** / **fr** / **ja** / **ko** / **ru**: 其他语言数据库（独立包）" >> "$RELEASE_NOTES_FILE"
@@ -795,6 +796,34 @@ jobs:
         fi
         
         echo "[+] Release说明已生成: $RELEASE_NOTES_FILE"
+    
+    - name: 创建全量tar包
+      id: create-tar
+      run: |
+        FINAL_BUILD_NUMBER="${{ needs.get-build-info.outputs.final-build-number }}"
+        TAR_NAME="sde-build-${FINAL_BUILD_NUMBER}-all.tar.gz"
+        
+        echo "[+] 创建全量tar包: $TAR_NAME"
+        
+        # 收集所有 release 文件到 tar 包（含 whats_new 若存在）
+        WHATS_NEW="${{ steps.check-whats-new.outputs.whats-new-name }}"
+        if [ -n "$WHATS_NEW" ] && [ -f "$WHATS_NEW" ]; then
+          tar -czvf "$TAR_NAME" \
+            sde.zip icons.zip \
+            sde_db_de.zip sde_db_es.zip sde_db_fr.zip sde_db_ja.zip sde_db_ko.zip sde_db_ru.zip \
+            metadata.json "$WHATS_NEW"
+          echo "[+] 已加入 whats_new 文件: $WHATS_NEW"
+        else
+          tar -czvf "$TAR_NAME" \
+            sde.zip icons.zip \
+            sde_db_de.zip sde_db_es.zip sde_db_fr.zip sde_db_ja.zip sde_db_ko.zip sde_db_ru.zip \
+            metadata.json
+        fi
+        
+        TAR_SIZE=$(stat -c%s "$TAR_NAME")
+        TAR_SIZE_MB=$((TAR_SIZE / 1024 / 1024))
+        echo "[+] 全量tar包创建完成: $TAR_NAME (${TAR_SIZE_MB} MB)"
+        echo "tar-name=${TAR_NAME}" >> $GITHUB_OUTPUT
     
     - name: 创建Release
       if: steps.check-whats-new.outputs.whats-new-exists == 'true' || needs.build-sde.outputs.whats-new-exists == 'true'
@@ -810,6 +839,7 @@ jobs:
           sde_db_ko.zip
           sde_db_ru.zip
           metadata.json
+          ${{ steps.create-tar.outputs.tar-name }}
           ${{ steps.check-whats-new.outputs.whats-new-name }}
         tag_name: sde-build-${{ needs.get-build-info.outputs.final-build-number }}
         name: EVE SDE Build ${{ needs.get-build-info.outputs.final-build-number }}
