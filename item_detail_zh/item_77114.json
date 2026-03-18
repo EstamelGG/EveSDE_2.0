@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 100.0,
+      "value": 80.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -686,12 +686,6 @@
       "content": "<b>100%</b> <a href=showinfo:11579>隐形装置</a>、<a href=showinfo:17938>探针发射器</a>、<a href=showinfo:22177>遗迹分析仪</a>和<a href=showinfo:22175>数据分析仪</a>CPU需求降低"
     },
     {
-      "content": "<b>100%</b> <a href=showinfo:3303>小型能量炮台</a>、<a href=showinfo:3301>小型混合炮台</a>和<a href=showinfo:3302>小型射弹炮台</a>伤害加成"
-    },
-    {
-      "content": "<b>100%</b> <a href=showinfo:3321>轻型导弹</a>和<a href=showinfo:3320>火箭</a>伤害加成"
-    },
-    {
       "content": "<b>2+</b> 舰船跃迁核心强度加成"
     },
     {
@@ -702,6 +696,12 @@
     },
     {
       "content": "<b>50%</b> <a href=showinfo:3436>无人机</a>HP加成"
+    },
+    {
+      "content": "<b>80%</b> <a href=showinfo:3303>小型能量炮台</a>、<a href=showinfo:3301>小型混合炮台</a>和<a href=showinfo:3302>小型射弹炮台</a>伤害加成"
+    },
+    {
+      "content": "<b>80%</b> <a href=showinfo:3321>轻型导弹</a>和<a href=showinfo:3320>火箭</a>伤害加成"
     },
     {
       "content": "可以装配<a href=showinfo:11578>隐形特勤舰隐形装置</a>"

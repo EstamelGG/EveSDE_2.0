@@ -848,6 +848,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusForceAuxiliaryM5",
+      "value": 30.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -859,6 +866,9 @@
     },
     {
       "content": "<b>200%</b> <a href=showinfo:3439>后勤无人机</a>传输量加成"
+    },
+    {
+      "content": "<b>30%</b> bonus to <a href=showinfo:3417>Capacitor Booster</a> amount"
     },
     {
       "content": "<b>5%</b> <a href=showinfo:24568>旗舰级远程装甲维修器</a>和<a href=showinfo:24571>旗舰级远程护盾回充增量器</a>循环周期加成"

@@ -403,7 +403,7 @@
     },
     {
       "attribute_name": "shipBonus2CB",
-      "value": -7.5,
+      "value": -10.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -752,20 +752,6 @@
       "unit_name": null
     },
     {
-      "attribute_name": "battleshipPlateHPBonus",
-      "value": 50.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": null
-    },
-    {
-      "attribute_name": "battleshipExtenderHPBonus",
-      "value": 100.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": null
-    },
-    {
       "attribute_name": "battleshipBulkheadHPModifierBonus",
       "value": 0.05,
       "categoryID": 37,
@@ -809,7 +795,7 @@
       "content": "<b>10%</b> bonus to <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> max velocity"
     },
     {
-      "content": "<b>100%</b> bonus to <a href=showinfo:3425>Shield Extender</a> hitpoints"
+      "content": "<b>10%</b> bonus to Rapid <a href=showinfo:3324>Heavy Missile</a>, <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> Launcher rate of fire"
     },
     {
       "content": "<b>4%</b> bonus to all shield resistances"
@@ -821,16 +807,10 @@
       "content": "<b>5%</b> additional bonus to <a href=showinfo:3394>Reinforced Bulkhead</a> hitpoints"
     },
     {
-      "content": "<b>50%</b> bonus to <a href=showinfo:3394>Armor Plate</a> hitpoints"
-    },
-    {
       "content": "<b>50%</b> reduction in <a href=showinfo:21096>Cynosural Field Generator</a> and <a href=showinfo:28646>Covert Cynosural Field Generator</a> duration"
     },
     {
       "content": "<b>650%</b> bonus to ship max velocity when using <a href=showinfo:11579>Cloaking Devices</a>"
-    },
-    {
-      "content": "<b>7.5%</b> bonus to Rapid <a href=showinfo:3324>Heavy Missile</a>, <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> Launcher rate of fire"
     },
     {
       "content": "<b>75%</b> reduction to effective distance traveled for jump fatigue"

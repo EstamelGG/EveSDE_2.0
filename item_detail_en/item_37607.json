@@ -848,6 +848,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusForceAuxiliaryG5",
+      "value": 30.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
@@ -861,6 +868,9 @@
       "content": "<b>200%</b> bonus to <a href=showinfo:3439>Logistics Drone</a> transfer amount"
     },
     {
+      "content": "<b>30%</b> bonus to <a href=showinfo:3417>Capacitor Booster</a> amount"
+    },
+    {
       "content": "<b>5%</b> bonus to <a href=showinfo:24568>Capital Remote Armor Repairer</a> and <a href=showinfo:24571>Capital Remote Shield Booster</a> cycle time"
     },
     {
@@ -870,7 +880,7 @@
       "content": "<b>5x</b> penalty to <a href=showinfo:34593>Entosis Link</a> duration"
     },
     {
-      "content": "<b>7.5%</b> bonus to <a href=showinfo:3393>Armor Repairer</a> and <a href=showinfo:3417>Capacitor Booster</a> amount"
+      "content": "<b>7.5%</b> bonus to <a href=showinfo:3393>Armor Repairer</a> amount"
     },
     {
       "content": "Can fit a <a href=showinfo:27951>Triage module</a>"

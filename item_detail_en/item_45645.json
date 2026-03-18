@@ -855,11 +855,21 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusForceAuxiliaryG5",
+      "value": 20.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
     {
       "content": "<b>1000%</b> bonus to <a href=showinfo:3439>Logistics Drone</a> transfer amount and hitpoints"
+    },
+    {
+      "content": "<b>20%</b> bonus to <a href=showinfo:3417>Capacitor Booster</a> amount"
     },
     {
       "content": "<b>200%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"

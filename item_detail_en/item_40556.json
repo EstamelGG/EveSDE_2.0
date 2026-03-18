@@ -88,7 +88,7 @@
     },
     {
       "attribute_name": "shieldCapacity",
-      "value": 2420.0,
+      "value": 3630.0,
       "categoryID": 2,
       "display_name": "Shield Capacity",
       "unit_name": "HP"
@@ -235,7 +235,7 @@
     },
     {
       "attribute_name": "fighterAbilityMissilesDamageEM",
-      "value": 131.0,
+      "value": 196.5,
       "categoryID": 34,
       "display_name": "EM Damage (Per Fighter)",
       "unit_name": "HP"
@@ -319,7 +319,7 @@
     },
     {
       "attribute_name": "fighterSquadronMaxSize",
-      "value": 9.0,
+      "value": 6.0,
       "categoryID": 38,
       "display_name": "Squadron Size",
       "unit_name": null
@@ -340,7 +340,7 @@
     },
     {
       "attribute_name": "fighterAbilityAttackMissileDamageEM",
-      "value": 72.0,
+      "value": 108.0,
       "categoryID": 34,
       "display_name": "EM Damage (Per Fighter)",
       "unit_name": "HP"

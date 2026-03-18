@@ -848,11 +848,21 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusForceAuxiliaryA5",
+      "value": 20.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
     {
       "content": "<b>1%</b> bonus to <a href=showinfo:20494>Armored Command</a> and <a href=showinfo:20495>Information Command</a> burst strength and duration"
+    },
+    {
+      "content": "<b>20%</b> bonus to <a href=showinfo:3417>Capacitor Booster</a> amount"
     },
     {
       "content": "<b>200%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"

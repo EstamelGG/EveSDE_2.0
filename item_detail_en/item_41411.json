@@ -151,16 +151,9 @@
     },
     {
       "attribute_name": "canFitShipGroup01",
-      "value": 547.0,
-      "categoryID": 1,
-      "display_name": "Can only be fitted to",
-      "unit_name": "groupID"
-    },
-    {
-      "attribute_name": "canFitShipGroup02",
       "value": 659.0,
       "categoryID": 1,
-      "display_name": "Can be fitted to",
+      "display_name": "Can only be fitted to",
       "unit_name": "groupID"
     },
     {

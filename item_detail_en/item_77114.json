@@ -438,7 +438,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 100.0,
+      "value": 80.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -683,12 +683,6 @@
       "content": "<b>10+</b> bonus to <a href=showinfo:22177>Relic</a> and <a href=showinfo:22175>Data Analyzer</a> virus strength"
     },
     {
-      "content": "<b>100%</b> bonus to <a href=showinfo:3303>Small Energy Turret</a>, <a href=showinfo:3301>Small Hybrid Turret</a> and <a href=showinfo:3302>Small Projectile Turret</a> damage"
-    },
-    {
-      "content": "<b>100%</b> bonus to <a href=showinfo:3321>Light Missile</a> and <a href=showinfo:3320>Rockets</a> damage"
-    },
-    {
       "content": "<b>100%</b> reduction in <a href=showinfo:11579>Cloaking Device</a>, <a href=showinfo:17938>Probe Launcher</a>, <a href=showinfo:22177>Relic Analyzer</a>, and <a href=showinfo:22175>Data Analyzer</a> CPU requirements"
     },
     {
@@ -702,6 +696,12 @@
     },
     {
       "content": "<b>50%</b> bonus to <a href=showinfo:3436>Drone</a> hitpoints"
+    },
+    {
+      "content": "<b>80%</b> bonus to <a href=showinfo:3303>Small Energy Turret</a>, <a href=showinfo:3301>Small Hybrid Turret</a> and <a href=showinfo:3302>Small Projectile Turret</a> damage"
+    },
+    {
+      "content": "<b>80%</b> bonus to <a href=showinfo:3321>Light Missile</a> and <a href=showinfo:3320>Rockets</a> damage"
     },
     {
       "content": "Can fit <a href=showinfo:11578>Covert Ops Cloaking Device</a>"

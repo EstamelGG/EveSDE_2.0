@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 150000.0,
+      "value": 127500.0,
       "categoryID": 6,
       "display_name": "锁定范围上限",
       "unit_name": "m"

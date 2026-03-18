@@ -424,7 +424,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 25.0,
+      "value": 20.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -600,10 +600,10 @@
   ],
   "traits": [
     {
-      "content": "<b>25%</b> <a href=\"showinfo:3306\">中型能量炮台</a>、<a href=\"showinfo:3304\">中型混合炮台</a>和<a href=\"showinfo:3305\">中型射弹炮台</a>伤害加成"
+      "content": "<b>20%</b> <a href=\"showinfo:3306\">中型能量炮台</a>、<a href=\"showinfo:3304\">中型混合炮台</a>和<a href=\"showinfo:3305\">中型射弹炮台</a>伤害加成"
     },
     {
-      "content": "<b>25%</b> <a href=\"showinfo:3324\">重型导弹</a>和<a href=\"showinfo:25719\">重型攻击导弹</a>伤害加成"
+      "content": "<b>20%</b> <a href=\"showinfo:3324\">重型导弹</a>和<a href=\"showinfo:25719\">重型攻击导弹</a>伤害加成"
     },
     {
       "content": "<b>37.5%</b> <a href=\"showinfo:30013\">核心</a>和<a href=\"showinfo:30028\">作战扫描探针</a>强度加成"

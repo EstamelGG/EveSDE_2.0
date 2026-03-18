@@ -53,7 +53,7 @@
     },
     {
       "attribute_name": "weaponRangeMultiplier",
-      "value": 1.8,
+      "value": 1.6,
       "categoryID": 7,
       "display_name": "范围加成",
       "unit_name": "%"

@@ -424,7 +424,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 25.0,
+      "value": 20.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -614,10 +614,10 @@
   ],
   "traits": [
     {
-      "content": "<b>25%</b> bonus to <a href=showinfo:3307>Large Hybrid Turret</a>, <a href=showinfo:3309>Large Energy Turret</a> and <a href=showinfo:3308>Large Projectile Turret</a> damage"
+      "content": "<b>20%</b> bonus to <a href=showinfo:3307>Large Hybrid Turret</a>, <a href=showinfo:3309>Large Energy Turret</a> and <a href=showinfo:3308>Large Projectile Turret</a> damage"
     },
     {
-      "content": "<b>25%</b> bonus to <a href=showinfo:3324>Heavy Missile</a>, <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> damage"
+      "content": "<b>20%</b> bonus to <a href=showinfo:3324>Heavy Missile</a>, <a href=showinfo:3326>Cruise Missile</a> and <a href=showinfo:3325>Torpedo</a> damage"
     },
     {
       "content": "<b>37.5%</b> bonus to <a href=showinfo:30013>Core</a> and <a href=showinfo:30028>Combat Scanner Probe</a> strength"

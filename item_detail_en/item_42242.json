@@ -890,11 +890,21 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "shipBonusForceAuxiliaryA5",
+      "value": 20.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": [
     {
       "content": "<a href=showinfo:3423>Energy Nosferatu</a> fitted to this ship will drain targeted ship's capacitor regardless of your own capacitor level"
+    },
+    {
+      "content": "<b>20%</b> bonus to <a href=showinfo:3417>Capacitor Booster</a> amount"
     },
     {
       "content": "<b>200%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"

@@ -46,7 +46,7 @@
     },
     {
       "attribute_name": "filamentSpoolupTimeSeconds",
-      "value": 180.0,
+      "value": 210.0,
       "categoryID": 7,
       "display_name": "Activation Delay",
       "unit_name": "sec"

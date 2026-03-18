@@ -109,7 +109,7 @@
     },
     {
       "attribute_name": "maxTargetRange",
-      "value": 140000.0,
+      "value": 119000.0,
       "categoryID": 6,
       "display_name": "Maximum Targeting Range",
       "unit_name": "m"

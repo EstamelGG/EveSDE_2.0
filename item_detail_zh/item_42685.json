@@ -4,8 +4,8 @@
   "description": "理性思维社团的旭日级驱逐舰让侍僧得以守护内幕调查的结果。 \n\n\n\n驾驶这艘舰船的技能需求非常低，任何飞行员都可以驾驶它。它在研究和探索领域表现出色。由于转向时间极短，在战斗时常常形单影只。\n\n\n\n驰骋于这宇宙，智慧与力量并重。旭日级深谙此道。",
   "volume": 55000.0,
   "repackaged_volume": 5000.0,
-  "capacity": 600.0,
-  "mass": 1500000.0,
+  "capacity": 450.0,
+  "mass": 1550000.0,
   "category_name": "舰船",
   "group_name": "驱逐舰",
   "attributes": [
@@ -102,7 +102,7 @@
     },
     {
       "attribute_name": "agility",
-      "value": 2.0,
+      "value": 2.85,
       "categoryID": 17,
       "display_name": "惯性调整",
       "unit_name": "x"
@@ -424,7 +424,7 @@
     },
     {
       "attribute_name": "shipBonusRole7",
-      "value": 25.0,
+      "value": 20.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -607,10 +607,10 @@
   ],
   "traits": [
     {
-      "content": "<b>25%</b> <a href=showinfo:3303>小型能量炮台</a>、<a href=showinfo:3301>小型混合炮台</a>和<a href=showinfo:3302>小型射弹炮台</a>伤害加成"
+      "content": "<b>20%</b> <a href=showinfo:3303>小型能量炮台</a>、<a href=showinfo:3301>小型混合炮台</a>和<a href=showinfo:3302>小型射弹炮台</a>伤害加成"
     },
     {
-      "content": "<b>25%</b> <a href=showinfo:3321>轻型导弹</a>和<a href=showinfo:3320>火箭</a>伤害加成"
+      "content": "<b>20%</b> <a href=showinfo:3321>轻型导弹</a>和<a href=showinfo:3320>火箭</a>伤害加成"
     },
     {
       "content": "<b>37.5%</b> <a href=showinfo:30013>核心</a>和<a href=showinfo:30028>作战扫描探针</a>强度加成"

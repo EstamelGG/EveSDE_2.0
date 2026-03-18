@@ -88,7 +88,7 @@
     },
     {
       "attribute_name": "shieldCapacity",
-      "value": 3630.0,
+      "value": 5445.0,
       "categoryID": 2,
       "display_name": "护盾容量",
       "unit_name": "HP"
@@ -249,7 +249,7 @@
     },
     {
       "attribute_name": "fighterAbilityMissilesDamageTherm",
-      "value": 145.0,
+      "value": 217.5,
       "categoryID": 34,
       "display_name": "热能伤害（每架铁骑舰载机）",
       "unit_name": "HP"
@@ -326,7 +326,7 @@
     },
     {
       "attribute_name": "fighterSquadronMaxSize",
-      "value": 9.0,
+      "value": 6.0,
       "categoryID": 38,
       "display_name": "中队大小",
       "unit_name": null
@@ -354,7 +354,7 @@
     },
     {
       "attribute_name": "fighterAbilityAttackMissileDamageTherm",
-      "value": 79.0,
+      "value": 118.5,
       "categoryID": 34,
       "display_name": "热能伤害（每架铁骑舰载机）",
       "unit_name": "HP"

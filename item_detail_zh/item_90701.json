@@ -32,7 +32,7 @@
     },
     {
       "attribute_name": "filamentSpoolupTimeSeconds",
-      "value": 60.0,
+      "value": 45.0,
       "categoryID": 7,
       "display_name": "激活延迟",
       "unit_name": "s"

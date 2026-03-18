@@ -396,7 +396,7 @@
     },
     {
       "attribute_name": "shipBonusGB",
-      "value": 10.0,
+      "value": 20.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -752,20 +752,6 @@
       "unit_name": null
     },
     {
-      "attribute_name": "battleshipPlateHPBonus",
-      "value": 50.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": null
-    },
-    {
-      "attribute_name": "battleshipExtenderHPBonus",
-      "value": 100.0,
-      "categoryID": 37,
-      "display_name": null,
-      "unit_name": null
-    },
-    {
       "attribute_name": "battleshipBulkheadHPModifierBonus",
       "value": 0.05,
       "categoryID": 37,
@@ -809,25 +795,19 @@
       "content": "<b>1+</b> <a href=showinfo:447>跃迁扰频器</a>干扰强度"
     },
     {
-      "content": "<b>10%</b> <a href=\"showinfo:3307\">大型混合炮台</a>伤害加成"
-    },
-    {
       "content": "<b>10%</b> <a href=\"showinfo:3436\">无人机</a>伤害和HP加成"
     },
     {
       "content": "<b>10%</b> <a href=showinfo:3436>跃迁扰频器</a>范围加成"
     },
     {
-      "content": "<b>100%</b> <a href=showinfo:3425>护盾扩展装置</a>护盾值加成"
+      "content": "<b>20%</b> <a href=\"showinfo:3307\">大型混合炮台</a>伤害加成"
     },
     {
       "content": "<b>5%</b> <a href=showinfo:3394>强化舱隔壁</a>结构值加成"
     },
     {
       "content": "<b>50%</b> <a href=showinfo:21096>诱导力场发生器</a>和<a href=showinfo:28646>隐秘诱导力场发生器</a>的持续时间缩短"
-    },
-    {
-      "content": "<b>50%</b> <a href=showinfo:3394>装甲附甲板</a>装甲值加成"
     },
     {
       "content": "<b>650%</b> 使用<a href=showinfo:11579>隐形装置</a>时舰船的最大速度加成"
