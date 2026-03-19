@@ -157,6 +157,13 @@
       "unit_name": "groupID"
     },
     {
+      "attribute_name": "canFitShipGroup08",
+      "value": 5087.0,
+      "categoryID": 1,
+      "display_name": "Can be fitted to",
+      "unit_name": "groupID"
+    },
+    {
       "attribute_name": "durationHighisGood",
       "value": 15000.0,
       "categoryID": 7,
