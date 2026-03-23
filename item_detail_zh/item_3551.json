@@ -1,7 +1,7 @@
 {
   "type_id": 3551,
   "name": "测量学",
-  "description": "操作船体扫描器、货柜扫描器和测量扫描器的技能。每升一级，该类装备的扫描速度各提升5%。",
+  "description": "操作舰船和货柜扫描器的技能。每升一级，该装备类型的扫描速度提升5%。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

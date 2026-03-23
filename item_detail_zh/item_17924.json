@@ -648,7 +648,7 @@
       "content": "<b>20%</b> <a href=\"showinfo:3450\">加力燃烧器</a>速度增益加成"
     },
     {
-      "content": "<b>50%</b> reduction in <a href=showinfo:3303>Small Energy Turret</a> activation cost"
+      "content": "<b>50%</b> <a href=showinfo:3303>小型能量炮台</a>启动消耗降低"
     },
     {
       "content": "<b>7.5%</b> <a href=\"showinfo:3303\">小型能量炮台</a>跟踪速度加成"
