@@ -4,10 +4,10 @@
   "description": "作为一位精明干练、敢于做出艰难决定的商界领袖，索拉亚·莱登于YC128年率先宣布参加总统竞选。凭借其家族显赫声望的支持，她倡导传统价值观，同时与私营力量开展开创性合作，以建设一个不可阻挡的联邦。",
   "volume": 115000.0,
   "repackaged_volume": null,
-  "capacity": 1750.0,
-  "mass": 13075000.0,
+  "capacity": 30.0,
+  "mass": 1000000.0,
   "category_name": "舰船",
-  "group_name": "Gallente Election YC128 Campaign Buses",
+  "group_name": "Special Edition Yachts",
   "attributes": [
     {
       "attribute_name": "damage",

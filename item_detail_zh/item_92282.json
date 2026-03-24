@@ -4,10 +4,10 @@
   "description": "作为人类优先政策的坚定拥护者，参议员卢卡斯·丹增在YC128年参与总统竞选。他的草根竞选活动独特之处在于，既没有外部政党的支持，也没有大企业的捐助。作为一位亲民之人，丹增承诺为一个统一的联邦而战，让人人都能共享繁荣。",
   "volume": 115000.0,
   "repackaged_volume": null,
-  "capacity": 1750.0,
-  "mass": 13075000.0,
+  "capacity": 30.0,
+  "mass": 1000000.0,
   "category_name": "舰船",
-  "group_name": "Gallente Election YC128 Campaign Buses",
+  "group_name": "Special Edition Yachts",
   "attributes": [
     {
       "attribute_name": "damage",

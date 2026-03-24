@@ -4,10 +4,10 @@
   "description": "A radical thinker ready to fight for the freedom to explore any possibility, Governor Alix Moreau ran for President in YC128. They were unchained by the traditional limitations of what has been and ready to embrace what could be.",
   "volume": 115000.0,
   "repackaged_volume": null,
-  "capacity": 1750.0,
-  "mass": 13075000.0,
+  "capacity": 30.0,
+  "mass": 1000000.0,
   "category_name": "Ship",
-  "group_name": "Gallente Election YC128 Campaign Buses",
+  "group_name": "Special Edition Yachts",
   "attributes": [
     {
       "attribute_name": "damage",

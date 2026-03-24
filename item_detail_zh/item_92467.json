@@ -123,14 +123,14 @@
     },
     {
       "attribute_name": "requiredSkill1",
-      "value": 24241.0,
+      "value": 3436.0,
       "categoryID": 8,
       "display_name": "主技能需求",
       "unit_name": "类别ID"
     },
     {
       "attribute_name": "requiredSkill2",
-      "value": 3423.0,
+      "value": 24241.0,
       "categoryID": 8,
       "display_name": "副技能需求",
       "unit_name": "类别ID"
@@ -263,14 +263,14 @@
     },
     {
       "attribute_name": "requiredSkill1Level",
-      "value": 1.0,
+      "value": 5.0,
       "categoryID": 8,
       "display_name": null,
       "unit_name": null
     },
     {
       "attribute_name": "requiredSkill2Level",
-      "value": 3.0,
+      "value": 1.0,
       "categoryID": 8,
       "display_name": null,
       "unit_name": null
@@ -403,14 +403,14 @@
     },
     {
       "attribute_name": "requiredSkill4",
-      "value": 3436.0,
+      "value": 3434.0,
       "categoryID": 8,
       "display_name": "四级技能需求",
       "unit_name": "类别ID"
     },
     {
       "attribute_name": "requiredSkill4Level",
-      "value": 5.0,
+      "value": 3.0,
       "categoryID": 8,
       "display_name": "所需技能等级",
       "unit_name": null

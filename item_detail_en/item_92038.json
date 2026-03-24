@@ -137,14 +137,14 @@
     },
     {
       "attribute_name": "requiredSkill1",
-      "value": 3441.0,
+      "value": 3436.0,
       "categoryID": 8,
       "display_name": "Primary Skill required",
       "unit_name": "typeID"
     },
     {
       "attribute_name": "requiredSkill2",
-      "value": 3423.0,
+      "value": 3441.0,
       "categoryID": 8,
       "display_name": "Secondary Skill required",
       "unit_name": "typeID"
@@ -277,21 +277,21 @@
     },
     {
       "attribute_name": "requiredSkill1Level",
-      "value": 1.0,
+      "value": 5.0,
       "categoryID": 8,
       "display_name": null,
       "unit_name": null
     },
     {
       "attribute_name": "requiredSkill2Level",
-      "value": 3.0,
+      "value": 1.0,
       "categoryID": 8,
       "display_name": null,
       "unit_name": null
     },
     {
       "attribute_name": "requiredSkill3Level",
-      "value": 1.0,
+      "value": 3.0,
       "categoryID": 8,
       "display_name": null,
       "unit_name": null
@@ -410,14 +410,14 @@
     },
     {
       "attribute_name": "requiredSkill4",
-      "value": 3436.0,
+      "value": 3423.0,
       "categoryID": 8,
       "display_name": "Quaternary Skill required",
       "unit_name": "typeID"
     },
     {
       "attribute_name": "requiredSkill4Level",
-      "value": 5.0,
+      "value": 3.0,
       "categoryID": 8,
       "display_name": "Level 5 required",
       "unit_name": null

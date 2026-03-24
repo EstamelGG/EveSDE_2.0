@@ -4,10 +4,10 @@
   "description": "A savvy business leader not afraid to make the tough decisions, Soraya Roden was the first to step into the Presidential race in YC128. With the baking of her family’s impressive legacy, she championed traditional values along with groundbreaking cooperation with private interests to build an unstoppable Federation.",
   "volume": 115000.0,
   "repackaged_volume": null,
-  "capacity": 1750.0,
-  "mass": 13075000.0,
+  "capacity": 30.0,
+  "mass": 1000000.0,
   "category_name": "Ship",
-  "group_name": "Gallente Election YC128 Campaign Buses",
+  "group_name": "Special Edition Yachts",
   "attributes": [
     {
       "attribute_name": "damage",

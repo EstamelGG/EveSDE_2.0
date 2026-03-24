@@ -4,10 +4,10 @@
   "description": "阿利克斯·莫罗州长是一位激进的思想家，愿为探索无限可能的自由而战，他在YC128年参与总统竞选。他们挣脱了过往传统的束缚，准备拥抱未来的一切可能。",
   "volume": 115000.0,
   "repackaged_volume": null,
-  "capacity": 1750.0,
-  "mass": 13075000.0,
+  "capacity": 30.0,
+  "mass": 1000000.0,
   "category_name": "舰船",
-  "group_name": "Gallente Election YC128 Campaign Buses",
+  "group_name": "Special Edition Yachts",
   "attributes": [
     {
       "attribute_name": "damage",
