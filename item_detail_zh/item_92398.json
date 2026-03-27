@@ -1,7 +1,7 @@
 {
   "type_id": 92398,
   "name": "Gallente Fighter Specialization",
-  "description": "Specialization in the operation of advanced Gallente fighters. 2% bonus per skill level to the damage of fighters requiring Gallente Fighter Specialization.",
+  "description": "操纵高级盖伦特铁骑舰载机的技能。每升一级，需要盖伦特铁骑舰载机专业研究技能的铁骑舰载机伤害提高2%。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

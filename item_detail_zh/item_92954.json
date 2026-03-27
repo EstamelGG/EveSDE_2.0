@@ -1,7 +1,7 @@
 {
   "type_id": 92954,
-  "name": "Occult XL",
-  "description": "An Entropic Disintegrator uses charges of exotic plasma to provide the particle feedstock for the weapon's beam, with different forms of exotic matter modulating the beam's characteristics.\n\nAn experimental exotic plasma charge developed using advanced technology in conjunction with Precursor weapons tech, the Occult charge achieves heavy thermal and explosive damage potential. \n\nThis high damage comes at the expense of range and significant loss in the stability of the disintegrator beam. This instability reduces the tracking of weapons using Occult Exotic Plasma charges.",
+  "name": "神秘XL",
+  "description": "熵能分解者使用异种等离子弹药为武器的集束激光提供粒子来源，但使用不同形态的异种物质来调整集束激光的性能。神秘是一种实验性异种等离子弹药，应用了与先驱者武器相关的先进技术，能造成大量热能和爆炸伤害。高伤害的代价是射程降低以及分解者光束稳定性的大幅降低。这种不稳定性会降低使用神秘异种等离子弹药的武器的追踪速度。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

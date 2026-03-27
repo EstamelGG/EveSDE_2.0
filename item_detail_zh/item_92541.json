@@ -1,7 +1,7 @@
 {
   "type_id": 92541,
-  "name": "Capital Disintegrator Specialization",
-  "description": "Specialist training in the operation of advanced Ultratidal Entropic Disintegrators. 2% bonus per skill level to the damage of extra large weapons requiring Capital Disintegrator Specialization.",
+  "name": "旗舰分解者专业研究",
+  "description": "操纵高级潮极熵能分解者的专业技能。每升一级，需要旗舰分解者专业研究技能的超大型武器伤害提高2%。",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
