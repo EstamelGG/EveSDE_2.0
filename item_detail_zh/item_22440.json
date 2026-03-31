@@ -599,7 +599,7 @@
     },
     {
       "attribute_name": "eliteBonusBlackOps1",
-      "value": 15.0,
+      "value": 7.5,
       "categoryID": 7,
       "display_name": null,
       "unit_name": null
@@ -724,6 +724,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "eliteBonusBlackOps3",
+      "value": 20.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "frigateEscapeBayCapacity",
       "value": 1.0,
       "categoryID": 4,
@@ -788,7 +795,7 @@
       "content": "<b>10%</b> <a href=\"showinfo:3308\">大型射弹炮台</a>伤害加成"
     },
     {
-      "content": "<b>15%</b> <a href=showinfo:3308>大型射弹炮台</a>跟踪速度加成"
+      "content": "<b>20%</b> bonus to <a href=showinfo:41040>Heavy Stasis Grappler</a> optimal range"
     },
     {
       "content": "<b>5%</b> <a href=\"showinfo:3308\">大型射弹炮台</a>射速加成"
@@ -804,6 +811,9 @@
     },
     {
       "content": "<b>7.5%</b> <a href=showinfo:3308>大型射弹炮台</a>失准范围加成"
+    },
+    {
+      "content": "<b>7.5%</b> <a href=showinfo:41040>重型停滞捕捉光束</a>衰减范围加成"
     },
     {
       "content": "<b>75%</b> 减少跳跃距离对产生跳跃疲劳的影响"

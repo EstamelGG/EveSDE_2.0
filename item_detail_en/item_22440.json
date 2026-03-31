@@ -599,7 +599,7 @@
     },
     {
       "attribute_name": "eliteBonusBlackOps1",
-      "value": 15.0,
+      "value": 7.5,
       "categoryID": 7,
       "display_name": null,
       "unit_name": null
@@ -724,6 +724,13 @@
       "unit_name": null
     },
     {
+      "attribute_name": "eliteBonusBlackOps3",
+      "value": 20.0,
+      "categoryID": 7,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "frigateEscapeBayCapacity",
       "value": 1.0,
       "categoryID": 4,
@@ -788,7 +795,7 @@
       "content": "<b>10%</b> bonus to <a href=showinfo:3308>Large Projectile Turret</a> damage"
     },
     {
-      "content": "<b>15%</b> bonus to <a href=showinfo:41040>Heavy Stasis Grappler</a> falloff range"
+      "content": "<b>20%</b> bonus to <a href=showinfo:41040>Heavy Stasis Grappler</a> optimal range"
     },
     {
       "content": "<b>5%</b> additional bonus to <a href=showinfo:3394>Reinforced Bulkhead</a> hitpoints"
@@ -803,7 +810,10 @@
       "content": "<b>650%</b> bonus to ship max velocity when using <a href=showinfo:11579>Cloaking Devices</a>"
     },
     {
-      "content": "<b>7.5%</b> bonus to <a href=showinfo:3308>Large Projectile Turret</a> falloff"
+      "content": "<b>7.5%</b> bonus to <a href=showinfo:3308>Large Projectile Turret</a> falloff range"
+    },
+    {
+      "content": "<b>7.5%</b> bonus to <a href=showinfo:3308>Large Projectile Turret</a> tracking"
     },
     {
       "content": "<b>75%</b> reduction to effective distance traveled for jump fatigue"

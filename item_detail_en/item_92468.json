@@ -1,6 +1,6 @@
 {
   "type_id": 92468,
-  "name": "Immaculate TD-600",
+  "name": "Immaculate TD-600-I",
   "description": "The combat chassis of this medium drone has been adapted to also house a tracking disruption.\n\nIts design is inhuman in origin, having been developed inside a Rogue Drone hive. Its link to the hive was never formed, and now it serves at the behest of the humans it was built to destroy.",
   "volume": 10.0,
   "repackaged_volume": null,
@@ -57,6 +57,13 @@
       "categoryID": 17,
       "display_name": "Inertia Modifier",
       "unit_name": "x"
+    },
+    {
+      "attribute_name": "duration",
+      "value": 5000.0,
+      "categoryID": 7,
+      "display_name": "Activation time / duration",
+      "unit_name": "s"
     },
     {
       "attribute_name": "scanSpeed",
@@ -414,6 +421,13 @@
       "categoryID": 8,
       "display_name": "Level 5 required",
       "unit_name": null
+    },
+    {
+      "attribute_name": "remoteResistanceID",
+      "value": 2113.0,
+      "categoryID": 36,
+      "display_name": null,
+      "unit_name": "attributeID"
     },
     {
       "attribute_name": "fighterAbilityAntiFighterMissileResistance",
