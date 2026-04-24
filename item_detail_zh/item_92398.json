@@ -1,6 +1,6 @@
 {
   "type_id": 92398,
-  "name": "Gallente Fighter Specialization",
+  "name": "盖伦特铁骑舰载机专业研究",
   "description": "操纵高级盖伦特铁骑舰载机的技能。每升一级，需要盖伦特铁骑舰载机专业研究技能的铁骑舰载机伤害提高2%。",
   "volume": 0.01,
   "repackaged_volume": null,
