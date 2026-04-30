@@ -339,10 +339,17 @@
       "unit_name": "%"
     },
     {
-      "attribute_name": "bastionModeArmorRepairAndShieldBoosterCapDurationBonus",
+      "attribute_name": "bastionModeArmorRepairCapDurationBonus",
       "value": -20.0,
       "categoryID": 37,
-      "display_name": "Armor Repairer / Shield Booster Duration and Capacitor Bonus",
+      "display_name": "Armor Repairer Duration and Capacitor Bonus",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "bastionModeShieldBoosterCapDurationBonus",
+      "value": -20.0,
+      "categoryID": 37,
+      "display_name": "Shield Booster Duration and Capacitor Bonus",
       "unit_name": "%"
     }
   ],

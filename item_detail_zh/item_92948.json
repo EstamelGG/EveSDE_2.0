@@ -1,0 +1,70 @@
+{
+  "type_id": 92948,
+  "name": "Federation Defense Booster IV",
+  "description": "This booster has been produced by the Gallente Federation to assist with their covert research operations.\n\n<b>+12% to Subcapital Armor Repairer Effectiveness. +8% to all Structure Resistances. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "volume": 1.0,
+  "repackaged_volume": null,
+  "capacity": null,
+  "mass": null,
+  "category_name": "植入体",
+  "group_name": "增效剂",
+  "attributes": [
+    {
+      "attribute_name": "requiredSkill1",
+      "value": 3405.0,
+      "categoryID": 8,
+      "display_name": "主技能需求",
+      "unit_name": "类别ID"
+    },
+    {
+      "attribute_name": "requiredSkill1Level",
+      "value": 1.0,
+      "categoryID": 8,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "boosterDuration",
+      "value": 7200000.0,
+      "categoryID": 7,
+      "display_name": "增效剂时效",
+      "unit_name": "s"
+    },
+    {
+      "attribute_name": "metaLevelOld",
+      "value": 6.0,
+      "categoryID": 7,
+      "display_name": "衍生等级",
+      "unit_name": "等级"
+    },
+    {
+      "attribute_name": "boosterness",
+      "value": 15.0,
+      "categoryID": 7,
+      "display_name": "增效剂槽位",
+      "unit_name": "槽位"
+    },
+    {
+      "attribute_name": "boosterLastInjectionDatetime",
+      "value": 20613.4576388889,
+      "categoryID": 7,
+      "display_name": "有效期",
+      "unit_name": null
+    },
+    {
+      "attribute_name": "armorRepairBonus",
+      "value": 12.0,
+      "categoryID": 3,
+      "display_name": "装甲维修加成",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "hullDamageResistanceBonus",
+      "value": -8.0,
+      "categoryID": 7,
+      "display_name": "结构伤害抗性加成",
+      "unit_name": "%"
+    }
+  ],
+  "traits": []
+}

@@ -1,0 +1,70 @@
+{
+  "type_id": 93124,
+  "name": "Imperial Damage Booster IV",
+  "description": "This booster has been produced by the Amarr Empire to assist with their covert research operations.\n\n<b>+8% Energy Turret Damage. +8% Drone Damage. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "volume": 1.0,
+  "repackaged_volume": null,
+  "capacity": null,
+  "mass": null,
+  "category_name": "植入体",
+  "group_name": "增效剂",
+  "attributes": [
+    {
+      "attribute_name": "damageMultiplier",
+      "value": 1.08,
+      "categoryID": 29,
+      "display_name": "伤害量调整",
+      "unit_name": "x"
+    },
+    {
+      "attribute_name": "requiredSkill1",
+      "value": 3405.0,
+      "categoryID": 8,
+      "display_name": "主技能需求",
+      "unit_name": "类别ID"
+    },
+    {
+      "attribute_name": "requiredSkill1Level",
+      "value": 1.0,
+      "categoryID": 8,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
+      "attribute_name": "damageMultiplierBonus",
+      "value": 8.0,
+      "categoryID": 7,
+      "display_name": "伤害倍增系数加成",
+      "unit_name": "%"
+    },
+    {
+      "attribute_name": "boosterDuration",
+      "value": 7200000.0,
+      "categoryID": 7,
+      "display_name": "增效剂时效",
+      "unit_name": "s"
+    },
+    {
+      "attribute_name": "metaLevelOld",
+      "value": 6.0,
+      "categoryID": 7,
+      "display_name": "衍生等级",
+      "unit_name": "等级"
+    },
+    {
+      "attribute_name": "boosterness",
+      "value": 17.0,
+      "categoryID": 7,
+      "display_name": "增效剂槽位",
+      "unit_name": "槽位"
+    },
+    {
+      "attribute_name": "boosterLastInjectionDatetime",
+      "value": 20613.4576388889,
+      "categoryID": 7,
+      "display_name": "有效期",
+      "unit_name": null
+    }
+  ],
+  "traits": []
+}
