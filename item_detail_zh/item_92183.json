@@ -1,7 +1,7 @@
 {
   "type_id": 92183,
   "name": "CONCORD-Carrier Rogue Analysis Beacon",
-  "description": "In response to the growing Rogue Drone outbreaks of YC128, CONCORD commissioned a Carrier specific version of the CONCORD Rogue Analysis Beacon (CRAB).\n\nUnlike the original version, this one was able to mask drones and fighters from any incoming Rogue Drones. It also used a subtler, more thorough approach to signal analysis that resulted in less system interference.\n\n<i>NOTE: CRAB linking may not be possible if system signal interference is too high, or if the linking capsuleer has insufficient Complex Encryption Qubits (CEQ).</i>\n\n<b>WARNING: Linking to this CRAB will render your ship immobile until the powering up phase is completed.</b>\n\n<i>Ship Restrictions: linking and activation may only be performed by <b>Carriers.</b></i>",
+  "description": "为应对YC128年间日益猖獗的自由无人机爆发事件，统合部委托制造了一款专为航母设计的统合部自由分析信标（CRAB）。与原版不同，该型号能够将无人机和铁骑舰载机隐匿起来，使其不被任何来袭的自由无人机察觉。它还采用了更为隐蔽、更为彻底的信号分析手段，从而减少了对星系的干扰。<i>注意：如果星系中的信号干扰太强，或者克隆飞行员手中没有足够的复合加密量子比特，就无法连接到统合部自由无人机分析信标。</i><b>警告：连接到统合部自由无人机分析信标后，你的舰船在信标启动完成之前无法移动。</b><i>舰船限制：能够连接并启动信标的舰船包括<b>航母</b>。</i>",
   "volume": 100.0,
   "repackaged_volume": null,
   "capacity": null,
