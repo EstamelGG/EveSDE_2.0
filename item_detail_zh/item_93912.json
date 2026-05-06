@@ -1,7 +1,7 @@
 {
   "type_id": 93912,
-  "name": "Revelli’s Modified Integrated Analyzer",
-  "description": "As this multi-use analyzer has both fully integrated archaeology and hacking systems, it can be used to both analyze ancient ruins and bypass electronic security systems.",
+  "name": "雷维利的改良型集成式分析仪",
+  "description": "这个多用途分析仪完美整合了考古和破译系统，即可用于分析远古遗迹，也可以用来破译电子安全系统。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

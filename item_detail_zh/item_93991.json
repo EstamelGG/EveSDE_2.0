@@ -1,7 +1,7 @@
 {
   "type_id": 93991,
-  "name": "Officer Integrated Analyzer Blueprint Crate",
-  "description": "Contains a Revelli’s Modified Integrated Analyzer blueprint copy with a single run.",
+  "name": "军官集成式分析仪蓝图箱",
+  "description": "包含一份雷维利的改良型集成式分析仪蓝图拷贝，限使用一次。",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

@@ -342,14 +342,14 @@
       "attribute_name": "bastionModeArmorRepairCapDurationBonus",
       "value": -20.0,
       "categoryID": 37,
-      "display_name": "装甲维修器/护盾回充增量器的持续时间和电容器加成",
+      "display_name": "装甲维修器的持续时间和电容器加成",
       "unit_name": "%"
     },
     {
       "attribute_name": "bastionModeShieldBoosterCapDurationBonus",
       "value": -20.0,
       "categoryID": 37,
-      "display_name": null,
+      "display_name": "护盾回充增量器的持续时间和电容器加成",
       "unit_name": "%"
     }
   ],

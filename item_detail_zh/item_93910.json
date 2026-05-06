@@ -1,7 +1,7 @@
 {
   "type_id": 93910,
-  "name": "Torigo’s Modified Capacitor Flux Coil",
-  "description": "Increases capacitor recharge rate, but causes a reduction in maximum capacitor storage.",
+  "name": "托里格的改良型电容通量线圈",
+  "description": "提高电容器的回充速率，但会减少电容器的最大储量。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

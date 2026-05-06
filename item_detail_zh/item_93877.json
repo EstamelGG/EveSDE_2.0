@@ -1,7 +1,7 @@
 {
   "type_id": 93877,
-  "name": "Warpath Supply Cache",
-  "description": "A cache of parts and basic military supplies that, while not greatly useful to a capsuleer, can be sold at stations run by key government or military organizations for ISK.",
+  "name": "战争之路补给箱",
+  "description": "一批零件和基本军事物资，对克隆飞行员虽然没有太大的用处，但可在关键政府或军事组织运营的空间站出售换取星币。",
   "volume": 0.1,
   "repackaged_volume": null,
   "capacity": null,

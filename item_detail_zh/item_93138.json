@@ -1,7 +1,7 @@
 {
   "type_id": 93138,
-  "name": "Imperial Mobility Booster II",
-  "description": "This booster has been produced by the Amarr Empire to assist with their covert research operations.\n\n<b>+4% Ship Velocity. +6% Warp Speed. -6% Afterburner Capacitor Consumption. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "name": "帝国机动性增效剂II",
+  "description": "这款增效剂由艾玛帝国生产，用于协助他们的秘密研究行动。<b>+4%舰船速度，+6%跃迁速度，-6%加力燃烧器电容消耗。基础持续时间：2小时。</b><b>过期时间：YC128年6月9日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

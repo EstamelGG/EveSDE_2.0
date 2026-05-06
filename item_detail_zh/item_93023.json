@@ -1,7 +1,7 @@
 {
   "type_id": 93023,
-  "name": "Republic Damage Booster II",
-  "description": "This booster has been produced by the Minmatar Republic to assist with their covert research operations.\n\n<b>+4% Projectile Turret Damage. +4% Missile Damage. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "name": "共和国伤害增效剂II",
+  "description": "这款增效剂由米玛塔尔共和国生产，用于协助他们的秘密研究行动。<b>+4%射弹炮台伤害，+4%导弹伤害。基础持续时间：2小时。</b><b>过期时间：YC128年6月9日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

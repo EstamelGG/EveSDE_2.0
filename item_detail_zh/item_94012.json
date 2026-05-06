@@ -1,7 +1,7 @@
 {
   "type_id": 94012,
-  "name": "Caldari Navy Bastion Module Blueprint Crate",
-  "description": "Contains a Caldari Navy Bastion Module blueprint copy with a single run.",
+  "name": "加达里海军堡垒装备蓝图箱",
+  "description": "包含一份加达里海军堡垒装备蓝图拷贝，限使用一次。",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

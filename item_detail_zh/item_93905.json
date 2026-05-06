@@ -1,7 +1,7 @@
 {
   "type_id": 93905,
-  "name": "xer Qosh’s Modified Expanded Cargohold",
-  "description": "Increases cargo hold capacity at the expense of maximum velocity and hull strength.",
+  "name": "泽·库什的改良延展型货柜舱",
+  "description": "牺牲最大速度和结构强度来增加货柜舱容量。",
   "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,

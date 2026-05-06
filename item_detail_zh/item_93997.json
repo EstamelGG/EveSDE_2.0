@@ -1,7 +1,7 @@
 {
   "type_id": 93997,
-  "name": "Officer Capacitor Flux Coil Blueprint Crate",
-  "description": "Contains a Torigo’s Modified Capacitor Flux Coil blueprint copy with a single run.",
+  "name": "军官电容通量线圈蓝图箱",
+  "description": "包含一份托里格的改良型电容通量线圈蓝图拷贝，限使用一次。",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

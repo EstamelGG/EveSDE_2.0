@@ -1,7 +1,7 @@
 {
   "type_id": 92987,
-  "name": "Federation Damage Booster IV",
-  "description": "This booster has been produced by the Gallente Federation to assist with their covert research operations.\n\n<b>+8% Hybrid Turret Damage. +8% Drone Damage. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "name": "联邦伤害增效剂IV",
+  "description": "这款增效剂由盖伦特联邦生产，用于协助他们的秘密研究行动。<b>+8%混合炮台伤害，+8%无人机伤害。基础持续时间：2小时。</b><b>过期时间：YC128年6月9日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

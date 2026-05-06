@@ -1,7 +1,7 @@
 {
   "type_id": 93775,
-  "name": "Basic Capsuleer Day XXIII Cerebral Accelerator",
-  "description": "When consumed by a capsuleer, this booster will increase the rate at which they train skills for a short time.\n\nVolatile compounds were used to create this cerebral accelerator, limiting its shelf life. It will cease to function after June 9, YC128.",
+  "name": "基础型克隆飞行员之日XXIII大脑加速器",
+  "description": "使用后，它可以在短时间内提高克隆飞行员训练技能的速度。这款大脑加速器使用了不稳定化合物制造，效能持续时间有限。它的有效期至YC128年6月9日。",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

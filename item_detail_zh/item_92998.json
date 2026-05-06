@@ -1,7 +1,7 @@
 {
   "type_id": 92998,
-  "name": "Federation Application Booster III",
-  "description": "This booster has been produced by the Gallente Federation to assist with their covert research operations.\n\n<b>+9% Hybrid Turret Tracking Speed. +9% Drone Tracking Speed and Velocity. Base Duration: 2 Hours.</b>\n\n<b>Expiry date: June 9th YC128</b>",
+  "name": "联邦应用增效剂III",
+  "description": "这款增效剂由盖伦特联邦生产，用于协助他们的秘密研究行动。<b>+9%混合炮台跟踪速度，+9%无人机跟踪速度和移动速度。基础持续时间：2小时。</b><b>过期时间：YC128年6月9日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,
