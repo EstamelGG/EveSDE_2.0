@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 80.0,
+      "value": 81.0,
       "categoryID": 17,
       "display_name": "Maximum Velocity",
       "unit_name": "m/sec"

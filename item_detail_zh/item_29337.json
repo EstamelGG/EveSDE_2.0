@@ -5,7 +5,7 @@
   "volume": 101000.0,
   "repackaged_volume": 10000.0,
   "capacity": 480.0,
-  "mass": 10650000.0,
+  "mass": 13150000.0,
   "category_name": "舰船",
   "group_name": "巡洋舰",
   "attributes": [
@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 215.0,
+      "value": 245.0,
       "categoryID": 17,
       "display_name": "最大速度",
       "unit_name": "m/s"
@@ -95,14 +95,14 @@
     },
     {
       "attribute_name": "rechargeRate",
-      "value": 475000.0,
+      "value": 465000.0,
       "categoryID": 5,
       "display_name": "电容回充时间",
       "unit_name": "s"
     },
     {
       "attribute_name": "agility",
-      "value": 0.48,
+      "value": 0.38,
       "categoryID": 17,
       "display_name": "惯性调整",
       "unit_name": "x"
@@ -361,7 +361,7 @@
     },
     {
       "attribute_name": "capacitorCapacity",
-      "value": 1500.0,
+      "value": 1625.0,
       "categoryID": 5,
       "display_name": "电容容量",
       "unit_name": "GJ"

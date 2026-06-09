@@ -1,7 +1,7 @@
 {
   "type_id": 19766,
   "name": "Signal Suppression",
-  "description": "Skill at the operation of remote sensor dampers. 5% bonus to remote sensor dampers' scan resolution and targeting range suppression per skill level.",
+  "description": "Skill at the operation of Remote Sensor Dampeners. 5% bonus to Remote Sensor Dampeners' scan resolution and targeting range suppression per skill level.",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,
@@ -71,6 +71,13 @@
       "categoryID": 7,
       "display_name": "EW Strength Modifier",
       "unit_name": "%"
+    },
+    {
+      "attribute_name": "canNotBeTrainedOnTrial",
+      "value": 0.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": []

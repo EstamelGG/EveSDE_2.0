@@ -676,7 +676,7 @@
     },
     {
       "attribute_name": "shipRoleBonusWarpSpeed",
-      "value": 60.0,
+      "value": 140.0,
       "categoryID": 37,
       "display_name": "Warp Speed and Acceleration Bonus",
       "unit_name": "%"
@@ -701,6 +701,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -717,6 +724,9 @@
       "content": "<b>10+</b> bonus to <a href=showinfo:22177>Relic</a> and <a href=showinfo:22175>Data Analyzer</a> virus strength"
     },
     {
+      "content": "<b>140%</b> bonus to warp speed and warp acceleration"
+    },
+    {
       "content": "<b>15%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> tracking speed"
     },
     {
@@ -726,7 +736,7 @@
       "content": "<b>200%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> damage"
     },
     {
-      "content": "<b>60%</b> bonus to warp speed and warp acceleration"
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     },
     {
       "content": "Can fit <a href=showinfo:11578>Covert Ops Cloaking Device</a> and <a href=showinfo:28646>Covert Cynosural Field Generator</a>"

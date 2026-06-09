@@ -1,7 +1,7 @@
 {
   "type_id": 185,
   "name": "EMP S",
-  "description": "Small projectile Ammo. A new technology, this highly advanced ammunition emits a focused EM pulse. Very potent against shields.\n\n50% reduced optimal range.",
+  "description": "Small Projectile Ammo. A new technology, this highly advanced ammunition emits a focused EM pulse. Very potent against shields.\n\n50% reduced optimal range.",
   "volume": 0.0025,
   "repackaged_volume": null,
   "capacity": null,

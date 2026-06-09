@@ -4,7 +4,7 @@
   "description": "Command ships are engineered specifically to wreak havoc on a battlefield of many. Sporting advanced command module interfaces, these vessels are more than capable of turning the tide in large engagements. Command ships represent the ultimate in Command Burst efficiency; the boosts they give their comrades in combat make them indispensable assets to any well-rounded fleet.",
   "volume": 216000.0,
   "repackaged_volume": 15000.0,
-  "capacity": 575.0,
+  "capacity": 885.0,
   "mass": 12500000.0,
   "category_name": "Ship",
   "group_name": "Command Ship",
@@ -452,7 +452,7 @@
     },
     {
       "attribute_name": "shipBonusMBC2",
-      "value": -5.0,
+      "value": 7.5,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -671,7 +671,7 @@
       "content": "<b>5%</b> bonus to <a href=showinfo:3324>Heavy Missile</a> and <a href=showinfo:25719>Heavy Assault Missile</a> Launcher rate of fire"
     },
     {
-      "content": "<b>5%</b> bonus to <a href=showinfo:3324>Heavy Missile</a> and <a href=showinfo:25719>Heavy Assault Missile</a> Launcher rate of fire"
+      "content": "<b>7.5%</b> bonus to <a href=showinfo:3324>Heavy Missile</a> and <a href=showinfo:25719>Heavy Assault Missile</a> damage"
     },
     {
       "content": "Can use two <a href=showinfo:3348>Command Burst</a> modules"

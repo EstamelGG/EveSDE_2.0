@@ -71,6 +71,13 @@
       "categoryID": 7,
       "display_name": "电子战强度调整",
       "unit_name": "%"
+    },
+    {
+      "attribute_name": "canNotBeTrainedOnTrial",
+      "value": 0.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": []

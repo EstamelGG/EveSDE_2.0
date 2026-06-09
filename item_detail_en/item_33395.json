@@ -654,6 +654,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "shipRoleBonusWarpSpeed",
+      "value": 50.0,
+      "categoryID": 37,
+      "display_name": "Warp Speed and Acceleration Bonus",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "isBlackOpsJumpPortalPassenger",
       "value": 1.0,
       "categoryID": 0,
@@ -673,6 +680,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -690,6 +704,12 @@
     },
     {
       "content": "<b>30%</b> bonus to <a href=showinfo:526>Stasis Webifier</a> optimal range"
+    },
+    {
+      "content": "<b>50%</b> bonus to warp speed and warp acceleration"
+    },
+    {
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     },
     {
       "content": "Can fit <a href=showinfo:11578>Covert Ops Cloaking Device</a>, <a href=showinfo:21096>Cynosural Field Generator</a>, and <a href=showinfo:28646>Covert Cynosural Field Generator</a> modules"

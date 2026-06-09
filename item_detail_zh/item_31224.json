@@ -41,7 +41,7 @@
       "attribute_name": "scanStrengthBonus",
       "value": 15.0,
       "categoryID": 7,
-      "display_name": "扫描强度加成",
+      "display_name": "探针扫描强度加成",
       "unit_name": "%"
     },
     {

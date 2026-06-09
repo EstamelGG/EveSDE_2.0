@@ -848,6 +848,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -865,6 +872,9 @@
     },
     {
       "content": "<b>5x</b> penalty to <a href=showinfo:34593>Entosis Link</a> cycle time"
+    },
+    {
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     },
     {
       "content": "Can activate <a href=showinfo:83465>Capital Micro Jump Drive</a> while in siege mode"

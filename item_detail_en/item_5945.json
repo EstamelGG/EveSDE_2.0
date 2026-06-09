@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 280.0,
+      "value": 220.0,
       "categoryID": 5,
       "display_name": "Activation Cost",
       "unit_name": "GJ"

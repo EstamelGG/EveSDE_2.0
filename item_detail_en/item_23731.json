@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "hp",
-      "value": 60.0,
+      "value": 80.0,
       "categoryID": 4,
       "display_name": "Structure Hitpoints",
       "unit_name": "HP"
@@ -25,7 +25,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 2400.0,
+      "value": 3200.0,
       "categoryID": 17,
       "display_name": "Maximum Velocity",
       "unit_name": "m/sec"
@@ -179,7 +179,7 @@
     },
     {
       "attribute_name": "shieldCapacity",
-      "value": 25.0,
+      "value": 75.0,
       "categoryID": 2,
       "display_name": "Shield Capacity",
       "unit_name": "HP"
@@ -326,7 +326,7 @@
     },
     {
       "attribute_name": "signatureRadius",
-      "value": 26.0,
+      "value": 25.0,
       "categoryID": 6,
       "display_name": "Signature Radius",
       "unit_name": "m"

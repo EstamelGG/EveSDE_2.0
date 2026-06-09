@@ -4,7 +4,7 @@
   "description": "Command ships are engineered specifically to wreak havoc on a battlefield of many. Sporting advanced command module interfaces, these vessels are more than capable of turning the tide in large engagements. Command ships represent the ultimate in Command Burst efficiency; the boosts they give their comrades in combat make them indispensable assets to any well-rounded fleet.",
   "volume": 270000.0,
   "repackaged_volume": 15000.0,
-  "capacity": 400.0,
+  "capacity": 740.0,
   "mass": 12300000.0,
   "category_name": "Ship",
   "group_name": "Command Ship",
@@ -102,7 +102,7 @@
     },
     {
       "attribute_name": "agility",
-      "value": 0.7,
+      "value": 0.69,
       "categoryID": 17,
       "display_name": "Inertia Modifier",
       "unit_name": "x"
@@ -452,7 +452,7 @@
     },
     {
       "attribute_name": "shipBonusGBC1",
-      "value": 7.5,
+      "value": 10.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -466,7 +466,7 @@
     },
     {
       "attribute_name": "eliteBonusCommandShips1",
-      "value": -7.5,
+      "value": 10.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -649,6 +649,12 @@
   ],
   "traits": [
     {
+      "content": "<b>10%</b> bonus to <a href=showinfo:3304>Medium Hybrid Turret</a> damage"
+    },
+    {
+      "content": "<b>10%</b> bonus to <a href=showinfo:3304>Medium Hybrid Turret</a> damage"
+    },
+    {
       "content": "<b>10%</b> bonus to <a href=showinfo:3304>Medium Hybrid Turret</a> falloff"
     },
     {
@@ -659,12 +665,6 @@
     },
     {
       "content": "<b>50%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"
-    },
-    {
-      "content": "<b>7.5%</b> bonus to <a href=showinfo:3304>Medium Hybrid Turret</a> damage"
-    },
-    {
-      "content": "<b>7.5%</b> bonus to <a href=showinfo:3304>Medium Hybrid Turret</a> rate of fire"
     },
     {
       "content": "Can use two <a href=showinfo:3348>Command Burst</a> modules"

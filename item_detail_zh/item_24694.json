@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 115.0,
+      "value": 120.0,
       "categoryID": 17,
       "display_name": "最大速度",
       "unit_name": "m/s"
@@ -102,7 +102,7 @@
     },
     {
       "attribute_name": "agility",
-      "value": 0.136,
+      "value": 0.111,
       "categoryID": 17,
       "display_name": "惯性调整",
       "unit_name": "x"
@@ -333,7 +333,7 @@
     },
     {
       "attribute_name": "droneCapacity",
-      "value": 100.0,
+      "value": 125.0,
       "categoryID": 10,
       "display_name": "无人机容量",
       "unit_name": "m3"
@@ -396,7 +396,7 @@
     },
     {
       "attribute_name": "signatureRadius",
-      "value": 460.0,
+      "value": 400.0,
       "categoryID": 6,
       "display_name": "信号半径",
       "unit_name": "m"

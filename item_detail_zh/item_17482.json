@@ -2,7 +2,7 @@
   "type_id": 17482,
   "name": "露天采矿器 I",
   "description": "专用于采矿驳船和采掘者的大型矿石采集器。",
-  "volume": 25.0,
+  "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

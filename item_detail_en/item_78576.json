@@ -897,6 +897,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -929,6 +936,9 @@
     },
     {
       "content": "<b>6+</b> bonus to ship warp core strength"
+    },
+    {
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     },
     {
       "content": "<b>80%</b> bonus to Sensor Dampener resistance"

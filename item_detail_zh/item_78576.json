@@ -897,6 +897,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -929,6 +936,9 @@
     },
     {
       "content": "<b>6+</b> 舰船跃迁核心强度加成"
+    },
+    {
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     },
     {
       "content": "<b>80%</b> 停滞效果抗性加成"

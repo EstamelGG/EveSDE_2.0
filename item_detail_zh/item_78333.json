@@ -620,7 +620,7 @@
     },
     {
       "attribute_name": "shipRoleBonusWarpSpeed",
-      "value": 25.0,
+      "value": 50.0,
       "categoryID": 37,
       "display_name": "跃迁速度和加速加成",
       "unit_name": "%"
@@ -631,6 +631,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -641,13 +648,16 @@
       "content": "<b>100%</b> <a href=showinfo:3302>小型射弹炮台</a>伤害加成"
     },
     {
-      "content": "<b>25%</b> 跃迁速度和跃迁加速加成"
-    },
-    {
       "content": "<b>50%</b> <a href=showinfo:3302>小型射弹炮台</a>失准范围加成"
     },
     {
+      "content": "<b>50%</b> 跃迁速度和跃迁加速加成"
+    },
+    {
       "content": "<b>7.5%</b> <a href=showinfo:3302>小型射弹炮台</a>追踪速度加成"
+    },
+    {
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     }
   ]
 }

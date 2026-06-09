@@ -2,7 +2,7 @@
   "type_id": 90493,
   "name": "深渊露天采矿器",
   "description": "可用于采矿驳船和采掘者舰船的大型矿石采集器。",
-  "volume": 25.0,
+  "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

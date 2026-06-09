@@ -1,7 +1,7 @@
 {
   "type_id": 91916,
   "name": "Imperial Electronics Booster I",
-  "description": "This booster has been produced by the Amarr Empire to assist capsuleers with their military campaign war efforts.\n\n<b>\n+2% Stasis Webfier Resistance\n+2% Scan Probe Strength\n+2% reduction in Maximum Scan Probe Deviation\n+2% Maximum Targeting Range\n+4% Mining Critical Success Chance. \nBase Duration: 2 Hours<b>\n\n<b>Expiry date: November 10th YC128</b>",
+  "description": "This booster has been produced by the Amarr Empire to assist capsuleers with their military campaign war efforts.\n\n<b>+4% Stasis Webfier Resistance\n+2% Scan Probe Strength\n+2% Maximum Targeting Range\n+4% Mining Critical Success Chance. \nBase Duration: 2 Hours<b>\n\n<b>Expiry date: November 10th YC128</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,
@@ -48,7 +48,7 @@
       "attribute_name": "scanStrengthBonus",
       "value": 2.0,
       "categoryID": 7,
-      "display_name": "Scan Strength Bonus",
+      "display_name": "Probe Scan Strength Bonus",
       "unit_name": "%"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "attribute_name": "stasisWebifierResistanceBonus",
-      "value": -2.0,
+      "value": -4.0,
       "categoryID": 36,
       "display_name": "Stasis Webifier Resistance Bonus",
       "unit_name": "%"

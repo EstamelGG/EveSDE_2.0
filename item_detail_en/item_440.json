@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 50.0,
+      "value": 40.0,
       "categoryID": 5,
       "display_name": "Activation Cost",
       "unit_name": "GJ"
@@ -81,7 +81,7 @@
     },
     {
       "attribute_name": "signatureRadiusBonus",
-      "value": 500.0,
+      "value": 475.0,
       "categoryID": 21,
       "display_name": "Signature Radius Modifier",
       "unit_name": "%"

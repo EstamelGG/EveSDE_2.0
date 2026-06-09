@@ -81,7 +81,7 @@
     },
     {
       "attribute_name": "cpuOutput",
-      "value": 310.0,
+      "value": 340.0,
       "categoryID": 1,
       "display_name": "CPU Output",
       "unit_name": "tf"

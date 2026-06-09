@@ -2,7 +2,7 @@
   "type_id": 90493,
   "name": "Abyssal Strip Miner",
   "description": "A bulk ore extractor designed for use on Mining Barges and Exhumers.",
-  "volume": 25.0,
+  "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

@@ -620,7 +620,7 @@
     },
     {
       "attribute_name": "shipRoleBonusWarpSpeed",
-      "value": 25.0,
+      "value": 50.0,
       "categoryID": 37,
       "display_name": "Warp Speed and Acceleration Bonus",
       "unit_name": "%"
@@ -631,6 +631,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -641,13 +648,16 @@
       "content": "<b>100%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> damage"
     },
     {
-      "content": "<b>25%</b> bonus to warp speed and warp acceleration"
-    },
-    {
       "content": "<b>50%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> falloff"
     },
     {
+      "content": "<b>50%</b> bonus to warp speed and warp acceleration"
+    },
+    {
       "content": "<b>7.5%</b> bonus to <a href=showinfo:3302>Small Projectile Turret</a> tracking speed"
+    },
+    {
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     }
   ]
 }

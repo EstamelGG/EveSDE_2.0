@@ -402,6 +402,13 @@
       "unit_name": "mm"
     },
     {
+      "attribute_name": "shipBonusAB2",
+      "value": 5.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "warpSpeedMultiplier",
       "value": 3.0,
       "categoryID": 17,
@@ -641,6 +648,9 @@
     },
     {
       "content": "<b>5%</b> additional bonus to <a href=showinfo:3394>Reinforced Bulkhead</a> hitpoints"
+    },
+    {
+      "content": "<b>5%</b> bonus to <a href=showinfo:3423>Energy Nosferatu</a> and <a href=showinfo:3423>Energy Neutralizer</a> falloff range"
     },
     {
       "content": "<b>50%</b> bonus to <a href=showinfo:3394>Armor Plate</a> hitpoints"

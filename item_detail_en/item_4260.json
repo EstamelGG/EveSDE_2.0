@@ -97,7 +97,7 @@
       "attribute_name": "scanStrengthBonus",
       "value": 5.0,
       "categoryID": 7,
-      "display_name": "Scan Strength Bonus",
+      "display_name": "Probe Scan Strength Bonus",
       "unit_name": "%"
     },
     {

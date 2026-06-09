@@ -402,6 +402,13 @@
       "unit_name": "mm"
     },
     {
+      "attribute_name": "shipBonusAB2",
+      "value": 5.0,
+      "categoryID": 9,
+      "display_name": null,
+      "unit_name": null
+    },
+    {
       "attribute_name": "warpSpeedMultiplier",
       "value": 3.0,
       "categoryID": 17,
@@ -641,6 +648,9 @@
     },
     {
       "content": "<b>5%</b> <a href=showinfo:3394>强化舱隔壁</a>结构值加成"
+    },
+    {
+      "content": "<b>5%</b> <a href=showinfo:3423>掠能器</a>和<a href=showinfo:3423>能量中和器</a>失准范围加成"
     },
     {
       "content": "<b>50%</b> <a href=showinfo:3394>装甲附甲板</a>装甲值加成"

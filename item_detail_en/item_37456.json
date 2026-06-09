@@ -25,7 +25,7 @@
     },
     {
       "attribute_name": "powerOutput",
-      "value": 38.0,
+      "value": 40.0,
       "categoryID": 1,
       "display_name": "Powergrid Output",
       "unit_name": "MW"
@@ -74,14 +74,14 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 325.0,
+      "value": 335.0,
       "categoryID": 17,
       "display_name": "Maximum Velocity",
       "unit_name": "m/sec"
     },
     {
       "attribute_name": "cpuOutput",
-      "value": 150.0,
+      "value": 155.0,
       "categoryID": 1,
       "display_name": "CPU Output",
       "unit_name": "tf"
@@ -130,7 +130,7 @@
     },
     {
       "attribute_name": "turretSlotsLeft",
-      "value": 2.0,
+      "value": 3.0,
       "categoryID": 1,
       "display_name": "Turret Hardpoints",
       "unit_name": "hardpoints"

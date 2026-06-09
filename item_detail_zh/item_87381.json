@@ -848,6 +848,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -865,6 +872,9 @@
     },
     {
       "content": "<b>5x</b> <a href=showinfo:34593>侵噬链接</a>循环周期惩罚"
+    },
+    {
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     },
     {
       "content": "可以装配<a href=showinfo:83465>旗舰级微型跳跃引擎</a>"

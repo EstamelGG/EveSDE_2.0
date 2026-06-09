@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 325.0,
+      "value": 335.0,
       "categoryID": 17,
       "display_name": "最大速度",
       "unit_name": "m/s"
@@ -585,7 +585,7 @@
     },
     {
       "attribute_name": "roleBonus",
-      "value": -85.0,
+      "value": -70.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -631,7 +631,7 @@
       "content": "<b>-50%</b> <a href=showinfo:3436>无人机</a>HP和控制距离减少"
     },
     {
-      "content": "<b>-85%</b> <a href=showinfo:3436>无人机</a>伤害惩罚"
+      "content": "<b>-70%</b> <a href=showinfo:3436>无人机</a>伤害惩罚"
     },
     {
       "content": "<b>10%</b> <a href=showinfo:3436>ECM无人机</a>干扰持续时间加成"

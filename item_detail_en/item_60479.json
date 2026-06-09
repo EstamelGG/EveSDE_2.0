@@ -10,6 +10,13 @@
   "group_name": "Combat Drone",
   "attributes": [
     {
+      "attribute_name": "hp",
+      "value": 200.0,
+      "categoryID": 4,
+      "display_name": "Structure Hitpoints",
+      "unit_name": "HP"
+    },
+    {
       "attribute_name": "requiredSkill1",
       "value": 33699.0,
       "categoryID": 8,
@@ -29,6 +36,20 @@
       "categoryID": 8,
       "display_name": "Tertiary Skill required",
       "unit_name": "typeID"
+    },
+    {
+      "attribute_name": "shieldCapacity",
+      "value": 200.0,
+      "categoryID": 2,
+      "display_name": "Shield Capacity",
+      "unit_name": "HP"
+    },
+    {
+      "attribute_name": "armorHP",
+      "value": 200.0,
+      "categoryID": 3,
+      "display_name": "Armor Hitpoints",
+      "unit_name": "HP"
     },
     {
       "attribute_name": "requiredSkill1Level",
@@ -57,6 +78,13 @@
       "categoryID": 7,
       "display_name": "Tech Level",
       "unit_name": "Level"
+    },
+    {
+      "attribute_name": "signatureRadius",
+      "value": 50.0,
+      "categoryID": 6,
+      "display_name": "Signature Radius",
+      "unit_name": "m"
     }
   ],
   "traits": []

@@ -676,7 +676,7 @@
     },
     {
       "attribute_name": "shipRoleBonusWarpSpeed",
-      "value": 60.0,
+      "value": 140.0,
       "categoryID": 37,
       "display_name": "跃迁速度和加速加成",
       "unit_name": "%"
@@ -701,6 +701,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -717,6 +724,9 @@
       "content": "<b>10+</b> <a href=\"showinfo:22177\">遗迹分析仪</a>和<a href=\"showinfo:22175\">数据分析仪</a>病毒强度加成"
     },
     {
+      "content": "<b>140%</b> 跃迁速度和跃迁加速加成"
+    },
+    {
       "content": "<b>15%</b> <a href=\"showinfo:3302\">小型射弹炮台</a>跟踪速度加成"
     },
     {
@@ -726,7 +736,7 @@
       "content": "<b>200%</b> <a href=\"showinfo:3302\">小型射弹炮台</a>伤害加成"
     },
     {
-      "content": "<b>60%</b> 跃迁速度和跃迁加速加成"
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     },
     {
       "content": "可以装备<a href=\"showinfo:11578\">隐秘行动隐形装置</a>和<a href=\"showinfo:28646\">隐秘诱导力场发生器</a>"

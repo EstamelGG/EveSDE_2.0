@@ -592,7 +592,7 @@
     },
     {
       "attribute_name": "shipBonusNavyDestroyerCaldari1",
-      "value": 5.0,
+      "value": 7.5,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -641,10 +641,10 @@
       "content": "<b>10%</b> <a href=showinfo:3416>护盾回充增量器</a>回充量加成"
     },
     {
-      "content": "<b>5%</b> <a href=showinfo:3301>小型混合炮台</a>伤害加成"
+      "content": "<b>50%</b> <a href=showinfo:3301>小型混合炮台</a>最佳射程和失准范围加成"
     },
     {
-      "content": "<b>50%</b> <a href=showinfo:3301>小型混合炮台</a>最佳射程和失准范围加成"
+      "content": "<b>7.5%</b> <a href=showinfo:3301>小型混合炮台</a>伤害加成"
     }
   ]
 }

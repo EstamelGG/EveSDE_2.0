@@ -592,7 +592,7 @@
     },
     {
       "attribute_name": "shipBonusNavyDestroyerCaldari1",
-      "value": 5.0,
+      "value": 7.5,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -641,10 +641,10 @@
       "content": "<b>10%</b> bonus to <a href=showinfo:3416>Shield Booster</a> amount"
     },
     {
-      "content": "<b>5%</b> bonus to <a href=showinfo:3301>Small Hybrid Turret</a> damage"
+      "content": "<b>50%</b> bonus to <a href=showinfo:3301>Small Hybrid Turret</a> optimal range and falloff"
     },
     {
-      "content": "<b>50%</b> bonus to <a href=showinfo:3301>Small Hybrid Turret</a> optimal range and falloff"
+      "content": "<b>7.5%</b> bonus to <a href=showinfo:3301>Small Hybrid Turret</a> damage"
     }
   ]
 }

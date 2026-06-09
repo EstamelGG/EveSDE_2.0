@@ -3,7 +3,7 @@
   "name": "Victorieux Luxury Yacht",
   "description": "Developed for use by station governors and other well-connected members of the Intaki Syndicate, Victorieux-class Luxury Yachts combine opulent accommodations with state of the art cloaking and propulsion systems. The Victorieux enables comfortable and discreet travel for business or pleasure, from Poitot to Intaki and beyond.\n\nThe Syndicate has steadfastly refused to answer inquiries on how they obtained the technology necessary to enable simultaneous cloak and warp drive activation on this yacht.\n\nIn early YC117, Silphy en Diabel announced that the Syndicate would be sponsoring an invitational tournament and making limited run blueprints for the Victorieux available to all capsuleer supporters of the winning team.",
   "volume": 115000.0,
-  "repackaged_volume": null,
+  "repackaged_volume": 10000.0,
   "capacity": 30.0,
   "mass": 1000000.0,
   "category_name": "Ship",

@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 325.0,
+      "value": 335.0,
       "categoryID": 17,
       "display_name": "Maximum Velocity",
       "unit_name": "m/sec"
@@ -585,7 +585,7 @@
     },
     {
       "attribute_name": "roleBonus",
-      "value": -85.0,
+      "value": -70.0,
       "categoryID": 9,
       "display_name": null,
       "unit_name": null
@@ -631,7 +631,7 @@
       "content": "<b>-50%</b> reduction in <a href=showinfo:3436>Drone</a> hitpoints and control range"
     },
     {
-      "content": "<b>-85%</b> penalty to <a href=showinfo:3436>Drone</a> damage"
+      "content": "<b>-70%</b> penalty to <a href=showinfo:3436>Drone</a> damage"
     },
     {
       "content": "<b>10%</b> bonus to <a href=showinfo:3436>ECM Drone</a> jam duration"

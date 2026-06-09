@@ -638,6 +638,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -658,6 +665,9 @@
     },
     {
       "content": "<b>50%</b> <a href=showinfo:3348>指挥脉冲波</a>效果范围加成"
+    },
+    {
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     },
     {
       "content": "可以装配一个<a href=showinfo:3348>指挥脉冲波</a>装备"

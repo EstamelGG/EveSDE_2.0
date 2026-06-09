@@ -144,7 +144,7 @@
     },
     {
       "attribute_name": "dotMaxHPPercentagePerTick",
-      "value": 0.8,
+      "value": 0.6,
       "categoryID": 7,
       "display_name": "Maximum percentage of target HP damaged per second",
       "unit_name": "%"

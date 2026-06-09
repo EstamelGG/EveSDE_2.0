@@ -1,7 +1,7 @@
 {
   "type_id": 41253,
   "name": "50000MN微型跃迁推进器 II",
-  "description": "在极短时间内大幅提高航行速度。推进舰船的动力和相应的最大速度加成均受使用该装备的舰船重量所限。该系统运转所需的高额能量值意味着它必须使用部分电容输出的能量，以确保跃迁有效力场的完整性。启用该装备会显著增加舰船的电磁辐射信号。\n\n惩罚：最大电容量将减少。\n\n注：只能装配在旗舰级舰船上。",
+  "description": "在极短时间内大幅提高航行速度。推进舰船的动力和相应的最大速度加成均受使用该装备的舰船重量所限。该系统运转所需的高额能量值意味着它必须使用部分电容输出的能量，以确保跃迁有效力场的完整性。启用该装备会显著增加舰船的电磁辐射信号。惩罚：最大电容减少。注：只能用于旗舰级舰船。",
   "volume": 4000.0,
   "repackaged_volume": 1000.0,
   "capacity": null,
@@ -11,7 +11,7 @@
   "attributes": [
     {
       "attribute_name": "capacitorNeed",
-      "value": 11000.0,
+      "value": 9000.0,
       "categoryID": 5,
       "display_name": "启用耗电量",
       "unit_name": "GJ"
@@ -81,7 +81,7 @@
     },
     {
       "attribute_name": "signatureRadiusBonus",
-      "value": 500.0,
+      "value": 475.0,
       "categoryID": 21,
       "display_name": "信号半径修正值",
       "unit_name": "%"
@@ -201,6 +201,13 @@
     {
       "attribute_name": "canFitShipGroup07",
       "value": 4594.0,
+      "categoryID": 1,
+      "display_name": "可装配至",
+      "unit_name": "组别ID"
+    },
+    {
+      "attribute_name": "canFitShipGroup08",
+      "value": 5120.0,
       "categoryID": 1,
       "display_name": "可装配至",
       "unit_name": "组别ID"

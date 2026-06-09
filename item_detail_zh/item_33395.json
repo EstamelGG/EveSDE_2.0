@@ -654,6 +654,13 @@
       "unit_name": "%"
     },
     {
+      "attribute_name": "shipRoleBonusWarpSpeed",
+      "value": 50.0,
+      "categoryID": 37,
+      "display_name": "跃迁速度和加速加成",
+      "unit_name": "%"
+    },
+    {
       "attribute_name": "isBlackOpsJumpPortalPassenger",
       "value": 1.0,
       "categoryID": 0,
@@ -673,6 +680,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -690,6 +704,12 @@
     },
     {
       "content": "<b>30%</b> <a href=\"showinfo:526\">停滞缠绕光束</a>最佳射程加成"
+    },
+    {
+      "content": "<b>50%</b> 跃迁速度和跃迁加速加成"
+    },
+    {
+      "content": "<b>75%</b> 减少射弹武器的装填时间"
     },
     {
       "content": "可以装配<a href=showinfo:11578>隐秘行动隐形装置</a>、<a href=showinfo:21096>诱导力场发生器</a>和<a href=showinfo:28646>隐秘诱导力场发生器</a>装备"

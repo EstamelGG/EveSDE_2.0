@@ -10,6 +10,13 @@
   "group_name": "战斗无人机",
   "attributes": [
     {
+      "attribute_name": "hp",
+      "value": 200.0,
+      "categoryID": 4,
+      "display_name": "结构值",
+      "unit_name": "HP"
+    },
+    {
       "attribute_name": "requiredSkill1",
       "value": 33699.0,
       "categoryID": 8,
@@ -29,6 +36,20 @@
       "categoryID": 8,
       "display_name": "三级技能需求",
       "unit_name": "类别ID"
+    },
+    {
+      "attribute_name": "shieldCapacity",
+      "value": 200.0,
+      "categoryID": 2,
+      "display_name": "护盾容量",
+      "unit_name": "HP"
+    },
+    {
+      "attribute_name": "armorHP",
+      "value": 200.0,
+      "categoryID": 3,
+      "display_name": "装甲值",
+      "unit_name": "HP"
     },
     {
       "attribute_name": "requiredSkill1Level",
@@ -57,6 +78,13 @@
       "categoryID": 7,
       "display_name": "科技等级",
       "unit_name": "等级"
+    },
+    {
+      "attribute_name": "signatureRadius",
+      "value": 50.0,
+      "categoryID": 6,
+      "display_name": "信号半径",
+      "unit_name": "m"
     }
   ],
   "traits": []

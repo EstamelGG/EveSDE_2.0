@@ -1,7 +1,7 @@
 {
   "type_id": 3357,
   "name": "Diplomacy",
-  "description": "Skill at interacting with hostile Agents in order to de-escalate tense situations as demonstrated by some of the finest diplomats in New Eden. 4% Modifier per level to effective standing towards hostile Agents. Not cumulative with Connections or Criminal Connections.",
+  "description": "Skill at interacting with hostile Agents in order to de-escalate tense situations as demonstrated by some of the finest diplomats in New Eden. 4% Modifier per level to effective standing towards hostile Agents. Not cumulative with Connections or Criminal Connections.\n\nThis skill has no effect on the standing requirements to enlist with and stay enlisted in factional warfare.",
   "volume": 0.01,
   "repackaged_volume": null,
   "capacity": null,

@@ -2,7 +2,7 @@
   "type_id": 16278,
   "name": "冰矿采集器 I",
   "description": "用来从冰矿中采集珍贵材料的装置。只能安装在采矿驳船和采掘者上。",
-  "volume": 25.0,
+  "volume": 5.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

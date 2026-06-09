@@ -25,7 +25,7 @@
     },
     {
       "attribute_name": "maxVelocity",
-      "value": 2000.0,
+      "value": 2750.0,
       "categoryID": 17,
       "display_name": "最大速度",
       "unit_name": "m/s"
@@ -179,7 +179,7 @@
     },
     {
       "attribute_name": "shieldCapacity",
-      "value": 50.0,
+      "value": 100.0,
       "categoryID": 2,
       "display_name": "护盾容量",
       "unit_name": "HP"
@@ -326,7 +326,7 @@
     },
     {
       "attribute_name": "signatureRadius",
-      "value": 52.0,
+      "value": 75.0,
       "categoryID": 6,
       "display_name": "信号半径",
       "unit_name": "m"

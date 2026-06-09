@@ -638,6 +638,13 @@
       "categoryID": 7,
       "display_name": "Maximum Directional Scan Range",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "angelCartelProjectileReloadingSpeed",
+      "value": -75.0,
+      "categoryID": 0,
+      "display_name": null,
+      "unit_name": "%"
     }
   ],
   "traits": [
@@ -658,6 +665,9 @@
     },
     {
       "content": "<b>50%</b> bonus to <a href=showinfo:3348>Command Burst</a> area of effect range"
+    },
+    {
+      "content": "<b>75%</b> reduction in projectile weapon reload time"
     },
     {
       "content": "Can use one <a href=showinfo:3348>Command Burst</a> module"

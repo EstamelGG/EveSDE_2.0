@@ -1,7 +1,7 @@
 {
   "type_id": 91916,
-  "name": "Imperial Electronics Booster I",
-  "description": "This booster has been produced by the Amarr Empire to assist capsuleers with their military campaign war efforts.\n\n<b>\n+2% Stasis Webfier Resistance\n+2% Scan Probe Strength\n+2% reduction in Maximum Scan Probe Deviation\n+2% Maximum Targeting Range\n+4% Mining Critical Success Chance. \nBase Duration: 2 Hours<b>\n\n<b>Expiry date: November 10th YC128</b>",
+  "name": "帝国电子系统增效剂I",
+  "description": "这款增效剂由艾玛帝国生产，旨在协助克隆飞行员进行军事行动作战。<b>+4%停滞缠绕光束抗性 +2%扫描探针强度 +2%最大锁定范围 +4%采矿暴击成功率。基础持续时间：2小时<b><b>过期时间：YC128年11月10日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,
@@ -48,7 +48,7 @@
       "attribute_name": "scanStrengthBonus",
       "value": 2.0,
       "categoryID": 7,
-      "display_name": "扫描强度加成",
+      "display_name": "探针扫描强度加成",
       "unit_name": "%"
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "attribute_name": "stasisWebifierResistanceBonus",
-      "value": -2.0,
+      "value": -4.0,
       "categoryID": 36,
       "display_name": "停滞缠绕抗性加成",
       "unit_name": "%"
@@ -76,7 +76,7 @@
       "attribute_name": "boosterMiningCriticalHitChanceBonus",
       "value": 2.0,
       "categoryID": 51,
-      "display_name": null,
+      "display_name": "采矿暴击成功率加成",
       "unit_name": "%"
     }
   ],

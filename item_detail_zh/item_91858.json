@@ -1,7 +1,7 @@
 {
   "type_id": 91858,
-  "name": "Talwar Fleet Issue",
-  "description": "YC128 was a prosperous time for the Thukker tribes of the Great Wildlands. In order to protect the influx of wealth from newly discovered Phased Fields, they voted to support an increase in Republic Fleet spending. \n\nOne of the results of that spending was the development of a new Fleet Issue Talwar. Designed with assistance from Thukker engineers, the ship combines the stalwart fortitude of Fleet Issue vessels with the flexibility and efficiency that has made the caravans of the Great Wildlands uncontested within their homespace.",
+  "name": "弯刀级舰队型",
+  "description": "YC128年，对“大荒野”的图克尔部落而言，是一个繁荣的时期。为保护因新发现的“相位场”而涌入的财富，他们投票支持增加共和舰队的开支。这笔投入的成果之一，便是催生了全新的“弯刀级舰队型”。该舰在图克尔工程师的协助下设计而成，融合了舰队型舰船的坚固坚韧与图克尔部族特有的灵活高效——正是这种高效，使得大荒野的商队在其家园空间内所向披靡。",
   "volume": 43000.0,
   "repackaged_volume": 5000.0,
   "capacity": 400.0,
