@@ -21,6 +21,28 @@ from utils.http_client import get
 import scripts.item_changes_analyzer as item_changes_analyzer
 
 
+def set_github_output(name: str, value: str) -> None:
+    """Write a GitHub Actions output when running in CI."""
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if not github_output:
+        return
+
+    with open(github_output, "a", encoding="utf-8") as f:
+        f.write(f"{name}={value}\n")
+
+
+def set_whats_new_outputs(path: Optional[Path] = None) -> None:
+    if path:
+        rel_path = path.relative_to(project_root)
+        set_github_output("whats-new-exists", "true")
+        set_github_output("whats-new-name", rel_path.as_posix())
+        set_github_output("whats-new-basename", path.name)
+    else:
+        set_github_output("whats-new-exists", "false")
+        set_github_output("whats-new-name", "")
+        set_github_output("whats-new-basename", "")
+
+
 def load_config() -> Optional[Dict[str, Any]]:
     """加载配置文件"""
     # 使用全局的 project_root
@@ -221,6 +243,7 @@ def main():
     if not release_info:
         print("[!] 无法获取最新 Release 信息，可能是首次构建")
         print("[!] 跳过 whats_new 报告生成")
+        set_whats_new_outputs()
         sys.exit(0)  # 首次构建不算错误，正常退出
     
     prev_tag = release_info.get('tag_name', '')
@@ -229,6 +252,7 @@ def main():
     if not old_download:
         print(f"[!] 无法从 tag_name ({prev_tag}) 中提取 build_number")
         print("[!] 跳过 whats_new 报告生成")
+        set_whats_new_outputs()
         sys.exit(0)
     
     print(f"[+] 上一版本: {old_download}")
@@ -298,6 +322,7 @@ def main():
         print(f"[+] whats_new 报告生成成功!")
         print(f"    文件路径: {whats_new_path}")
         print(f"    文件名: {whats_new_filename}")
+        set_whats_new_outputs(whats_new_path)
         
         # 清理临时目录
         if temp_dir.exists():
