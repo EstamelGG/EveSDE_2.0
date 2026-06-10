@@ -305,7 +305,7 @@
     },
     {
       "attribute_name": "entityCruiseSpeed",
-      "value": 350.0,
+      "value": 900.0,
       "categoryID": 17,
       "display_name": "环绕速度",
       "unit_name": "m/s"

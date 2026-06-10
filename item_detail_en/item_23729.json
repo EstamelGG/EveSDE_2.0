@@ -305,7 +305,7 @@
     },
     {
       "attribute_name": "entityCruiseSpeed",
-      "value": 300.0,
+      "value": 700.0,
       "categoryID": 17,
       "display_name": "Orbit Velocity",
       "unit_name": "m/sec"
