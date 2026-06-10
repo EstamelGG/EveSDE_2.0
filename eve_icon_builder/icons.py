@@ -284,7 +284,7 @@ def _process_blueprint(type_id: int, type_info: TypeInfo, category_id: int,
     """处理蓝图类型图标"""
     
     if type_info.graphic_id and type_info.graphic_id in data.graphics_folders:
-        folder = data.graphics_folders[type_info.graphic_id].rstrip('/')
+        folder = data.graphics_folders[type_info.graphic_id].rstrip('/\\')
         icon_resource_bp = f"{folder}/{type_info.graphic_id}_64_bp.png"
         icon_resource_bpc = f"{folder}/{type_info.graphic_id}_64_bpc.png"
         
@@ -407,7 +407,7 @@ def _process_regular_item(type_id: int, type_info: TypeInfo, category_id: int,
     
     # 尝试使用图形资源
     if type_info.graphic_id and type_info.graphic_id in data.graphics_folders:
-        folder = data.graphics_folders[type_info.graphic_id].rstrip('/')
+        folder = data.graphics_folders[type_info.graphic_id].rstrip('/\\')
         icon_resource = f"{folder}/{type_info.graphic_id}_64.png"
         
         if not cache.has_resource(icon_resource) or type_info.group_id in USE_ICON_INSTEAD_OF_GRAPHIC_GROUPS:

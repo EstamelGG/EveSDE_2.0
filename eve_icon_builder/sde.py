@@ -165,7 +165,7 @@ def read_graphics(sde: ZipFile, silent_mode: bool = False) -> Dict[int, str]:
         graphic_id = data['_key']
         icon_folder = data.get('iconFolder')
         if icon_folder:
-            graphics_folders[graphic_id] = icon_folder
+            graphics_folders[graphic_id] = icon_folder.replace('\\', '/').rstrip('/')
     
     return graphics_folders
 
