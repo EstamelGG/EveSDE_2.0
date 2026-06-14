@@ -1,7 +1,7 @@
 {
   "type_id": 91977,
   "name": "共和国挂载点增效剂III",
-  "description": "This booster has been produced by the Minmatar Republic to assist with their military campaign war efforts.\n\n<b>+6% bonus to Projectile Turret Damage\n+6% bonus to Missile Damage\n+6% reduction in Mining, Ice and Gas Harvester duration and capacitor use. \n+12% Reduction in Salvager cycle time\nBase Duration: 2 Hours.</b>\n\n<b>Expiry date: November 10th YC128</b>",
+  "description": "这款增效剂由米玛塔尔共和国生产，旨在协助其完成军事行动作战。<b>+6%射弹炮台伤害 +6%导弹伤害 -6%采矿、冰块和气云采集器的持续时间和电容消耗 -12%打捞器循环时间加成 基础持续时间：2小时。</b><b>过期时间：YC128年11月10日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

@@ -1,7 +1,7 @@
 {
   "type_id": 95274,
-  "name": "Exordium Filament",
-  "description": "Once activated, the Exordium Filament instantly transports a capsuleer from <b>High Security Space</b> to a system in the Exordium region.\n\nThis filament can only be activated by capsuleers <b>under 35 days old</b> with <b>2 million or fewer</b> skill points.\n\nAIR has issued this filament to celebrate the opening of Exordium, a region dedicated to new pilots. With CONCORD’s protection and AIR’s guidance, capsuleers in Exordium can learn the skills they need to face the threats of wider New Eden, and earn the rewards they offer.",
+  "name": "始源星域纤维",
+  "description": "一旦激活，始源星域纤维会立即将一名克隆飞行员从<b>高安星系</b>传送到始源星域内的一个星系。此纤维只能由<b>人物创建时间少于35天</b>且<b>技能点数为200万或更少</b>的克隆飞行员激活。星空会发行此纤维以庆祝始源星域的开放，这是一个专为新手飞行员打造的星域。在统合部的保护和星空会的指引下，始源星域内的克隆飞行员可以学习应对更广阔新伊甸威胁所需的技能，并获得相应的奖励。",
   "volume": 0.1,
   "repackaged_volume": null,
   "capacity": null,
@@ -48,21 +48,21 @@
       "attribute_name": "filamentHighSecOnly",
       "value": 1.0,
       "categoryID": 7,
-      "display_name": null,
+      "display_name": "仅限高安星系",
       "unit_name": "1=True 0=False"
     },
     {
       "attribute_name": "filamentCharacterSPLimit",
       "value": 2000000.0,
       "categoryID": 7,
-      "display_name": null,
+      "display_name": "人物角色技能点上限",
       "unit_name": null
     },
     {
       "attribute_name": "filamentCharacterAgeLimit",
       "value": 840.0,
       "categoryID": 7,
-      "display_name": null,
+      "display_name": "人物创建时间限制",
       "unit_name": null
     }
   ],

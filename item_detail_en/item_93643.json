@@ -1,8 +1,8 @@
 {
   "type_id": 93643,
   "name": "Supplies: Battle of Pator",
-  "description": "Modules recommended for the completion of the Battle of Pator simulation experience.",
-  "volume": 10.0,
+  "description": "Everything required for the completion of the Battle of Pator simulation experience.",
+  "volume": 3000.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

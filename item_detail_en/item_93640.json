@@ -1,8 +1,8 @@
 {
   "type_id": 93640,
   "name": "Supplies: Golgothan Fields",
-  "description": "Modules recommended for the completion of the Golgothan Fields simulation experience.",
-  "volume": 10.0,
+  "description": "Everything required for the completion of the Golgothan Fields simulation experience.",
+  "volume": 3000.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

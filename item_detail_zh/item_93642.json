@@ -2,7 +2,7 @@
   "type_id": 93642,
   "name": "补给：印塔基解放",
   "description": "建议用于完成印塔基解放模拟体验的装备和无人机。",
-  "volume": 10.0,
+  "volume": 3000.0,
   "repackaged_volume": null,
   "capacity": null,
   "mass": null,

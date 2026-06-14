@@ -1,7 +1,7 @@
 {
   "type_id": 91975,
   "name": "联邦挂载点增效剂III",
-  "description": "This booster has been produced by the Gallente Federation to assist with their military campaign war efforts.\n\n<b>+6% bonus to Hybrid Turret Damage\n+6% bonus to Drone Damage\n+6% reduction in Mining, Ice and Gas Harvester duration and capacitor use. \n+12% reduction in Salvager cycle time\nBase Duration: 2 Hours.</b>\n\n<b>Expiry date: November 10th YC128</b>",
+  "description": "这款增效剂由盖伦特联邦生产，旨在协助其完成军事行动作战。<b>+6%混合炮台伤害 +6%无人机伤害 -6%采矿、冰块和气云采集器的持续时间和电容消耗 -12%打捞器循环时间加成 基础持续时间：2小时。</b><b>过期时间：YC128年11月10日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

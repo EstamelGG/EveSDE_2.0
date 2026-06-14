@@ -1,7 +1,7 @@
 {
   "type_id": 94043,
-  "name": "Crucible Booster III",
-  "description": "It will apply immediately when redeemed. Base Duration 2 Hours.\n\n3% bonus to missile weapon damage\n3% bonus to shield hitpoint\n3% bonus to local shield repair module effectiveness\n3% bonus to maximum targeting range\n3% bonus to sensor strength",
+  "name": "竞技场增效剂III",
+  "description": "领取后立即生效。基础持续时间：2小时。导弹武器伤害提高3%，护盾值提高3%，自身护盾维修装备的效果提高3%，最大锁定距离提高3%，传感器强度提高3%",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

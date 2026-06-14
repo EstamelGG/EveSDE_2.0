@@ -1,7 +1,7 @@
 {
   "type_id": 91972,
   "name": "合众国挂载点增效剂II",
-  "description": "This booster has been produced by the Caldari State to assist with their military campaign war efforts.\n\n<b>+4% bonus to Hybrid Turret Damage\n+4% bonus to Missile Damage\n+4% reduction in Mining, Ice and Gas Harvester duration and capacitor use. \n+8% Reduction in Salvager cycle time\nBase Duration: 2 Hours.</b>\n\n<b>Expiry date: November 10th YC128</b>",
+  "description": "这款增效剂由加达里合众国生产，旨在协助其完成军事行动作战。<b>+4%混合炮台伤害 +4%导弹伤害 -4%采矿、冰块和气云采集器的持续时间和电容消耗 -8%打捞器循环时间加成 基础持续时间：2小时。</b><b>过期时间：YC128年11月10日</b>",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,

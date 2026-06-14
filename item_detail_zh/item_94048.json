@@ -1,7 +1,7 @@
 {
   "type_id": 94048,
-  "name": "Strokar Booster VI",
-  "description": "It will apply immediately when redeemed. Base Duration 2 Hours.\n\n6% bonus to projectile weapon damage\n6% bonus to shield hitpoint\n6% bonus to turret falloff\n6% bonus to ship max velocity\n6% bonus to warp speed",
+  "name": "斯托卡增效剂VI",
+  "description": "领取后立即生效。基础持续时间：2小时。射弹武器伤害提高6%，护盾值提高6%，炮台失准范围提高6%，舰船最大速度提高6%，跃迁速度提高6%",
   "volume": 1.0,
   "repackaged_volume": null,
   "capacity": null,
