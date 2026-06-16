@@ -74,7 +74,7 @@
     },
     {
       "attribute_name": "boosterMiningCriticalHitChanceBonus",
-      "value": 2.0,
+      "value": 4.0,
       "categoryID": 51,
       "display_name": "采矿暴击成功率加成",
       "unit_name": "%"

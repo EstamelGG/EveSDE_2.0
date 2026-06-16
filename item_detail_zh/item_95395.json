@@ -1,20 +1,20 @@
 {
-  "type_id": 92371,
-  "name": "Veldspar 0-Grade",
-  "description": "This low purity cluster of Veldspar offers 50% lower yield than those typically found throughout wider New Eden. It is most commonly located within the region of Exordium.\n\nVeldspar is the most common ore type in the central regions of known universe. It is still in constant demand as it holds a large portion of the much-used Tritanium mineral.",
-  "volume": 0.1,
+  "type_id": 95395,
+  "name": "Pyroxeres  0-Grade",
+  "description": "This low purity cluster of Pyroxeres offers 50% lower yield than those typically found throughout wider New Eden. It is most commonly located within the region of Exordium.\n\nPyroxeres is a common ore available in all regions of space. It has fair amounts of <a href=showinfo:35>Pyerite</a> and <a href=showinfo:36>Mexallon</a>.",
+  "volume": 0.3,
   "repackaged_volume": null,
   "capacity": null,
-  "mass": 4000.0,
-  "category_name": "Asteroid",
-  "group_name": "Veldspar",
+  "mass": 1e+35,
+  "category_name": "小行星",
+  "group_name": "干焦岩",
   "attributes": [
     {
       "attribute_name": "requiredSkill1",
       "value": 3386.0,
       "categoryID": 8,
-      "display_name": "Primary Skill required",
-      "unit_name": "typeID"
+      "display_name": "主技能需求",
+      "unit_name": "类别ID"
     },
     {
       "attribute_name": "requiredSkill1Level",
@@ -27,21 +27,21 @@
       "attribute_name": "reprocessingSkillType",
       "value": 60377.0,
       "categoryID": 7,
-      "display_name": "Reprocessing Skill",
-      "unit_name": "typeID"
+      "display_name": "回收再生技能",
+      "unit_name": "类别ID"
     },
     {
       "attribute_name": "asteroidRadiusGrowthFactor",
       "value": 0.5,
       "categoryID": 31,
-      "display_name": "Asteroid radius size multiplier",
+      "display_name": "小行星半径系数",
       "unit_name": null
     },
     {
       "attribute_name": "stasisWebifierResistance",
       "value": 0.0,
       "categoryID": 36,
-      "display_name": "Stasis Webifier Resistance",
+      "display_name": "停滞缠绕抗性",
       "unit_name": "%"
     },
     {
@@ -53,10 +53,10 @@
     },
     {
       "attribute_name": "oreBasicType",
-      "value": 1230.0,
+      "value": 1224.0,
       "categoryID": 7,
       "display_name": null,
-      "unit_name": "typeID"
+      "unit_name": "类别ID"
     },
     {
       "attribute_name": "ignoreMiningWaste",
