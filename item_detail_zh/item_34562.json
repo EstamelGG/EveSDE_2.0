@@ -624,6 +624,13 @@
       "categoryID": 7,
       "display_name": "最大定向扫描范围",
       "unit_name": "m"
+    },
+    {
+      "attribute_name": "proximityDbuffEffectTacticalDestroyerHP",
+      "value": 0.0,
+      "categoryID": 37,
+      "display_name": null,
+      "unit_name": "x"
     }
   ],
   "traits": [
