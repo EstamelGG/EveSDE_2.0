@@ -50,6 +50,13 @@
       "categoryID": 7,
       "display_name": null,
       "unit_name": "类别ID"
+    },
+    {
+      "attribute_name": "ignoreMiningWaste",
+      "value": 0.0,
+      "categoryID": 51,
+      "display_name": null,
+      "unit_name": null
     }
   ],
   "traits": []
