@@ -739,7 +739,7 @@
     },
     {
       "attribute_name": "industrialCommandBonusDroneHitPoints",
-      "value": 10.0,
+      "value": 15.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -771,13 +771,13 @@
       "content": "<b>1%</b> bonus to <a href=showinfo:3350>Shield Command Burst</a> effect strength and duration"
     },
     {
-      "content": "<b>10%</b> bonus to <a href=showinfo:3436>Drone</a> hitpoints and damage"
-    },
-    {
       "content": "<b>100%</b> bonus to <a href=showinfo:24348>Tractor Beam</a> velocity"
     },
     {
       "content": "<b>100%</b> bonus to <a href=showinfo:3436>Drone</a> damage"
+    },
+    {
+      "content": "<b>15%</b> bonus to <a href=showinfo:3436>Drone</a> hitpoints and damage"
     },
     {
       "content": "<b>15%</b> bonus to <a href=showinfo:3436>Drone</a> ore mining yield"

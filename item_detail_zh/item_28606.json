@@ -739,7 +739,7 @@
     },
     {
       "attribute_name": "industrialCommandBonusDroneHitPoints",
-      "value": 10.0,
+      "value": 15.0,
       "categoryID": 37,
       "display_name": null,
       "unit_name": null
@@ -771,13 +771,13 @@
       "content": "<b>1%</b> <a href=showinfo:3350>护盾指挥脉冲波</a>效果强度和持续时间加成"
     },
     {
-      "content": "<b>10%</b> <a href=showinfo:3436>无人机</a>HP和伤害加成"
-    },
-    {
       "content": "<b>100%</b> <a href=\"showinfo:24348\">牵引光束</a>牵引速度加成"
     },
     {
       "content": "<b>100%</b> <a href=showinfo:3436>无人机</a>伤害加成"
+    },
+    {
+      "content": "<b>15%</b> <a href=showinfo:3436>无人机</a>HP和伤害加成"
     },
     {
       "content": "<b>15%</b> <a href=showinfo:3436>无人机</a>采矿量加成"
